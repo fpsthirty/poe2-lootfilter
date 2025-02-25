@@ -1,0 +1,1902 @@
+#===============================================================================================================
+# fpsthirty caster LootFilter — Path of Exile 2
+#===============================================================================================================
+#
+# VERSION: 	0.1.1-1 (actual for PoE2 v0.1.1)
+# AUTHOR: 	fpsthirty
+# SOURCE: 	https://github.com/fpsthirty/poe2-lootfilter
+#
+# --- based on NeverSink's lootfilter v0.1.1 ---
+#
+# basic principles of this lootfilter:
+# 1. Take everything you see on the ground. At Area levels 1+ / 65+ / 71+ you see fewer and fewer items that have str- & dex-requirements on them and other useless items for your class.
+# 2. Minimalism for equipment: 99% of the equipment is garbage that doesn't deserve much custom styling, but you'll see a colorful design of map-specific items etc.
+# Special equipment stylization applies in three cases: 
+# - for the best bases of the corresponding slot, on which the maximum affix tier (81–82 itemLevel) can be generated;
+# - for some infrequent items on low-level characters: jewelry, belts, and Chiming staff;
+# - items with additional quality.
+#
+# I express my respect to @NeverSink for the original version of lootfilter and will mention its credentials below:
+# TWITTER: @NeverSinkDev
+# DISCORD: https://discord.gg/mye6xhF
+# TWITCH:  https://www.twitch.tv/neversink
+#
+#------------------------------------
+# INSTALLATION / UPDATE:
+#------------------------------------
+#
+# 0) It's recommended to check for updates once a month or at least before new leagues, to receive economy finetuning and new features!
+# 1) Paste this file into the following folder: %userprofile%/Documents/My Games/Path of Exile 2
+# 2) INGAME: Escape -> Options -> UI -> Scroll down -> Select the filter from the Dropdown box
+#
+#===============================================================================================================
+# [WELCOME] TABLE OF CONTENTS + QUICKJUMP TABLE
+#===============================================================================================================
+# [[0100]] Your custom rules
+# [[0200]] Section for non-minionmancer casters
+# [[0300]] Hide stuff with specific names
+# [[0400]] Stylized collection of specific stuff
+# [[0500]] High itemLevel bases
+#   [0501] weapons
+#   [0502] armor pieces
+#   [0503] jewellery
+# [[0600]] White items for unique craft
+# [[0700]] Endgame custom rules
+# [[0800]] For T11+ maps / area level 75+
+#   [0801] hide low-level bases (<= Rare)
+#   [0802] dex- / str-bases
+#   [0803] mix-bases
+#   [0804] int-bases
+# [[0900]] For T7+ maps / area level 71+
+#   [0901] hide low-level bases (<= Magic)
+#   [0902] equipment with int-bases and mix-bases
+#   [0903] set default font size for belts and jewellery 
+#   [0904] set low priority styles for cheap currency
+# [[1000]] First steps on the maps / area level 65+
+#   [1001] mix-bases
+#   [1002] caster weapons/offhands
+#   [1003] hide cheap currency, normal charms and some mix-bases 
+# [[1100]] To start for any class of casters
+#   [1101] dex- / str-bases
+# [[1200]] Salvagable Items / +quality
+# [[1300]] Sanctum keys
+# [[1400]] Things of maps
+#   [1401] pinnacle keys
+#   [1402] logbooks
+#   [1403] omens 
+#   [1404] delirium / distilled emotions
+#   [1405] catalysts
+# [[1500]] Overrides - Uniques, Valuables
+# [[1600]] Gold
+# [[1700]] Uncut Gems
+# [[1800]] Socketables and Special Character Equipment
+#   [1801] league specific socketables (soul cores) and timeless-jewels
+#   [1802] breach rings
+#   [1803] sanctum relics
+#   [1804] any jewels
+#   [1805] any runes and charms
+# [[1900]] Socketables and Special Character Equipment
+#   [1901] currency Tier A: Gemcutter, Annullment
+#   [1902] currency Tier B: Vaal, Chaos, Exalt, Exotic
+#   [1903] essences
+#   [1904] default styles for Distillates, Catalysts and Essences
+#   [1905] currency Tier C: Vaal, Chaos, Exalt, Exotic
+#   [1906] fragments / tablets
+#   [1907] ascendancy keys
+# [[2000]] Waystones
+# [[2100]] Value rares for leveling
+# [[2200]] Rings, Amulets, Belts
+# [[2300]] OPTIONAL RULES
+
+
+
+#--------------------------
+# [[0100]] Your custom rules: items that must always be shown/hidden:
+#--------------------------
+
+# examples:
+# Show
+# Class "Sceptre"
+# AreaLevel >= 65
+#
+# Hide
+# Rarity <= Magic
+# BaseType " Helm" " Tower Shield"
+# DropLevel < 65
+
+#--------------------------
+# [[0200]] Section for non-minionmancer casters
+#--------------------------
+
+# remove the symbol "#" on each line below in this section if you play for a caster without minions
+
+# Hide
+# Class "Sceptre" "Shield"
+# Rarity Normal
+# AreaLevel >= 40
+# 
+# Hide
+# Class "Sceptre" "Shield"
+# Rarity Magic
+# AreaLevel >= 65
+# 
+# Hide
+# Class "Sceptre" "Shield"
+# Rarity Rare
+# AreaLevel >= 71
+#
+# Hide
+# Class "Quarterstaff"
+# 
+# Show
+# Class "Staff" "Wand" "Focus"
+#
+# Hide
+# Class "Staff" "Wand" "Focus"
+# Rarity <= Rare
+# DropLevel < 61
+# AreaLevel >= 71
+#
+# Show
+# Rarity Unique
+# BaseType "Spiked Club"
+
+#--------------------------
+# [[0300]] Hide stuff with specific names:
+#--------------------------
+
+Hide
+Class "Quarter"
+Rarity <= Rare
+AreaLevel >= 71
+
+Hide
+Class "Quarter"
+Rarity <= Magic
+AreaLevel > 65
+
+Hide
+Class "Quarter"
+Rarity Normal
+
+#--------------------------
+# [[0400]] Stylized collection of specific stuff
+#--------------------------
+
+Show
+BaseType "Golden Charm"
+SetTextColor 255 255 255 255
+SetBorderColor 255 255 255 255
+SetBackgroundColor 240 90 35 200
+PlayAlertSound 1 100
+PlayEffect White
+MinimapIcon 1 White Circle
+
+Show # event-specific things (speedruns etc)
+BaseType "Golden Mantle" "Golden Bracers" "Golden Caligae" "Golden Wreath" "Golden Visage"
+SetFontSize 45
+SetTextColor 255 0 0 255
+SetBorderColor 255 0 0 255
+SetBackgroundColor 255 255 255 255
+PlayAlertSound 6 300
+PlayEffect Red
+MinimapIcon 0 Red Star
+
+#--------------------------
+# [[0500]] High itemLevel bases:
+#--------------------------
+
+#  [0501] weapons:
+Show
+BaseType "Omen Sceptre" "Rattling Sceptre"
+ItemLevel >= 81
+Rarity <= Rare
+SetBorderColor 95 0 160
+PlayEffect Purple
+MinimapIcon 1 Purple Circle
+PlayAlertSound 16 300
+
+
+#  [0502] armor pieces:
+Show
+BaseType "Expert Feathered Tiara" "Expert Altar Robe" "Expert Intricate Gloves" "Expert Feathered Sandals" "Expert Omen Crest Shield"
+ItemLevel >= 82
+Rarity <= Rare
+SetBorderColor 95 0 160
+PlayEffect Purple
+MinimapIcon 1 Purple Circle
+PlayAlertSound 16 300
+
+#  [0503] jewellery:
+Show 
+BaseType == "Breach Ring"
+ItemLevel >= 82
+Rarity <= Rare
+SetTextColor 239 34 255
+SetBorderColor 95 0 160
+SetBackgroundColor 0 0 0 230
+MinimapIcon 1 Purple Circle
+PlayAlertSound 16 300
+SetFontSize 40
+
+Show
+BaseType " Ring" " Amulet" " Belt"
+Rarity <= Rare
+ItemLevel >= 82
+SetBorderColor 95 0 160
+MinimapIcon 1 Purple Circle
+PlayAlertSound 16 300
+SetFontSize 40
+
+#--------------------------
+# [[0600]] White items for unique craft:
+#--------------------------
+
+# S-tier:
+
+Show
+BaseType "Stellar Amulet" # Astramentis / +(80–100) to all Attributes
+Rarity Normal
+ItemLevel >= 24
+SetBorderColor 255 128 200
+SetBackgroundColor 65 65 65
+PlayEffect Orange
+MinimapIcon 1 Orange Square
+PlayAlertSound 2 100
+SetFontSize 40
+
+# A-tier:
+
+Show
+BaseType "Trimmed Greaves"
+# Trampletoe / Deal 30% of Overkill damage to enemies within 2 metres of the enemy killed
+Rarity Normal
+ItemLevel >= 27
+DropLevel = 27
+SetBorderColor 255 128 200
+SetBackgroundColor 65 65 65
+PlayEffect Orange
+MinimapIcon 1 Orange Square
+PlayAlertSound 2 100
+
+Show
+BaseType "Spiked Club"
+# Trenchtimbre / +(1–3) to Level of all Minion Skills
+Rarity Normal
+ItemLevel >= 16
+SetBorderColor 255 128 200
+SetBackgroundColor 65 65 65
+PlayEffect Orange
+MinimapIcon 1 Orange Square
+PlayAlertSound 2 100
+
+Show
+BaseType "Sapphire Ring"
+# Dream Fragments / +20% mana & +(30–50)% mana regen
+# Polcirkeln / Enemies Chilled by your Hits can be Shattered as though Frozen
+Rarity Normal
+ItemLevel >= 12
+SetBorderColor 255 128 200
+SetBackgroundColor 65 65 65
+PlayEffect Orange
+MinimapIcon 1 Orange Square
+PlayAlertSound 2 100
+SetFontSize 40
+
+Show 
+BaseType "Gold Ring" # Ventor's Gamble / life + spirit + rarity + elemental res
+Rarity Normal
+ItemLevel >= 64
+SetBorderColor 255 128 200
+SetBackgroundColor 65 65 65
+PlayEffect Orange
+MinimapIcon 1 Orange Square
+PlayAlertSound 2 100
+SetFontSize 40
+
+Show 
+BaseType "Sigil Crest Shield" # Oaksworn / +50 spirit 
+Rarity Normal
+ItemLevel >= 7
+DropLevel = 7
+SetBorderColor 255 128 200
+SetBackgroundColor 65 65 65
+PlayEffect Orange
+MinimapIcon 1 Orange Square
+PlayAlertSound 2 100
+
+Show 
+BaseType "Solar Amulet"
+# Beacon of Azis / Critical Hits ignore Enemy Monster Elemental Resistances
+# Fireflower / +(1–4) to Level of all Fire Skills
+Rarity Normal
+ItemLevel >= 52
+SetBorderColor 255 128 200
+SetBackgroundColor 65 65 65
+PlayEffect Orange
+MinimapIcon 1 Orange Square
+PlayAlertSound 2 100
+SetFontSize 40
+
+Show 
+BaseType "Heavy Belt" # Headhunter / When you Kill a Rare monster, you gain its Modifiers for 20 seconds
+Rarity Normal
+ItemLevel >= 50
+SetBorderColor 255 128 200
+SetBackgroundColor 65 65 65
+PlayEffect Orange
+MinimapIcon 1 Orange Square
+PlayAlertSound 2 100
+
+# B-tier:
+
+Show 
+BaseType "Tattered Robe" # Ghostwrithe / 50% of Maximum Life Converted to Energy Shield
+Rarity Normal
+ItemLevel >= 1
+DropLevel = 1
+SetBorderColor 255 128 200
+SetBackgroundColor 65 65 65
+PlayEffect Orange
+MinimapIcon 1 Orange Square
+PlayAlertSound 2 100
+
+Show
+BaseType "Pilgrim Vestments" # Enfolding Dawn / +100 to Spirit
+Rarity Normal
+ItemLevel >= 64
+DropLevel < 45
+SetBorderColor 255 128 200
+SetBackgroundColor 65 65 65
+PlayEffect Orange
+MinimapIcon 1 Orange Square
+PlayAlertSound 2 100
+
+#Show
+#BaseType "Silk Robe" # Cloak of Flame Silk Robe / 40% of Physical Damage taken as Fire Damage
+#Rarity Normal
+#ItemLevel >= 64
+#DropLevel = 22
+#SetBorderColor 255 128 200
+#SetBackgroundColor 65 65 65
+#PlayEffect Orange
+#MinimapIcon 1 Orange Square
+#PlayAlertSound 2 100
+
+# C-tier:
+
+#Show 
+#BaseType "Pearl Ring" # Snakepit / chain-fork
+#Rarity Normal
+#ItemLevel >= 32
+#SetBorderColor 255 128 200
+#SetBackgroundColor 65 65 65
+#PlayEffect Orange
+#MinimapIcon 1 Orange Square
+#PlayAlertSound 2 100
+#SetFontSize 40
+
+#Show 
+#BaseType "Plate Belt" # Infernoclasp / +(3–5)% to Maximum Fire Resistance
+#Rarity Normal
+#ItemLevel >= 24
+#SetBorderColor 255 128 200
+#SetBackgroundColor 65 65 65
+#PlayEffect Orange
+#MinimapIcon 1 Orange Square
+#PlayAlertSound 2 100
+
+#--------------------------
+# [[0700]] Endgame custom rules:
+#--------------------------
+
+# REMOVE THE BASES YOU --DO-- WANT TO HIDE
+
+Hide
+BaseType "Chiming Staff"
+Rarity <= Rare
+ItemLevel <= 77
+AreaLevel >= 65
+
+Hide
+Class "Sceptre"
+Rarity <= Rare
+ItemLevel <= 80
+AreaLevel >= 65
+
+Hide
+BaseType "Uncut Skill Gem" "Uncut Spirit Gem"
+ItemLevel <= 19
+AreaLevel >= 65
+
+Hide # only runes existing at the time of patch v0.1.1 are listed here:
+BaseType "Desert Rune" "Storm Rune" "Body Rune" "Rebirth Rune" "Stone Rune" "Glacial Rune" "Iron Rune" "Mind Rune" "Inspiration Rune" "Vision Rune"
+Rarity Normal
+AreaLevel >= 65
+
+Hide
+Class "Flask"
+Rarity <= Magic
+AreaLevel >= 65
+
+Hide
+Class "Shields"
+Rarity <= Rare
+AreaLevel >= 65
+
+Hide
+Class "Currency"
+BaseType "Orb of Augmentation" "Orb of Transmutation" "Regal Shard" "Transmutation Shard"
+AreaLevel >= 65
+
+#--------------------------
+# [[0800]] For T11+ maps / area level 75+:
+#--------------------------
+
+#  [0801] hide low-level bases (<= Rare):
+Hide
+Class "Helmet" "Body" "Gloves" "Boots" "Shields"
+Rarity <= Rare
+DropLevel <= 60
+AreaLevel >= 71
+
+Hide
+BaseType "Advanced"
+Rarity <= Rare
+AreaLevel >= 71
+
+Hide
+BaseType " Charm"
+Quality < 1
+Rarity <= Magic
+AreaLevel >= 75
+
+Hide
+BaseType "Uncut Skill Gem" "Uncut Spirit Gem"
+ItemLevel <= 18
+AreaLevel >= 79
+
+Show
+BaseType "Chiming Staff"
+AreaLevel >= 75
+
+#caster weapons/offhands:
+Hide
+Class "Staff" "Wand" "Focus"
+Rarity <= Rare
+AreaLevel >= 75
+
+Hide
+Class "Quiver" "Mace" "Quarter" "Bow" "Crossbow"
+Rarity <= Rare
+AreaLevel >= 75
+
+#  [0802] dex- / str-bases:-----------
+Hide
+Class "Helmet"
+BaseType "Greathelm" " Cap" " Hood"
+Rarity <= Rare
+AreaLevel >= 75
+
+Hide
+Class "Body"
+BaseType "Jacket" " Armour" " Coat" "Cuirass" "Plate" "Vest"
+Rarity <= Rare
+AreaLevel >= 75
+
+Hide
+Class "Gloves"
+BaseType "Bracers" "Mitts"
+Rarity <= Rare
+AreaLevel >= 75
+
+Hide
+Class "Shields"
+BaseType "Tower Shield" 
+Rarity <= Rare
+AreaLevel >= 75
+
+Hide
+Class "Boots"
+BaseType "Greaves" "Boots"
+Rarity <= Rare
+AreaLevel >= 75
+
+#  [0803] mix-bases:-----------
+Hide
+Class "Helmet"
+BaseType "Crown" "Mask" " Helm"
+Rarity <= Rare
+AreaLevel >= 75
+
+Hide
+Class "Body"
+BaseType " Jacket" " Mail" "Mantle"
+Rarity <= Rare
+AreaLevel >= 75
+
+Hide
+Class "Gloves"
+BaseType "Cuffs" "Wraps" "Gauntlets"
+Rarity <= Rare
+AreaLevel >= 75
+
+Hide
+Class "Shields"
+BaseType "Targe" 
+Rarity <= Rare
+AreaLevel >= 75
+
+Hide
+Class "Boots"
+BaseType "Sabatons" "Leggings" " Shoes"
+Rarity <= Rare
+AreaLevel >= 75
+
+#  [0804] int-bases:-----------
+
+Show
+Class "Helmet"
+BaseType "Expert Feathered Tiara" "Expert Wicker Tiara" "Expert Chain Tiara"
+
+Show
+Class "Body"
+BaseType "Expert Hexer's Robe" "Expert Keth Raiment" "Expert Altar Robe"
+
+Show
+Class "Gloves"
+BaseType "Expert Sombre Gloves" "Expert Jewelled Gloves" "Expert Intricate Gloves"
+
+Show
+Class "Boots"
+BaseType "Expert Wrapped Sandals" "Expert Silk Slippers" "Expert Feathered Sandals"
+
+
+#--------------------------
+# [[0900]] For T7+ maps / area level 71+:
+#--------------------------
+
+#  [0901] hide low-level bases (<= Magic):
+
+Hide
+Class "Helmet" "Body" "Gloves" "Boots" "Shields"
+Rarity <= Magic
+DropLevel <= 60
+AreaLevel >= 71
+
+Hide
+BaseType "Advanced"
+Rarity <= Magic
+AreaLevel >= 71
+
+#  [0902] equipment with int-bases and mix-bases:
+
+#body armor:
+Show
+BaseType "Expert Altar Robe" "Arcane Robe" "Expert Keth Raiment" "Enlightened Robe" "Havoc Raiment" "Expert Hexer's Robe"
+
+#helm:
+Show
+BaseType " Circlet" " Tiara"
+
+Show
+BaseType " Crown"
+Rarity Magic
+
+#gloves:
+Show
+BaseType " Gloves" " Cuffs"
+Rarity Magic
+
+#boots:
+Show
+BaseType " Sandals" " Slippers" 
+
+Show
+BaseType " Leggings"
+Rarity Magic
+
+#shield:
+Show
+BaseType " Shield"
+Rarity Magic
+
+Show
+Class "Shields"
+BaseType "Crest Shield"
+DropLevel >= 65
+AreaLevel >= 71
+
+Hide
+Class "Shields"
+BaseType "Crest Shield"
+Rarity <= Magic
+DropLevel <= 60
+AreaLevel >= 71
+
+#  [0903] set default font size for belts and jewellery:
+Show
+Class "Belts"
+Rarity <= Rare
+AreaLevel >= 71
+
+Show
+Class "Amulets"
+BaseType "Crimson Amulet" "Bloodstone Amulet"
+Rarity <= Rare
+AreaLevel >= 71
+
+Hide
+Class "Rings"
+BaseType "Iron Ring" "Emerald Ring"
+Rarity Normal
+AreaLevel >= 71
+
+Show
+Class "Rings"
+BaseType "Iron Ring" "Emerald Ring"
+Rarity <= Rare
+AreaLevel >= 71
+
+Hide
+BaseType "Uncut Support Gem"
+AreaLevel >= 71
+
+#  [0904] set low priority for cheap currency:
+Show
+Class "Currency"
+BaseType "Lesser Jeweller's Orb" "Glassblower's Bauble" "Artificer's Orb"
+SetTextColor 255 207 132
+SetBorderColor 255 207 132
+MinimapIcon 2 Grey Circle
+AreaLevel >= 71
+
+Hide
+StackSize <= 250
+BaseType == "Gold"
+AreaLevel >= 71
+
+#--------------------------
+# [[1000]] First steps on the maps / area level 65+:
+#--------------------------
+
+Hide
+BaseType "Stoic Sceptre" "Shrine Sceptre"
+Rarity <= Magic
+AreaLevel >= 65
+
+Show
+BaseType "Chiming Staff"
+AreaLevel >= 65
+
+Hide
+Class "Rings"
+BaseType "Iron Ring" "Emerald Ring"
+Rarity Normal
+AreaLevel >= 65
+
+Hide
+Class "Quiver" "Mace" "Quarter" "Bow" "Crossbow"
+Rarity <= Magic
+AreaLevel >= 65
+
+Show
+Class "Shields"
+BaseType "Crest Shield"
+DropLevel >= 55
+AreaLevel >= 65
+
+#  [1001] mix-bases:-----------
+Hide
+Class "Helmet"
+BaseType "Crown" "Mask" " Helm"
+Rarity Normal
+AreaLevel >= 65
+
+Hide
+Class "Body"
+BaseType " Jacket" " Mail" "Mantle"
+Rarity Normal
+AreaLevel >= 65
+
+Hide
+Class "Gloves"
+BaseType "Cuffs" "Wraps" "Gauntlets"
+Rarity Normal
+AreaLevel >= 65
+
+Hide
+Class "Shields"
+BaseType "Targe" 
+Rarity Normal
+AreaLevel >= 65
+
+Hide
+Class "Boots"
+BaseType "Sabatons" "Leggings" " Shoes"
+Rarity Normal
+AreaLevel >= 65
+
+Hide
+Rarity <= Rare
+BaseType "Greathammer" "Crossbow" "Quarterstaff" "Bow" "Tower Shield" "Maul"
+AreaLevel >= 65
+
+#  [1002] caster weapons/offhands:
+Hide
+Class "Staff" "Wand" "Focus"
+Rarity <= Magic
+AreaLevel >= 65
+
+#  [1003] hide cheap currency, normal charms and some mix-bases
+Hide
+Rarity <= Magic
+Class "Flask" "Body" "Helmet" "Boots" "Gloves" "Quiver" "Mace" "Quarter" "Bow" "Crossbow"
+AreaLevel >= 65
+
+Hide
+Class "Currency"
+BaseType "Wisdom"
+AreaLevel >= 65
+
+Hide
+StackSize <= 100
+BaseType == "Gold"
+AreaLevel >= 65
+
+Hide
+BaseType " Charm"
+Rarity Normal
+Quality < 1
+AreaLevel >= 65
+
+
+#--------------------------
+#  [[1100]] To start for any class of casters:
+#--------------------------
+
+Show
+BaseType "Uncut Support Gem"
+AreaLevel < 71
+SetTextColor 255 255 255
+SetBorderColor 20 240 240
+PlayAlertSound 2 300
+PlayEffect Cyan
+MinimapIcon 1 Cyan Triangle
+
+Show
+Class "Body"
+BaseType "Raiment" "Robe"
+AreaLevel < 65
+
+Show
+Class "Gloves"
+BaseType "Gloves"
+AreaLevel < 65
+
+Show
+Class "Helmet"
+BaseType "Tiara"
+AreaLevel < 65
+
+Show
+Class "Boots"
+BaseType "Slippers" "Sandals"
+AreaLevel < 65
+
+Show
+BaseType "Sceptre"
+
+Show
+BaseType "Chiming Staff"
+PlayEffect Blue
+
+Hide
+Class "Quiver" "Mace" "Quarter" "Bow" "Crossbow"
+Rarity Normal
+
+Show
+Class "Staff"
+AreaLevel < 40
+
+Show
+Class "Wand" "Focus"
+AreaLevel < 40
+
+Hide
+BaseType "Tower Shield"
+Rarity Normal
+
+Show
+BaseType " Shield"
+AreaLevel < 65
+Rarity <= Rare
+
+Show
+Class "Flask"
+AreaLevel < 65
+
+#  [1101] dex- / str-bases:-----------
+Hide
+Class "Helmet"
+BaseType "Greathelm" " Cap" " Hood"
+Rarity Normal
+
+Hide
+Class "Body"
+BaseType "Jacket" " Armour" " Coat" "Cuirass" "Plate" "Vest"
+Rarity Normal
+
+Hide
+Class "Gloves"
+BaseType "Bracers" "Mitts"
+Rarity Normal
+
+Hide
+Class "Boots"
+BaseType "Greaves" "Boots"
+Rarity Normal
+
+# "Scroll of Wisdom" is only shown in acts 1 and 4 
+
+Show
+BaseType "Scroll of Wisdom"
+AreaLevel <= 48
+AreaLevel >= 45
+
+Hide
+BaseType "Scroll of Wisdom"
+AreaLevel > 16
+
+Show
+BaseType "Scroll of Wisdom"
+AreaLevel <= 15
+
+#--------------------------
+# [[1200]] Salvagable Items / +quality
+#--------------------------
+
+Show
+Quality >= 7
+Class "Flask" "Wand" "Sceptre" "Staff"
+SetBorderColor 200 200 200
+SetBackgroundColor 65 65 65
+PlayEffect Grey
+MinimapIcon 1 Grey Square
+PlayAlertSound 2 100
+
+Show
+Quality >= 1
+Class "Flask" "Wand" "Sceptre" "Staff"
+SetBorderColor 200 200 200
+SetBackgroundColor 65 65 65
+PlayEffect Grey
+MinimapIcon 1 Grey Square
+PlayAlertSound 2 100
+AreaLevel < 65
+
+Show
+BaseType " Charm"
+Quality > 1
+SetBackgroundColor 65 65 65
+SetTextColor 0 240 190
+PlayEffect Cyan Temp
+
+Show
+Quality >= 7
+Class "Body" "Helmet" "Boots" "Gloves" "Shields" "Focus"
+Rarity <= Rare
+SetBorderColor 200 200 200
+SetBackgroundColor 65 65 65
+PlayEffect Grey
+MinimapIcon 1 Grey Square
+PlayAlertSound 2 100
+AreaLevel < 71
+
+#--------------------------
+# [[1300]] Sanctum keys
+#--------------------------
+
+Show
+BaseType == "Gold Key"
+SetTextColor 255 205 113
+SetBorderColor 255 207 132
+SetBackgroundColor 76 51 12 200
+#SetBackgroundColor 205 129 0 200
+PlayAlertSound 2 300
+SetFontSize 35
+PlayEffect Pink
+MinimapIcon 1 Yellow Triangle
+
+Show
+BaseType == "Silver Key"
+SetTextColor 55 55 55 #255 207 132
+SetBorderColor 255 207 132
+SetBackgroundColor 133 134 135 200
+PlayAlertSound 2 200
+SetFontSize 35
+PlayEffect Pink
+MinimapIcon 1 White Triangle
+
+Show
+BaseType == "Bronze Key"
+SetTextColor 255 207 132
+SetBorderColor 255 207 132
+SetBackgroundColor 76 51 12 200
+PlayAlertSound 2 100
+SetFontSize 35
+PlayEffect Pink
+MinimapIcon 0 Brown Triangle
+
+#--------------------------
+# [[1400]] Things of maps
+#--------------------------
+
+#  [1401] pinnacle keys
+Show
+Class == "Pinnacle Keys"
+SetTextColor 255 255 255 255
+SetBorderColor 255 255 255 255
+SetBackgroundColor 240 90 35 200
+PlayAlertSound 1 100
+PlayEffect Orange
+MinimapIcon 1 Orange Square
+SetFontSize 40
+
+Show
+BaseType == "An Audience with the King" "Breachstone" "Simulacrum"
+SetFontSize 45
+SetTextColor 255 0 0 255
+SetBorderColor 255 0 0 255
+SetBackgroundColor 255 255 255 255
+PlayAlertSound 6 300
+PlayEffect Red
+MinimapIcon 0 Red Star
+
+#  [1402] logbooks
+Show
+BaseType "Expedition Logbook"
+SetTextColor 255 255 255 255
+SetBorderColor 255 255 255 255
+SetBackgroundColor 240 90 35 200
+PlayAlertSound 1 100
+PlayEffect White
+MinimapIcon 1 White Circle
+
+#  [1403] omens
+Show
+Class == "Omen"
+BaseType == "Omen of Greater Annulment" "Omen of Amelioration" "Omen of Dextral Annulment" "Omen of Dextral Erasure" "Omen of Sinistral Annulment" "Omen of Sinistral Erasure" "Omen of Whittling"
+SetFontSize 45
+SetTextColor 255 0 0 255
+SetBorderColor 255 0 0 255
+SetBackgroundColor 255 255 255 255
+PlayAlertSound 6 300
+PlayEffect Red
+MinimapIcon 0 Red Star
+
+Show
+Class == "Omen"
+BaseType == "Omen of Resurgence" "Omen of Corruption"
+SetTextColor 255 255 255 255
+SetBorderColor 255 255 255 255
+SetBackgroundColor 240 90 35 200
+PlayAlertSound 1 100
+PlayEffect Orange
+MinimapIcon 1 Orange Square
+SetFontSize 40
+
+Show
+Class == "Omen"
+BaseType == "Omen of Sinistral Coronation" "Omen of Dextral Coronation" "Omen of Dextral Alchemy" "Omen of Sinistral Alchemy" "Omen of Greater Exaltation" "Omen of Sinistral Exaltation" "Omen of Dextral Exaltation"
+SetTextColor 255 207 132
+SetBorderColor 255 207 132
+SetBackgroundColor 76 51 12
+PlayAlertSound 2 300
+PlayEffect White
+MinimapIcon 1 White Circle
+SetFontSize 40
+
+Show
+Class == "Omen"
+BaseType == "Omen of Refreshment"
+SetTextColor 255 207 132
+SetBorderColor 255 207 132
+MinimapIcon 2 Grey Circle
+
+Show
+Class == "Omen"
+SetTextColor 255 207 132
+SetBorderColor 255 207 132
+SetBackgroundColor 76 51 12
+PlayAlertSound 2 300
+PlayEffect White
+MinimapIcon 1 White Circle
+SetFontSize 40
+
+#  [1404] delirium / distilled emotions: -----------------------
+Show
+Class "Currency"
+BaseType "Distilled Ire"
+SetTextColor 255 207 132
+SetBorderColor 255 207 132
+SetBackgroundColor 124 25 22
+PlayAlertSound 2 300
+PlayEffect White
+MinimapIcon 1 White Circle
+
+Show
+Class "Currency"
+BaseType "Distilled Guilt"
+SetTextColor 255 207 132
+SetBorderColor 255 207 132
+SetBackgroundColor 158 81 107 200
+PlayAlertSound 2 300
+PlayEffect White
+MinimapIcon 1 White Circle
+
+Show
+Class "Currency"
+BaseType "Distilled Greed"
+SetTextColor 255 205 113
+SetBorderColor 255 207 132
+SetBackgroundColor 205 129 0 200
+PlayAlertSound 2 300
+PlayEffect White
+MinimapIcon 1 White Circle
+
+Show
+Class "Currency"
+BaseType "Distilled Paranoia"
+SetTextColor 85 67 32
+SetBorderColor 255 207 132
+SetBackgroundColor 255 227 102 160
+PlayAlertSound 2 300
+PlayEffect White
+MinimapIcon 1 White Circle
+
+Show
+Class "Currency"
+BaseType "Distilled Envy"
+SetTextColor 255 207 132
+SetBorderColor 255 207 132
+SetBackgroundColor 80 132 59 200
+PlayAlertSound 2 300
+PlayEffect White
+MinimapIcon 1 White Circle
+
+Show
+Class "Currency"
+BaseType "Distilled Disgust"
+SetTextColor 255 207 132
+SetBorderColor 255 207 132
+SetBackgroundColor 37 42 9
+PlayAlertSound 2 300
+PlayEffect White
+MinimapIcon 1 White Circle
+
+Show
+Class "Currency"
+BaseType "Distilled Despair"
+SetTextColor 255 207 132
+SetBorderColor 255 207 132
+SetBackgroundColor 9 30 56
+PlayAlertSound 2 300
+PlayEffect White
+MinimapIcon 1 White Circle
+
+Show
+Class "Currency"
+BaseType "Distilled Fear"
+SetTextColor 255 207 132
+SetBorderColor 255 207 132
+SetBackgroundColor 55 18 55
+PlayAlertSound 2 300
+PlayEffect White
+MinimapIcon 1 White Circle
+
+Show
+Class "Currency"
+BaseType "Distilled Suffering"
+SetTextColor 22 22 22
+SetBorderColor 255 207 132
+SetBackgroundColor 33 34 35 230
+PlayAlertSound 2 300
+PlayEffect White
+MinimapIcon 1 White Circle
+
+Show
+Class "Currency"
+BaseType "Distilled Isolation"
+SetTextColor 255 207 132
+SetBorderColor 255 207 132
+SetBackgroundColor 133 134 135 200
+PlayAlertSound 2 300
+PlayEffect White
+MinimapIcon 1 White Circle
+
+#  [1405] catalysts: -----------------------
+Show
+Class "Currency"
+BaseType "Adaptive Catalyst" 
+SetTextColor 255 207 132
+SetBorderColor 239 34 255
+SetBackgroundColor 38 36 31 222
+PlayAlertSound 2 300
+PlayEffect White
+MinimapIcon 1 White Circle
+
+Show
+Class "Currency"
+BaseType "Carapace Catalyst" 
+SetTextColor 255 207 132
+SetBorderColor 239 34 255
+SetBackgroundColor 10 83 2 222
+PlayAlertSound 2 300
+PlayEffect White
+MinimapIcon 1 White Circle
+
+Show
+Class "Currency"
+BaseType "Chayula's Catalyst" 
+SetTextColor 255 207 132
+SetBorderColor 239 34 255
+SetBackgroundColor 80 19 95 222
+PlayAlertSound 2 300
+PlayEffect White
+MinimapIcon 1 White Circle
+
+Show
+Class "Currency"
+BaseType "Esh's Catalyst" 
+SetTextColor 255 207 132
+SetBorderColor 239 34 255
+SetBackgroundColor 34 4 98 222
+PlayAlertSound 2 300
+PlayEffect White
+MinimapIcon 1 White Circle
+
+Show
+Class "Currency"
+BaseType "Flesh Catalyst" 
+SetTextColor 255 207 132
+SetBorderColor 239 34 255
+SetBackgroundColor 126 3 22 222
+PlayAlertSound 2 300
+PlayEffect White
+MinimapIcon 1 White Circle
+
+Show
+Class "Currency"
+BaseType "Neural Catalyst" 
+SetTextColor 255 207 132
+SetBorderColor 239 34 255
+SetBackgroundColor 4 44 122 222
+PlayAlertSound 2 300
+PlayEffect White
+MinimapIcon 1 White Circle
+
+Show
+Class "Currency"
+BaseType "Reaver Catalyst" 
+SetTextColor 255 207 132
+SetBorderColor 239 34 255
+SetBackgroundColor 55 29 10 222
+PlayAlertSound 2 300
+PlayEffect White
+MinimapIcon 1 White Circle
+
+Show
+Class "Currency"
+BaseType "Sibilant Catalyst" 
+SetTextColor 255 207 132
+SetBorderColor 239 34 255
+SetBackgroundColor 20 75 112 222
+PlayAlertSound 2 300
+PlayEffect White
+MinimapIcon 1 White Circle
+
+Show
+Class "Currency"
+BaseType "Skittering Catalyst" 
+SetTextColor 255 207 132
+SetBorderColor 239 34 255
+SetBackgroundColor 28 42 9 222
+PlayAlertSound 2 300
+PlayEffect White
+MinimapIcon 1 White Circle
+
+Show
+Class "Currency"
+BaseType "Tul's Catalyst" 
+SetTextColor 255 207 132
+SetBorderColor 239 34 255
+SetBackgroundColor 36 52 77 222
+PlayAlertSound 2 300
+PlayEffect White
+MinimapIcon 1 White Circle
+
+Show
+Class "Currency"
+BaseType "Uul-Netol's Catalyst" 
+SetTextColor 255 207 132
+SetBorderColor 239 34 255
+SetBackgroundColor 92 77 22 222
+PlayAlertSound 2 300
+PlayEffect White
+MinimapIcon 1 White Circle
+
+Show
+Class "Currency"
+BaseType "Xoph's Catalyst" 
+SetTextColor 255 207 132
+SetBorderColor 239 34 255
+SetBackgroundColor 163 64 3 222
+PlayAlertSound 2 300
+PlayEffect White
+MinimapIcon 1 White Circle
+
+#--------------------------
+# [[1500]] Overrides - Uniques, Valuables
+#--------------------------
+
+Show
+Rarity Unique
+BaseType == "Ring"
+Sockets > 0
+SetTextColor 175 96 37 255
+SetBorderColor 175 96 37 255
+SetBackgroundColor 53 13 13 255
+PlayAlertSound 3 300
+PlayEffect Brown
+MinimapIcon 1 Brown Star
+SetFontSize 40
+
+Show
+Rarity Unique
+BaseType "Omen Crest Shield"
+Sockets > 1
+SetFontSize 45
+SetTextColor 255 0 0 255
+SetBorderColor 255 0 0 255
+SetBackgroundColor 255 255 255 255
+PlayAlertSound 6 300
+PlayEffect Red
+MinimapIcon 0 Red Star
+
+Show
+Rarity Unique
+BaseType == "Armoured Cap" "Emerald" "Furtive Wraps" "Incense Relic" "Ornate Belt" "Ring" "Ruby" "Sapphire" "Smuggler Coat" "Stone Tower Shield" "Diamond" "Timeless Jewel" "Ultimate Life Flask" "Ultimate Mana Flask" "Utility Belt" "Vase Relic" "Spiked Club" "Trimmed Greaves" "Time-Lost Diamond"
+SetFontSize 45
+SetTextColor 255 0 0 255
+SetBorderColor 255 0 0 255
+SetBackgroundColor 255 255 255 255
+PlayAlertSound 6 300
+PlayEffect Red
+MinimapIcon 0 Red Star
+
+Show
+Rarity Unique
+PlayAlertSound 3 300
+PlayEffect Brown
+MinimapIcon 2 Brown Star
+
+## Divine Orb Style
+Show
+Class "Currency"
+BaseType "Mirror" "Divine" "Perfect Jeweller's Orb"
+SetFontSize 45
+SetTextColor 255 0 0 255
+SetBorderColor 255 0 0 255
+SetBackgroundColor 255 255 255 255
+PlayAlertSound 6 300
+PlayEffect Red
+MinimapIcon 0 Red Star
+
+#--------------------------
+# [[1600]] Gold
+#--------------------------
+
+Show
+StackSize >= 500
+BaseType == "Gold"
+SetTextColor 255 255 255
+SetBorderColor 255 255 255
+PlayEffect Orange Temp
+
+Hide
+StackSize <= 100
+BaseType == "Gold"
+AreaLevel >= 65
+
+Show
+BaseType == "Gold"
+SetTextColor 180 180 180
+SetBorderColor 0 0 0 255
+SetBackgroundColor 0 0 0 180
+
+#--------------------------
+# [[1700]] Uncut Gems
+#--------------------------
+
+Show
+ItemLevel = 20
+BaseType "Uncut Skill Gem" "Uncut Spirit Gem"
+SetFontSize 45
+SetTextColor 255 0 0 255
+SetBorderColor 255 0 0 255
+SetBackgroundColor 255 255 255 255
+PlayAlertSound 6 300
+PlayEffect Red
+MinimapIcon 0 Red Star
+
+Show
+BaseType "Uncut Skill Gem"
+ItemLevel = 19
+SetTextColor 255 140 0 255
+SetBorderColor 20 240 240 255
+PlayAlertSound 2 300
+PlayEffect Brown
+MinimapIcon 1 Cyan Triangle
+
+Show
+BaseType "Uncut Skill Gem"
+SetTextColor 20 240 240
+SetBorderColor 20 240 240
+PlayAlertSound 2 300
+PlayEffect Cyan
+MinimapIcon 1 Cyan Triangle
+
+Show
+BaseType "Uncut Spirit Gem"
+ItemLevel = 19
+SetTextColor 255 140 0 255
+SetBorderColor 20 240 240 255
+PlayAlertSound 2 300
+PlayEffect Brown
+MinimapIcon 1 Cyan Triangle
+
+Show
+BaseType "Uncut Spirit Gem"
+SetTextColor 140 140 140
+SetBorderColor 20 240 240
+PlayAlertSound 2 300
+PlayEffect Cyan
+MinimapIcon 1 Cyan Triangle
+
+#--------------------------
+# [[1800]] Socketables and Special Character Equipment
+#--------------------------
+
+# Special A Tier
+#  [1801] league specific socketables (soul cores) and timeless-jewels
+Show
+Class == "Socketable"
+BaseType == "Soul Core of Azcapa" # + spirit or rarity
+SetFontSize 40
+SetTextColor 255 0 0 255
+SetBorderColor 255 0 0 255
+SetBackgroundColor 255 255 255 255
+PlayAlertSound 6 300
+PlayEffect Red
+MinimapIcon 0 Red Star
+
+Show
+Class == "Socketable"
+BaseType == "Soul Core of Citaqualotl" "Soul Core of Zalatl" # +5 elemental res / +2% max mana
+SetTextColor 255 255 255 255
+SetBorderColor 255 255 255 255
+SetFontSize 40
+SetBackgroundColor 240 90 35 200
+PlayAlertSound 1 100
+PlayEffect White
+MinimapIcon 1 White Circle
+
+Show 
+BaseType "Soul Core" "Timeless"
+SetTextColor 0 240 190
+SetBorderColor 0 240 190
+SetFontSize 40
+MinimapIcon 0 Cyan Diamond
+PlayAlertSound 2 300
+PlayEffect Cyan
+
+# Special Highlight
+#  [1802] breach rings
+Show 
+Rarity Rare
+BaseType == "Breach Ring"
+SetTextColor 239 34 255
+SetBorderColor 239 34 255
+SetBackgroundColor 0 0 0 230
+SetFontSize 40
+MinimapIcon 1 Pink Diamond
+PlayEffect Pink
+PlayAlertSound 2 300
+
+Show 
+Rarity <= Magic
+BaseType == "Breach Ring"
+SetTextColor 239 34 255
+SetBackgroundColor 0 0 0 230
+SetFontSize 35
+MinimapIcon 2 Pink Diamond
+PlayEffect Pink Temp
+
+# Special A Tier
+#  [1803] Sanctum Relics
+Show
+Rarity <= Magic
+BaseType == "Tapestry Relic" "Amphora Relic" # relics with potencial for merchant affixes
+SetTextColor 0 240 190
+SetBorderColor 0 240 190
+SetFontSize 40
+MinimapIcon 2 Cyan Triangle
+PlayAlertSound 2 200
+PlayEffect Cyan
+
+Show 
+Class "Relic"
+SetTextColor 0 240 190
+SetBorderColor 0 240 190
+MinimapIcon 2 Cyan Triangle
+
+# Special A Tier
+#  [1804] any jewels
+Show
+Class "Jewel"
+BaseType == "Ruby"
+Rarity <= Rare
+SetTextColor 255 207 132
+SetBorderColor 0 240 190
+SetBackgroundColor 124 25 22
+SetFontSize 40
+MinimapIcon 2 Cyan Triangle
+PlayEffect Cyan
+
+Show
+Class "Jewel"
+BaseType == "Emerald"
+Rarity <= Rare
+SetTextColor 255 207 132
+SetBorderColor 0 240 190
+SetBackgroundColor 80 132 59 200
+SetFontSize 40
+MinimapIcon 2 Cyan Triangle
+PlayEffect Cyan
+
+Show
+Class "Jewel"
+BaseType == "Sapphire"
+Rarity <= Rare
+SetBorderColor 0 240 190
+SetTextColor 255 207 132
+SetBackgroundColor 9 30 56
+SetFontSize 40
+MinimapIcon 2 Cyan Triangle
+PlayEffect Cyan
+
+Show
+Class "Jewel"
+Rarity <= Rare
+SetTextColor 0 240 190
+SetBorderColor 0 240 190
+SetFontSize 40
+MinimapIcon 2 Cyan Triangle
+PlayEffect Cyan
+
+# Special B Tier 
+#  [1805] any runes and charms
+
+Show 
+BaseType " Rune" " Charm"
+SetTextColor 0 240 190
+PlayEffect Cyan Temp
+
+#--------------------------
+# [[1900]] Socketables and Special Character Equipment
+#--------------------------
+
+#  [1901] currency Tier A: Gemcutter, Annullment
+Show
+Class "Currency"
+BaseType "Greater Jeweller's Orb"
+SetTextColor 255 255 255 255
+SetBorderColor 255 255 255 255
+SetBackgroundColor 240 90 35 200
+PlayAlertSound 1 100
+PlayEffect White
+MinimapIcon 1 White Circle
+SetFontSize 40
+
+Show
+Class "Currency"
+BaseType "Gemcutter's Prism" "Orb of Chance" "Orb of Annulment"
+SetTextColor 255 255 255 255
+SetBorderColor 255 255 255 255
+SetBackgroundColor 240 90 35 200
+PlayAlertSound 1 150
+PlayEffect White
+MinimapIcon 1 White Circle
+SetFontSize 40
+
+#  [1902] currency Tier B: Vaal, Chaos, Exalt, Exotic
+Show
+Class "Currency"
+BaseType "Vaal Orb" 
+SetTextColor 255 158 132
+SetBorderColor 255 207 132
+SetBackgroundColor 76 51 12
+PlayAlertSound 2 300
+PlayEffect White
+MinimapIcon 1 White Circle
+SetFontSize 40
+
+Show
+Class "Currency"
+BaseType "Chaos Orb"
+SetTextColor 207 130 255
+SetBorderColor 255 207 132
+SetBackgroundColor 76 51 12
+PlayAlertSound 2 300
+PlayEffect White
+MinimapIcon 1 White Circle
+SetFontSize 40
+
+Show
+Class "Currency"
+BaseType "Exalted Orb"
+SetTextColor 255 225 200
+SetBorderColor 255 207 132
+SetBackgroundColor 76 51 12
+PlayAlertSound 2 300
+PlayEffect White
+MinimapIcon 1 White Circle
+SetFontSize 40
+
+Show
+Class "Currency"
+BaseType "Orb of Alchemy"
+SetTextColor 130 255 157
+SetBorderColor 255 207 132
+SetBackgroundColor 76 51 12
+PlayAlertSound 2 300
+PlayEffect White
+MinimapIcon 1 White Circle
+SetFontSize 40
+
+Show
+Class "Currency"
+BaseType "Lesser Jeweller's Orb" "Exotic" "Artificer's Orb" "Glassblower's Bauble" "Regal Orb" "Chance Shard"
+SetTextColor 255 207 132
+SetBorderColor 255 207 132
+SetBackgroundColor 76 51 12
+PlayAlertSound 2 300
+PlayEffect White
+MinimapIcon 1 White Circle
+SetFontSize 40
+
+#  [1903] essences: -----------------------
+
+Show
+Class "Currency"
+BaseType "Greater Essence of Battle"
+SetTextColor 255 207 132
+SetBorderColor 132 255 207
+SetBackgroundColor 169 141 91 200
+PlayAlertSound 2 300
+PlayEffect White
+MinimapIcon 1 White Circle
+SetFontSize 40
+
+Show
+Class "Currency"
+BaseType "Greater Essence of Electricity"
+SetTextColor 255 207 132
+SetBorderColor 132 255 207
+SetBackgroundColor 67 80 154 200
+PlayAlertSound 2 300
+PlayEffect White
+MinimapIcon 1 White Circle
+SetFontSize 40
+
+Show
+Class "Currency"
+BaseType "Greater Essence of Enhancement"
+SetTextColor 255 207 132
+SetBorderColor 132 255 207
+SetBackgroundColor 194 129 106 200
+PlayAlertSound 2 300
+PlayEffect White
+MinimapIcon 1 White Circle
+SetFontSize 40
+
+Show
+Class "Currency"
+BaseType "Greater Essence of Flames"
+SetTextColor 85 40 40
+SetBorderColor 132 255 207
+SetBackgroundColor 255 167 30 200
+PlayAlertSound 2 300
+PlayEffect White
+MinimapIcon 1 White Circle
+SetFontSize 40
+
+Show
+Class "Currency"
+BaseType "Greater Essence of Haste"
+SetTextColor 255 207 132
+SetBorderColor 132 255 207
+SetBackgroundColor 103 144 66 200
+PlayAlertSound 2 300
+PlayEffect White
+MinimapIcon 1 White Circle
+SetFontSize 40
+
+Show
+Class "Currency"
+BaseType "Greater Essence of Ice"
+SetTextColor 255 207 132
+SetBorderColor 132 255 207
+SetBackgroundColor 103 103 103 200
+PlayAlertSound 2 300
+PlayEffect White
+MinimapIcon 1 White Circle
+SetFontSize 40
+
+Show
+Class "Currency"
+BaseType "Greater Essence of Ruin"
+SetTextColor 255 207 132
+SetBorderColor 132 255 207
+SetBackgroundColor 155 80 198 200
+PlayAlertSound 2 300
+PlayEffect White
+MinimapIcon 1 White Circle
+SetFontSize 40
+
+Show
+Class "Currency"
+BaseType "Greater Essence of Sorcery"
+SetTextColor 255 207 132
+SetBorderColor 132 255 207
+SetBackgroundColor 88 155 158 200
+PlayAlertSound 2 300
+PlayEffect White
+MinimapIcon 1 White Circle
+SetFontSize 40
+
+Show
+Class "Currency"
+BaseType "Greater Essence of Torment"
+SetTextColor 255 207 132
+SetBorderColor 132 255 207
+SetBackgroundColor 156 139 127 200
+PlayAlertSound 2 300
+PlayEffect White
+MinimapIcon 1 White Circle
+SetFontSize 40
+
+Show
+Class "Currency"
+BaseType "Greater Essence of the Body"
+SetTextColor 255 207 132
+SetBorderColor 132 255 207
+SetBackgroundColor 202 98 97 200
+PlayAlertSound 2 300
+PlayEffect White
+MinimapIcon 1 White Circle
+SetFontSize 40
+
+Show
+Class "Currency"
+BaseType "Greater Essence of the Infinite"
+SetTextColor 55 200 132
+SetBorderColor 132 255 207
+SetBackgroundColor 100 33 33 200
+PlayAlertSound 2 300
+PlayEffect White
+MinimapIcon 1 White Circle
+SetFontSize 40
+
+Show
+Class "Currency"
+BaseType "Greater Essence of the Mind"
+SetTextColor 255 207 132
+SetBorderColor 132 255 207
+SetBackgroundColor 84 115 255 200
+PlayAlertSound 2 300
+PlayEffect White
+MinimapIcon 1 White Circle
+SetFontSize 40
+
+Show
+Class "Currency"
+BaseType "Greater Essence"
+SetTextColor 255 207 132
+SetBorderColor 255 207 132
+SetBackgroundColor 76 51 12
+PlayAlertSound 2 300
+PlayEffect White
+MinimapIcon 1 White Circle
+SetFontSize 40
+
+#  [1904] default styles for Distillates, Catalysts and Essences:
+Show
+Class "Currency"
+BaseType "Distilled" "Catalyst" "Essence of"
+SetTextColor 255 207 132
+SetBorderColor 255 207 132
+SetBackgroundColor 76 51 12
+PlayAlertSound 2 300
+PlayEffect White
+MinimapIcon 1 White Circle
+
+#  [1905] currency Tier C: Vaal, Chaos, Exalt, Exotic
+Show
+Class "Currency"
+BaseType "Arcanist's Etcher" "Armourer's Scrap" "Blacksmith's Whetstone" "Orb of Augmentation" "Orb of Transmutation" "Regal Shard"
+SetTextColor 255 207 132
+SetBorderColor 255 207 132
+MinimapIcon 2 Grey Circle
+
+Show
+Class "Currency"
+BaseType "Simulacrum Splinter"
+SetTextColor 255 207 132
+SetBorderColor 132 255 207
+PlayAlertSound 2 100
+MinimapIcon 2 Cyan Circle
+
+Show
+Class "Currency"
+BaseType "Breach Splinter" 
+SetTextColor 255 207 132
+SetBorderColor 239 34 255
+MinimapIcon 2 Pink Circle
+
+Show
+Class "Currency"
+BaseType " Artifact"
+SetTextColor 255 207 132
+SetBorderColor 255 207 132
+MinimapIcon 2 Grey Circle
+
+Show
+Class "Currency"
+BaseType "Shard"
+
+# Unknown currency
+Show
+Class "Currency"
+SetTextColor 255 207 132
+SetBorderColor 255 207 132
+SetBackgroundColor 76 51 12
+PlayAlertSound 2 300
+PlayEffect Pink
+MinimapIcon 1 White Circle
+
+#  [1906] fragments / tablets
+Show
+BaseType " Tablet" " Fragment" "Cowardly Fate" "Deadly Fate" "Victorious Fate"
+SetTextColor 255 207 255
+SetBorderColor 255 207 255
+SetBackgroundColor 65 20 80
+PlayAlertSound 2 300
+PlayEffect White
+MinimapIcon 1 White Square
+SetFontSize 40
+
+#  [1907] ascendancy keys
+Show
+BaseType "Barya" "Ultimatum"
+Rarity >= Magic
+SetTextColor 255 207 255
+SetBorderColor 255 207 255
+SetBackgroundColor 65 20 80
+PlayAlertSound 2 300
+PlayEffect White
+SetFontSize 40
+PlayEffect Blue
+MinimapIcon 1 White Square
+
+Show
+BaseType "Barya" "Ultimatum"
+SetTextColor 255 207 255
+SetBorderColor 255 207 255
+SetBackgroundColor 65 20 80
+PlayAlertSound 2 300
+PlayEffect White
+MinimapIcon 1 White Square
+
+#--------------------------
+# [[2000]] Waystones 
+#--------------------------
+
+Show
+WaystoneTier >= 15
+BaseType "Waystone"
+Rarity <= Rare
+SetTextColor 200 200 200 255
+SetBorderColor 255 140 0 255
+PlayAlertSound 4 200
+MinimapIcon 1 White Square
+SetFontSize 40
+
+Show
+WaystoneTier < 14
+BaseType "Waystone"
+Rarity <= Rare
+SetTextColor 200 200 200
+SetBorderColor 255 255 255
+PlayAlertSound 4 200
+MinimapIcon 1 White Square
+SetFontSize 35
+
+Show
+WaystoneTier < 7
+BaseType "Waystone"
+Rarity <= Rare
+SetTextColor 100 100 100
+SetBorderColor 255 255 255
+PlayAlertSound 4 100
+SetFontSize 35
+
+Show
+BaseType "Waystone"
+Rarity <= Rare
+SetTextColor 255 255 255
+SetBorderColor 255 255 255
+PlayAlertSound 4 300
+PlayEffect White
+MinimapIcon 1 White Square
+SetFontSize 40
+
+#--------------------------
+# [[2100]] Value rares for leveling
+#--------------------------
+
+Show
+Class "Rings" "Amulets" "Belts"
+Rarity Rare
+SetFontSize 40
+SetTextColor 233 206 75
+SetBorderColor 233 206 75
+PlayEffect Yellow
+MinimapIcon 1 Yellow Diamond
+
+#--------------------------
+# [[2200]] Rings, Amulets, Belts
+#--------------------------
+
+Show
+Rarity Normal
+Class "Rings" "Amulets" "Belts"
+SetFontSize 40
+
+Show
+Class "Rings" "Amulets" "Belts"
+Rarity Magic
+SetFontSize 40
+
+#--------------------------
+# [[2300]] OPTIONAL RULES
+#--------------------------
+# TO ENABLE RULES, REMOVE THE # AT THE START OF THE LINE
+
+
+### OPTIONAL RULE: Hide random bases
+# REMOVE THE BASES YOU --DO-- WANT TO SEE BEFORE SETTING TO HIDE
+
+# Hide
+# Rarity Normal
+# ItemLevel <= 60
+
+### OPTIONAL RULE: REDUCES BACKGROUND ON LOW LEVEL BASES
+
+# Show
+# Rarity <= Magic
+# Class "Flask" "Body" "Helmet" "Boots" "Gloves" "Shields" "Quiver" "Mace" "Staff" "Quarter" "Bow" "Crossbow" "Wand" "Sceptre"
+# AreaLevel >= 65
+# DropLevel <= 50
+# SetBackgroundColor 0 0 0 125
