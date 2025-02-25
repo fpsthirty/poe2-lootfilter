@@ -392,42 +392,42 @@ PlayAlertSound 2 100
 
 # REMOVE THE BASES YOU --DO-- WANT TO HIDE
 
-Hide
-BaseType "Chiming Staff"
-Rarity <= Rare
-ItemLevel <= 77
-AreaLevel >= 65
-
-Hide
-Class "Sceptre"
-Rarity <= Rare
-ItemLevel <= 80
-AreaLevel >= 65
-
-Hide
-BaseType "Uncut Skill Gem" "Uncut Spirit Gem"
-ItemLevel <= 19
-AreaLevel >= 65
-
-Hide # only runes existing at the time of patch v0.1.1 are listed here:
-BaseType "Desert Rune" "Storm Rune" "Body Rune" "Rebirth Rune" "Stone Rune" "Glacial Rune" "Iron Rune" "Mind Rune" "Inspiration Rune" "Vision Rune"
-Rarity Normal
-AreaLevel >= 65
-
-Hide
-Class "Flask"
-Rarity <= Magic
-AreaLevel >= 65
-
-Hide
-Class "Shields"
-Rarity <= Rare
-AreaLevel >= 65
-
-Hide
-Class "Currency"
-BaseType "Orb of Augmentation" "Orb of Transmutation" "Regal Shard" "Transmutation Shard"
-AreaLevel >= 65
+#Hide
+#BaseType "Chiming Staff"
+#Rarity <= Rare
+#ItemLevel <= 77
+#AreaLevel >= 65
+#
+#Hide
+#Class "Sceptre"
+#Rarity <= Rare
+#ItemLevel <= 80
+#AreaLevel >= 65
+#
+#Hide
+#BaseType "Uncut Skill Gem" "Uncut Spirit Gem"
+#ItemLevel <= 19
+#AreaLevel >= 65
+#
+#Hide # only runes existing at the time of patch v0.1.1 are listed here:
+#BaseType "Desert Rune" "Storm Rune" "Body Rune" "Rebirth Rune" "Stone Rune" "Glacial Rune" "Iron Rune" "Mind Rune" "Inspiration Rune" "Vision Rune"
+#Rarity Normal
+#AreaLevel >= 65
+#
+#Hide
+#Class "Flask"
+#Rarity <= Magic
+#AreaLevel >= 65
+#
+#Hide
+#Class "Shields"
+#Rarity <= Rare
+#AreaLevel >= 65
+#
+#Hide
+#Class "Currency"
+#BaseType "Orb of Augmentation" "Orb of Transmutation" "Regal Shard" "Transmutation Shard"
+#AreaLevel >= 65
 
 #--------------------------
 # [[0800]] For T11+ maps / area level 75+:
