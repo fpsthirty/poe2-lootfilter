@@ -2,14 +2,14 @@
 # fpsthirty caster LootFilter — Path of Exile 2
 #===============================================================================================================
 #
-# VERSION: 	0.1.1-1 (actual for PoE2 v0.1.1)
+# VERSION: 	0.1.1-2 (actual for PoE2 v0.1.1)
 # AUTHOR: 	fpsthirty
 # SOURCE: 	https://github.com/fpsthirty/poe2-lootfilter
 #
 # --- based on NeverSink's lootfilter v0.1.1 ---
 #
 # basic principles of this lootfilter:
-# 1. Take everything you see on the ground. At Area levels 1+ / 65+ / 71+ you see fewer and fewer items that have str- & dex-requirements on them and other useless items for your class.
+# 1. Take everything you see on the ground. At Area levels 1+ / 65+ / 71+ / 75+ you see fewer and fewer items that have str- & dex-requirements on them and other useless items for your class.
 # 2. Minimalism for equipment: 99% of the equipment is garbage that doesn't deserve much custom styling, but you'll see a colorful design of map-specific items etc.
 # Special equipment stylization applies in three cases: 
 # - for the best bases of the corresponding slot, on which the maximum affix tier (81–82 itemLevel) can be generated;
@@ -65,7 +65,7 @@
 #   [1402] logbooks
 #   [1403] omens 
 #   [1404] delirium / distilled emotions
-#   [1405] catalysts
+#   [1405] breach / catalysts
 # [[1500]] Overrides - Uniques, Valuables
 # [[1600]] Gold
 # [[1700]] Uncut Gems
@@ -136,10 +136,6 @@
 # Rarity <= Rare
 # DropLevel < 61
 # AreaLevel >= 71
-#
-# Show
-# Rarity Unique
-# BaseType "Spiked Club"
 
 #--------------------------
 # [[0300]] Hide stuff with specific names:
@@ -438,12 +434,12 @@ Hide
 Class "Helmet" "Body" "Gloves" "Boots" "Shields"
 Rarity <= Rare
 DropLevel <= 60
-AreaLevel >= 71
+AreaLevel >= 75
 
 Hide
 BaseType "Advanced"
 Rarity <= Rare
-AreaLevel >= 71
+AreaLevel >= 75
 
 Hide
 BaseType " Charm"
@@ -581,12 +577,12 @@ BaseType " Circlet" " Tiara"
 
 Show
 BaseType " Crown"
-Rarity Magic
+Rarity Magic Rare
 
 #gloves:
 Show
 BaseType " Gloves" " Cuffs"
-Rarity Magic
+Rarity Magic Rare
 
 #boots:
 Show
@@ -594,12 +590,12 @@ BaseType " Sandals" " Slippers"
 
 Show
 BaseType " Leggings"
-Rarity Magic
+Rarity Magic Rare
 
 #shield:
 Show
 BaseType " Shield"
-Rarity Magic
+Rarity Magic Rare
 
 Show
 Class "Shields"
@@ -934,16 +930,6 @@ MinimapIcon 0 Brown Triangle
 
 #  [1401] pinnacle keys
 Show
-Class == "Pinnacle Keys"
-SetTextColor 255 255 255 255
-SetBorderColor 255 255 255 255
-SetBackgroundColor 240 90 35 200
-PlayAlertSound 1 100
-PlayEffect Orange
-MinimapIcon 1 Orange Square
-SetFontSize 40
-
-Show
 BaseType == "An Audience with the King" "Breachstone" "Simulacrum"
 SetFontSize 45
 SetTextColor 255 0 0 255
@@ -952,6 +938,16 @@ SetBackgroundColor 255 255 255 255
 PlayAlertSound 6 300
 PlayEffect Red
 MinimapIcon 0 Red Star
+
+Show
+Class == "Pinnacle Keys"
+SetTextColor 255 255 255 255
+SetBorderColor 255 255 255 255
+SetBackgroundColor 240 90 35 200
+PlayAlertSound 1 100
+PlayEffect Orange
+MinimapIcon 1 Orange Square
+SetFontSize 40
 
 #  [1402] logbooks
 Show
@@ -1115,7 +1111,7 @@ PlayAlertSound 2 300
 PlayEffect White
 MinimapIcon 1 White Circle
 
-#  [1405] catalysts: -----------------------
+#  [1405] breach / catalysts: -----------------------
 Show
 Class "Currency"
 BaseType "Adaptive Catalyst" 
@@ -1320,7 +1316,7 @@ SetBackgroundColor 0 0 0 180
 #--------------------------
 
 Show
-ItemLevel = 20
+ItemLevel >= 20
 BaseType "Uncut Skill Gem" "Uncut Spirit Gem"
 SetFontSize 45
 SetTextColor 255 0 0 255

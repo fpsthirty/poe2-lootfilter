@@ -3,10 +3,10 @@
 *based on NeverSink's lootfilter v0.1.1 and augmented with a few hundred of my additional rules*
 
 ## Basic principles of this lootfilter:
-1. <ins>Take everything you see on the ground</ins>. At AreaLevel *1+ / 65+ / 71+* you see fewer and fewer items that have str- & dex-requirements on them and other useless items for your class. <br> **Characters of level 90+**: check out the "Endgame custom rules" section to apply additional rules for hiding potentially excessive items
-2. <ins>Minimalism for equipment</ins>: ~99% of the equipment is garbage that doesn't deserve much custom styling, but you'll see a colorful design of map-specific items etc.
-Special equipment stylization applies in three cases: 
-   - for the best bases of the corresponding slot, on which the maximum affix tier *(81–82 itemLevel)* can be generated;
+1. <ins>Take everything you see on the ground</ins>. At AreaLevel *1+ / 65+ / 71+ / 75+* you see fewer and fewer items that have str- & dex-requirements on them and other useless items for your class. <br> **Characters of level 90+**: check out the "Endgame custom rules" section to apply additional rules for hiding potentially excessive items
+2. <ins>Minimalism for equipment styles</ins>: ~99% of the equipment is garbage that doesn't deserve much custom styling, but you'll see a colorful design of currency, map-specific items etc.
+Special equipment stylization applies in three cases:
+   - for the best bases of the corresponding slot, on which the maximum affix tier *(itemLevel 81–82)* can be generated;
    - for some infrequent items on low-level characters: jewelry, belts, and Chiming staff;
    - items with additional quality.
 
