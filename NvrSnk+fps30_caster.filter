@@ -2,7 +2,7 @@
 # fpsthirty caster LootFilter — Path of Exile 2
 #===============================================================================================================
 #
-# VERSION: 	0.1.1-2 (actual for PoE2 v0.1.1)
+# VERSION: 	0.1.1-3 (actual for PoE2 v0.1.1)
 # AUTHOR: 	fpsthirty
 # SOURCE: 	https://github.com/fpsthirty/poe2-lootfilter
 #
@@ -45,9 +45,10 @@
 # [[0700]] Endgame custom rules
 # [[0800]] For T11+ maps / area level 75+
 #   [0801] hide low-level bases (<= Rare)
-#   [0802] dex- / str-bases
-#   [0803] mix-bases
-#   [0804] int-bases
+#   [0802] waystones: additional rules for low-level and distilled waystones
+#   [0803] dex- / str-bases
+#   [0804] mix-bases
+#   [0805] int-bases
 # [[0900]] For T7+ maps / area level 71+
 #   [0901] hide low-level bases (<= Magic)
 #   [0902] equipment with int-bases and mix-bases
@@ -81,9 +82,9 @@
 #   [1902] currency Tier B: Vaal, Chaos, Exalt, Exotic
 #   [1903] essences
 #   [1904] default styles for Distillates, Catalysts and Essences
-#   [1905] currency Tier C: Vaal, Chaos, Exalt, Exotic
+#   [1905] currency Tier C: quality things, blue orbs, splinters, shards, etc
 #   [1906] fragments / tablets
-#   [1907] ascendancy keys
+#   [1907] keys to ascendancy trials
 # [[2000]] Waystones
 # [[2100]] Value rares for leveling
 # [[2200]] Rings, Amulets, Belts
@@ -161,10 +162,10 @@ Rarity Normal
 #--------------------------
 
 Show
-BaseType "Golden Charm"
-SetTextColor 255 255 255 255
-SetBorderColor 255 255 255 255
-SetBackgroundColor 240 90 35 100
+BaseType "Golden Charm" # useless charm in v0.1.1, wait for next patches
+#SetTextColor 255 255 255 255
+#SetBorderColor 255 255 255 255
+#SetBackgroundColor 240 90 35 100
 PlayAlertSound 1 100
 PlayEffect White
 MinimapIcon 1 White Circle
@@ -191,6 +192,8 @@ MinimapIcon 0 Purple Star
 ### soul cores: Soul Core of Azcapa
 ### pinnacle keys: An Audience with the King
 ### unid uniques: "Mahuxotl's Machination" Omen Crest Shield "Temporalis" Silk Robe, "Headhunter" Heavy Belt, Incense Relic, Vase Relic, Glass Shank, Ultimate Life Flask, Ultimate Mana Flask, Armoured Cap, "Astramentis" Stellar amulet, "Dream Fragments" Sapphire Ring, "Original Sin" Amethyst Ring
+### specific bases: Golden Mantle, Golden Bracers, Golden Caligae, Golden Wreath, Golden Visage
+
 
 ## RED beam: price ~1 divine orb
 ### currency: Perfect Jeweller's Orb
@@ -478,6 +481,69 @@ BaseType "Uncut Skill Gem" "Uncut Spirit Gem"
 ItemLevel <= 18
 AreaLevel >= 79
 
+#  [0802] waystones: additional rules for low-level and distilled waystones:
+
+Show
+WaystoneTier >= 15
+BaseType "Waystone"
+AnyEnchantment True # with distilled emotions from Delirium
+Rarity <= Rare
+SetTextColor 20 20 20 255
+SetBorderColor 255 140 0 255
+SetBackgroundColor 95 95 95 200
+PlayAlertSound 4 200
+MinimapIcon 1 White Square
+PlayEffect White Temp
+SetFontSize 40
+
+Show
+WaystoneTier <= 14
+BaseType "Waystone"
+AnyEnchantment True
+Rarity <= Rare
+SetTextColor 20 20 20 255
+SetBorderColor 255 255 255
+SetBackgroundColor 95 95 95 200
+PlayAlertSound 4 200
+MinimapIcon 1 White Square
+PlayEffect White Temp
+SetFontSize 35
+
+Show
+WaystoneTier < 7
+BaseType "Waystone"
+AnyEnchantment True
+Rarity <= Rare
+SetTextColor 20 20 20 255
+SetBorderColor 255 255 255
+SetBackgroundColor 95 95 95 200
+PlayAlertSound 4 100
+MinimapIcon 1 White Square
+PlayEffect White Temp
+SetFontSize 35
+
+Show
+BaseType "Waystone"
+AnyEnchantment True
+
+Hide
+BaseType "Waystone"
+WaystoneTier < 9
+BaseType "Waystone"
+Rarity Normal
+
+Hide
+BaseType "Waystone"
+WaystoneTier < 8
+BaseType "Waystone"
+Rarity Magic
+
+Hide
+BaseType "Waystone"
+WaystoneTier < 7
+BaseType "Waystone"
+Rarity Rare
+
 Show
 Quality >= 1
 BaseType "Chiming Staff"
@@ -500,7 +566,7 @@ Class "Quiver" "Mace" "Quarter" "Bow" "Crossbow" "One Hand Sword" "One Hand Swor
 Rarity <= Rare
 AreaLevel >= 75
 
-#  [0802] dex- / str-bases:-----------
+#  [0803] dex- / str-bases:-----------
 Hide
 Class "Helmet"
 BaseType "Greathelm" " Cap" " Hood"
@@ -531,7 +597,7 @@ BaseType "Greaves" "Boots"
 Rarity <= Rare
 AreaLevel >= 75
 
-#  [0803] mix-bases:-----------
+#  [0804] mix-bases:-----------
 Hide
 Class "Helmet"
 BaseType "Crown" "Mask" " Helm"
@@ -562,7 +628,7 @@ BaseType "Sabatons" "Leggings" " Shoes"
 Rarity <= Rare
 AreaLevel >= 75
 
-#  [0804] int-bases:-----------
+#  [0805] int-bases:-----------
 
 Show
 Class "Helmet"
@@ -1009,11 +1075,11 @@ PlayEffect Red
 MinimapIcon 0 Red Star
 
 Show
-Class == "Pinnacle Keys"
-SetTextColor 255 255 255 255
-SetBorderColor 255 255 255 255
-SetBackgroundColor 240 90 35 200
-PlayAlertSound 1 100
+Class == "Pinnacle Keys" # from citadels
+SetTextColor 255 205 113
+SetBorderColor 255 207 255
+SetBackgroundColor 65 20 80
+PlayAlertSound 2 300
 PlayEffect Orange
 MinimapIcon 1 Orange Square
 SetFontSize 40
@@ -1021,12 +1087,25 @@ SetFontSize 40
 #  [1402] logbooks
 Show
 BaseType "Expedition Logbook"
+ItemLevel >= 79
 SetTextColor 255 255 255 255
 SetBorderColor 255 255 255 255
 SetBackgroundColor 240 90 35 200
 PlayAlertSound 1 100
 PlayEffect White
-MinimapIcon 1 White Circle
+MinimapIcon 1 Orange Square
+SetFontSize 40
+
+Show
+BaseType "Expedition Logbook"
+ItemLevel < 79
+SetTextColor 255 207 132
+SetBorderColor 255 207 132
+SetBackgroundColor 76 51 12
+PlayAlertSound 2 300
+PlayEffect White
+MinimapIcon 1 White Square
+SetFontSize 40
 
 #  [1403] omens
 Show
@@ -1672,7 +1751,7 @@ SetFontSize 40
 
 Show
 Class "Currency"
-BaseType "Exalted Orb"
+BaseType "Exalted Orb" "Exotic Coinage"
 SetTextColor 255 225 200
 SetBorderColor 255 207 132
 SetBackgroundColor 76 51 12
@@ -1694,7 +1773,7 @@ SetFontSize 40
 
 Show
 Class "Currency"
-BaseType "Lesser Jeweller's Orb" "Exotic" "Artificer's Orb" "Glassblower's Bauble" "Regal Orb" "Chance Shard"
+BaseType "Lesser Jeweller's Orb" "Artificer's Orb" "Glassblower's Bauble" "Regal Orb" "Chance Shard"
 SetTextColor 255 207 132
 SetBorderColor 255 207 132
 SetBackgroundColor 76 51 12
@@ -1859,7 +1938,7 @@ PlayAlertSound 2 300
 PlayEffect White
 MinimapIcon 1 White Circle
 
-#  [1905] currency Tier C: Vaal, Chaos, Exalt, Exotic
+#  [1905] currency Tier C: quality things, blue orbs, splinters, shards, etc
 Show
 Class "Currency"
 BaseType "Arcanist's Etcher"
@@ -1913,8 +1992,8 @@ MinimapIcon 1 White Circle
 
 #  [1906] fragments / tablets
 Show
-BaseType " Tablet" " Fragment" "Cowardly Fate" "Deadly Fate" "Victorious Fate"
-SetTextColor 255 207 255
+BaseType "Cowardly Fate" "Deadly Fate" "Victorious Fate"
+SetTextColor 255 205 113
 SetBorderColor 255 207 255
 SetBackgroundColor 65 20 80
 PlayAlertSound 2 300
@@ -1922,7 +2001,17 @@ PlayEffect White
 MinimapIcon 1 White Square
 SetFontSize 40
 
-#  [1907] ascendancy keys
+Show
+BaseType " Tablet" " Fragment"
+SetTextColor 255 207 255
+SetBorderColor 255 207 255
+SetBackgroundColor 65 20 80 200
+PlayAlertSound 2 300
+PlayEffect White
+MinimapIcon 1 White Square
+SetFontSize 40
+
+#  [1907] keys to ascendancy trials
 Show
 BaseType "Barya" "Ultimatum"
 Rarity >= Magic
