@@ -64,7 +64,7 @@
 # [[1300]] Uniques
 # [[1400]] Things of maps
 #   [1401] pinnacle keys
-#   [1402] Expedition / logbooks & artifacts
+#   [1402] Expedition / logbooks, artifacts & exotic coinage
 #   [1403] Altar / omens
 #   [1404] Delirium / distilled emotions
 #   [1405] Breach / catalysts and breach rings
@@ -83,7 +83,7 @@
 # [[1900]] Craft and Currency
 #   [1901] currency Tier S: Mirror, Divine
 #   [1902] currency Tier A: Gemcutter, Annullment
-#   [1903] currency Tier B: Vaal, Chaos, Exalt, Exotic
+#   [1903] currency Tier B: Vaal, Chaos, Exalt
 #   [1904] currency Tier C: quality things, blue orbs, shards, etc
 #   [1905] essences
 #   [1906] default styles for distillates, catalysts and essences
@@ -115,24 +115,36 @@
 #--------------------------
 
 # remove the symbol "#" on each line below in this section if you play for a caster without minions
-
-# Hide
-# Class "Sceptre" "Shield"
-# Rarity Normal
-# AreaLevel >= 40
-#
-# Hide
-# Class "Sceptre" "Shield"
-# Rarity Magic
-# AreaLevel >= 65
-#
-# Hide
-# Class "Sceptre" "Shield"
-# Rarity Rare
-# AreaLevel >= 71
 #
 # Hide
 # Class "Quarterstaff"
+#
+# Show
+# Class "Wand"
+# ItemLevel >= 81
+# Rarity <= Rare
+# SetBorderColor 95 0 160
+# PlayEffect White Temp
+# MinimapIcon 1 Purple Circle
+# PlayAlertSound 16 300
+#
+# Show
+# Class "Focus"
+# ItemLevel >= 82
+# Rarity <= Rare
+# SetBorderColor 95 0 160
+# PlayEffect White Temp
+# MinimapIcon 1 Purple Circle
+# PlayAlertSound 16 300
+#
+# Show
+# Quality >= 1
+# Class "Wand" "Sceptre" "Staff"
+# SetBorderColor 200 200 200
+# SetBackgroundColor 65 65 65
+# PlayEffect Grey
+# MinimapIcon 1 Grey Square
+# PlayAlertSound 2 100
 #
 # Hide
 # Class "Staff" "Wand" "Focus"
@@ -146,24 +158,21 @@
 # DropLevel < 65
 # AreaLevel >= 75
 #
-# Show
-# Quality >= 1
-# Class "Wand" "Sceptre" "Staff"
-# SetBorderColor 200 200 200
-# SetBackgroundColor 65 65 65
-# PlayEffect Grey
-# MinimapIcon 1 Grey Square
-# PlayAlertSound 2 100
+# Hide
+# Class "Sceptre" "Shield"
+# Rarity Normal
+# AreaLevel >= 40
 #
-#   ??? todo add staff 81+
-# Show
-# BaseType "Omen Sceptre" "Rattling Sceptre"
-# ItemLevel >= 81
-# Rarity <= Rare
-# SetBorderColor 95 0 160
-# PlayEffect White Temp
-# MinimapIcon 1 Purple Circle
-# PlayAlertSound 16 300
+# Hide
+# Class "Sceptre" "Shield"
+# Rarity Magic
+# AreaLevel >= 65
+#
+# Hide
+# Class "Sceptre" "Shield"
+# Rarity Rare
+# AreaLevel >= 75
+#
 # Show
 # Class "Staff" "Wand" "Focus"
 
@@ -245,7 +254,6 @@ PlayEffect White Temp
 MinimapIcon 1 Purple Circle
 PlayAlertSound 16 300
 
-
 #   [0502] armor pieces:
 Show
 BaseType "Expert Feathered Tiara" "Expert Altar Robe" "Expert Intricate Gloves" "Expert Feathered Sandals" "Expert Omen Crest Shield"
@@ -266,6 +274,7 @@ SetBorderColor 95 0 160
 SetBackgroundColor 0 0 0 230
 MinimapIcon 1 Purple Circle
 PlayAlertSound 16 300
+PlayEffect Pink Temp
 SetFontSize 40
 
 Show
@@ -851,15 +860,6 @@ AreaLevel >= 65
 #--------------------------
 
 Show
-BaseType "Uncut Support Gem"
-AreaLevel < 71
-SetTextColor 255 255 255
-SetBorderColor 20 240 240
-PlayAlertSound 2 300
-PlayEffect Cyan
-MinimapIcon 1 Cyan Triangle
-
-Show
 Class "Body"
 BaseType "Raiment" "Robe"
 AreaLevel < 65
@@ -1167,7 +1167,7 @@ PlayEffect Orange
 MinimapIcon 1 Orange Square
 SetFontSize 40
 
-#   [1402] Expedition / logbooks & artifacts
+#   [1402] Expedition / logbooks, artifacts & exotic coinage
 Show
 BaseType "Expedition Logbook"
 ItemLevel >= 79
@@ -1197,10 +1197,21 @@ SetTextColor 255 207 132
 SetBorderColor 255 207 132
 MinimapIcon 2 Grey Circle
 
+Show
+Class "Currency"
+BaseType "Exotic Coinage"
+SetTextColor 255 225 200
+SetBorderColor 255 207 132
+SetBackgroundColor 76 51 12
+PlayAlertSound 2 300
+PlayEffect White
+MinimapIcon 1 White Circle
+SetFontSize 40
+
 #   [1403] Altar / omens
 Show
 Class == "Omen"
-BaseType == "Omen of Amelioration" "Omen of Dextral Annulment" "Omen of Dextral Erasure" "Omen of Sinistral Annulment" "Omen of Sinistral Erasure" "Omen of Whittling"
+BaseType == "Omen of Dextral Annulment" "Omen of Dextral Erasure" "Omen of Sinistral Annulment" "Omen of Sinistral Erasure" "Omen of Whittling"
 SetFontSize 45
 SetTextColor 255 0 0 255
 SetBorderColor 255 0 0 255
@@ -1222,7 +1233,7 @@ SetFontSize 40
 
 Show
 Class == "Omen"
-BaseType == "Omen of Resurgence"
+BaseType == "Omen of Resurgence" "Omen of Amelioration"
 SetTextColor 255 255 255 255
 SetBorderColor 255 255 255 255
 SetBackgroundColor 240 90 35 200
@@ -1355,7 +1366,7 @@ Class "Currency"
 BaseType "Distilled Suffering"
 SetTextColor 22 22 22
 SetBorderColor 255 207 132
-SetBackgroundColor 33 34 35 230
+SetBackgroundColor 73 74 75 230
 PlayAlertSound 2 300
 PlayEffect White
 MinimapIcon 1 White Circle
@@ -1388,7 +1399,7 @@ SetBorderColor 239 34 255
 SetBackgroundColor 0 0 0 230
 SetFontSize 40
 MinimapIcon 1 Pink Diamond
-PlayEffect Pink
+PlayEffect Pink Temp
 PlayAlertSound 2 300
 
 Show
@@ -1669,8 +1680,10 @@ MinimapIcon 0 Red Star
 Show
 BaseType "Uncut Skill Gem"
 ItemLevel = 19
-SetTextColor 255 140 0 255
+#SetTextColor 255 140 0 255
+SetTextColor 20 240 240
 SetBorderColor 20 240 240 255
+SetBackgroundColor 25 50 100
 PlayAlertSound 2 300
 PlayEffect Brown
 MinimapIcon 1 Cyan Triangle
@@ -1698,8 +1711,9 @@ MinimapIcon 0 Purple Star
 Show
 BaseType "Uncut Spirit Gem"
 ItemLevel = 19
-SetTextColor 255 140 0 255
+SetTextColor 140 140 140
 SetBorderColor 20 240 240 255
+SetBackgroundColor 25 50 100
 PlayAlertSound 2 300
 PlayEffect Brown
 MinimapIcon 1 Cyan Triangle
@@ -1707,6 +1721,14 @@ MinimapIcon 1 Cyan Triangle
 Show
 BaseType "Uncut Spirit Gem"
 SetTextColor 140 140 140
+SetBorderColor 20 240 240
+PlayAlertSound 2 300
+PlayEffect Cyan
+MinimapIcon 1 Cyan Triangle
+
+Show
+BaseType "Uncut Support Gem"
+SetTextColor 255 255 255
 SetBorderColor 20 240 240
 PlayAlertSound 2 300
 PlayEffect Cyan
@@ -1883,7 +1905,7 @@ PlayEffect White
 MinimapIcon 1 White Circle
 SetFontSize 40
 
-#   [1903] currency Tier B: Vaal, Chaos, Exalt, Exotic
+#   [1903] currency Tier B: Vaal, Chaos, Exalt
 Show
 Class "Currency"
 BaseType "Vaal Orb"
@@ -1908,7 +1930,7 @@ SetFontSize 40
 
 Show
 Class "Currency"
-BaseType "Exalted Orb" "Exotic Coinage"
+BaseType "Exalted Orb"
 SetTextColor 255 225 200
 SetBorderColor 255 207 132
 SetBackgroundColor 76 51 12
@@ -1946,7 +1968,7 @@ BaseType "Arcanist's Etcher"
 SetTextColor 255 207 132
 SetBorderColor 255 207 132
 MinimapIcon 2 Grey Circle
-SetFontSize 35
+SetFontSize 40
 
 Show
 Class "Currency"
@@ -2259,14 +2281,14 @@ PlayEffect White
 MinimapIcon 1 White Square
 SetFontSize 40
 
-# Unknown item
-Show
-SetTextColor 255 207 132
-SetBorderColor 255 207 132
-SetBackgroundColor 222 102 204
-PlayAlertSound 2 300
-PlayEffect Pink
-MinimapIcon 1 Pink Circle
+# items without any other rules:
+# Show
+# SetTextColor 255 207 132
+# SetBorderColor 255 207 132
+# SetBackgroundColor 222 102 204
+# PlayAlertSound 2 300
+# PlayEffect Pink
+# MinimapIcon 1 Pink Circle
 
 ### OPTIONAL RULE: Hide random bases
 # REMOVE THE BASES YOU --DO-- WANT TO SEE BEFORE SETTING TO HIDE
