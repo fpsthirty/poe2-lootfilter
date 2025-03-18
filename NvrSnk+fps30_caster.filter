@@ -45,7 +45,7 @@
 # [[0700]] Endgame custom rules
 # [[0800]] For T11+ maps / area level 75+
 #   [0801] hide low-level bases (<= Rare)
-#   [0802] waystones: additional rules for distilled and low waystones
+#   [0802] waystones: additional rules for low waystones
 #   [0803] dex- / str-bases
 #   [0804] mix-bases
 #   [0805] int-bases
@@ -147,13 +147,13 @@
 # PlayAlertSound 2 100
 #
 # Hide
-# Class "Staff" "Wand" "Focus"
+# Class "Wand" "Focus" # "Staff"
 # Rarity <= Rare
 # DropLevel < 61
 # AreaLevel >= 71
 #
 # Hide
-# Class "Staff" "Wand" "Focus"
+# Class "Wand" "Focus" # "Staff"
 # Rarity <= Rare
 # DropLevel < 65
 # AreaLevel >= 75
@@ -174,7 +174,7 @@
 # AreaLevel >= 75
 #
 # Show
-# Class "Staff" "Wand" "Focus"
+# Class "Wand" "Focus" # "Staff"
 
 #--------------------------
 # [[0300]] Hide stuff with specific names:
@@ -237,6 +237,7 @@ MinimapIcon 0 Purple Star
 ### essences: Greater Essence of the Infinite, Greater Essence of the Mind, Greater Essence of Electricity
 ### omens: Omen of Corruption
 ### unid uniques: Emerald, Ruby, Sapphire, Diamond, Time-Lost Diamond, Timeless Jewel, Furtive Wraps, Smuggler Coat, Stone Tower Shield, Utility Belt, Spiked Club, Trimmed Greaves
+### specific bases: Fishing Rod
 ### uncut gems: uncut skill gem 20 lvl
 ### tablets: any rare tablet (Ritual tablet is prefer)
 
@@ -306,8 +307,7 @@ SetFontSize 40
 # A-tier:
 
 Show
-BaseType "Trimmed Greaves"
-# Trampletoe / Deal 30% of Overkill damage to enemies within 2 metres of the enemy killed
+BaseType "Trimmed Greaves" # Trampletoe / Deal 30% of Overkill damage to enemies within 2 metres of the enemy killed
 Rarity Normal
 ItemLevel >= 27
 DropLevel = 27
@@ -318,8 +318,7 @@ MinimapIcon 1 Orange Square
 PlayAlertSound 2 100
 
 Show
-BaseType "Spiked Club"
-# Trenchtimbre / +(1–3) to Level of all Minion Skills
+BaseType "Spiked Club" # Trenchtimbre / +(1–3) to Level of all Minion Skills
 Rarity Normal
 ItemLevel >= 16
 SetBorderColor 255 128 200
@@ -520,6 +519,28 @@ Quality < 1
 Rarity <= Magic
 AreaLevel >= 75
 
+Show
+Quality >= 1
+BaseType "Chiming Staff"
+SetBorderColor 200 200 200
+SetBackgroundColor 65 65 65
+AreaLevel >= 75
+
+Show
+BaseType "Chiming Staff"
+AreaLevel >= 75
+
+#caster weapons/offhands:
+Hide
+Class "Staff" "Wand" "Focus"
+Rarity <= Rare
+AreaLevel >= 75
+
+Hide
+Class "Quiver" "Mace" "Quarter" "Bow" "Crossbow" "One Hand Sword" "One Hand Sword" "Two Hand Sword" "Dagger" "Spear" "One Hand Axe" "Two Hand Axe" "Flail" "Trap" "Claw"
+Rarity <= Rare
+AreaLevel >= 75
+
 #   [0802] waystones: additional rules for low waystones
 Hide
 BaseType "Waystone"
@@ -540,28 +561,6 @@ BaseType "Waystone"
 WaystoneTier < 7
 AnyEnchantment False
 Rarity Rare
-AreaLevel >= 75
-
-Show
-Quality >= 1
-BaseType "Chiming Staff"
-SetBorderColor 200 200 200
-SetBackgroundColor 65 65 65
-AreaLevel >= 75
-
-Show
-BaseType "Chiming Staff"
-AreaLevel >= 75
-
-#caster weapons/offhands:
-Hide
-Class "Staff" "Wand" "Focus"
-Rarity <= Rare
-AreaLevel >= 75
-
-Hide
-Class "Quiver" "Mace" "Quarter" "Bow" "Crossbow" "One Hand Sword" "One Hand Sword" "Two Hand Sword" "Dagger" "Spear" "One Hand Axe" "Two Hand Axe" "Flail"
-Rarity <= Rare
 AreaLevel >= 75
 
 #   [0803] dex- / str-bases:-----------
@@ -780,7 +779,7 @@ Rarity Normal
 AreaLevel >= 65
 
 Hide
-Class "Quiver" "Mace" "Quarter" "Bow" "Crossbow" "Spear" "Two Hand Axe" "Two Hand Sword"
+Class "Quiver" "Mace" "Quarter" "Bow" "Crossbow" "One Hand Sword" "One Hand Sword" "Two Hand Sword" "Dagger" "Spear" "One Hand Axe" "Two Hand Axe" "Flail" "Trap" "Claw"
 Rarity <= Magic
 AreaLevel >= 65
 
@@ -822,8 +821,8 @@ Rarity Normal
 AreaLevel >= 65
 
 Hide
-Rarity <= Rare
-BaseType "Greathammer" "Crossbow" "Quarterstaff" "Bow" "Tower Shield" "Maul"
+Rarity <= Magic
+BaseType "Tower Shield"
 AreaLevel >= 65
 
 #   [1002] caster weapons/offhands:
@@ -835,7 +834,7 @@ AreaLevel >= 65
 #   [1003] hide cheap currency, normal charms and some mix-bases
 Hide
 Rarity <= Magic
-Class "Flask" "Body" "Helmet" "Boots" "Gloves" "Quiver" "Mace" "Quarter" "Bow" "Crossbow"
+Class "Flask" "Helmet" "Quiver" "Mace" "Quarter" "Bow" "Crossbow"
 AreaLevel >= 65
 
 Hide
@@ -895,11 +894,11 @@ MinimapIcon 2 Blue Circle
 PlayAlertSound 16 300
 
 Hide
-Class "One Hand Sword" "One Hand Sword" "Two Hand Sword" "Dagger" "Spear" "One Hand Axe" "Two Hand Axe" "Flail"
+Class "Quiver" "Mace" "One Hand Sword" "One Hand Sword" "Dagger" "One Hand Axe" "Flail" "Claw"
 Rarity Normal
 
 Hide
-Class "Quiver" "Mace" "Quarter" "Bow" "Crossbow"
+Class "Quarter" "Bow" "Crossbow" "Two Hand Sword" "Two Hand Axe" "Spear" "Two Hand Axe" "Trap"
 Rarity Normal
 
 Show
@@ -1613,6 +1612,16 @@ MinimapIcon 0 Purple Star
 Show
 Rarity Unique
 BaseType == "Emerald" "Furtive Wraps" "Ruby" "Sapphire" "Smuggler Coat" "Stone Tower Shield" "Diamond" "Timeless Jewel" "Utility Belt" "Spiked Club" "Trimmed Greaves" "Time-Lost Diamond"
+SetFontSize 45
+SetTextColor 255 0 0 255
+SetBorderColor 255 0 0 255
+SetBackgroundColor 255 255 255 255
+PlayAlertSound 6 300
+PlayEffect Red
+MinimapIcon 0 Red Star
+
+Show
+Class "Fishing Rod"
 SetFontSize 45
 SetTextColor 255 0 0 255
 SetBorderColor 255 0 0 255
