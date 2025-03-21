@@ -11,10 +11,13 @@
 # basic principles of this lootfilter:
 # 1. Take everything you see on the ground. At Area levels 1+ / 65+ / 71+ / 75+ you see fewer and fewer items that have str- & dex-requirements on them and other useless items for your class.
 # 2. Minimalism for equipment: 99% of the equipment is garbage that doesn't deserve much custom styling, but you'll see a colorful design of map-specific items etc.
-# Special equipment stylization applies in three cases:
+# Special equipment stylization applies in four cases:
 # - for the best bases of the corresponding slot, on which the maximum affix tier (81–82 itemLevel) can be generated;
 # - for some infrequent items on low-level characters: jewelry, belts, and Chiming staff;
 # - items with additional quality.
+# - bases for crafting uniques with Chance Orb.
+#
+# I also recommend check out the short documentation for before using it: in just a couple minutes you can familiarize yourself with the styles of ~95% of the items in the game and ~95% of the rules for showing/hiding items: https://github.com/fpsthirty/poe2-lootfilter/blob/main/README.md
 #
 # I express my respect to @NeverSink for the original version of lootfilter and will mention its credentials below:
 # TWITTER: @NeverSinkDev
@@ -36,7 +39,7 @@
 # [[0200]] Section for non-summoner casters
 # [[0300]] Hide stuff with specific names
 # [[0400]] Stylized collection of specific stuff
-#   [0401] additional highlighting for expensive items (for trading league)
+#   [0401] additional highlighting for expensive items (trading league)
 # [[0500]] High itemLevel bases
 #   [0501] weapons
 #   [0502] armor pieces
@@ -51,15 +54,18 @@
 #   [0805] int-bases
 # [[0900]] For T7+ maps / area level 71+
 #   [0901] hide low-level bases (<= Magic)
-#   [0902] equipment with int-bases and mix-bases
-#   [0903] set default font size for belts and jewellery
-#   [0904] set low priority styles for cheap currency
+#   [0902] dex- or/and str-bases
+#   [0903] mix-bases
+#   [0904] int-bases
+#   [0905] set default font size for belts and jewellery
+#   [0906] set low priority styles for cheap currency
+#   [0907] hide cheap things
 # [[1000]] First steps on the maps / area level 65+
 #   [1001] mix-bases
 #   [1002] caster weapons/offhands
 #   [1003] hide cheap currency, normal charms and some mix-bases
 # [[1100]] To start for any class of casters
-#   [1101] dex- / str-bases
+#   [1101] dex- or/and str-bases
 # [[1200]] Salvagable items & items with +quality
 # [[1300]] Uniques
 # [[1400]] Things of maps
@@ -93,13 +99,14 @@
 # [[2100]] Value rares for leveling
 #   [2101] rings, amulets and belts
 # [[2200]] Low-priority rules
+#   [2201] flasks
 #
 # ====================================
 #
 #--------------------------
 # [[0100]] Your custom rules: items that must always be shown/hidden:
 #--------------------------
-
+## Import "MyCustomRules.filter" Optional # import is not supported in PoE 2 v0.1.1.
 # examples:
 # Show
 # Class "Sceptre"
@@ -114,11 +121,11 @@
 # [[0200]] Section for non-summoner casters
 #--------------------------
 
-# remove the symbol "#" on each line below in this section if you play for a caster without minions
+### remove the symbol "#" on each line below in this section if you play for a caster without minions
 #
 # Hide
 # Class "Quarterstaff"
-#
+# 
 # Show
 # Class "Wand"
 # ItemLevel >= 81
@@ -127,7 +134,7 @@
 # PlayEffect White Temp
 # MinimapIcon 1 Purple Circle
 # PlayAlertSound 16 300
-#
+# 
 # Show
 # Class "Focus"
 # ItemLevel >= 82
@@ -136,7 +143,7 @@
 # PlayEffect White Temp
 # MinimapIcon 1 Purple Circle
 # PlayAlertSound 16 300
-#
+# 
 # Show
 # Quality >= 1
 # Class "Wand" "Sceptre" "Staff"
@@ -145,34 +152,39 @@
 # PlayEffect Grey
 # MinimapIcon 1 Grey Square
 # PlayAlertSound 2 100
-#
+# 
 # Hide
 # Class "Wand" "Focus" # "Staff"
 # Rarity <= Rare
 # DropLevel < 61
 # AreaLevel >= 71
-#
+# 
 # Hide
 # Class "Wand" "Focus" # "Staff"
 # Rarity <= Rare
 # DropLevel < 65
 # AreaLevel >= 75
-#
+# 
 # Hide
 # Class "Sceptre" "Shield"
 # Rarity Normal
-# AreaLevel >= 40
-#
+# AreaLevel > 40
+# 
 # Hide
-# Class "Sceptre" "Shield"
+# Class "Sceptre"
 # Rarity Magic
 # AreaLevel >= 65
-#
+# 
+# Hide
+# Class "Shield"
+# Rarity Magic
+# AreaLevel >= 71
+# 
 # Hide
 # Class "Sceptre" "Shield"
 # Rarity Rare
 # AreaLevel >= 75
-#
+# 
 # Show
 # Class "Wand" "Focus" # "Staff"
 
@@ -208,7 +220,7 @@ PlayEffect White
 MinimapIcon 1 White Circle
 
 Show # event-specific things (speedruns etc)
-BaseType "Golden Mantle" "Golden Bracers" "Golden Caligae" "Golden Wreath" "Golden Visage"
+BaseType "Golden Mantle" "Golden Bracers" "Golden Caligae" "Golden Wreath" "Golden Visage" "Golden Flame" "Golden Shield"
 SetFontSize 45
 SetTextColor 255 0 0 255
 SetBorderColor 255 0 0 255
@@ -217,7 +229,7 @@ PlayAlertSound 6 300
 PlayEffect Purple
 MinimapIcon 0 Purple Star
 
-#   [0401] additional highlighting for expensive items (for trading league)
+#   [0401] additional highlighting for expensive items (trading league)
 # Check out the actual Market Tier List here: https://poe2filter.com/tier-list
 # This is just a list of item names, styles are applied within the respective lootfilter sections
 
@@ -227,8 +239,8 @@ MinimapIcon 0 Purple Star
 ### omens: Omen of Sinistral Erasure, Omen of Dextral Annulment, Omen of Dextral Erasure, Omen of Sinistral Annulment, Omen of Whittling
 ### soul cores: Soul Core of Azcapa
 ### pinnacle keys: An Audience with the King
-### unid uniques: "Mahuxotl's Machination" Omen Crest Shield "Temporalis" Silk Robe, "Headhunter" Heavy Belt, Incense Relic, Vase Relic, Glass Shank, Ultimate Life Flask, Ultimate Mana Flask, Armoured Cap, "Astramentis" Stellar amulet, "Dream Fragments" Sapphire Ring, "Original Sin" Amethyst Ring
-### specific bases: Golden Mantle, Golden Bracers, Golden Caligae, Golden Wreath, Golden Visage
+### unid uniques: "Mahuxotl's Machination" Omen Crest Shield "Temporalis" Silk Robe, "Headhunter" Heavy Belt, Incense Relic, Vase Relic, Glass Shank, Ultimate Life Flask, Ultimate Mana Flask, Armoured Cap, "Astramentis" Stellar amulet, "Dream Fragments" Sapphire Ring, "Original Sin" Amethyst Ring, "Kalandra's Touch" Ring
+### specific bases: Golden Mantle, Golden Bracers, Golden Caligae, Golden Wreath, Golden Visage, Golden Flame, Golden Shield
 ### uncut gems: uncut spirit gem 20 lvl
 
 ##  -------- RED beam: price ~1 divine orb --------
@@ -236,7 +248,7 @@ MinimapIcon 0 Purple Star
 ### delirium / distilled emotions: Distilled Isolation (white)
 ### essences: Greater Essence of the Infinite, Greater Essence of the Mind, Greater Essence of Electricity
 ### omens: Omen of Corruption
-### unid uniques: Emerald, Ruby, Sapphire, Diamond, Time-Lost Diamond, Timeless Jewel, Furtive Wraps, Smuggler Coat, Stone Tower Shield, Utility Belt, Spiked Club, Trimmed Greaves
+### unid uniques: Emerald, Ruby, Sapphire, Diamond, Time-Lost Diamond, Timeless Jewel, Furtive Wraps, Smuggler Coat, Stone Tower Shield, Utility Belt, Spiked Club, Trimmed Greaves, Sekhema's Resolve
 ### specific bases: Fishing Rod
 ### uncut gems: uncut skill gem 20 lvl
 ### tablets: any rare tablet (Ritual tablet is prefer)
@@ -247,7 +259,7 @@ MinimapIcon 0 Purple Star
 
 #   [0501] weapons:
 Show
-BaseType "Omen Sceptre" "Rattling Sceptre"
+BaseType "Omen Sceptre" "Rattling Sceptre" "Lupine Sceptre" "Ochre Sceptre" "Devouring Sceptre" "Clasped Sceptre" "Devotional Sceptre" "Wrath Sceptre" "Aromatic Sceptre" "Pious Sceptre" "Hallowed Sceptre"
 ItemLevel >= 81
 Rarity <= Rare
 SetBorderColor 95 0 160
@@ -493,9 +505,16 @@ AreaLevel >= 79 # for T15+ maps / area level 79+:
 #
 #Hide
 #Rarity <= Rare
-#Class "Flask" "Body" "Helmet" "Boots" "Gloves" "Shields" "Quiver" "Mace" "Staff" "Quarter" "Bow" "Crossbow" "Wand" "Sceptre"
+#Class "Body" "Helmet" "Boots" "Gloves" "Shields" "Quiver" "Mace" "Staff" "Quarter" "Bow" "Crossbow" "Wand" "Sceptre"
 #AreaLevel >= 75
 #DropLevel <= 70
+#
+#Hide
+#Class "Trial Coin" "Inscribed Ultimatum"
+#BaseType "Barya" "Ultimatum"
+#Rarity < Magic
+#AreaLevel >= 65
+#AreaLevel < 75
 
 #--------------------------
 # [[0800]] For T11+ maps / area level 75+:
@@ -517,7 +536,7 @@ Hide
 BaseType " Charm"
 Quality < 1
 Rarity <= Magic
-AreaLevel >= 75
+AreaLevel >= 71
 
 Show
 Quality >= 1
@@ -537,7 +556,7 @@ Rarity <= Rare
 AreaLevel >= 75
 
 Hide
-Class "Quiver" "Mace" "Quarter" "Bow" "Crossbow" "One Hand Sword" "One Hand Sword" "Two Hand Sword" "Dagger" "Spear" "One Hand Axe" "Two Hand Axe" "Flail" "Trap" "Claw"
+Class "Quiver" "Mace" "Quarter" "Bow" "Crossbow" "One Hand Sword" "One Hand Sword" "Two Hand Sword" "Dagger" "Spear" "One Hand Axe" "Two Hand Axe" "Two Hand Mace" "Flail" "Trap" "Claw"
 Rarity <= Rare
 AreaLevel >= 75
 
@@ -572,7 +591,7 @@ AreaLevel >= 75
 
 Hide
 Class "Body"
-BaseType " Armour" " Coat" "Cuirass" "Plate" "Vest"
+BaseType " Coat" "Cuirass" "Plate" " Vest"
 Rarity <= Rare
 AreaLevel >= 75
 
@@ -584,7 +603,7 @@ AreaLevel >= 75
 
 Hide
 Class "Shields"
-BaseType "Tower Shield"
+BaseType "Tower Shield" "Buckler"
 Rarity <= Rare
 AreaLevel >= 75
 
@@ -597,19 +616,19 @@ AreaLevel >= 75
 #   [0804] mix-bases:-----------
 Hide
 Class "Helmet"
-BaseType "Crown" "Mask" " Helm"
+BaseType " Crown" " Mask" " Helm" " Visage"
 Rarity <= Rare
 AreaLevel >= 75
 
 Hide
 Class "Body"
-BaseType " Jacket" " Mail" "Mantle" " Garb"
+BaseType " Jacket" " Mail" " Armour" "Mantle" " Garb" "Vestments" "Regalia"
 Rarity <= Rare
 AreaLevel >= 75
 
 Hide
 Class "Gloves"
-BaseType "Cuffs" "Wraps" "Gauntlets"
+BaseType "Cuffs" "Wraps" "Gauntlets" "Manchettes"
 Rarity <= Rare
 AreaLevel >= 75
 
@@ -621,7 +640,7 @@ AreaLevel >= 75
 
 Hide
 Class "Boots"
-BaseType "Sabatons" "Leggings" " Shoes"
+BaseType "Sabatons" "Leggings" " Shoes" "Cuisses"
 Rarity <= Rare
 AreaLevel >= 75
 
@@ -653,7 +672,6 @@ AreaLevel >= 75
 #--------------------------
 
 #   [0901] hide low-level bases (<= Magic):
-
 Hide
 Class "Helmet" "Body" "Gloves" "Boots" "Shields"
 Rarity <= Magic
@@ -665,8 +683,68 @@ BaseType "Advanced"
 Rarity <= Magic
 AreaLevel >= 71
 
-#   [0902] equipment with int-bases and mix-bases:
+#   [0902] dex- or/and str-bases:
+Hide
+Class "Helmet"
+BaseType "Greathelm" " Cap" " Hood"
+Rarity <= Magic
+AreaLevel >= 71
 
+Hide
+Class "Body"
+BaseType " Coat" "Cuirass" "Plate" " Vest"
+Rarity <= Magic
+AreaLevel >= 71
+
+Hide
+Class "Boots"
+BaseType "Sabatons" "Leggings" " Shoes" "Cuisses"
+Rarity <= Magic
+AreaLevel >= 71
+
+Hide
+Class "Boots"
+BaseType "Greaves" "Boots" "Sabatons"
+Rarity Magic
+AreaLevel >= 71
+
+Hide
+Class "Gloves"
+BaseType "Bracers" "Mitts"
+Rarity <= Magic
+AreaLevel >= 71
+
+#   [0903] mix-bases:-----------
+Hide
+Class "Helmet"
+BaseType " Crown" " Mask" " Helm" " Visage"
+Rarity <= Magic
+AreaLevel >= 71
+
+Hide
+Class "Body"
+BaseType " Jacket" " Mail" " Armour" "Mantle" " Garb" "Vestments" "Regalia"
+Rarity <= Magic
+AreaLevel >= 71
+
+Hide
+Class "Gloves"
+BaseType "Cuffs" "Wraps" "Gauntlets" "Manchettes"
+Rarity <= Magic
+AreaLevel >= 71
+
+Hide
+Class "Shields"
+BaseType "Targe" "Buckler" "Tower Shield"
+Rarity <= Magic
+AreaLevel >= 71
+
+#shield:
+Show
+BaseType "Crest Shield"
+Rarity Magic Rare
+
+#   [0904] int-bases:
 #body armor:
 Show
 BaseType "Expert Altar Robe" "Arcane Robe" "Expert Keth Raiment" "Enlightened Robe" "Havoc Raiment" "Expert Hexer's Robe"
@@ -675,42 +753,16 @@ BaseType "Expert Altar Robe" "Arcane Robe" "Expert Keth Raiment" "Enlightened Ro
 Show
 BaseType " Circlet" " Tiara"
 
-Show
-BaseType " Crown"
-Rarity Magic Rare
-
 #gloves:
 Show
-BaseType " Gloves" " Cuffs"
+BaseType " Gloves"
 Rarity Magic Rare
 
 #boots:
 Show
 BaseType " Sandals" " Slippers"
 
-Show
-BaseType " Leggings"
-Rarity Magic Rare
-
-#shield:
-Show
-BaseType " Shield"
-Rarity Magic Rare
-
-Show
-Class "Shields"
-BaseType "Crest Shield"
-DropLevel >= 65
-AreaLevel >= 71
-
-Hide
-Class "Shields"
-BaseType "Crest Shield"
-Rarity <= Magic
-DropLevel <= 60
-AreaLevel >= 71
-
-#   [0903] set default font size for belts and jewellery:
+#   [0905] set default font size for belts and jewellery:
 Show
 Class "Belts"
 Rarity <= Rare
@@ -734,11 +786,7 @@ BaseType "Iron Ring" "Emerald Ring"
 Rarity <= Rare
 AreaLevel >= 71
 
-Hide
-BaseType "Uncut Support Gem"
-AreaLevel >= 71
-
-#   [0904] set low priority for cheap currency:
+#   [0906] set low priority styles for cheap currency:
 Show
 Class "Currency"
 BaseType "Lesser Jeweller's Orb" "Glassblower's Bauble" "Artificer's Orb"
@@ -747,19 +795,19 @@ SetBorderColor 255 207 132
 MinimapIcon 2 Grey Circle
 AreaLevel >= 71
 
+#   [0907] hide cheap things:
 Hide
 StackSize <= 250
 BaseType == "Gold"
 AreaLevel >= 71
 
+Hide
+BaseType "Uncut Support Gem"
+AreaLevel >= 71
+
 #--------------------------
 # [[1000]] First steps on the maps / area level 65+:
 #--------------------------
-
-Hide
-BaseType "Stoic Sceptre" "Shrine Sceptre"
-Rarity <= Magic
-AreaLevel >= 65
 
 Show
 Quality >= 1
@@ -779,50 +827,38 @@ Rarity Normal
 AreaLevel >= 65
 
 Hide
-Class "Quiver" "Mace" "Quarter" "Bow" "Crossbow" "One Hand Sword" "One Hand Sword" "Two Hand Sword" "Dagger" "Spear" "One Hand Axe" "Two Hand Axe" "Flail" "Trap" "Claw"
+Class "Quiver" "Mace" "Quarter" "Bow" "Crossbow" "One Hand Sword" "One Hand Sword" "Two Hand Sword" "Dagger" "Spear" "One Hand Axe" "Two Hand Axe" "Two Hand Mace" "Flail" "Trap" "Claw"
 Rarity <= Magic
 AreaLevel >= 65
 
-Show
-Class "Shields"
-BaseType "Crest Shield"
-DropLevel >= 55
+Hide
+Rarity <= Magic
+BaseType "Tower Shield" "Buckler"
 AreaLevel >= 65
 
 #   [1001] mix-bases:-----------
 Hide
 Class "Helmet"
-BaseType "Crown" "Mask" " Helm"
+BaseType "Crown" "Mask" " Helm" " Visage"
 Rarity Normal
 AreaLevel >= 65
 
 Hide
 Class "Body"
-BaseType " Jacket" " Mail" "Mantle"  " Garb"
+BaseType " Jacket" " Mail" " Armour" "Mantle" " Garb" "Vestments" "Regalia"
 Rarity Normal
 AreaLevel >= 65
 
 Hide
 Class "Gloves"
-BaseType "Cuffs" "Wraps" "Gauntlets"
-Rarity Normal
-AreaLevel >= 65
-
-Hide
-Class "Shields"
-BaseType "Targe"
+BaseType "Cuffs" "Wraps" "Gauntlets" "Manchettes"
 Rarity Normal
 AreaLevel >= 65
 
 Hide
 Class "Boots"
-BaseType "Sabatons" "Leggings" " Shoes"
+BaseType "Sabatons" "Leggings" " Shoes" "Cuisses"
 Rarity Normal
-AreaLevel >= 65
-
-Hide
-Rarity <= Magic
-BaseType "Tower Shield"
 AreaLevel >= 65
 
 #   [1002] caster weapons/offhands:
@@ -834,8 +870,20 @@ AreaLevel >= 65
 #   [1003] hide cheap currency, normal charms and some mix-bases
 Hide
 Rarity <= Magic
-Class "Flask" "Helmet" "Quiver" "Mace" "Quarter" "Bow" "Crossbow"
+Class "Quiver" "Mace" "Quarter" "Bow" "Crossbow"
 AreaLevel >= 65
+
+Hide
+Class "Flask"
+Rarity <= Magic
+Quality < 1
+AreaLevel >= 65
+
+Hide
+Class "Flask"
+Rarity <= Magic
+Quality < 7
+AreaLevel >= 71
 
 Hide
 Class "Currency"
@@ -898,7 +946,7 @@ Class "Quiver" "Mace" "One Hand Sword" "One Hand Sword" "Dagger" "One Hand Axe" 
 Rarity Normal
 
 Hide
-Class "Quarter" "Bow" "Crossbow" "Two Hand Sword" "Two Hand Axe" "Spear" "Two Hand Axe" "Trap"
+Class "Quarter" "Bow" "Crossbow" "Two Hand Sword" "Two Hand Axe" "Spear" "Two Hand Mace" "Trap"
 Rarity Normal
 
 Show
@@ -915,72 +963,26 @@ BaseType "Sceptre"
 
 Show
 Class "Wand" "Focus" "Staff"
-AreaLevel < 40
+AreaLevel <= 40
 
 Hide
-BaseType "Tower Shield"
+Class "Wand" "Focus" "Staff"
 Rarity Normal
+
+Hide
+BaseType "Tower Shield" "Targe" "Buckler"
+Rarity Normal
+
+Show
+BaseType "Crest Shield"
+Rarity <= Rare
 
 Show
 BaseType " Shield"
 AreaLevel < 65
 Rarity <= Rare
 
-Show
-Class "Flask"
-BaseType "Life"
-Quality >= 1
-SetBackgroundColor 130 50 50 150
-SetBorderColor 255 255 255 150
-PlayEffect Grey
-MinimapIcon 1 Grey Circle
-AreaLevel < 65
-
-Show
-Class "Flask"
-BaseType "Life"
-SetBackgroundColor 130 50 50 150
-AreaLevel < 65
-
-Show
-Class "Flask"
-BaseType "Mana"
-Quality >= 1
-SetBackgroundColor 50 50 130 150
-SetBorderColor 255 255 255 150
-PlayEffect Grey
-MinimapIcon 1 Grey Circle
-AreaLevel < 65
-
-Show
-Class "Flask"
-BaseType "Mana"
-SetBackgroundColor 50 50 130 150
-AreaLevel < 65
-
-# [1101] dex- / str-bases:-----------
-Hide
-Class "Helmet"
-BaseType "Greathelm" " Cap" " Hood"
-Rarity Normal
-
-Hide
-Class "Body"
-BaseType "Jacket" " Armour" " Coat" "Cuirass" "Plate" "Vest"
-Rarity Normal
-
-Hide
-Class "Gloves"
-BaseType "Bracers" "Mitts"
-Rarity Normal
-
-Hide
-Class "Boots"
-BaseType "Greaves" "Boots"
-Rarity Normal
-
 # "Scroll of Wisdom" is only shown in acts 1–4
-
 Hide
 BaseType "Scroll of Wisdom"
 AreaLevel > 49
@@ -988,6 +990,31 @@ AreaLevel > 49
 Show
 BaseType "Scroll of Wisdom"
 AreaLevel <= 48
+
+#   [1101] dex- or/and str-bases:-----------
+Hide
+Class "Helmet"
+BaseType "Greathelm" " Cap" " Hood" " Helm"
+Quality < 7
+Rarity Normal
+
+Hide
+Class "Body"
+BaseType " Coat" "Cuirass" " Plate" " Vest" " Mail" " Armour"
+Quality < 7
+Rarity Normal
+
+Hide
+Class "Gloves"
+BaseType "Bracers" "Mitts" "Gauntlets"
+Quality < 7
+Rarity Normal
+
+Hide
+Class "Boots"
+BaseType "Greaves" "Boots" "Sabatons"
+Quality < 7
+Rarity Normal
 
 #--------------------------
 # [[1200]] Salvagable items & items with +quality
@@ -1010,6 +1037,7 @@ SetBackgroundColor 65 65 65
 PlayEffect Grey
 MinimapIcon 1 Grey Square
 PlayAlertSound 2 100
+AreaLevel >= 71
 
 Show
 Quality >= 1
@@ -1019,7 +1047,7 @@ SetBackgroundColor 65 65 65
 PlayEffect Grey
 MinimapIcon 1 Grey Square
 PlayAlertSound 2 100
-AreaLevel < 65
+AreaLevel < 71
 
 Show
 Quality >= 1
@@ -1606,7 +1634,7 @@ PlayAlertSound 6 300
 PlayEffect Purple
 MinimapIcon 0 Purple Star
 
-# cant set styles for: Astramentis, Dream Fragments, Original Sin
+# cant set styles for unid items: Astramentis, Dream Fragments, Original Sin, Kalandra's Touch
 
 # Red beam: price ~1 divine orb
 Show
@@ -1634,13 +1662,13 @@ Show
 Rarity Unique
 BaseType == "Ring"
 Sockets > 0
-SetTextColor 175 96 37 255
-SetBorderColor 175 96 37 255
-SetBackgroundColor 53 13 13 255
-PlayAlertSound 3 300
-PlayEffect Brown
-MinimapIcon 1 Brown Star
-SetFontSize 40
+SetFontSize 45
+SetTextColor 255 0 0 255
+SetBorderColor 255 0 0 255
+SetBackgroundColor 255 255 255 255
+PlayAlertSound 6 300
+PlayEffect Red
+MinimapIcon 0 Red Star
 
 Show
 Rarity Unique
@@ -1981,7 +2009,7 @@ SetFontSize 40
 
 Show
 Class "Currency"
-BaseType "Armourer's Scrap" "Blacksmith's Whetstone" "Orb of Augmentation" "Orb of Transmutation" "Regal Shard"
+BaseType "Armourer's Scrap" "Blacksmith's Whetstone" "Orb of Augmentation" "Orb of Transmutation" "Regal Shard" "Alchemy Shard"
 SetTextColor 255 207 132
 SetBorderColor 255 207 132
 MinimapIcon 2 Grey Circle
@@ -2298,6 +2326,28 @@ SetFontSize 40
 # PlayAlertSound 2 300
 # PlayEffect Pink
 # MinimapIcon 1 Pink Circle
+
+Show
+BaseType "Garment"
+
+#   [2201] flasks:
+Show
+Class "Flask"
+BaseType "Life"
+Rarity Normal
+SetBackgroundColor 130 50 50 150
+
+Show
+Class "Flask"
+BaseType "Life"
+Rarity Magic
+SetBackgroundColor 130 50 50 150
+SetTextColor 100 200 255
+
+Show
+Class "Flask"
+BaseType "Mana"
+SetBackgroundColor 50 50 130 150
 
 ### OPTIONAL RULE: Hide random bases
 # REMOVE THE BASES YOU --DO-- WANT TO SEE BEFORE SETTING TO HIDE
