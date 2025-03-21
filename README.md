@@ -4,7 +4,7 @@
 
 ## Basic principles of this project:
 1. 💯 <ins>Pick everything you see on the ground, on any area level</ins>. At AreaLevel *1+ / 65+ / 71+ / 75+* you see fewer and fewer items that have str- & dex-requirements on them and other useless items for your class. <br> **Characters of level 90+**: check out the "Endgame custom rules" section to apply additional rules for hiding potentially excessive items.
-2. 🖋️ <ins>Minimalism for equipment styles</ins>: ~99% of the equipment is garbage that doesn't deserve much custom styling, but you'll see a colorful 🎨 design of currency, map-specific items etc.
+2. 🖋️ <ins>Minimalism for equipment styles</ins>: ~99% of the equipment is garbage that doesn't deserve much custom styling, <br>but you'll see a colorful 🎨 design of currency, map-specific items etc.
 Special equipment stylization applies in four cases:
    - for the best bases of the corresponding slot, on which the maximum affix tier *(itemLevel 81–82)* can be generated;
    - for some infrequent items on low-level characters: jewelry, belts, and Chiming staff;
@@ -31,7 +31,7 @@ Automatically updated lootfilter without the need to download any files.
    - for summoners (scepters and int-shields are always shown)
 4. Turn on filter in the game settings : `Escape` -> Options -> Game -> select the filter from the Dropdown box of "Item Filter" section — name of lootfilter will be **blue** color.
 
-  ![settings/game-itemfilter](https://github.com/fpsthirty/poe2-lootfilter/raw/master/img/settings/game-itemfilter.png)
+  ![settings/game-itemfilter](https://github.com/fpsthirty/poe2-lootfilter/raw/main/img/settings/game-itemfilter.png)
 
 
 ### 🗄️ LOCAL FILE
@@ -52,28 +52,27 @@ In this case you can make your own edits, including activating additionally prep
 
 <details>
   <summary>show/hide rules for armors in the different area levels</summary>
-> [!NOTE] 
-> - double values in the lines for Shields indicate the difference in display depending on selected profile: summoner / caster;
-> - some item bases you've never seen, but information about them is in the game.
-> [!NOTE]  
-> An example of how to navigate the table:
-> there is an armor item that has "Greathelm" in its name, and depending on the rarity of the item, different rules are applied to show/hide it:
-> ⚪ normal Greathelm: will be hidden at any area level (1-99);
-> 🔵 magic Greathelm: will only show on area levels 1-70;
-> 🟡 rare Greathelm: will only show on area levels 1-74;
-> 🟠 unique Greathelm: will be shown in any area level (1-99).
+<br> Notes:
+<br> - double values in the lines for Shields indicate the difference in display depending on selected profile: summoner / caster;
+<br> - some item bases you've never seen, but information about them is in the game.
 <br>
-<br>![table-armors](https://github.com/fpsthirty/poe2-lootfilter/raw/master/img/loot/table-armors.png)
+<br> An example of how to navigate the table:
+<br> there is an armor item that has "Greathelm" in its name, and depending on the rarity of the item, different rules are applied to show/hide it:
+<br> ⚪ normal Greathelm: will be hidden at any area level (1-99);
+<br> 🔵 magic Greathelm: will only show on area levels 1-70;
+<br> 🟡 rare Greathelm: will only show on area levels 1-74;
+<br> 🟠 unique Greathelm: will be shown in any area level (1-99).
+<br>
+<br>![table-armors](https://github.com/fpsthirty/poe2-lootfilter/raw/main/img/loot/table-armors.png)
 </details>
 <details>
   <summary>show/hide rules for weapons in the different area levels</summary>
-> [!NOTE]  
-> - double values in the lines for Focuses, Sceptres and Wands indicate the difference in display depending on selected profile: summoner / caster;
-> - some item bases you've never seen, but information about them is in the game.
-> [!TIP]
-> * the Chiming Staff is always displayed
-> [!NOTE]  
-> An example of how to navigate the table:
+<br> Notes:
+<br> - double values in the lines for Focuses, Sceptres and Wands indicate the difference in display depending on selected profile: summoner / caster;
+<br> - some item bases you've never seen, but information about them is in the game.
+<br> Marker:
+<br> * — Chiming Staff is always displayed
+<br>
 <br> An example of how to navigate the table:
 <br> there is an weapon item that has "Crossbow" in its name, and depending on the rarity of the item, different rules are applied to show/hide it:
 <br> ⚪ normal Crossbow: will be hidden at any area level (1-99);
@@ -81,67 +80,67 @@ In this case you can make your own edits, including activating additionally prep
 <br> 🟡 rare Crossbow: will only show on area levels 1-74;
 <br> 🟠 unique Crossbow: will be shown in any area level (1-99).
 <br>
-<br>![table-weapons](https://github.com/fpsthirty/poe2-lootfilter/raw/master/img/loot/table-weapons.png)
+<br>![table-weapons](https://github.com/fpsthirty/poe2-lootfilter/raw/main/img/loot/table-weapons.png)
 </details>
 <details>
   <summary>altar</summary>
-  ![altar](https://github.com/fpsthirty/poe2-lootfilter/raw/master/img/loot/altar.png)
+  ![altar](https://github.com/fpsthirty/poe2-lootfilter/raw/main/img/loot/altar.png)
 </details>
 <details>
   <summary>breach</summary>
-  ![breach](https://github.com/fpsthirty/poe2-lootfilter/raw/master/img/loot/breach.png)
+  ![breach](https://github.com/fpsthirty/poe2-lootfilter/raw/main/img/loot/breach.png)
 </details>
 <details>
   <summary>currency</summary>
-  ![currency](https://github.com/fpsthirty/poe2-lootfilter/raw/master/img/loot/currency.png)
+  ![currency](https://github.com/fpsthirty/poe2-lootfilter/raw/main/img/loot/currency.png)
 </details>
 <details>
   <summary>delirium</summary>
-  ![delirium](https://github.com/fpsthirty/poe2-lootfilter/raw/master/img/loot/delirium.png)
+  ![delirium](https://github.com/fpsthirty/poe2-lootfilter/raw/main/img/loot/delirium.png)
 </details>
 <details>
   <summary>equipment: high-end</summary>
-  -end![equip_high-end](https://github.com/fpsthirty/poe2-lootfilter/raw/master/img/loot/equip_high-end.png)
+  -end![equip_high-end](https://github.com/fpsthirty/poe2-lootfilter/raw/main/img/loot/equip_high-end.png)
 </details>
 <details>
   <summary>equipment</summary>
-  ![equipment](https://github.com/fpsthirty/poe2-lootfilter/raw/master/img/loot/equipment.png)
+  ![equipment](https://github.com/fpsthirty/poe2-lootfilter/raw/main/img/loot/equipment.png)
 </details>
 <details>
   <summary>essences</summary>
-  ![essences](https://github.com/fpsthirty/poe2-lootfilter/raw/master/img/loot/essences.png)
+  ![essences](https://github.com/fpsthirty/poe2-lootfilter/raw/main/img/loot/essences.png)
 </details>
 <details>
   <summary>expedition</summary>
-  ![expedition](https://github.com/fpsthirty/poe2-lootfilter/raw/master/img/loot/expedition.png)
+  ![expedition](https://github.com/fpsthirty/poe2-lootfilter/raw/main/img/loot/expedition.png)
 </details>
 <details>
   <summary>gold</summary>
-  ![gold](https://github.com/fpsthirty/poe2-lootfilter/raw/master/img/loot/gold.png)
+  ![gold](https://github.com/fpsthirty/poe2-lootfilter/raw/main/img/loot/gold.png)
 </details>
 <details>
   <summary>pinnacle keys</summary>
-  ![pinnacle_keys](https://github.com/fpsthirty/poe2-lootfilter/raw/master/img/loot/pinnacle_keys.png)
+  ![pinnacle_keys](https://github.com/fpsthirty/poe2-lootfilter/raw/main/img/loot/pinnacle_keys.png)
 </details>
 <details>
   <summary>socketables</summary>
-  ![socketables](https://github.com/fpsthirty/poe2-lootfilter/raw/master/img/loot/socketables.png)
+  ![socketables](https://github.com/fpsthirty/poe2-lootfilter/raw/main/img/loot/socketables.png)
 </details>
 <details>
   <summary>tablets</summary>
-  ![tablets](https://github.com/fpsthirty/poe2-lootfilter/raw/master/img/loot/tablets.png)
+  ![tablets](https://github.com/fpsthirty/poe2-lootfilter/raw/main/img/loot/tablets.png)
 </details>
 <details>
   <summary>trials overall</summary>
-  ![trials_overall](https://github.com/fpsthirty/poe2-lootfilter/raw/master/img/loot/trials_overall.png)
+  ![trials_overall](https://github.com/fpsthirty/poe2-lootfilter/raw/main/img/loot/trials_overall.png)
 </details>
 <details>
   <summary>uncut_gems</summary>
-  ![uncut_gems](https://github.com/fpsthirty/poe2-lootfilter/raw/master/img/loot/image.png)
+  ![uncut_gems](https://github.com/fpsthirty/poe2-lootfilter/raw/main/img/loot/image.png)
 </details>
 <details open>
   <summary>waystones | next your click to one dropdown higher, etc. — so you have to scroll less. </summary>
-  ![waystones](https://github.com/fpsthirty/poe2-lootfilter/raw/master/img/loot/image.png)
+  ![waystones](https://github.com/fpsthirty/poe2-lootfilter/raw/main/img/loot/image.png)
 </details>
 <script>
 document.addEventListener("DOMContentLoaded", () => {
