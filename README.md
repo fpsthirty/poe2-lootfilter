@@ -40,7 +40,7 @@ In this case you can make your own edits, including activating additionally prep
 🧾 **Instruction:**
 1. Open link of current release: [releases/latest](https://github.com/fpsthirty/poe2-lootfilter/releases/latest)
 2. Scroll down to the "Assets"-section and click on the file name `NvrSnk+fps30_caster.filter` to download it.
-3. Paste this file into the following folder: `%userprofile%/Documents/My Games/Path of Exile 2` *(you can paste this correct link into File Explorer)*
+3. Move this file into the following folder: `%userprofile%/Documents/My Games/Path of Exile 2` *(you can paste this correct link into File Explorer)*
 4. Turn on filter in the game settings : `Escape` -> Options -> Game -> select the filter from the Dropdown box of "Item Filter" section — name of lootfilter will be **white** color.
 
 > [!WARNING]  
@@ -51,34 +51,38 @@ In this case you can make your own edits, including activating additionally prep
 ## 📖 Documentation
 *click on the last dropdown item first, you'll be more comfortable, trust me.*
 
-### show/hide rules for armors in the different area levels
-> [!NOTE] Notes:
+### show/hide rules for armors in the different area levels:
+> [!NOTE]
 > - double values in the lines for Shields indicate the difference in display depending on selected profile: summoner / caster;
 > - some item bases you've never seen, but information about them is in the game.
 
-> [!NOTE] An example of how to navigate the table:
+> [!NOTE]
+> An example of how to navigate the table:
 > there is an armor item that has "Greathelm" in its name, and depending on the rarity of the item, different rules are applied to show/hide it:
-> <br>⚪ normal Greathelm: will be hidden at any area level (1-99);
-> <br>🔵 magic Greathelm: will only show on area levels 1-70;
-> <br>🟡 rare Greathelm: will only show on area levels 1-74;
-> <br>🟠 unique Greathelm: will be shown in any area level (1-99).
+> <br>⚪ **normal** Greathelm: will be hidden at any area level _(**1-99**)_;
+> <br>🔵 **magic** Greathelm: will only show on area levels **1-70**;
+> <br>🟡 **rare** Greathelm: will only show on area levels **1-74**;
+> <br>🟠 **unique** Greathelm: will be shown in any area level _(**1-99**)_.
 
 > ![table-armors](https://github.com/fpsthirty/poe2-lootfilter/raw/main/img/loot/table-armors.png)
-
-### show/hide rules for weapons in the different area levels</summary>
-> [!TIP] Marker:
+---
+---
+### show/hide rules for weapons in the different area levels:
+> [!TIP]
+> Marker:
 > \* — Chiming Staff is always displayed
 
-> [!NOTE] Notes:
+> [!NOTE]
 > - double values in the lines for Focuses, Sceptres and Wands indicate the difference in display depending on selected profile: summoner / caster;
 > - some item bases you've never seen, but information about them is in the game.
 
-> [!NOTE] An example of how to navigate the table:
+> [!NOTE]
+> An example of how to navigate the table:
 > there is an weapon item that has "Crossbow" in its name, and depending on the rarity of the item, different rules are applied to show/hide it:
-> <br>⚪ normal Crossbow: will be hidden at any area level (1-99);
-> <br>🔵 magic Crossbow: will only show on area levels 1-64;
-> <br>🟡 rare Crossbow: will only show on area levels 1-74;
-> <br>🟠 unique Crossbow: will be shown in any area level (1-99).
+> <br>⚪ normal Crossbow: will be hidden at any area level _(**1-99**)_;
+> <br>🔵 magic Crossbow: will only show on area levels **1-64**;
+> <br>🟡 rare Crossbow: will only show on area levels **1-74**;
+> <br>🟠 unique Crossbow: will be shown in any area level _(**1-99**)_.
 
 > ![table-weapons](https://github.com/fpsthirty/poe2-lootfilter/raw/main/img/loot/table-weapons.png)
 
@@ -126,8 +130,6 @@ In this case you can make your own edits, including activating additionally prep
 
 > ### waystones:
 >  ![waystones](https://github.com/fpsthirty/poe2-lootfilter/raw/main/img/loot/waystones.png)
-
----
 
 > [!NOTE]  
 > 💬 I express my respect to **@NeverSink** for the **[original version](https://github.com/NeverSinkDev/NeverSink-Filter-for-PoE2)** of lootfilter and will mention its credentials below:
