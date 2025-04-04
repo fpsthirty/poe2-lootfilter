@@ -26,7 +26,7 @@ Automatically updated lootfilter without the need to download any files.
 1. Log in to the official website: https://www.pathofexile.com/
 2. Open the page with list of lootfilters from the author of this repository: [fpsthirty-6961/item-filters](https://www.pathofexile.com/account/view-profile/fpsthirty-6961/item-filters)
 3. Click on the "Follow" button in lootfilter you're interested in. Now there are two variants of lootfilters:
-   - for pure casters *(wands and focuses are always shown)*,
+   - for pure mages *(wands and focuses are always shown)*,
    - for summoners *(scepters and int-shields are always shown)*.
 4. Turn on filter in the game settings : `Escape` -> Options -> Game -> select the filter from the Dropdown box of "Item Filter" section — name of lootfilter will be **blue** color.
 
@@ -44,7 +44,7 @@ In this case you can make your own edits, including activating additionally prep
 4. Turn on filter in the game settings : `Escape` -> Options -> Game -> select the filter from the Dropdown box of "Item Filter" section — name of lootfilter will be **white** color.
 
 > [!WARNING]  
-> Summoner settings are enabled by default; if you are playing as a caster without a large number of summons, open lootfilter-file in any text editor (I recommend Sublime Text), find "[[0200]] Section for non-summoner casters" section outside the table of contents.
+> Summoner settings are enabled by default; if you are playing as a mage without a large number of summons, open lootfilter-file in any text editor (I recommend Sublime Text), find "[[0200]] Section for non-summoner casters" section outside the table of contents.
 
 ---
 
@@ -53,7 +53,7 @@ In this case you can make your own edits, including activating additionally prep
 
 ### show/hide rules for armors in the different area levels:
 > [!NOTE]
-> - double values in the lines for Shields indicate the difference in display depending on selected profile: summoner / caster;
+> - double values in the lines for Shields indicate the difference in display depending on selected profile: summoner / mage;
 > - some item bases you've never seen, but information about them is in the game.
 
 > [!NOTE]
@@ -68,12 +68,9 @@ In this case you can make your own edits, including activating additionally prep
 ---
 ---
 ### show/hide rules for weapons in the different area levels:
-> [!TIP]
-> Marker:
-> \* — Chiming Staff is always displayed
 
 > [!NOTE]
-> - double values in the lines for Focuses, Sceptres and Wands indicate the difference in display depending on selected profile: summoner / caster;
+> - double values in the lines for Focuses, Sceptres and Wands indicate the difference in display depending on selected profile: summoner / mage;
 > - some item bases you've never seen, but information about them is in the game.
 
 > [!NOTE]
@@ -83,6 +80,10 @@ In this case you can make your own edits, including activating additionally prep
 > <br>🔵 magic Crossbow: will only show on area levels **1-64**;
 > <br>🟡 rare Crossbow: will only show on area levels **1-74**;
 > <br>🟠 unique Crossbow: will be shown in any area level _(**1-99**)_.
+
+> [!TIP]
+> Marker:
+> \* — Chiming Staff is always displayed
 
 > ![table-weapons](https://github.com/fpsthirty/poe2-lootfilter/raw/main/img/loot/table-weapons.png)
 
