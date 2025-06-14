@@ -280,7 +280,7 @@ MinimapIcon 0 Purple Star
 ### socketables: Rabbit Talisman, Fox Talisman, Talisman of Sirrius, Countess Seske's Rune of Archery, Farrul's Rune of the Chase, Hedgewitch Assandra's Rune of Wisdom, Saqawal's Rune of Memory
 ### essences: Essence of Horror, Essence of Delirium
 ### omens: Omen of Sinistral Erasure, Omen of Dextral Annulment, Omen of Dextral Erasure, Omen of Sinistral Annulment, Omen of Whittling
-### pinnacle keys: vault keys
+### pinnacle keys: Zarokh's Reliquary Key: Against the Darkness, Olroth's Reliquary Key, The Arbiter's Reliquary Key, Zarokh's Reliquary Key: Temporalis
 ### unid uniques: "Temporalis" Silk Robe, "Headhunter" Heavy Belt, Incense Relic, Vase Relic, Glass Shank, Ultimate Life Flask, Armoured Cap, "Astramentis" Stellar amulet, "Original Sin" Amethyst Ring, "Kalandra's Touch" Ring, "Chernobog's Pillar" Blacksteel Tower Shield, "The Gnashing Sash" Wide Belt, "Defiance of Destiny" Jade Amulet, "Snakepit" Pearl Ring, "Ryslatha's Coil" Ornate Belt, "Bursting Decay" Unset Ring, "Tabula Rasa" Garment, "Rathpith Globe" Sacred Focus, "Death Articulated" Ornate Gauntlets, "Maligaro's Virtuosity" Fine Bracers, "Hyrri's Ire" Armoured Vest, "The Surrender" Stone Tower Shield, "Leopold's Applause" Embroidered Gloves, "The Coming Calamity" Heroic Armour, "Rite of Passage" Golden Charm, "The Fall of the Axe" Silver Charm, "For Utopia" Stone Charm, Ritual Precursor Tablet, "Sacred Flame" Shrine Sceptre, "Palm of the Dreamer" Shrine Sceptre, "Cadiro's Gambit" Primed Quiver
 ### specific bases: Fishing Rod, Golden Mantle, Golden Bracers, Golden Caligae, Golden Wreath, Golden Visage, Golden Flame, Golden Shield
 ### uncut gems: uncut spirit gem 20 lvl
@@ -291,7 +291,7 @@ MinimapIcon 0 Purple Star
 ### delirium / distilled emotions: Distilled Isolation (white)
 ### essences: Essence of Insanity, Essence of Hysteria
 ### omens: -
-### pinnacle keys: Arbiter fragments
+### pinnacle keys: Arbiter fragments, Tangmazu's Reliquary Key, Xesht's Reliquary Key
 ### unid uniques: Emerald, Ruby, Sapphire, Diamond, Time-Lost Diamond, Timeless Jewel, Furtive Wraps, Smuggler Coat, Ultimate Mana Flask, Stone Tower Shield, Utility Belt, Spiked Club, Sekhema's Resolve, Giant Maul, "Dream Fragments" Sapphire Ring, "Prism Guardian" Intricate Crest Shield, "Forsaken Bangle" Amethyst Charm, "The Hammer of Faith" Giant Maul, "The Last Lament" Desolate Crossbow
 ### specific bases: -
 ### uncut gems: uncut skill gem 20 lvl
@@ -337,7 +337,7 @@ SetBorderColor 200 200 200
 SetBackgroundColor 65 65 65
 PlayEffect Grey
 MinimapIcon 1 Grey Square
-PlayAlertSound 2 100
+PlayAlertSound 10 100
 
 Show
 Class "Flask"
@@ -347,7 +347,7 @@ SetBorderColor 200 200 200
 SetBackgroundColor 65 65 65
 PlayEffect Grey
 MinimapIcon 1 Grey Square
-PlayAlertSound 2 100
+PlayAlertSound 10 100
 
 Show
 Class "Flask"
@@ -377,7 +377,7 @@ SetBorderColor 200 200 200
 SetBackgroundColor 65 65 65
 PlayEffect Grey
 MinimapIcon 1 Grey Circle
-PlayAlertSound 2 100
+PlayAlertSound 10 100
 
 #--------------------------
 # [[0600]] High itemLevel bases:
@@ -429,8 +429,7 @@ PlayAlertSound 16 300
 # [[0700]] White items for unique craft:
 #--------------------------
 
-# S-tier:
-
+# S-Tier:
 Show
 BaseType "Stellar Amulet" # Astramentis / +(80–100) to all Attributes
 Rarity Normal
@@ -1558,6 +1557,54 @@ MinimapIcon 1 Orange Square
 SetFontSize 40
 
 # vault keys
+# S-Tier:
+Show
+Class "Vault Key"
+BaseType == "Zarokh's Reliquary Key: Against the Darkness" "Olroth's Reliquary Key" "The Arbiter's Reliquary Key" "Zarokh's Reliquary Key: Temporalis"
+SetFontSize 45
+SetTextColor 255 0 0 255
+SetBorderColor 255 0 0 255
+SetBackgroundColor 255 255 255 255
+PlayAlertSound 6 300
+PlayEffect Purple
+MinimapIcon 0 Purple Star
+
+# A-Tier:
+Show
+Class "Vault Key"
+BaseType == "Tangmazu's Reliquary Key" "Xesht's Reliquary Key"
+SetFontSize 45
+SetTextColor 255 0 0 255
+SetBorderColor 255 0 0 255
+SetBackgroundColor 255 255 255 255
+PlayAlertSound 6 300
+PlayEffect Red
+MinimapIcon 0 Red Star
+
+# B-Tier:
+Show
+Class "Vault Key"
+BaseType == "Twilight Reliquary Key" "Ritualistic Reliquary Key" "The Trialmaster's Reliquary Key" "Zarokh's Reliquary Key: Sandstorm Visage"
+SetTextColor 255 255 255 255
+SetBorderColor 255 255 255 255
+SetBackgroundColor 240 90 35 200
+PlayAlertSound 1 100
+PlayEffect Orange
+MinimapIcon 1 Orange Square
+SetFontSize 40
+
+# C-Tier:
+Show
+Class "Vault Key"
+BaseType == "Zarokh's Reliquary Key: Blessed Bonds" "Zarokh's Reliquary Key: Sekhema's Resolve"
+SetTextColor 255 225 200
+SetBorderColor 255 207 132
+SetBackgroundColor 76 51 12
+PlayAlertSound 2 300
+PlayEffect White
+MinimapIcon 1 White Circle
+SetFontSize 40
+
 Show
 Class "Vault Key"
 SetFontSize 45
@@ -1576,17 +1623,17 @@ SetTextColor 255 255 255 255
 SetBorderColor 255 255 255 255
 SetBackgroundColor 240 90 35 200
 PlayAlertSound 1 100
-PlayEffect White
+PlayEffect Orange
 MinimapIcon 1 Orange Square
 SetFontSize 40
 
 Show
 BaseType "Expedition Logbook"
 ItemLevel < 79
-SetTextColor 255 207 132
-SetBorderColor 255 207 132
-SetBackgroundColor 76 51 12
-PlayAlertSound 2 300
+SetTextColor 255 255 255 255
+SetBorderColor 255 255 255 255
+SetBackgroundColor 240 90 35 200
+PlayAlertSound 1 100
 PlayEffect White
 MinimapIcon 1 White Square
 SetFontSize 40
@@ -1978,6 +2025,7 @@ PlayEffect Cyan Temp
 
 #   [1408] quest items in unique maps
 Show
+Class "Quest Item" "Instance Local Item"
 BaseType == "Rotten Satchel Charge"
 SetTextColor 0 209 0
 SetBackgroundColor 0 0 0 220
@@ -2007,7 +2055,7 @@ BaseType "Barya" "Ultimatum"
 SetTextColor 255 207 255
 SetBorderColor 255 207 255
 SetBackgroundColor 65 20 80 200
-PlayAlertSound 2 300
+PlayAlertSound 2 200
 PlayEffect White
 MinimapIcon 1 White Square
 
@@ -2491,7 +2539,18 @@ MinimapIcon 2 Cyan Triangle
 PlayEffect Cyan
 
 Show
-BaseType "Soul Core" "Timeless"
+Class == "Socketable"
+BaseType "Soul Core"
+SetTextColor 0 240 190
+SetBorderColor 0 240 190
+SetFontSize 40
+MinimapIcon 0 Cyan Diamond
+PlayAlertSound 2 300
+PlayEffect Cyan
+
+Show
+Class "Jewel"
+BaseType "Timeless"
 SetTextColor 0 240 190
 SetBorderColor 0 240 190
 SetFontSize 40
@@ -2665,7 +2724,7 @@ SetTextColor 0 240 190
 PlayEffect Cyan Temp
 
 #   [1805] talismans
-# S-tier
+# S-Tier
 Show
 Class "Socketable"
 BaseType "Rabbit Talisman" "Fox Talisman" "Talisman of Ralakesh" "Talisman of Sirrius"
@@ -2677,7 +2736,7 @@ PlayAlertSound 6 300
 PlayEffect Purple
 MinimapIcon 0 Purple Star
 
-# A-tier
+# A-Tier
 Show
 Class "Socketable"
 BaseType "Owl Talisman" "Primate Talisman" "Serpent Talisman" "Talisman of Grold" "Talisman of Thruldana"
@@ -2694,7 +2753,9 @@ Show
 Class "Socketable"
 BaseType "Talisman"
 SetTextColor 104 238 170
-PlayEffect Cyan Temp
+PlayEffect Cyan
+PlayAlertSound 2 200
+MinimapIcon 1 Cyan Circle
 
 #--------------------------
 # [[1900]] Craft and Currency
@@ -3180,6 +3241,10 @@ SetFontSize 40
 #--------------------------
 
 Show
+Class "Quest Item" "Instance Local Item"
+SetFontSize 40
+
+Show
 Class "Map Fragments"
 SetTextColor 255 207 255
 SetBorderColor 255 207 255
@@ -3187,10 +3252,6 @@ SetBackgroundColor 65 20 80 200
 PlayAlertSound 2 300
 PlayEffect White
 MinimapIcon 1 White Square
-SetFontSize 40
-
-Show
-Class "Quest Item"
 SetFontSize 40
 
 #   [2201] flasks:
