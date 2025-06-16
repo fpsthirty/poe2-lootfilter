@@ -69,6 +69,10 @@
 #   [1202] mix-bases
 #   [1203] int-bases
 # [[1300]] Uniques
+#   [1301] purple beam: price 2–500+ divine orbs
+#   [1302] red beam: price ~1 divine orb
+#   [1303] red beam: price ~1 divine orb
+#   [1304] Schrödinger's uniques
 # [[1400]] Things of the Atlas
 #   [1401] pinnacle keys
 #   [1402] Expedition / logbooks, artifacts & exotic coinage
@@ -86,11 +90,12 @@
 # [[1600]] Gold
 # [[1700]] Uncut Gems
 # [[1800]] Socketables
-#   [1801] soul cores and timeless-jewels
-#   [1802] any jewels
-#   [1803] any runes
-#   [1804] charms
-#   [1805] talismans
+#   [1801] soul cores
+#   [1802] timeless-jewels
+#   [1803] any jewels
+#   [1804] any runes
+#   [1805] charms
+#   [1806] talismans
 # [[1900]] Craft and Currency
 #   [1901] currency Tier S: Mirror, Divine
 #   [1902] currency Tier A: Gemcutter, Annullment
@@ -101,7 +106,7 @@
 # [[2000]] Waystones
 #   [2001] distilled waystones
 #   [2002] default styles for waystones
-# [[2100]] Value rares for leveling
+# [[2100]] Valuable rares for leveling
 #   [2101] rings, amulets and belts
 # [[2200]] Low-priority rules
 #   [2201] flasks
@@ -436,9 +441,9 @@ Rarity Normal
 ItemLevel >= 24
 SetBorderColor 255 128 200
 SetBackgroundColor 65 65 65
-PlayEffect Orange
+PlayEffect Orange Temp
 MinimapIcon 1 Orange Square
-PlayAlertSound 2 100
+PlayAlertSound 12 300
 
 Show
 BaseType "Jade Amulet" # Defiance of Destiny / Recover 10% of Missing Life before being Hit by an Enemy
@@ -446,37 +451,28 @@ Rarity Normal
 ItemLevel >= 56
 SetBorderColor 255 128 200
 SetBackgroundColor 65 65 65
-PlayEffect Orange
+PlayEffect Orange Temp
 MinimapIcon 1 Orange Square
-PlayAlertSound 2 100
+PlayAlertSound 12 300
 
 Show
-BaseType "Ornate Belt" # Ryslatha's Coil / [-40–-30%; 30–40%] min-max Physical Attack Damage
+BaseType "Bloodstone Amulet" # Yoke of Suffering / Enemies take (15-20)% increased Damage for each Elemental Ailment type among your Ailments on them
 Rarity Normal
-ItemLevel >= 31
+ItemLevel >= 18
 SetBorderColor 255 128 200
 SetBackgroundColor 65 65 65
-PlayEffect Orange
+PlayEffect Orange Temp
 MinimapIcon 1 Orange Square
-PlayAlertSound 2 100
-
-Show
-BaseType "Sacred Focus" # Rathpith Globe / Non-Channelling Spells gain +5% crit chance + +10% damage per 100 hp
-Rarity Normal
-SetBorderColor 255 128 200
-SetBackgroundColor 65 65 65
-PlayEffect Orange
-MinimapIcon 1 Orange Square
-PlayAlertSound 2 100
+PlayAlertSound 12 300
 
 Show
 BaseType "Stone Tower Shield" # The Surrender / Recover 4% of Life when you Block
 Rarity Normal
 SetBorderColor 255 128 200
 SetBackgroundColor 65 65 65
-PlayEffect Orange
+PlayEffect Orange Temp
 MinimapIcon 1 Orange Square
-PlayAlertSound 2 100
+PlayAlertSound 12 300
 
 Show
 BaseType "Embroidered Glove" # Leopold's Applause / Your Hits can Penetrate Elemental Resistances down to a minimum of -50%
@@ -484,9 +480,9 @@ Rarity Normal
 ItemLevel >= 31
 SetBorderColor 255 128 200
 SetBackgroundColor 65 65 65
-PlayEffect Orange
+PlayEffect Orange Temp
 MinimapIcon 1 Orange Square
-PlayAlertSound 2 100
+PlayAlertSound 12 300
 
 Show
 BaseType "Silver Charm" # The Fall of the Axe / Grants Onslaught during effect
@@ -494,9 +490,9 @@ Rarity Normal
 ItemLevel >= 10
 SetBorderColor 255 128 200
 SetBackgroundColor 65 65 65
-PlayEffect Orange
+PlayEffect Orange Temp
 MinimapIcon 1 Orange Square
-PlayAlertSound 2 100
+PlayAlertSound 12 300
 
 Show
 BaseType "Stone Charm" # For Utopia / Defend with 200% of Armour during effect
@@ -504,9 +500,9 @@ Rarity Normal
 ItemLevel >= 8
 SetBorderColor 255 128 200
 SetBackgroundColor 65 65 65
-PlayEffect Orange
+PlayEffect Orange Temp
 MinimapIcon 1 Orange Square
-PlayAlertSound 2 100
+PlayAlertSound 12 300
 
 # A-tier:
 Show
@@ -515,9 +511,18 @@ Rarity Normal
 ItemLevel >= 24
 SetBorderColor 255 128 200
 SetBackgroundColor 65 65 65
-PlayEffect Orange
+PlayEffect Orange Temp
 MinimapIcon 1 Orange Square
-PlayAlertSound 2 100
+PlayAlertSound 12 300
+
+Show
+BaseType "Sacred Focus" # Rathpith Globe / Non-Channelling Spells gain +5% crit chance + +10% damage per 100 hp
+Rarity Normal
+SetBorderColor 255 128 200
+SetBackgroundColor 65 65 65
+PlayEffect Orange Temp
+MinimapIcon 1 Orange Square
+PlayAlertSound 12 300
 
 Show
 BaseType "Giant Maul" # The Hammer of Faith / Gain a random shrine buff every 10 seconds
@@ -525,9 +530,9 @@ Rarity Normal
 DropLevel = 65
 SetBorderColor 255 128 200
 SetBackgroundColor 65 65 65
-PlayEffect Orange
+PlayEffect Orange Temp
 MinimapIcon 1 Orange Square
-PlayAlertSound 2 100
+PlayAlertSound 12 300
 
 Show
 BaseType "Intricate Crest Shield" # Prism Guardian / +1 to Maximum Spirit per 50 Maximum Life
@@ -535,9 +540,9 @@ Rarity Normal
 ItemLevel >= 33
 SetBorderColor 255 128 200
 SetBackgroundColor 65 65 65
-PlayEffect Orange
+PlayEffect Orange Temp
 MinimapIcon 1 Orange Square
-PlayAlertSound 2 100
+PlayAlertSound 12 300
 
 Show
 BaseType "Amethyst Charm" # Forsaken Bangle / 50% of Chaos damage you prevent when Hit Recouped as Life and Mana during effect
@@ -545,9 +550,9 @@ Rarity Normal
 ItemLevel >= 40
 SetBorderColor 255 128 200
 SetBackgroundColor 65 65 65
-PlayEffect Orange
+PlayEffect Orange Temp
 MinimapIcon 1 Orange Square
-PlayAlertSound 2 100
+PlayAlertSound 12 300
 
 Show
 BaseType "Gold Circlet" # Atziri's Disdain / 10% of Damage taken bypasses Energy Shield + Gain (10-15)% of Maximum Life as Extra Maximum Energy Shield
@@ -555,19 +560,19 @@ Rarity Normal
 DropLevel = 40
 SetBorderColor 255 128 200
 SetBackgroundColor 65 65 65
-PlayEffect Orange
+PlayEffect Orange Temp
 MinimapIcon 1 Orange Square
-PlayAlertSound 2 100
+PlayAlertSound 12 300
 
 Show
-BaseType "Spiked Club" # Trenchtimbre / +(1–3) to Level of all Minion Skills
+BaseType "Spiked Club" # Trenchtimbre / +(1–2) to Level of all Minion Skills
 Rarity Normal
 DropLevel = 16
 SetBorderColor 255 128 200
 SetBackgroundColor 65 65 65
-PlayEffect Orange
+PlayEffect Orange Temp
 MinimapIcon 1 Orange Square
-PlayAlertSound 2 100
+PlayAlertSound 12 300
 
 Show
 BaseType "Sapphire Ring"
@@ -577,10 +582,9 @@ Rarity Normal
 ItemLevel >= 12
 SetBorderColor 255 128 200
 SetBackgroundColor 65 65 65
-PlayEffect Orange
+PlayEffect Orange Temp
 MinimapIcon 1 Orange Square
-PlayAlertSound 2 100
-SetFontSize 40
+PlayAlertSound 12 300
 
 Show
 BaseType "Pearl Ring" # Snakepit / chain-fork
@@ -588,10 +592,9 @@ Rarity Normal
 ItemLevel >= 32
 SetBorderColor 255 128 200
 SetBackgroundColor 65 65 65
-PlayEffect Orange
+PlayEffect Orange Temp
 MinimapIcon 1 Orange Square
-PlayAlertSound 2 100
-SetFontSize 40
+PlayAlertSound 12 300
 
 Show
 BaseType "Gold Ring" # Ventor's Gamble / life + spirit + rarity + elemental res
@@ -599,10 +602,9 @@ Rarity Normal
 ItemLevel >= 64
 SetBorderColor 255 128 200
 SetBackgroundColor 65 65 65
-PlayEffect Orange
+PlayEffect Orange Temp
 MinimapIcon 1 Orange Square
-PlayAlertSound 2 100
-SetFontSize 40
+PlayAlertSound 12 300
 
 Show
 BaseType "Sectarian Crest Shield" # Prism Guardian / +1 to Maximum Spirit per 50 Maximum Life
@@ -610,9 +612,9 @@ Rarity Normal
 DropLevel = 33
 SetBorderColor 255 128 200
 SetBackgroundColor 65 65 65
-PlayEffect Orange
+PlayEffect Orange Temp
 MinimapIcon 1 Orange Square
-PlayAlertSound 2 100
+PlayAlertSound 12 300
 
 Show
 BaseType "Solar Amulet"
@@ -622,10 +624,9 @@ Rarity Normal
 ItemLevel >= 52
 SetBorderColor 255 128 200
 SetBackgroundColor 65 65 65
-PlayEffect Orange
+PlayEffect Orange Temp
 MinimapIcon 1 Orange Square
-PlayAlertSound 2 100
-SetFontSize 40
+PlayAlertSound 12 300
 
 Show
 BaseType "Heavy Belt" # Headhunter / When you Kill a Rare monster, you gain its Modifiers for 20 seconds
@@ -633,9 +634,19 @@ Rarity Normal
 ItemLevel >= 50
 SetBorderColor 255 128 200
 SetBackgroundColor 65 65 65
-PlayEffect Orange
+PlayEffect Orange Temp
 MinimapIcon 1 Orange Square
-PlayAlertSound 2 100
+PlayAlertSound 12 300
+
+Show
+BaseType "Ornate Belt" # Ryslatha's Coil / [-40–-30%; 30–40%] min-max Physical Attack Damage
+Rarity Normal
+ItemLevel >= 31
+SetBorderColor 255 128 200
+SetBackgroundColor 65 65 65
+PlayEffect Orange Temp
+MinimapIcon 1 Orange Square
+PlayAlertSound 12 300
 
 # B-tier:
 
@@ -645,20 +656,9 @@ Rarity Normal
 DropLevel = 1
 SetBorderColor 255 128 200
 SetBackgroundColor 65 65 65
-PlayEffect Orange
+PlayEffect Orange Temp
 MinimapIcon 1 Orange Square
-PlayAlertSound 2 100
-
-Show
-BaseType "Pilgrim Vestments" # Enfolding Dawn / +100 to Spirit
-Rarity Normal
-ItemLevel >= 64
-DropLevel < 45
-SetBorderColor 255 128 200
-SetBackgroundColor 65 65 65
-PlayEffect Orange
-MinimapIcon 1 Orange Square
-PlayAlertSound 2 100
+PlayAlertSound 12 300
 
 #Show
 #BaseType "Silk Robe" # Cloak of Flame Silk Robe / 40% of Physical Damage taken as Fire Damage
@@ -667,9 +667,9 @@ PlayAlertSound 2 100
 #DropLevel = 22
 #SetBorderColor 255 128 200
 #SetBackgroundColor 65 65 65
-#PlayEffect Orange
+#PlayEffect Orange Temp
 #MinimapIcon 1 Orange Square
-#PlayAlertSound 2 100
+#PlayAlertSound 12 300
 
 # C-tier:
 
@@ -679,9 +679,20 @@ PlayAlertSound 2 100
 #ItemLevel >= 24
 #SetBorderColor 255 128 200
 #SetBackgroundColor 65 65 65
-#PlayEffect Orange
+#PlayEffect Orange Temp
 #MinimapIcon 1 Orange Square
-#PlayAlertSound 2 100
+#PlayAlertSound 12 300
+
+#Show
+#BaseType "Pilgrim Vestments" # Enfolding Dawn / +100 to Spirit
+#Rarity Normal
+#ItemLevel >= 64
+#DropLevel < 45
+#SetBorderColor 255 128 200
+#SetBackgroundColor 65 65 65
+#PlayEffect Orange Temp
+#MinimapIcon 1 Orange Square
+#PlayAlertSound 12 300
 
 #--------------------------
 # [[0800]] Endgame custom rules:
@@ -754,7 +765,6 @@ AreaLevel >= 79
 #--------------------------
 
 #   [0901] hide low-level bases (<= Rare):
-
 
 Hide
 Class "Helmet" "Body" "Gloves" "Boots" "Shields"
@@ -1372,11 +1382,10 @@ Rarity <= Rare
 # [[1300]] Uniques
 #--------------------------
 
-# Purple beam: price 2–500+ divine orbs
-
+#   [1301] purple beam: price 2–500+ divine orbs
 Show
 Rarity Unique
-BaseType == "Incense Relic" "Vase Relic" "Glass Shank" "Ultimate Life Flask" "Armoured Cap" "Ritual Precursor Tablet" "Blacksteel Tower Shield" "Sacred Focus" "Ornate Gauntlets" "Fine Bracers" "Armoured Vest" "Stone Tower Shield" "Embroidered Gloves" "Heroic Armour" "Golden Charm" "Silver Charm" "Stone Charm" "Ritual Precursor Tablet" "Primed Quiver"
+BaseType == "Incense Relic" "Vase Relic" "Glass Shank" "Ultimate Life Flask" "Armoured Cap" "Ritual Precursor Tablet" "Blacksteel Tower Shield" "Sacred Focus" "Ornate Gauntlets" "Fine Bracers" "Armoured Vest" "Stone Tower Shield" "Embroidered Gloves" "Heroic Armour" "Golden Charm" "Silver Charm" "Stone Charm" "Primed Quiver"
 SetFontSize 45
 SetTextColor 255 0 0 255
 SetBorderColor 255 0 0 255
@@ -1447,7 +1456,7 @@ MinimapIcon 0 Purple Star
 
 Show
 Rarity Unique
-BaseType == "Unset Ring" # Bursting Decay / [-40–-30%;30–40%] Attacks have added Physical damage equal to 3% of maximum Life
+BaseType == "Unset Ring" # Bursting Decay / Attacks have added Physical damage equal to 3% of maximum Life
 DropLevel == 60
 SetFontSize 45
 SetTextColor 255 0 0 255
@@ -1457,9 +1466,20 @@ PlayAlertSound 6 300
 PlayEffect Purple
 MinimapIcon 0 Purple Star
 
-# cant set styles for unid items: Astramentis, Dream Fragments, Original Sin, Kalandra's Touch, Headhunter
+Show
+Rarity Unique
+Class == "Ring"
+BaseType == "Ring" # Kalandra's Touch / Reflects opposite Ring
+DropLevel == 1
+SetFontSize 45
+SetTextColor 255 0 0 255
+SetBorderColor 255 0 0 255
+SetBackgroundColor 255 255 255 255
+PlayAlertSound 6 300
+PlayEffect Purple
+MinimapIcon 0 Purple Star
 
-# Red beam: price ~1 divine orb
+#   [1302] red beam: price ~1 divine orb
 Show
 Rarity Unique
 BaseType == "Emerald" "Furtive Wraps" "Ruby" "Sapphire" "Smuggler Coat" "Stone Tower Shield" "Diamond" "Timeless Jewel" "Utility Belt" "Spiked Club" "Time-Lost Diamond" "Ultimate Mana Flask" "Intricate Crest Shield" "Amethyst Charm" "Desolate Crossbow"
@@ -1505,6 +1525,7 @@ MinimapIcon 0 Red Star
 
 Show
 Rarity Unique
+Class == "Ring"
 BaseType == "Ring"
 Sockets > 0
 SetFontSize 45
@@ -1515,11 +1536,80 @@ PlayAlertSound 6 300
 PlayEffect Red
 MinimapIcon 0 Red Star
 
+#   [1304] Schrödinger's uniques
+# cant set styles for unid expensive uniques because of the lack of parameters, by which you can filter items
+# (GGG please give ability to filter by the icon of item)
+# so the rules below will apply to both expensive and cheap uniques
+
 Show
 Rarity Unique
-PlayAlertSound 3 300
-PlayEffect Brown
-MinimapIcon 2 Brown Star
+BaseType == "Stellar Amulet"
+DropLevel == 25 # Astramentis
+SetBorderColor 255 128 200
+PlayEffect Pink
+MinimapIcon 1 Pink Star
+SetFontSize 40
+PlayAlertSound 7 300
+
+Show
+Rarity Unique
+BaseType == "Jade Amulet"
+DropLevel == 8 # Defiance of Destiny
+SetBorderColor 255 128 200
+PlayEffect Pink
+MinimapIcon 1 Pink Star
+SetFontSize 40
+PlayAlertSound 7 300
+
+Show
+Rarity Unique
+BaseType == "Heavy Belt"
+DropLevel == 50 # Headhunter
+SetBorderColor 255 128 200
+PlayEffect Pink
+MinimapIcon 1 Pink Star
+SetFontSize 40
+PlayAlertSound 7 300
+
+Show
+Rarity Unique
+BaseType == "Amethyst Ring"
+DropLevel == 20 # Original Sin
+SetBorderColor 255 128 200
+PlayEffect Pink
+MinimapIcon 1 Pink Star
+SetFontSize 40
+PlayAlertSound 7 300
+
+Show
+Rarity Unique
+BaseType == "Bloodstone Amulet"
+DropLevel == 18 # Yoke of Suffering
+SetBorderColor 255 128 200
+PlayEffect Pink
+MinimapIcon 1 Pink Star
+SetFontSize 40
+PlayAlertSound 7 300
+
+Show
+Rarity Unique
+BaseType == "Sapphire Ring"
+DropLevel == 12 # Dream Fragments
+SetBorderColor 255 128 200
+PlayEffect Pink
+MinimapIcon 1 Pink Star
+SetFontSize 40
+PlayAlertSound 7 300
+
+Show
+Rarity Unique
+BaseType == "Solar Amulet"
+DropLevel == 30 # Fireflower
+SetBorderColor 255 128 200
+PlayEffect Pink
+MinimapIcon 1 Pink Star
+SetFontSize 40
+PlayAlertSound 7 300
 
 #--------------------------
 # [[1400]] Things of the Atlas
@@ -1982,6 +2072,17 @@ MinimapIcon 1 White Circle
 
 #   [1406] tablets
 Show
+Rarity == Unique
+Class "Tablet"
+SetTextColor 255 205 113
+SetBorderColor 255 140 0 255
+SetBackgroundColor 65 20 80
+PlayAlertSound 1 200
+PlayEffect Orange
+MinimapIcon 1 Orange Star
+SetFontSize 40
+
+Show
 Rarity >= Rare
 Class "Tablet"
 SetTextColor 255 205 113
@@ -2169,7 +2270,7 @@ SetBorderColor 20 240 240 255
 SetBackgroundColor 25 50 100
 PlayAlertSound 2 300
 PlayEffect Brown
-MinimapIcon 1 Cyan Triangle
+MinimapIcon 1 Cyan Diamond
 
 Show
 BaseType "Uncut Skill Gem"
@@ -2328,7 +2429,7 @@ SetBorderColor 20 240 240 255
 SetBackgroundColor 25 50 100
 PlayAlertSound 2 300
 PlayEffect Brown
-MinimapIcon 1 Cyan Triangle
+MinimapIcon 1 White Diamond
 
 Show
 BaseType "Uncut Spirit Gem"
@@ -2336,8 +2437,8 @@ ItemLevel >= 14
 SetTextColor 140 140 140
 SetBorderColor 20 240 240
 PlayAlertSound 2 300
-PlayEffect Cyan
-MinimapIcon 1 Cyan Triangle
+PlayEffect Grey
+MinimapIcon 1 White Triangle
 
 Show
 BaseType "Uncut Spirit Gem"
@@ -2346,8 +2447,8 @@ AreaLevel <= 57
 SetTextColor 140 140 140
 SetBorderColor 20 240 240
 PlayAlertSound 2 300
-PlayEffect Cyan
-MinimapIcon 1 Cyan Triangle
+PlayEffect Grey
+MinimapIcon 1 White Triangle
 
 Show
 BaseType "Uncut Spirit Gem"
@@ -2356,8 +2457,8 @@ AreaLevel <= 51
 SetTextColor 140 140 140
 SetBorderColor 20 240 240
 PlayAlertSound 2 300
-PlayEffect Cyan
-MinimapIcon 1 Cyan Triangle
+PlayEffect Grey
+MinimapIcon 1 White Triangle
 
 Show
 BaseType "Uncut Spirit Gem"
@@ -2366,8 +2467,8 @@ AreaLevel <= 45
 SetTextColor 140 140 140
 SetBorderColor 20 240 240
 PlayAlertSound 2 300
-PlayEffect Cyan
-MinimapIcon 1 Cyan Triangle
+PlayEffect Grey
+MinimapIcon 1 White Triangle
 
 Show
 BaseType "Uncut Spirit Gem"
@@ -2376,8 +2477,8 @@ AreaLevel <= 40
 SetTextColor 140 140 140
 SetBorderColor 20 240 240
 PlayAlertSound 2 300
-PlayEffect Cyan
-MinimapIcon 1 Cyan Triangle
+PlayEffect Grey
+MinimapIcon 1 White Triangle
 
 Show
 BaseType "Uncut Spirit Gem"
@@ -2386,8 +2487,8 @@ AreaLevel <= 35
 SetTextColor 140 140 140
 SetBorderColor 20 240 240
 PlayAlertSound 2 300
-PlayEffect Cyan
-MinimapIcon 1 Cyan Triangle
+PlayEffect Grey
+MinimapIcon 1 White Triangle
 
 Show
 BaseType "Uncut Spirit Gem"
@@ -2396,8 +2497,8 @@ AreaLevel <= 30
 SetTextColor 140 140 140
 SetBorderColor 20 240 240
 PlayAlertSound 2 300
-PlayEffect Cyan
-MinimapIcon 1 Cyan Triangle
+PlayEffect Grey
+MinimapIcon 1 White Triangle
 
 Show
 BaseType "Uncut Spirit Gem"
@@ -2406,8 +2507,8 @@ AreaLevel <= 25
 SetTextColor 140 140 140
 SetBorderColor 20 240 240
 PlayAlertSound 2 300
-PlayEffect Cyan
-MinimapIcon 1 Cyan Triangle
+PlayEffect Grey
+MinimapIcon 1 White Triangle
 
 Show
 BaseType "Uncut Spirit Gem"
@@ -2417,7 +2518,7 @@ SetTextColor 140 140 140
 SetBorderColor 20 240 240
 PlayAlertSound 2 300
 PlayEffect Cyan
-MinimapIcon 1 Cyan Triangle
+MinimapIcon 1 White Triangle
 
 Show
 BaseType "Uncut Spirit Gem"
@@ -2426,8 +2527,8 @@ AreaLevel <= 17
 SetTextColor 140 140 140
 SetBorderColor 20 240 240
 PlayAlertSound 2 300
-PlayEffect Cyan
-MinimapIcon 1 Cyan Triangle
+PlayEffect Grey
+MinimapIcon 1 White Triangle
 
 Show
 BaseType "Uncut Spirit Gem"
@@ -2436,8 +2537,8 @@ AreaLevel <= 13
 SetTextColor 140 140 140
 SetBorderColor 20 240 240
 PlayAlertSound 2 300
-PlayEffect Cyan
-MinimapIcon 1 Cyan Triangle
+PlayEffect Grey
+MinimapIcon 1 White Triangle
 
 Show
 BaseType "Uncut Spirit Gem"
@@ -2446,8 +2547,8 @@ AreaLevel <= 9
 SetTextColor 140 140 140
 SetBorderColor 20 240 240
 PlayAlertSound 2 300
-PlayEffect Cyan
-MinimapIcon 1 Cyan Triangle
+PlayEffect Grey
+MinimapIcon 1 White Triangle
 
 Show
 BaseType "Uncut Spirit Gem"
@@ -2456,16 +2557,16 @@ AreaLevel <= 5
 SetTextColor 140 140 140
 SetBorderColor 20 240 240
 PlayAlertSound 2 300
-PlayEffect Cyan
-MinimapIcon 1 Cyan Triangle
+PlayEffect Grey
+MinimapIcon 1 White Triangle
 
 Show
 BaseType "Uncut Spirit Gem"
 SetTextColor 140 140 140
 SetBorderColor 20 240 240
 PlayAlertSound 2 300
-PlayEffect Cyan Temp
-MinimapIcon 1 Cyan Triangle
+PlayEffect Grey Temp
+MinimapIcon 1 White Triangle
 
 # support gems: ---------
 Show
@@ -2473,15 +2574,15 @@ BaseType "Uncut Support Gem"
 SetTextColor 255 255 255
 SetBorderColor 20 240 240
 PlayAlertSound 2 300
-PlayEffect Cyan
-MinimapIcon 1 Cyan Triangle
+PlayEffect White
+MinimapIcon 1 White Triangle
 
 #--------------------------
 # [[1800]] Socketables
 #--------------------------
 
-#   [1801] soul cores and timeless-jewels
-# S-Tier
+#   [1801] soul cores
+# S-Tier:
 Show
 Class == "Socketable"
 BaseType == "Guatelitzi's Soul Core of Endurance" "Opiloti's Soul Core of Assault" "Tzamoto's Soul Core of Ferocity" "Xopec's Soul Core of Power"
@@ -2493,7 +2594,7 @@ PlayAlertSound 6 300
 PlayEffect Red
 MinimapIcon 0 Red Star
 
-# A-Tier
+# A-Tier:
 Show
 Class == "Socketable"
 BaseType == "Soul Core of Ticaba" "Soul Core of Jiquani" "Estazunti's Soul Core of Convalescence" "Tacati's Soul Core of Affliction" "Xipocado's Soul Core of Dominion"
@@ -2506,6 +2607,17 @@ PlayEffect White
 MinimapIcon 1 White Circle
 
 Show
+Class == "Socketable"
+BaseType "Soul Core"
+SetTextColor 0 240 190
+SetBorderColor 0 240 190
+SetFontSize 40
+MinimapIcon 0 Cyan Diamond
+PlayAlertSound 2 300
+PlayEffect Cyan
+
+#   [1802] timeless-jewels
+Show
 Class "Jewel"
 BaseType == "Time-lost Sapphire"
 Rarity <= Rare
@@ -2513,7 +2625,7 @@ SetBorderColor 0 240 190
 SetTextColor 255 207 132
 SetBackgroundColor 9 30 56
 SetFontSize 40
-MinimapIcon 2 Cyan Triangle
+MinimapIcon 2 Blue Diamond
 PlayEffect Cyan
 
 Show
@@ -2524,7 +2636,7 @@ SetTextColor 255 207 132
 SetBorderColor 0 240 190
 SetBackgroundColor 124 25 22
 SetFontSize 40
-MinimapIcon 2 Cyan Triangle
+MinimapIcon 2 Red Diamond
 PlayEffect Cyan
 
 Show
@@ -2535,17 +2647,7 @@ SetTextColor 255 207 132
 SetBorderColor 0 240 190
 SetBackgroundColor 80 132 59 200
 SetFontSize 40
-MinimapIcon 2 Cyan Triangle
-PlayEffect Cyan
-
-Show
-Class == "Socketable"
-BaseType "Soul Core"
-SetTextColor 0 240 190
-SetBorderColor 0 240 190
-SetFontSize 40
-MinimapIcon 0 Cyan Diamond
-PlayAlertSound 2 300
+MinimapIcon 2 Green Diamond
 PlayEffect Cyan
 
 Show
@@ -2558,7 +2660,7 @@ MinimapIcon 0 Cyan Diamond
 PlayAlertSound 2 300
 PlayEffect Cyan
 
-#   [1802] any jewels
+#   [1803] any jewels
 Show
 Class "Jewel"
 BaseType == "Ruby"
@@ -2568,7 +2670,7 @@ SetBorderColor 244 222 94
 SetBackgroundColor 124 25 22
 SetFontSize 40
 MinimapIcon 2 Cyan Triangle
-PlayEffect Cyan
+PlayEffect Cyan Temp
 
 Show
 Class "Jewel"
@@ -2579,7 +2681,7 @@ SetBorderColor 127 153 230
 SetBackgroundColor 124 25 22
 SetFontSize 40
 MinimapIcon 2 Cyan Triangle
-PlayEffect Cyan
+PlayEffect Cyan Temp
 
 Show
 Class "Jewel"
@@ -2590,7 +2692,7 @@ SetBorderColor 244 222 94
 SetBackgroundColor 80 132 59 200
 SetFontSize 40
 MinimapIcon 2 Cyan Triangle
-PlayEffect Cyan
+PlayEffect Cyan Temp
 
 Show
 Class "Jewel"
@@ -2601,7 +2703,7 @@ SetBorderColor 127 153 230
 SetBackgroundColor 80 132 59 200
 SetFontSize 40
 MinimapIcon 2 Cyan Triangle
-PlayEffect Cyan
+PlayEffect Cyan Temp
 
 Show
 Class "Jewel"
@@ -2612,7 +2714,7 @@ SetTextColor 255 207 132
 SetBackgroundColor 9 30 56
 SetFontSize 40
 MinimapIcon 2 Cyan Triangle
-PlayEffect Cyan
+PlayEffect Cyan Temp
 
 Show
 Class "Jewel"
@@ -2623,7 +2725,7 @@ SetTextColor 255 207 132
 SetBackgroundColor 9 30 56
 SetFontSize 40
 MinimapIcon 2 Cyan Triangle
-PlayEffect Cyan
+PlayEffect Cyan Temp
 
 Show
 Class "Jewel"
@@ -2632,10 +2734,10 @@ SetTextColor 0 240 190
 SetBorderColor 0 240 190
 SetFontSize 40
 MinimapIcon 2 Cyan Triangle
-PlayEffect Cyan
+PlayEffect Cyan 
 
-#   [1803] any runes
-# S-Tier
+#   [1804] any runes
+# S-Tier:
 Show
 Class "Socketable"
 BaseType "Countess Seske's Rune of Archery" "Farrul's Rune of the Chase" "Hedgewitch Assandra's Rune of Wisdom" "Saqawal's Rune of Memory"
@@ -2658,7 +2760,7 @@ PlayAlertSound 6 300
 PlayEffect Red
 MinimapIcon 0 Red Star
 
-# A-tier
+# A-tier:
 Show
 Class "Socketable"
 BaseType "Courtesan Mannan's Rune of Cruelty" "Saqawal's Rune of Erosion" "Saqawal's Rune of the Sky" "Thane Girt's Rune of Wildness" "Thane Grannell's Rune of Mastery" "Thane Leld's Rune of Spring" "Greater Rune of Tithing"
@@ -2717,13 +2819,13 @@ BaseType "Rune"
 SetTextColor 0 240 190
 PlayEffect Cyan Temp
 
-#   [1804] charms
+#   [1805] charms
 Show
 Class "Charm"
 SetTextColor 0 240 190
 PlayEffect Cyan Temp
 
-#   [1805] talismans
+#   [1806] talismans
 # S-Tier
 Show
 Class "Socketable"
@@ -3120,12 +3222,49 @@ MinimapIcon 1 White Circle
 
 #   [2001] distilled waystones
 Show
-WaystoneTier >= 15
 BaseType "Waystone"
 AnyEnchantment True # with distilled emotions from Delirium
-Rarity <= Rare
+Rarity Unique
 SetTextColor 20 20 20 255
-#SetBorderColor 255 140 0 255
+SetBorderColor 255 140 0 255
+SetBackgroundColor 95 95 95 200
+PlayAlertSound 4 300
+MinimapIcon 1 Orange Square
+PlayEffect Orange
+SetFontSize 40
+
+Show
+WaystoneTier >= 15
+BaseType "Waystone"
+AnyEnchantment True
+Rarity Rare
+SetTextColor 20 20 20 255
+SetBorderColor 244 222 94 255
+SetBackgroundColor 95 95 95 200
+PlayAlertSound 4 300
+MinimapIcon 1 White Square
+PlayEffect White Temp
+SetFontSize 40
+
+Show
+WaystoneTier >= 15
+BaseType "Waystone"
+AnyEnchantment True
+Rarity Magic
+SetTextColor 20 20 20 255
+SetBorderColor 77 77 230 255
+SetBackgroundColor 95 95 95 200
+PlayAlertSound 4 300
+MinimapIcon 1 White Square
+PlayEffect White Temp
+SetFontSize 40
+
+Show
+WaystoneTier >= 15
+BaseType "Waystone"
+AnyEnchantment True
+Rarity Normal
+SetTextColor 20 20 20 255
 SetBorderColor 255 255 255
 SetBackgroundColor 95 95 95 200
 PlayAlertSound 4 300
@@ -3137,9 +3276,35 @@ Show
 WaystoneTier < 14
 BaseType "Waystone"
 AnyEnchantment True
-Rarity <= Rare
+Rarity Rare
 SetTextColor 20 20 20 255
-SetBorderColor 255 255 255
+SetBorderColor 244 222 94 255
+SetBackgroundColor 95 95 95 200
+PlayAlertSound 4 200
+MinimapIcon 1 White Square
+PlayEffect White Temp
+SetFontSize 35
+
+Show
+WaystoneTier < 14
+BaseType "Waystone"
+AnyEnchantment True
+Rarity Magic
+SetTextColor 20 20 20 255
+SetBorderColor 77 77 230 255
+SetBackgroundColor 95 95 95 200
+PlayAlertSound 4 200
+MinimapIcon 1 White Square
+PlayEffect White Temp
+SetFontSize 35
+
+Show
+WaystoneTier < 14
+BaseType "Waystone"
+AnyEnchantment True
+Rarity Normal
+SetTextColor 20 20 20 255
+SetBorderColor 255 255 255 255
 SetBackgroundColor 95 95 95 200
 PlayAlertSound 4 200
 MinimapIcon 1 White Square
@@ -3150,9 +3315,35 @@ Show
 WaystoneTier < 7
 BaseType "Waystone"
 AnyEnchantment True
-Rarity <= Rare
+Rarity Rare
 SetTextColor 20 20 20 255
-SetBorderColor 255 255 255
+SetBorderColor 244 222 94 255
+SetBackgroundColor 95 95 95 200
+PlayAlertSound 4 100
+MinimapIcon 1 White Square
+PlayEffect White Temp
+SetFontSize 35
+
+Show
+WaystoneTier < 7
+BaseType "Waystone"
+AnyEnchantment True
+Rarity Magic
+SetTextColor 20 20 20 255
+SetBorderColor 77 77 230 255
+SetBackgroundColor 95 95 95 200
+PlayAlertSound 4 100
+MinimapIcon 1 White Square
+PlayEffect White Temp
+SetFontSize 35
+
+Show
+WaystoneTier < 7
+BaseType "Waystone"
+AnyEnchantment True
+Rarity Normal
+SetTextColor 20 20 20 255
+SetBorderColor 255 255 255 255
 SetBackgroundColor 95 95 95 200
 PlayAlertSound 4 100
 MinimapIcon 1 White Square
@@ -3164,7 +3355,31 @@ BaseType "Waystone"
 AnyEnchantment True
 Rarity <= Rare
 SetTextColor 20 20 20 255
-SetBorderColor 255 255 255
+SetBorderColor 244 222 94 255
+SetBackgroundColor 95 95 95 200
+PlayAlertSound 4 300
+PlayEffect White Temp
+MinimapIcon 1 White Square
+SetFontSize 40
+
+Show
+BaseType "Waystone"
+AnyEnchantment True
+Rarity Magic
+SetTextColor 20 20 20 255
+SetBorderColor 77 77 230 255
+SetBackgroundColor 95 95 95 200
+PlayAlertSound 4 300
+PlayEffect White Temp
+MinimapIcon 1 White Square
+SetFontSize 40
+
+Show
+BaseType "Waystone"
+AnyEnchantment True
+Rarity Normal
+SetTextColor 20 20 20 255
+SetBorderColor 255 255 255 255
 SetBackgroundColor 95 95 95 200
 PlayAlertSound 4 300
 PlayEffect White Temp
@@ -3172,13 +3387,47 @@ MinimapIcon 1 White Square
 SetFontSize 40
 
 #   [2002] default styles for waystones
+
+Show
+BaseType "Waystone"
+AnyEnchantment False # without distilled emotions from Delirium
+Rarity Unique
+SetTextColor 255 255 255 255
+SetBorderColor 255 140 0 255
+PlayAlertSound 4 300
+MinimapIcon 1 Orange Square
+PlayEffect Orange
+SetFontSize 40
+
 Show
 WaystoneTier >= 15
 BaseType "Waystone"
-Rarity <= Rare
+AnyEnchantment False
+Rarity Rare
 SetTextColor 255 255 255 255
-#SetBorderColor 255 140 0 255
-SetBorderColor 255 255 255
+SetBorderColor 244 222 94 255
+PlayAlertSound 4 300
+MinimapIcon 1 White Square
+SetFontSize 40
+
+Show
+WaystoneTier >= 15
+BaseType "Waystone"
+AnyEnchantment False
+Rarity Magic
+SetTextColor 255 255 255 255
+SetBorderColor 77 77 230 255
+PlayAlertSound 4 300
+MinimapIcon 1 White Square
+SetFontSize 40
+
+Show
+WaystoneTier >= 15
+BaseType "Waystone"
+AnyEnchantment False
+Rarity Normal
+SetTextColor 255 255 255 255
+SetBorderColor 255 255 255 255
 PlayAlertSound 4 300
 MinimapIcon 1 White Square
 SetFontSize 40
@@ -3186,9 +3435,32 @@ SetFontSize 40
 Show
 WaystoneTier < 14
 BaseType "Waystone"
-Rarity <= Rare
+AnyEnchantment False
+Rarity Rare
 SetTextColor 200 200 200
-SetBorderColor 255 255 255
+SetBorderColor 244 222 94 255
+PlayAlertSound 4 200
+MinimapIcon 1 White Square
+SetFontSize 35
+
+Show
+WaystoneTier < 14
+BaseType "Waystone"
+AnyEnchantment False
+Rarity Magic
+SetTextColor 200 200 200
+SetBorderColor 77 77 230 255
+PlayAlertSound 4 200
+MinimapIcon 1 White Square
+SetFontSize 35
+
+Show
+WaystoneTier < 14
+BaseType "Waystone"
+AnyEnchantment False
+Rarity Normal
+SetTextColor 200 200 200
+SetBorderColor 255 255 255 255
 PlayAlertSound 4 200
 MinimapIcon 1 White Square
 SetFontSize 35
@@ -3196,24 +3468,79 @@ SetFontSize 35
 Show
 WaystoneTier < 7
 BaseType "Waystone"
-Rarity <= Rare
+AnyEnchantment False
+Rarity Rare
 SetTextColor 100 100 100
-SetBorderColor 255 255 255
+SetBorderColor 244 222 94 255
 PlayAlertSound 4 100
 SetFontSize 35
+
+Show
+WaystoneTier < 7
+BaseType "Waystone"
+AnyEnchantment False
+Rarity Magic
+SetTextColor 100 100 100
+SetBorderColor 77 77 230 255
+PlayAlertSound 4 100
+SetFontSize 35
+
+Show
+WaystoneTier < 7
+BaseType "Waystone"
+AnyEnchantment False
+Rarity Normal
+SetTextColor 100 100 100
+SetBorderColor 255 255 255 255
+PlayAlertSound 4 100
+SetFontSize 35
+
+Show
+BaseType "Waystone"
+AnyEnchantment False
+Rarity Rare
+SetTextColor 255 255 255
+SetBorderColor 244 222 94 255
+PlayAlertSound 4 300
+PlayEffect White Temp
+MinimapIcon 1 White Square
+SetFontSize 40
+
+Show
+BaseType "Waystone"
+AnyEnchantment False
+Rarity Magic
+SetTextColor 255 255 255
+SetBorderColor 77 77 230 255
+PlayAlertSound 4 300
+PlayEffect White Temp
+MinimapIcon 1 White Square
+SetFontSize 40
+
+Show
+BaseType "Waystone"
+AnyEnchantment False
+Rarity Normal
+SetTextColor 255 255 255
+SetBorderColor 255 255 255 255
+PlayAlertSound 4 300
+PlayEffect White Temp
+MinimapIcon 1 White Square
+SetFontSize 40
 
 Show
 BaseType "Waystone"
 Rarity <= Rare
 SetTextColor 255 255 255
 SetBorderColor 255 255 255
+SetBackgroundColor 222 102 204 # pink background for unexpected waystones
 PlayAlertSound 4 300
 PlayEffect White Temp
 MinimapIcon 1 White Square
 SetFontSize 40
 
 #--------------------------
-# [[2100]] Value rares for leveling
+# [[2100]] Valuable rares for leveling
 #--------------------------
 
 #   [2101] rings, amulets and belts
@@ -3239,6 +3566,12 @@ SetFontSize 40
 #--------------------------
 # [[2200]] Low-priority rules
 #--------------------------
+
+Show
+Rarity Unique
+PlayAlertSound 3 300
+PlayEffect Brown
+MinimapIcon 2 Brown Star
 
 Show
 Class "Quest Item" "Instance Local Item"
