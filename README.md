@@ -5,15 +5,16 @@
 ## Basic principles of this project:
 1. 💯 <ins>Pick everything you see on the ground, on any area level</ins>. At AreaLevel *1+ / 65+ / 71+ / 75+* you see fewer and fewer items that have str- & dex-requirements on them and other useless items for your class. <br> **Characters of level 90+**: check out the "Endgame custom rules" section to apply additional rules for hiding potentially excessive items.
 2. 🖋️ <ins>Minimalism for equipment styles</ins>: ~99% of the equipment is garbage that doesn't deserve much custom styling, <br>**but you'll see a colorful 🎨 design of currency, map-specific items etc**.
-Special equipment stylization applies in four cases:
+Special equipment stylization applies in the following cases:
    - for the best bases of the corresponding slot, on which the maximum affix tier *(itemLevel 81–82)* can be generated;
    - for some infrequent items on low-level characters: jewelry, belts, and Chiming staff;
    - items with additional quality *(caster weapons and armors only)*;
-   - bases for crafting uniques with Chance Orb.
+   - bases for crafting uniques with Chance Orb;
+   - unique items with a base that theoretically can be either very expensive (Astramentis, etc.) or very cheap.
 3. 📖 <ins>Ultimate documentation</ins>: in just a couple minutes you can familiarize yourself with the styles of ~95% of the items in the game and ~95% of the rules for showing/hiding items - there are over a dozen screenshots of how lootfilter works at the end of the article. If you're only interested in individual rules/styles, you can find them in the table of contents *(look at the beginning of the lootfilter file)*
 
 More details are listed inside the `.lootfilter`-file.<br><br>
-For now, I've only created one version of lootfilter — **for caster classes**🧙‍♀️<br>
+For now, I've only created one version of lootfilter — **for casters**🧙‍♀️<br>
 *Note*: is not for a specific caster class, but **for the gameplay style** of your chosen class 🧔🧝🐻
 
 ## Installation / Connection:
@@ -43,7 +44,7 @@ In this case you can make your own edits, including activating additionally prep
 3. Move this file into the following folder: `%userprofile%/Documents/My Games/Path of Exile 2` *(you can paste this correct link into File Explorer)*
 4. Turn on filter in the game settings : `Escape` -> Options -> Game -> select the filter from the Dropdown box of "Item Filter" section — name of lootfilter will be **white** color.
 
-> [!WARNING]  
+> [!WARNING]
 > Summoner settings are enabled by default; if you are playing as a mage without a large number of summons, open lootfilter-file in any text editor (I recommend Sublime Text), find "[[0200]] Section for non-summoner casters" section outside the table of contents.
 
 ---
@@ -88,51 +89,51 @@ In this case you can make your own edits, including activating additionally prep
 > ![table-weapons](https://github.com/fpsthirty/poe2-lootfilter/raw/main/img/loot/table-weapons.png)
 
 >### altar:
->  ![altar](https://github.com/fpsthirty/poe2-lootfilter/raw/main/img/loot/altar.png)
+>  ![altar](https://github.com/fpsthirty/poe2-lootfilter/raw/main/img/loot/altar.jpg)
 
 >### breach:
->  ![breach](https://github.com/fpsthirty/poe2-lootfilter/raw/main/img/loot/breach.png)
+>  ![breach](https://github.com/fpsthirty/poe2-lootfilter/raw/main/img/loot/breach.jpg)
 
 >### currency:
->  ![currency](https://github.com/fpsthirty/poe2-lootfilter/raw/main/img/loot/currency.png)
+>  ![currency](https://github.com/fpsthirty/poe2-lootfilter/raw/main/img/loot/currency.jpg)
 
 > ### delirium:
->  ![delirium](https://github.com/fpsthirty/poe2-lootfilter/raw/main/img/loot/delirium.png)
+>  ![delirium](https://github.com/fpsthirty/poe2-lootfilter/raw/main/img/loot/delirium.jpg)
 
 > ### equipment (high-end):
->  ![equip_high-end](https://github.com/fpsthirty/poe2-lootfilter/raw/main/img/loot/equip_high-end.png)
+>  ![equip_high-end](https://github.com/fpsthirty/poe2-lootfilter/raw/main/img/loot/equip_high-end.jpg)
 
 > ### equipment:
->  ![equipment](https://github.com/fpsthirty/poe2-lootfilter/raw/main/img/loot/equipment.png)
+>  ![equipment](https://github.com/fpsthirty/poe2-lootfilter/raw/main/img/loot/equipment.jpg)
 
 > ### essences:
->  ![essences](https://github.com/fpsthirty/poe2-lootfilter/raw/main/img/loot/essences.png)
+>  ![essences](https://github.com/fpsthirty/poe2-lootfilter/raw/main/img/loot/essences.jpg)
 
 > ### expedition:
->  ![expedition](https://github.com/fpsthirty/poe2-lootfilter/raw/main/img/loot/expedition.png)
+>  ![expedition](https://github.com/fpsthirty/poe2-lootfilter/raw/main/img/loot/expedition.jpg)
 
 > ### gold:
->  ![gold](https://github.com/fpsthirty/poe2-lootfilter/raw/main/img/loot/gold.png)
+>  ![gold](https://github.com/fpsthirty/poe2-lootfilter/raw/main/img/loot/gold.jpg)
 
 > ### pinnacle keys:
->  ![pinnacle_keys](https://github.com/fpsthirty/poe2-lootfilter/raw/main/img/loot/pinnacle_keys.png)
+>  ![pinnacle_keys](https://github.com/fpsthirty/poe2-lootfilter/raw/main/img/loot/pinnacle_keys.jpg)
 
 > ### socketables:
->  ![socketables](https://github.com/fpsthirty/poe2-lootfilter/raw/main/img/loot/socketables.png)
+>  ![socketables](https://github.com/fpsthirty/poe2-lootfilter/raw/main/img/loot/socketables.jpg)
 
 > ### tablets:
->  ![tablets](https://github.com/fpsthirty/poe2-lootfilter/raw/main/img/loot/tablets.png)
+>  ![tablets](https://github.com/fpsthirty/poe2-lootfilter/raw/main/img/loot/tablets.jpg)
 
 > ### trials overall:
->  ![trials_overall](https://github.com/fpsthirty/poe2-lootfilter/raw/main/img/loot/trials_overall.png)
+>  ![trials_overall](https://github.com/fpsthirty/poe2-lootfilter/raw/main/img/loot/trials_overall.jpg)
 
 > ### uncut gems:
->  ![uncut_gems](https://github.com/fpsthirty/poe2-lootfilter/raw/main/img/loot/uncut_gems.png)
+>  ![uncut_gems](https://github.com/fpsthirty/poe2-lootfilter/raw/main/img/loot/uncut_gems.jpg)
 
 > ### waystones:
->  ![waystones](https://github.com/fpsthirty/poe2-lootfilter/raw/main/img/loot/waystones.png)
+>  ![waystones](https://github.com/fpsthirty/poe2-lootfilter/raw/main/img/loot/waystones.jpg)
 
-> [!NOTE]  
+> [!NOTE]
 > 💬 I express my respect to **@NeverSink** for the **[original version](https://github.com/NeverSinkDev/NeverSink-Filter-for-PoE2)** of lootfilter and will mention its credentials below:
 > * TWITTER: @NeverSinkDev
 > * DISCORD: https://discord.gg/mye6xhF
