@@ -1271,6 +1271,12 @@ AreaLevel >= 65
 Show
 Class "Body"
 BaseType " Coat" "Cuirass" " Plate" " Vest"
+Rarity Magic
+AreaLevel < 65
+
+Show
+Class "Body"
+BaseType " Coat" "Cuirass" " Plate" " Vest"
 Rarity Rare
 
 Hide
@@ -1327,8 +1333,14 @@ Rarity Normal
 Hide
 Class "Body"
 BaseType " Jacket" " Mail" " Armour" "Mantle" " Garb" "Vestments" "Regalia"
-Rarity <= Magic
+Rarity Magic
 AreaLevel >= 65
+
+Show
+Class "Body"
+BaseType " Jacket" " Mail" " Armour" "Mantle" " Garb" "Vestments" "Regalia"
+Rarity Magic
+AreaLevel < 65
 
 Show
 Class "Body"
@@ -1404,7 +1416,7 @@ MinimapIcon 0 Purple Star
 
 Show
 Rarity Unique
-BaseType == "Silk Robe" # Temporalis / Skills have (-4--2) seconds to Cooldown
+BaseType == "Silk Robe" # Temporalis / Skills have (-2–-1) seconds to Cooldown
 DropLevel == 64
 SetFontSize 45
 SetTextColor 255 0 0 255
@@ -1430,6 +1442,18 @@ Show
 Rarity Unique
 BaseType == "Wide Belt" # The Gnashing Sash / Life Recovery from Flasks can Overflow Maximum Life
 DropLevel == 60
+SetFontSize 45
+SetTextColor 255 0 0 255
+SetBorderColor 255 0 0 255
+SetBackgroundColor 255 255 255 255
+PlayAlertSound 6 300
+PlayEffect Purple
+MinimapIcon 0 Purple Star
+
+Show
+Rarity Unique
+BaseType == "Primed Quiver" # Cadiro's Gambit / Each Arrow fired is a Crescendo, Splinter, Reversing, Diamond, Covetous, or Blunt Arrow
+DropLevel == 51
 SetFontSize 45
 SetTextColor 255 0 0 255
 SetBorderColor 255 0 0 255
