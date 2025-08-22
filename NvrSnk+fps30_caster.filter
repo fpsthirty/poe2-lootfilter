@@ -44,6 +44,7 @@
 #   [0501] weapons
 #   [0502] armor pieces
 #   [0503] jewellery
+#   [0504] extra socket
 # [[0600]] Salvagable items & items with +quality
 # [[0700]] White items for unique craft
 # [[0800]] Endgame custom rules
@@ -369,6 +370,20 @@ Show
 Class = "Boots"
 Rarity <= Rare
 ItemLevel >= 82 # for 35% movespeed
+
+#   [0504] extra socket:
+Show
+Class == "Claws" "Daggers" "Flails" "One Hand Axes" "One Hand Maces" "One Hand Swords" "Sceptres" "Spears" "Wands" "Quivers" "Foci" "Helmets" "Boots" "Gloves" "Shields" "Bucklers"
+Corrupted False
+Rarity < Unique
+Sockets >= 2
+SetFontSize 40
+
+Show
+Corrupted False
+Rarity < Unique
+Sockets >= 3
+SetFontSize 40
 
 #--------------------------
 # [[0600]] Salvagable items & items with +quality
