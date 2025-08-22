@@ -3048,13 +3048,13 @@ PlayEffect Cyan Temp
 Show
 Class "Socketable"
 BaseType "Rabbit Talisman" "Fox Talisman" "Talisman of Ralakesh" "Talisman of Sirrius"
-SetFontSize 45
 SetTextColor 255 0 0 255
 SetBorderColor 255 0 0 255
 SetBackgroundColor 255 255 255 255
 PlayAlertSound 6 300
 PlayEffect Purple
 MinimapIcon 0 Purple Star
+SetFontSize 45
 
 # A-Tier
 Show
@@ -3076,6 +3076,7 @@ SetTextColor 104 238 170
 PlayEffect Cyan
 PlayAlertSound 2 200
 MinimapIcon 1 Cyan Circle
+SetFontSize 40
 
 #--------------------------
 # [[1900]] Craft and Currency
