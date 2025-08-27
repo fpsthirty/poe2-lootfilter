@@ -375,15 +375,25 @@ ItemLevel >= 82 # for 35% movespeed
 Show
 Class == "Claws" "Daggers" "Flails" "One Hand Axes" "One Hand Maces" "One Hand Swords" "Sceptres" "Spears" "Wands" "Quivers" "Foci" "Helmets" "Boots" "Gloves" "Shields" "Bucklers"
 Corrupted False
-Rarity < Unique
 Sockets >= 2
-SetFontSize 40
+SetFontSize 45
+SetTextColor 255 0 0 255
+SetBorderColor 255 0 0 255
+SetBackgroundColor 255 255 255 255
+PlayAlertSound 6 300
+PlayEffect Red
+MinimapIcon 0 Red Star
 
 Show
 Corrupted False
-Rarity < Unique
 Sockets >= 3
-SetFontSize 40
+SetFontSize 45
+SetTextColor 255 0 0 255
+SetBorderColor 255 0 0 255
+SetBackgroundColor 255 255 255 255
+PlayAlertSound 6 300
+PlayEffect Red
+MinimapIcon 0 Red Star
 
 #--------------------------
 # [[0600]] Salvagable items & items with +quality
