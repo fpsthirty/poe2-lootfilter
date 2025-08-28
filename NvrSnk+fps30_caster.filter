@@ -2,7 +2,7 @@
 # fpsthirty caster LootFilter — Path of Exile 2
 #===============================================================================================================
 #
-# VERSION: 	0.2.1-3 (actual for PoE2 v0.2.1 and higher, does not support v0.1.1 and lower)
+# VERSION: 	0.3.0-1 (actual for PoE2 v0.3.0 and higher, does not support v0.2.1 and lower)
 # AUTHOR: 	fpsthirty
 # SOURCE: 	https://github.com/fpsthirty/poe2-lootfilter
 #
@@ -98,6 +98,7 @@
 #   [1804] any runes
 #   [1805] charms
 #   [1806] talismans
+#   [1807] Abyss: gazes
 # [[1900]] Craft and Currency
 #   [1901] currency Tier S: Mirror, Divine
 #   [1902] currency Tier A: Gemcutter, Annullment
@@ -119,7 +120,7 @@
 #--------------------------
 # [[0100]] Your custom rules: items that must always be shown/hidden:
 #--------------------------
-## Import "MyCustomRules.filter" Optional # import is not supported in PoE 2 v0.2.1.
+## Import "MyCustomRules.filter" Optional # todo wait for the next release of this lootfilter
 # examples:
 # Show
 # Class "Sceptre"
@@ -141,7 +142,7 @@
 # 
 # Show
 # Class "Wand"
-# BaseType "Withered Wand" "Attuned Wand" "Siphoning Wand" "Acrid Wand"
+# BaseType "Withered Wand" "Attuned Wand" "Siphoning Wand" "Acrid Wand" "Galvanic Wand" "Dueling Wand"
 # ItemLevel >= 81
 # Rarity Normal
 # SetBorderColor 95 0 160
@@ -287,7 +288,7 @@ MinimapIcon 0 Purple Star
 # This is just a list of item names, styles are applied within the respective lootfilter sections
 
 ##  -------- PURPLE beam: price 2–500+ divine orbs --------
-### currency: Mirror of Kalandra, Perfect Jeweller's Orb
+### currency: Mirror of Kalandra, Hinekora's Lock, Perfect Jeweller's Orb
 ### socketables: Rabbit Talisman, Fox Talisman, Talisman of Sirrius, Countess Seske's Rune of Archery, Farrul's Rune of the Chase, Hedgewitch Assandra's Rune of Wisdom, Saqawal's Rune of Memory
 ### essences: Essence of Horror, Essence of Delirium
 ### omens: Omen of Sinistral Erasure, Omen of Dextral Annulment, Omen of Dextral Erasure, Omen of Sinistral Annulment, Omen of Whittling
@@ -315,7 +316,7 @@ MinimapIcon 0 Purple Star
 #   [0501] weapons:
 # filter-summoner
 Show
-BaseType "Omen Sceptre" "Rattling Sceptre" "Lupine Sceptre" "Ochre Sceptre" "Devouring Sceptre" "Clasped Sceptre" "Devotional Sceptre" "Wrath Sceptre" "Aromatic Sceptre" "Pious Sceptre" "Hallowed Sceptre"
+BaseType "Omen Sceptre" "Rattling Sceptre" "Lupine Sceptre" "Ochre Sceptre" "Devouring Sceptre" "Clasped Sceptre" "Devotional Sceptre" "Wrath Sceptre" "Aromatic Sceptre" "Pious Sceptre" "Hallowed Sceptre" "Wrath Sceptre"
 ItemLevel >= 81
 Rarity <= Rare
 SetBorderColor 95 0 160
@@ -356,6 +357,18 @@ MinimapIcon 1 Purple Circle
 PlayAlertSound 16 300
 PlayEffect Pink Temp
 SetFontSize 40
+
+Show
+Class "Amulet"
+BaseType "Pearlescent Amulet"
+Rarity <= Rare
+SetBackgroundColor 222 102 204 # todo temp pink background
+
+Show
+Class "Ring"
+BaseType "Abyssal Signet"
+Rarity <= Rare
+SetBackgroundColor 222 102 204 # todo temp pink background
 
 Show
 BaseType " Ring" " Amulet" " Belt"
@@ -1124,9 +1137,9 @@ StackSize <= 250
 BaseType == "Gold"
 AreaLevel >= 71
 
-Hide
-BaseType "Uncut Support Gem"
-AreaLevel >= 71
+#Hide todo update this rule after v0.3.0 for tier levels 1–5
+#BaseType "Uncut Support Gem"
+#AreaLevel >= 71
 
 #--------------------------
 # [[1100]] First steps on the maps / area level 65+:
@@ -1828,6 +1841,17 @@ SetFontSize 40
 
 Show
 Class == "Pinnacle Keys" # from citadels
+BaseType == "Primary Calamity Fragment" "Secondary Calamity Fragment" "Tertiary Calamity Fragment"
+SetTextColor 255 205 113
+SetBorderColor 255 140 0 255
+SetBackgroundColor 65 20 80
+PlayAlertSound 2 300
+PlayEffect Orange
+MinimapIcon 1 Orange Square
+SetFontSize 40
+
+Show
+Class == "Pinnacle Keys"
 SetTextColor 255 205 113
 SetBorderColor 255 140 0 255
 SetBackgroundColor 65 20 80
@@ -1972,7 +1996,7 @@ SetFontSize 40
 
 Show
 Class == "Omen"
-BaseType == "Omen of Greater Annulment" "Omen of Sinistral Coronation" "Omen of Dextral Coronation" "Omen of Dextral Alchemy" "Omen of Sinistral Alchemy" "Omen of Greater Exaltation" "Omen of Sinistral Exaltation" "Omen of Dextral Exaltation" "Omen of Answered Prayers" "Omen of Secret Compartments" "Omen of the Hunt"
+BaseType == "Omen of Greater Exaltation" "Omen of Sinistral Exaltation" "Omen of Dextral Exaltation" "Omen of Answered Prayers" "Omen of Secret Compartments" "Omen of the Hunt"
 SetTextColor 255 207 132
 SetBorderColor 255 207 132
 SetBackgroundColor 76 51 12
@@ -1987,6 +2011,17 @@ BaseType == "Omen of Refreshment"
 SetTextColor 255 207 132
 SetBorderColor 255 207 132
 MinimapIcon 2 Grey Circle
+
+Show
+Class == "Omen"
+"Omen of Homogenising Exaltation" "Omen of Homogenising Coronation" "Omen of Gambling" "Omen of Bartering" "Omen of Recombination" "Omen of the Blessed" "Omen of Chaotic Rarity" "Omen of Chaotic Monsters" "Omen of Chaotic Quantity" "Omen of Chance" "Omen of the Ancients" "Omen of Sanctification" "Omen of Dextral Crystallisation" "Omen of Sinistral Crystallisation" "Omen of Catalysing Exaltation" "Omen of Abyssal Echoes" "Omen of Putrefaction" "Omen of Light" "Omen of Sinistral Necromancy" "Omen of Dextral Necromancy" "Omen of the Sovereign" "Omen of the Liege" "Omen of the Blackblooded"
+SetTextColor 255 207 132
+SetBorderColor 255 207 132
+SetBackgroundColor 222 102 204 # todo temp pink background
+PlayAlertSound 2 300
+PlayEffect White
+MinimapIcon 1 White Circle
+SetFontSize 40
 
 Show
 Class == "Omen"
@@ -2011,7 +2046,7 @@ MinimapIcon 2 Cyan Circle
 # emotion flasks
 Show
 Class "Currency"
-BaseType "Distilled Ire"
+BaseType "Diluted Liquid Ire"
 SetTextColor 255 207 132
 SetBorderColor 255 207 132
 SetBackgroundColor 124 25 22
@@ -2021,7 +2056,7 @@ MinimapIcon 1 White Circle
 
 Show
 Class "Currency"
-BaseType "Distilled Guilt"
+BaseType "Diluted Liquid Guilt"
 SetTextColor 255 207 132
 SetBorderColor 255 207 132
 SetBackgroundColor 158 81 107 200
@@ -2031,7 +2066,7 @@ MinimapIcon 1 White Circle
 
 Show
 Class "Currency"
-BaseType "Distilled Greed"
+BaseType "Diluted Liquid Greed"
 SetTextColor 255 205 113
 SetBorderColor 255 207 132
 SetBackgroundColor 205 129 0 200
@@ -2041,7 +2076,7 @@ MinimapIcon 1 White Circle
 
 Show
 Class "Currency"
-BaseType "Distilled Paranoia"
+BaseType "Liquid Paranoia"
 SetTextColor 85 67 32
 SetBorderColor 255 207 132
 SetBackgroundColor 255 227 102 160
@@ -2051,7 +2086,7 @@ MinimapIcon 1 White Circle
 
 Show
 Class "Currency"
-BaseType "Distilled Envy"
+BaseType "Liquid Envy"
 SetTextColor 255 207 132
 SetBorderColor 255 207 132
 SetBackgroundColor 80 132 59 200
@@ -2061,7 +2096,7 @@ MinimapIcon 1 White Circle
 
 Show
 Class "Currency"
-BaseType "Distilled Disgust"
+BaseType "Liquid Disgust"
 SetTextColor 255 207 132
 SetBorderColor 255 207 132
 SetBackgroundColor 37 42 9
@@ -2071,7 +2106,7 @@ MinimapIcon 1 White Circle
 
 Show
 Class "Currency"
-BaseType "Distilled Despair"
+BaseType "Liquid Despair"
 SetTextColor 255 207 132
 SetBorderColor 255 207 132
 SetBackgroundColor 9 30 56
@@ -2081,7 +2116,7 @@ MinimapIcon 1 White Circle
 
 Show
 Class "Currency"
-BaseType "Distilled Fear"
+BaseType "Concentrated Liquid Fear"
 SetTextColor 255 207 132
 SetBorderColor 255 207 132
 SetBackgroundColor 55 18 55
@@ -2091,7 +2126,7 @@ MinimapIcon 1 White Circle
 
 Show
 Class "Currency"
-BaseType "Distilled Suffering"
+BaseType "Concentrated Liquid Suffering"
 SetTextColor 22 22 22
 SetBorderColor 255 207 132
 SetBackgroundColor 73 74 75 230
@@ -2101,7 +2136,7 @@ MinimapIcon 1 White Circle
 
 Show
 Class "Currency"
-BaseType "Distilled Isolation"
+BaseType "Concentrated Liquid Isolation"
 SetTextColor 255 207 132
 SetBorderColor 255 207 132
 SetBackgroundColor 133 134 135 200
@@ -2413,7 +2448,7 @@ MinimapIcon 2 Cyan Triangle
 #   [1504] Chaos: fragments
 Show
 Class "Map Fragments"
-BaseType "Cowardly Fate" "Deadly Fate" "Victorious Fate"
+BaseType "Cowardly Fate" "Deadly Fate" "Victorious Fate" "Idol of Estazunti" "Kulemak's Invitation"
 SetTextColor 255 205 113
 SetBorderColor 255 207 255
 SetBackgroundColor 65 20 80
@@ -2451,7 +2486,7 @@ SetBackgroundColor 0 0 0 180
 # Uncut Skill Gems: ----------
 Show
 ItemLevel >= 20
-BaseType "Uncut Skill Gem"
+Class "Uncut Skill Gem"
 SetFontSize 45
 SetTextColor 255 0 0 255
 SetBorderColor 255 0 0 255
@@ -2461,7 +2496,7 @@ PlayEffect Red
 MinimapIcon 0 Red Star
 
 Show
-BaseType "Uncut Skill Gem"
+Class "Uncut Skill Gem"
 ItemLevel = 19
 #SetTextColor 255 140 0 255
 SetTextColor 20 240 240
@@ -2472,7 +2507,7 @@ PlayEffect Brown
 MinimapIcon 1 Cyan Diamond
 
 Show
-BaseType "Uncut Skill Gem"
+Class "Uncut Skill Gem"
 ItemLevel >= 14
 SetTextColor 20 240 240
 SetBorderColor 20 240 240
@@ -2481,7 +2516,7 @@ PlayEffect Cyan
 MinimapIcon 1 Cyan Triangle
 
 Show
-BaseType "Uncut Skill Gem"
+Class "Uncut Skill Gem"
 ItemLevel = 13
 AreaLevel <= 57
 SetTextColor 20 240 240
@@ -2491,7 +2526,7 @@ PlayEffect Cyan
 MinimapIcon 1 Cyan Triangle
 
 Show
-BaseType "Uncut Skill Gem"
+Class "Uncut Skill Gem"
 ItemLevel = 12
 AreaLevel <= 51
 SetTextColor 20 240 240
@@ -2501,7 +2536,7 @@ PlayEffect Cyan
 MinimapIcon 1 Cyan Triangle
 
 Show
-BaseType "Uncut Skill Gem"
+Class "Uncut Skill Gem"
 ItemLevel = 11
 AreaLevel <= 45
 SetTextColor 20 240 240
@@ -2511,7 +2546,7 @@ PlayEffect Cyan
 MinimapIcon 1 Cyan Triangle
 
 Show
-BaseType "Uncut Skill Gem"
+Class "Uncut Skill Gem"
 ItemLevel = 10
 AreaLevel <= 40
 SetTextColor 20 240 240
@@ -2521,7 +2556,7 @@ PlayEffect Cyan
 MinimapIcon 1 Cyan Triangle
 
 Show
-BaseType "Uncut Skill Gem"
+Class "Uncut Skill Gem"
 ItemLevel = 9
 AreaLevel <= 35
 SetTextColor 20 240 240
@@ -2531,7 +2566,7 @@ PlayEffect Cyan
 MinimapIcon 1 Cyan Triangle
 
 Show
-BaseType "Uncut Skill Gem"
+Class "Uncut Skill Gem"
 ItemLevel = 8
 AreaLevel <= 30
 SetTextColor 20 240 240
@@ -2541,7 +2576,7 @@ PlayEffect Cyan
 MinimapIcon 1 Cyan Triangle
 
 Show
-BaseType "Uncut Skill Gem"
+Class "Uncut Skill Gem"
 ItemLevel = 7
 AreaLevel <= 25
 SetTextColor 20 240 240
@@ -2551,7 +2586,7 @@ PlayEffect Cyan
 MinimapIcon 1 Cyan Triangle
 
 Show
-BaseType "Uncut Skill Gem"
+Class "Uncut Skill Gem"
 ItemLevel = 6
 AreaLevel <= 21
 SetTextColor 20 240 240
@@ -2561,7 +2596,7 @@ PlayEffect Cyan
 MinimapIcon 1 Cyan Triangle
 
 Show
-BaseType "Uncut Skill Gem"
+Class "Uncut Skill Gem"
 ItemLevel = 5
 AreaLevel <= 17
 SetTextColor 20 240 240
@@ -2571,7 +2606,7 @@ PlayEffect Cyan
 MinimapIcon 1 Cyan Triangle
 
 Show
-BaseType "Uncut Skill Gem"
+Class "Uncut Skill Gem"
 ItemLevel = 4
 AreaLevel <= 13
 SetTextColor 20 240 240
@@ -2581,7 +2616,7 @@ PlayEffect Cyan
 MinimapIcon 1 Cyan Triangle
 
 Show
-BaseType "Uncut Skill Gem"
+Class "Uncut Skill Gem"
 ItemLevel = 3
 AreaLevel <= 9
 SetTextColor 20 240 240
@@ -2591,7 +2626,7 @@ PlayEffect Cyan
 MinimapIcon 1 Cyan Triangle
 
 Show
-BaseType "Uncut Skill Gem"
+Class "Uncut Skill Gem"
 ItemLevel = 2
 AreaLevel <= 5
 SetTextColor 20 240 240
@@ -2601,7 +2636,7 @@ PlayEffect Cyan
 MinimapIcon 1 Cyan Triangle
 
 Show
-BaseType "Uncut Skill Gem"
+Class "Uncut Skill Gem"
 SetTextColor 20 240 240
 SetBorderColor 20 240 240
 PlayAlertSound 2 300
@@ -2611,7 +2646,7 @@ MinimapIcon 1 Cyan Triangle
 # Uncut Spirit Gems: ----------
 Show
 ItemLevel >= 20
-BaseType "Uncut Spirit Gem"
+Class "Uncut Spirit Gem"
 SetFontSize 45
 SetTextColor 255 0 0 255
 SetBorderColor 255 0 0 255
@@ -2621,7 +2656,7 @@ PlayEffect Purple
 MinimapIcon 0 Purple Star
 
 Show
-BaseType "Uncut Spirit Gem"
+Class "Uncut Spirit Gem"
 ItemLevel = 19
 SetTextColor 140 140 140
 SetBorderColor 20 240 240 255
@@ -2631,7 +2666,7 @@ PlayEffect Brown
 MinimapIcon 1 White Diamond
 
 Show
-BaseType "Uncut Spirit Gem"
+Class "Uncut Spirit Gem"
 ItemLevel >= 14
 SetTextColor 140 140 140
 SetBorderColor 20 240 240
@@ -2640,7 +2675,7 @@ PlayEffect Grey
 MinimapIcon 1 White Triangle
 
 Show
-BaseType "Uncut Spirit Gem"
+Class "Uncut Spirit Gem"
 ItemLevel = 13
 AreaLevel <= 57
 SetTextColor 140 140 140
@@ -2650,7 +2685,7 @@ PlayEffect Grey
 MinimapIcon 1 White Triangle
 
 Show
-BaseType "Uncut Spirit Gem"
+Class "Uncut Spirit Gem"
 ItemLevel = 12
 AreaLevel <= 51
 SetTextColor 140 140 140
@@ -2660,7 +2695,7 @@ PlayEffect Grey
 MinimapIcon 1 White Triangle
 
 Show
-BaseType "Uncut Spirit Gem"
+Class "Uncut Spirit Gem"
 ItemLevel = 11
 AreaLevel <= 45
 SetTextColor 140 140 140
@@ -2670,7 +2705,7 @@ PlayEffect Grey
 MinimapIcon 1 White Triangle
 
 Show
-BaseType "Uncut Spirit Gem"
+Class "Uncut Spirit Gem"
 ItemLevel = 10
 AreaLevel <= 40
 SetTextColor 140 140 140
@@ -2680,7 +2715,7 @@ PlayEffect Grey
 MinimapIcon 1 White Triangle
 
 Show
-BaseType "Uncut Spirit Gem"
+Class "Uncut Spirit Gem"
 ItemLevel = 9
 AreaLevel <= 35
 SetTextColor 140 140 140
@@ -2690,7 +2725,7 @@ PlayEffect Grey
 MinimapIcon 1 White Triangle
 
 Show
-BaseType "Uncut Spirit Gem"
+Class "Uncut Spirit Gem"
 ItemLevel = 8
 AreaLevel <= 30
 SetTextColor 140 140 140
@@ -2700,7 +2735,7 @@ PlayEffect Grey
 MinimapIcon 1 White Triangle
 
 Show
-BaseType "Uncut Spirit Gem"
+Class "Uncut Spirit Gem"
 ItemLevel = 7
 AreaLevel <= 25
 SetTextColor 140 140 140
@@ -2710,7 +2745,7 @@ PlayEffect Grey
 MinimapIcon 1 White Triangle
 
 Show
-BaseType "Uncut Spirit Gem"
+Class "Uncut Spirit Gem"
 ItemLevel = 6
 AreaLevel <= 21
 SetTextColor 140 140 140
@@ -2720,7 +2755,7 @@ PlayEffect Cyan
 MinimapIcon 1 White Triangle
 
 Show
-BaseType "Uncut Spirit Gem"
+Class "Uncut Spirit Gem"
 ItemLevel = 5
 AreaLevel <= 17
 SetTextColor 140 140 140
@@ -2730,7 +2765,7 @@ PlayEffect Grey
 MinimapIcon 1 White Triangle
 
 Show
-BaseType "Uncut Spirit Gem"
+Class "Uncut Spirit Gem"
 ItemLevel = 4
 AreaLevel <= 13
 SetTextColor 140 140 140
@@ -2740,7 +2775,7 @@ PlayEffect Grey
 MinimapIcon 1 White Triangle
 
 Show
-BaseType "Uncut Spirit Gem"
+Class "Uncut Spirit Gem"
 ItemLevel = 3
 AreaLevel <= 9
 SetTextColor 140 140 140
@@ -2750,7 +2785,7 @@ PlayEffect Grey
 MinimapIcon 1 White Triangle
 
 Show
-BaseType "Uncut Spirit Gem"
+Class "Uncut Spirit Gem"
 ItemLevel = 2
 AreaLevel <= 5
 SetTextColor 140 140 140
@@ -2760,7 +2795,7 @@ PlayEffect Grey
 MinimapIcon 1 White Triangle
 
 Show
-BaseType "Uncut Spirit Gem"
+Class "Uncut Spirit Gem"
 SetTextColor 140 140 140
 SetBorderColor 20 240 240
 PlayAlertSound 2 300
@@ -2769,7 +2804,26 @@ MinimapIcon 1 White Triangle
 
 # support gems: ---------
 Show
-BaseType "Uncut Support Gem"
+Class "Uncut Support Gem"
+BaseType == "Atalui's Bloodletting" "Einhar's Beastrite" "Vilenta's Propulsion" "Ahn's Citadel" "Brutus' Brain" "Tecrod's Revenge" "Uruk's Smelting" "Paquate's Pact" "Ailith's Chimes" "Doedre's Undoing" "Ratha's Assault" "Arjun's Medal" "Kaom's Madness" "Sione's Temper" "Ixchel's Torment" "Romira's Requital" "Tawhoa's Tending" "Piety's Mercy" "Dialla's Desire" "Kalisa's Crescendo" "Xoph's Pyre" "Esh's Radiance" "Tul's Stillness" "Uul-Netol's Embrace" "Rakiata's Flow" "Rigwald's Ferocity" "Uhtred's Exodus" "Uhtred's Omen" "Uhtred's Augury" "Daresso's Passion" "Atziri's Allure" "Tacati's Ire" "Zarokh's Refrain" "Garukhan's Resolve" "Kurgal's Leash" "Kulemak's Dominion" "Amanamu's Tithe" "Varashta's Blessing" "Arbiter's Ignition" "Arakaali's Lust"
+Rarity Unique
+SetBorderColor 20 240 240 255
+SetBackgroundColor 25 50 100
+PlayAlertSound 3 300
+PlayEffect Brown
+MinimapIcon 1 Brown Diamond
+
+Show
+Class "Uncut Support Gem"
+Rarity Unique
+SetBorderColor 20 240 240 255
+SetBackgroundColor 25 50 100
+PlayAlertSound 3 300
+PlayEffect Brown
+MinimapIcon 1 Brown Diamond
+
+Show
+Class "Uncut Support Gem"
 SetTextColor 255 255 255
 SetBorderColor 20 240 240
 PlayAlertSound 2 300
@@ -3103,14 +3157,43 @@ PlayAlertSound 2 200
 MinimapIcon 1 Cyan Circle
 SetFontSize 40
 
+#   [1807] Abyss: gazes
+Show
+Class "Socketable"
+BaseType "Amanamu's Gaze" "Tecrod's Gaze" "Kurgal's Gaze" "Ulaman's Gaze"
+SetTextColor 47 191 78
+SetBackgroundColor 43 61 30 200
+PlayEffect Green
+PlayAlertSound 2 200
+MinimapIcon 1 Green Circle
+SetFontSize 40
+
+Show
+Class "Socketable"
+BaseType "Gaze"
+SetTextColor 47 191 78
+SetBackgroundColor 43 61 30 200
+PlayEffect Green
+PlayAlertSound 2 200
+MinimapIcon 1 Green Circle
+SetFontSize 40
+
+
 #--------------------------
 # [[1900]] Craft and Currency
 #--------------------------
 
+Show
+Class "Currency"
+BaseType  "Greater Chaos Orb" "Perfect Chaos Orb" "Greater Orb of Transmutation" "Perfect Orb of Transmutation" "Greater Exalted Orb" "Perfect Exalted Orb" "Greater Regal Orb" "Perfect Regal Orb" "Greater Orb of Augmentation" "Perfect Orb of Augmentation" "Perfect Essence of the Body" "Perfect Essence of the Mind" "Perfect Essence of Enhancement" "Perfect Essence of Abrasion" "Perfect Essence of Flames" "Perfect Essence of Ice" "Perfect Essence of Electricity" "Perfect Essence of Ruin" "Perfect Essence of Battle" "Perfect Essence of Sorcery" "Perfect Essence of Haste" "Perfect Essence of the Infinite" "Lesser Essence of Seeking" "Essence of Seeking" "Greater Essence of Seeking" "Perfect Essence of Seeking" "Essence of the Abyss" "Lesser Essence of Insulation" "Essence of Insulation" "Greater Essence of Insulation" "Perfect Essence of Insulation" "Lesser Essence of Thawing" "Essence of Thawing" "Greater Essence of Thawing" "Perfect Essence of Thawing" "Lesser Essence of Grounding" "Essence of Grounding" "Greater Essence of Grounding" "Perfect Essence of Grounding" "Lesser Essence of Alacrity" "Essence of Alacrity" "Greater Essence of Alacrity" "Perfect Essence of Alacrity" "Lesser Essence of Opulence" "Essence of Opulence" "Greater Essence of Opulence" "Perfect Essence of Opulence" "Lesser Essence of Command" "Essence of Command" "Greater Essence of Command" "Perfect Essence of Command" "Petition Splinter" "Runic Splinter" "Gnawed Jawbone" "Preserved Jawbone" "Ancient Jawbone" "Gnawed Rib" "Preserved Rib" "Ancient Rib" "Gnawed Collarbone" "Preserved Collarbone" "Ancient Collarbone" "Preserved Cranium" "Preserved Vertebrae" "Greater Essence of the Infinite"
+SetBackgroundColor 222 102 204 # todo temp pink background
+PlayAlertSound 2 300
+MinimapIcon 1 White Circle
+
 #   [1901] currency Tier S: Mirror, Divine
 Show
 Class "Currency"
-BaseType "Mirror of Kalandra" "Perfect Jeweller's Orb"
+BaseType "Mirror of Kalandra" "Hinekora's Lock" "Perfect Jeweller's Orb"
 SetFontSize 45
 SetTextColor 255 0 0 255
 SetBorderColor 255 0 0 255
@@ -3341,7 +3424,7 @@ SetFontSize 40
 
 Show
 Class "Currency"
-BaseType "Greater Essence of Torment"
+BaseType "Greater Essence of Abrasion"
 SetTextColor 255 207 132
 SetBorderColor 255 207 132
 SetBackgroundColor 156 139 127 200
