@@ -2014,17 +2014,6 @@ MinimapIcon 2 Grey Circle
 
 Show
 Class == "Omen"
-"Omen of Homogenising Exaltation" "Omen of Homogenising Coronation" "Omen of Gambling" "Omen of Bartering" "Omen of Recombination" "Omen of the Blessed" "Omen of Chaotic Rarity" "Omen of Chaotic Monsters" "Omen of Chaotic Quantity" "Omen of Chance" "Omen of the Ancients" "Omen of Sanctification" "Omen of Dextral Crystallisation" "Omen of Sinistral Crystallisation" "Omen of Catalysing Exaltation" "Omen of Abyssal Echoes" "Omen of Putrefaction" "Omen of Light" "Omen of Sinistral Necromancy" "Omen of Dextral Necromancy" "Omen of the Sovereign" "Omen of the Liege" "Omen of the Blackblooded"
-SetTextColor 255 207 132
-SetBorderColor 255 207 132
-SetBackgroundColor 222 102 204 # todo temp pink background
-PlayAlertSound 2 300
-PlayEffect White
-MinimapIcon 1 White Circle
-SetFontSize 40
-
-Show
-Class == "Omen"
 SetTextColor 255 207 132
 SetBorderColor 255 207 132
 SetBackgroundColor 76 51 12
@@ -3525,7 +3514,7 @@ SetFontSize 40
 #   [1906] default styles for distillates, catalysts and essences:
 Show
 Class "Currency"
-BaseType "Distilled" "Catalyst" "Essence of"
+BaseType "Catalyst" "Essence of"
 SetTextColor 255 207 132
 SetBorderColor 255 207 132
 SetBackgroundColor 76 51 12
