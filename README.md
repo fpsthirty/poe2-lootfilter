@@ -88,14 +88,24 @@ In this case you can make your own edits, including activating additionally prep
 
 > ![table-weapons](https://github.com/fpsthirty/poe2-lootfilter/raw/main/img/loot/table-weapons.png)
 
->### altar:
->  ![altar](https://github.com/fpsthirty/poe2-lootfilter/raw/main/img/loot/altar.jpg)
+>### abyss currency:
+>  ![altar](https://github.com/fpsthirty/poe2-lootfilter/raw/main/img/loot/abyss-currency.jpg)
+
+>### abyss omens:
+>  ![altar](https://github.com/fpsthirty/poe2-lootfilter/raw/main/img/loot/abyss-omens.jpg)
+
+> ### action gems:
+>  ![uncut_gems](https://github.com/fpsthirty/poe2-lootfilter/raw/main/img/loot/action-gems.jpg)
 
 >### breach:
 >  ![breach](https://github.com/fpsthirty/poe2-lootfilter/raw/main/img/loot/breach.jpg)
 
->### currency:
->  ![currency](https://github.com/fpsthirty/poe2-lootfilter/raw/main/img/loot/currency.jpg)
+>### currency with tiers (v0.3.0)
+>  ![currency](https://github.com/fpsthirty/poe2-lootfilter/raw/main/img/loot/currency-with-tiers.jpg)
+
+>### currency (low and high area level):
+>  ![currency](https://github.com/fpsthirty/poe2-lootfilter/raw/main/img/loot/currency-arealvl-low.jpg)
+>  ![currency](https://github.com/fpsthirty/poe2-lootfilter/raw/main/img/loot/currency-arealvl-high.jpg)
 
 > ### delirium:
 >  ![delirium](https://github.com/fpsthirty/poe2-lootfilter/raw/main/img/loot/delirium.jpg)
@@ -104,7 +114,7 @@ In this case you can make your own edits, including activating additionally prep
 >  ![equip_high-end](https://github.com/fpsthirty/poe2-lootfilter/raw/main/img/loot/equip_high-end.jpg)
 
 > ### equipment:
->  ![equipment](https://github.com/fpsthirty/poe2-lootfilter/raw/main/img/loot/equipment.jpg)
+>  ![equipment](https://github.com/fpsthirty/poe2-lootfilter/raw/main/img/loot/equip-main.jpg)
 
 > ### essences:
 >  ![essences](https://github.com/fpsthirty/poe2-lootfilter/raw/main/img/loot/essences.jpg)
@@ -115,8 +125,12 @@ In this case you can make your own edits, including activating additionally prep
 > ### gold:
 >  ![gold](https://github.com/fpsthirty/poe2-lootfilter/raw/main/img/loot/gold.jpg)
 
-> ### pinnacle keys:
->  ![pinnacle_keys](https://github.com/fpsthirty/poe2-lootfilter/raw/main/img/loot/pinnacle_keys.jpg)
+> ### pinnacle fragments and splinters:
+>  ![pinnacle_keys](https://github.com/fpsthirty/poe2-lootfilter/raw/main/img/loot/pinnacle-fragments.jpg)
+>  ![pinnacle_keys](https://github.com/fpsthirty/poe2-lootfilter/raw/main/img/loot/pinnacle-splinters.jpg)
+
+>### ritual omens:
+>  ![altar](https://github.com/fpsthirty/poe2-lootfilter/raw/main/img/loot/ritual-omens.jpg)
 
 > ### socketables:
 >  ![socketables](https://github.com/fpsthirty/poe2-lootfilter/raw/main/img/loot/socketables.jpg)
@@ -125,10 +139,7 @@ In this case you can make your own edits, including activating additionally prep
 >  ![tablets](https://github.com/fpsthirty/poe2-lootfilter/raw/main/img/loot/tablets.jpg)
 
 > ### trials overall:
->  ![trials_overall](https://github.com/fpsthirty/poe2-lootfilter/raw/main/img/loot/trials_overall.jpg)
-
-> ### uncut gems:
->  ![uncut_gems](https://github.com/fpsthirty/poe2-lootfilter/raw/main/img/loot/uncut_gems.jpg)
+>  ![trials_overall](https://github.com/fpsthirty/poe2-lootfilter/raw/main/img/loot/trials-overall.jpg)
 
 > ### waystones:
 >  ![waystones](https://github.com/fpsthirty/poe2-lootfilter/raw/main/img/loot/waystones.jpg)

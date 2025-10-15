@@ -14,8 +14,9 @@
 # Special equipment stylization applies in four cases:
 # - for the best bases of the corresponding slot, on which the maximum affix tier (81–82 itemLevel) can be generated;
 # - for some infrequent items on low-level characters: jewelry, belts, and Chiming staff;
-# - items with additional quality.
+# - items with additional quality;
 # - bases for crafting uniques with Chance Orb.
+# - unid uniques with great potencial to be expensive but find with the same search parameters as trash uniques.
 #
 # I also recommend check out the short documentation for before using it: in just a couple minutes you can familiarize yourself with the styles of ~95% of the items in the game and ~95% of the rules for showing/hiding items: https://github.com/fpsthirty/poe2-lootfilter/blob/main/README.md
 #
@@ -52,12 +53,12 @@
 # [[0900]] For T11+ maps / area level 75+
 #   [0901] hide low-level bases (<= Rare)
 #   [0902] waystones: additional rules for low waystones
-#   [0903] dex- / str-bases
+#   [0903] dex- or/and str-bases
 #   [0904] mix-bases
 #   [0905] int-bases
 # [[1000]] For T7+ maps / area level 71+
-#   [1001] hide low-level bases (<= Magic)
-#   [1002] dex- / str-bases
+#   [1001] hide low-level bases
+#   [1002] hide dex- or/and str-bases
 #   [1003] mix-bases
 #   [1004] int-bases
 #   [1005] set default font size for belts and jewellery
@@ -65,7 +66,8 @@
 #   [1007] hide cheap things
 # [[1100]] First steps on the maps / area level 65+
 #   [1101] caster weapons/offhands
-#   [1102] hide cheap currency, normal charms and some mix-bases
+#   [1102] hide cheap currency, normal charms and flasks
+#   [1103] hide dex- or/and str-bases
 # [[1200]] To start for any class of casters
 #   [1201] dex- / str-bases
 #   [1202] mix-bases
@@ -73,9 +75,8 @@
 # [[1300]] Uniques
 #   [1301] purple beam: price 2–500+ divine orbs
 #   [1302] red beam: price ~1 divine orb
-#   [1303] red beam: price ~1 divine orb
-#   [1304] Schrodinger's uniques
-#   [1305] high-end jewels
+#   [1303] Schrodinger's uniques
+#   [1304] high-end jewels
 # [[1400]] Things of the Atlas
 #   [1401] pinnacle keys
 #   [1402] Expedition / logbooks, artifacts & exotic coinage
@@ -904,6 +905,12 @@ AreaLevel > 78
 
 Hide
 Class "Currency"
+BaseType "Orb of Augmentation" "Orb of Transmutation"
+DropLevel < 45
+AreaLevel > 78
+
+Hide
+Class "Currency"
 BaseType "Lesser Jeweller's Orb" "Regal Shard" "Glassblower's Bauble" "Artificer's Orb" "Blacksmith's Whetstone"
 AreaLevel > 78
 
@@ -943,28 +950,8 @@ AreaLevel > 78
 #AreaLevel >= 65
 #
 #Hide
-#BaseType "Uncut Skill Gem" "Uncut Spirit Gem"
-#ItemLevel <= 19
-#AreaLevel >= 65
-#
-#Hide # only runes existing at the time of patch v0.1.1 are listed here:
-#BaseType "Desert Rune" "Storm Rune" "Body Rune" "Rebirth Rune" "Stone Rune" "Glacial Rune" "Iron Rune" "Mind Rune" "Inspiration Rune" "Vision Rune"
-#Rarity Normal
-#AreaLevel >= 65
-#
-#Hide
-#Class "Flask"
-#Rarity <= Magic
-#AreaLevel >= 65
-#
-#Hide
 #Class "Shields"
 #Rarity <= Rare
-#AreaLevel >= 65
-#
-#Hide
-#Class "Currency"
-#BaseType "Orb of Augmentation" "Orb of Transmutation" "Regal Shard" "Transmutation Shard"
 #AreaLevel >= 65
 #
 #Hide
@@ -979,7 +966,37 @@ AreaLevel > 78
 #Rarity < Magic
 #AreaLevel >= 65
 #AreaLevel < 75
-
+#
+#Hide
+#Class "Uncut Skill Gem"
+#BaseType = 16 17 18
+#AreaLevel >= 79
+#
+#Hide
+#Class "Uncut Spirit Gem"
+#BaseType = 16 17
+#AreaLevel >= 79
+#
+#Show
+#Class "Bow"
+#BaseType "Gemini Bow" "Twin Bow"
+#ItemLevel >= 82
+#Rarity <= Rare
+#SetBorderColor 95 0 160
+#SetBackgroundColor 0 0 0 210
+#PlayEffect White
+#MinimapIcon 1 Purple Circle
+#PlayAlertSound 16 300
+#
+#Show
+#Class "Bow"
+#BaseType "Gemini Bow"
+#SetBackgroundColor 0 0 0 210
+#
+#Hide
+#Class "Belts"
+#Rarity <= Magic
+#AreaLevel > 78
 #--------------------------
 # [[0900]] For T11+ maps / area level 75+:
 #--------------------------
@@ -1023,11 +1040,6 @@ Class "Staff" "Wand" "Focus"
 Rarity <= Rare
 AreaLevel >= 75
 
-Hide
-Class "Quiver" "One Hand Mace" "Quarter" "Bow" "Crossbow" "One Hand Sword" "One Hand Sword" "Two Hand Sword" "Dagger" "Spear" "One Hand Axe" "Two Hand Axe" "Two Hand Mace" "Flail" "Trap" "Claw"
-Rarity <= Rare
-AreaLevel >= 75
-
 #   [0902] waystones: additional rules for low waystones
 Hide
 BaseType "Waystone"
@@ -1050,65 +1062,89 @@ AnyEnchantment False
 Rarity Rare
 AreaLevel >= 75
 
-#   [0903] dex- / str-bases:-----------
-Hide
-Class "Helmet"
-BaseType "Greathelm" " Cap" " Hood"
-Rarity <= Rare
-AreaLevel >= 75
-
-Hide
-Class "Body"
-BaseType " Coat" "Cuirass" "Plate" " Vest"
-Rarity <= Rare
-AreaLevel >= 75
-
-Hide
-Class "Gloves"
-BaseType "Bracers" "Mitts"
-Rarity <= Rare
-AreaLevel >= 75
-
-Hide
-Class "Shields" "Buckler"
-BaseType "Tower Shield" "Buckler"
-Rarity <= Rare
-AreaLevel >= 75
-
-Hide
-Class "Boots"
-BaseType "Greaves" "Boots"
-Rarity <= Rare
-AreaLevel >= 75
+#   [0903] dex- or/and str-bases:-----------
+# is already hidden in the section for maps t7+
+# Hide
+# Class "Helmet"
+# BaseType "Greathelm" " Cap" " Hood"
+# Rarity <= Rare
+# AreaLevel >= 75
+# Hide
+# Class "Helmet"
+# BaseType " Helm"
+# Rarity <= Rare
+# AreaLevel >= 75
+# 
+# Hide
+# Class "Body"
+# BaseType " Coat" "Cuirass" "Plate" " Vest"
+# Rarity <= Rare
+# AreaLevel >= 75
+# 
+# Hide
+# Class "Body"
+# BaseType " Mail" " Armour"
+# Rarity <= Rare
+# AreaLevel >= 75
+# 
+# Hide
+# Class "Gloves"
+# BaseType "Bracers" "Mitts"
+# Rarity <= Rare
+# AreaLevel >= 75
+# 
+# Hide
+# Class "Gloves"
+# BaseType "Gauntlets"
+# Rarity <= Rare
+# AreaLevel >= 75
+# 
+# Hide
+# Class "Boots"
+# BaseType "Greaves" "Boots"
+# Rarity <= Rare
+# AreaLevel >= 75
+# 
+# Hide
+# Class "Boots"
+# BaseType "Sabatons"
+# Rarity <= Rare
+# AreaLevel >= 75
+# 
+# Hide
+# Class "Shields" "Buckler"
+# BaseType "Tower Shield" "Buckler"
+# Rarity <= Rare
+# AreaLevel >= 75
+# 
+# Hide
+# Class "Shields"
+# BaseType "Targe"
+# Rarity <= Rare
+# AreaLevel >= 75
 
 #   [0904] mix-bases:-----------
 Hide
 Class "Helmet"
-BaseType " Crown" " Mask" " Helm" " Visage"
+BaseType " Crown" " Mask" " Visage"
 Rarity <= Rare
 AreaLevel >= 75
 
 Hide
 Class "Body"
-BaseType " Jacket" " Mail" " Armour" "Mantle" " Garb" "Vestments" "Regalia"
+BaseType " Jacket" "Mantle" " Garb" "Vestments" "Regalia"
 Rarity <= Rare
 AreaLevel >= 75
 
 Hide
 Class "Gloves"
-BaseType "Cuffs" "Wraps" "Gauntlets" "Manchettes"
-Rarity <= Rare
-AreaLevel >= 75
-
-Hide
-Class "Shields"
-BaseType "Targe"
+BaseType "Cuffs" "Wraps" "Manchettes"
 Rarity <= Rare
 AreaLevel >= 75
 
 Hide
 Class "Boots"
-BaseType "Sabatons" "Leggings" " Shoes" "Cuisses"
+BaseType "Leggings" " Shoes" "Cuisses"
 Rarity <= Rare
 AreaLevel >= 75
 
@@ -1162,7 +1198,12 @@ Quality < 1
 Rarity <= Rare
 AreaLevel >= 71
 
-#   [1001] hide low-level bases (<= Magic):
+Hide
+Class "Quiver" "One Hand Mace" "Quarter" "Bow" "Crossbow" "One Hand Sword" "One Hand Sword" "Two Hand Sword" "Dagger" "Spear" "One Hand Axe" "Two Hand Axe" "Two Hand Mace" "Flail" "Trap" "Claw"
+Rarity <= Rare
+AreaLevel >= 71
+
+#   [1001] hide low-level bases:
 Hide
 Class "Helmet" "Body" "Gloves" "Boots" "Shields"
 Rarity <= Magic
@@ -1193,64 +1234,90 @@ BaseType "Armour"
 DropLevel <= 60
 AreaLevel >= 71
 
-#   [1002] dex- / str-bases:
+#   [1002] hide dex- or/and str-bases
+
 Hide
 Class "Helmet"
 BaseType "Greathelm" " Cap" " Hood"
-Rarity <= Magic
+Rarity <= Rare
 AreaLevel >= 71
 
-#Hide # already hidden at AreaLevel >= 65
-#Class "Body"
-#BaseType " Coat" "Cuirass" "Plate" " Vest"
-#Rarity <= Magic
-#AreaLevel >= 71
+Hide
+Class "Helmet"
+BaseType " Helm"
+Rarity <= Rare
+AreaLevel >= 71
 
 Hide
-Class "Boots"
-BaseType "Greaves" "Boots"
-Rarity Magic
+Class "Body"
+BaseType " Coat" "Cuirass" "Plate" " Vest"
+Rarity <= Rare
+AreaLevel >= 71
+
+Hide
+Class "Body"
+BaseType " Mail" " Armour"
+Rarity <= Rare
 AreaLevel >= 71
 
 Hide
 Class "Gloves"
 BaseType "Bracers" "Mitts"
-Rarity <= Magic
-AreaLevel >= 71
-
-Hide
-Class "Buckler"
-Rarity <= Magic
-AreaLevel >= 71
-
-#   [1003] mix-bases:-----------
-Hide
-Class "Helmet"
-BaseType " Crown" " Mask" " Helm" " Visage"
-Rarity <= Magic
-AreaLevel >= 71
-
-#Hide # already hidden at AreaLevel >= 65
-#Class "Body"
-#BaseType " Jacket" " Mail" " Armour" "Mantle" " Garb" "Vestments" "Regalia"
-#Rarity <= Magic
-#AreaLevel >= 71
-
-Hide
-Class "Boots"
-BaseType "Sabatons" "Leggings" " Shoes" "Cuisses"
-Rarity <= Magic
+Rarity <= Rare
 AreaLevel >= 71
 
 Hide
 Class "Gloves"
-BaseType "Cuffs" "Wraps" "Gauntlets" "Manchettes"
-Rarity <= Magic
+BaseType "Gauntlets"
+Rarity <= Rare
+AreaLevel >= 71
+
+Hide
+Class "Boots"
+BaseType "Greaves" "Boots"
+Rarity <= Rare
+AreaLevel >= 71
+
+Hide
+Class "Boots"
+BaseType "Sabatons"
+Rarity <= Rare
+AreaLevel >= 71
+
+Hide
+Class "Shields" "Buckler"
+BaseType "Tower Shield" "Buckler"
+Rarity <= Rare
 AreaLevel >= 71
 
 Hide
 Class "Shields"
 BaseType "Targe"
+Rarity <= Rare
+AreaLevel >= 71
+
+#   [1003] mix-bases:-----------
+Hide
+Class "Helmet"
+BaseType " Crown" " Mask" " Visage"
+Rarity <= Magic
+AreaLevel >= 71
+
+#Hide # already hidden at AreaLevel >= 65
+#Class "Body"
+#BaseType " Jacket" "Mantle" " Garb" "Vestments" "Regalia"
+#Rarity <= Magic
+#AreaLevel >= 71
+
+Hide
+Class "Boots"
+BaseType "Leggings" " Shoes" "Cuisses"
+Rarity <= Magic
+AreaLevel >= 71
+
+Hide
+Class "Gloves"
+BaseType "Cuffs" "Wraps" "Manchettes"
 Rarity <= Magic
 AreaLevel >= 71
 
@@ -1349,19 +1416,13 @@ Class "Quiver" "One Hand Mace" "Two Hand Mace" "Quarter" "Bow" "Crossbow" "One H
 Rarity <= Magic
 AreaLevel >= 65
 
-Hide
-Class "Shields"
-BaseType "Tower Shield"
-Rarity <= Magic
-AreaLevel >= 65
-
 #   [1101] caster weapons/offhands:
 Hide
 Class "Staff" "Wand" "Focus"
 Rarity <= Magic
 AreaLevel >= 65
 
-#   [1102] hide cheap currency, normal charms and some mix-bases
+#   [1102] hide cheap currency, normal charms and flasks
 Hide
 Class "Flask"
 Rarity <= Magic
@@ -1393,6 +1454,67 @@ AreaLevel >= 65
 Hide
 Class "Currency"
 BaseType "Artificer's Shard" "Transmutation Shard"
+AreaLevel >= 65
+
+#   [1103] hide dex- or/and str-bases
+Hide
+Class "Helmet"
+BaseType "Greathelm" " Cap" " Hood"
+Rarity <= Magic
+AreaLevel >= 65
+
+Hide
+Class "Helmet"
+BaseType " Helm"
+Rarity <= Magic
+AreaLevel >= 65
+
+Hide
+Class "Body"
+BaseType " Coat" "Cuirass" "Plate" " Vest"
+Rarity <= Magic
+AreaLevel >= 65
+
+Hide
+Class "Body"
+BaseType " Mail" " Armour"
+Rarity <= Magic
+AreaLevel >= 65
+
+Hide
+Class "Gloves"
+BaseType "Bracers" "Mitts"
+Rarity <= Magic
+AreaLevel >= 65
+
+Hide
+Class "Gloves"
+BaseType "Gauntlets"
+Rarity <= Magic
+AreaLevel >= 65
+
+Hide
+Class "Boots"
+BaseType "Greaves" "Boots"
+Rarity <= Magic
+AreaLevel >= 65
+
+Hide
+Class "Boots"
+BaseType "Sabatons"
+Rarity <= Magic
+AreaLevel >= 65
+
+Hide
+Class "Shields" "Buckler"
+BaseType "Tower Shield" "Buckler"
+Rarity <= Magic
+AreaLevel >= 65
+
+Hide
+Class "Shields"
+BaseType "Targe"
+Rarity <= Magic
 AreaLevel >= 65
 
 #--------------------------
@@ -1871,7 +1993,7 @@ PlayAlertSound 6 300
 PlayEffect Red
 MinimapIcon 0 Red Star
 
-#   [1304] Schrodinger's uniques
+#   [1303] Schrodinger's uniques
 # cant set styles for unid expensive uniques because of the lack of parameters, by which you can filter items
 # (GGG please give us ability to filter by the icon of item)
 # so the rules below will apply to both expensive and cheap uniques
@@ -1975,7 +2097,7 @@ PlayAlertSound 7 300
 # SetFontSize 40
 # PlayAlertSound 7 300
 
-#   [1305] high-end jewels
+#   [1304] high-end jewels
 Show
 Class "Jewel"
 BaseType == "Time-Lost Ruby"
