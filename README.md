@@ -111,7 +111,7 @@ In this case you can make your own edits, including activating additionally prep
 >  ![delirium](https://github.com/fpsthirty/poe2-lootfilter/raw/main/img/loot/delirium.jpg)
 
 > ### equipment (high-end):
->  ![equip_high-end](https://github.com/fpsthirty/poe2-lootfilter/raw/main/img/loot/equip_high-end.jpg)
+>  ![equip_high-end](https://github.com/fpsthirty/poe2-lootfilter/raw/main/img/loot/equip-highend.jpg)
 
 > ### equipment:
 >  ![equipment](https://github.com/fpsthirty/poe2-lootfilter/raw/main/img/loot/equip-main.jpg)
