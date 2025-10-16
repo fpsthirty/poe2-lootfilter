@@ -77,6 +77,7 @@
 #   [1302] red beam: price ~1 divine orb
 #   [1303] Schrodinger's uniques
 #   [1304] high-end jewels
+#   [1305] mid-tier uniques
 # [[1400]] Things of the Atlas
 #   [1401] pinnacle keys
 #   [1402] Expedition / logbooks, artifacts & exotic coinage
@@ -493,15 +494,15 @@ PlayEffect Orange Temp
 MinimapIcon 1 Orange Square
 PlayAlertSound 12 300
 
-Show
-BaseType "Spiked Club" # Trenchtimbre / +(1–2) to Level of all Minion Skills
-Rarity Normal
-DropLevel = 16
-SetBorderColor 255 128 200
-SetBackgroundColor 63 63 63 222
-PlayEffect Orange Temp
-MinimapIcon 1 Orange Square
-PlayAlertSound 12 300
+# Show
+# BaseType "Spiked Club" # Trenchtimbre / +(1–2) to Level of all Minion Skills
+# Rarity Normal
+# DropLevel = 16
+# SetBorderColor 255 128 200
+# SetBackgroundColor 63 63 63 222
+# PlayEffect Orange Temp
+# MinimapIcon 1 Orange Square
+# PlayAlertSound 12 300
 
 # Show
 # BaseType "Sapphire Ring"
@@ -1791,20 +1792,42 @@ SetBackgroundColor 0 0 0 210
 ## https://poe2scout.com/economy/accessory
 
 #   [1301] purple beam: price 2–500+ divine orbs
-Show
-Rarity Unique
-BaseType == "Incense Relic" "Vase Relic" "Glass Shank" "Ultimate Life Flask" "Armoured Cap" "Blacksteel Tower Shield" "Sacred Focus" "Ornate Gauntlets" "Fine Bracers" "Armoured Vest" "Stone Tower Shield" "Embroidered Gloves" "Heroic Armour" "Golden Charm" "Silver Charm" "Stone Charm" "Primed Quiver" "Lattice Sandals" "Conqueror Plate"
-SetFontSize 45
-SetTextColor 255 0 0 255
-SetBorderColor 255 0 0 255
-SetBackgroundColor 255 255 255 255
-PlayAlertSound 6 300
-PlayEffect Purple
-MinimapIcon 0 Purple Star
+### price 2+ div (October, 2025):
+# Temporalis, Silk Robe
+# Palm of the Dreamer, Shrine Sceptre
+# The Last Lament, Desolate Crossbow
+# Kaom's Heart, Conqueror Plate
+# Alpha's Howl, Armoured Cap
+# Hateforge, Moulded Mitts
+# Maligaro's Virtuosity, Fine Bracers
+# Death Articulated, Ornate Gauntlets
+# Bones of Ullr, Lattice Sandals
+# Prism Guardian, Intricate Crest Shield
+# Rathpith Globe, Sacred Focus
+# Heroic Tragedy, Timeless Jewel
+# Undying Hate, Timeless Jewel
+# Grand Spectrum Ruby
+# Grand Spectrum Emerald
+# The Adorned, Diamond
+# Heart of the Well, Diamond
+# The Last Flame, Incense Relic
+# Defiance of Destiny, Jade Amulet
+# Yoke of Suffering, Bloodstone Amulet
+# Astramentis, Stellar Amulet
+# Bursting Decay, Unset Ring
+# Olroth's Resolve, Ultimate Life Flask
+# The Fall of the Axe, Silver Charm
+# Rite of Passage, Golden Charm
+# Kalandra's Touch, Ring
+# Chernobog's Pillar, Blacksteel Tower Shield
+# Sacred Flame, Shrine Sceptre
+# The Gnashing Sash, Wide Belt
+# Headhunter, Heavy Belt
+# ----------------------------------
 
 Show
 Rarity Unique
-BaseType == "Emerald" "Ruby"
+BaseType == "Incense Relic" "Ultimate Life Flask" "Armoured Cap" "Blacksteel Tower Shield" "Sacred Focus" "Ornate Gauntlets" "Fine Bracers" "Golden Charm" "Silver Charm" "Lattice Sandals" "Conqueror Plate" "Desolate Crossbow" "Intricate Crest Shield" "Timeless Jewel" "Ruby" "Emerald"
 SetFontSize 45
 SetTextColor 255 0 0 255
 SetBorderColor 255 0 0 255
@@ -1827,9 +1850,8 @@ MinimapIcon 0 Purple Star
 
 Show
 Rarity Unique
-BaseType == "Garment" # Tabula Rasa / has 6 jewel sockets
-DropLevel == 1
-Sockets >= 5
+BaseType == "Moulded Mitts" # Hateforge / Gain (1-3) random Charge on reaching Maximum Rage
+DropLevel == 60
 SetFontSize 45
 SetTextColor 255 0 0 255
 SetBorderColor 255 0 0 255
@@ -1866,18 +1888,6 @@ Show
 Rarity Unique
 BaseType == "Primed Quiver" # Cadiro's Gambit / Each Arrow fired is a Crescendo, Splinter, Reversing, Diamond, Covetous, or Blunt Arrow
 DropLevel == 51
-SetFontSize 45
-SetTextColor 255 0 0 255
-SetBorderColor 255 0 0 255
-SetBackgroundColor 255 255 255 255
-PlayAlertSound 6 300
-PlayEffect Purple
-MinimapIcon 0 Purple Star
-
-Show
-Rarity Unique
-BaseType == "Jade Amulet" # Defiance of Destiny / Recover 10% of Missing Life before being Hit by an Enemy
-DropLevel == 56
 SetFontSize 45
 SetTextColor 255 0 0 255
 SetBorderColor 255 0 0 255
@@ -1925,9 +1935,26 @@ MinimapIcon 0 Purple Star
 
 # ======================================
 #   [1302] red beam: price ~1 divine orb
+### ~1 div (October, 2025):
+# Leopold's Applause, Embroidered Gloves
+# Tabula Rasa, Garment
+# Solus Ipse, Grand Visage
+# Megalomaniac, unid Diamond
+# From Nothing, unid Diamond
+# Controlled Metamorphosis, unid Diamond
+# Prism of Belief, Diamond
+# Cadiro's Gambit, Primed Quiver
+# Original Sin, Amethyst Ring
+# Nascent Hope, Thawing Charm
+# The Hammer of Faith, Giant Maul
+# The Surrender, Stone Tower Shield
+# Sekhema's Resolve, Ring
+# The Desperate Alliance, Vase Relic
+# ----------------------------------
+
 Show
 Rarity Unique
-BaseType == "Furtive Wraps" "Smuggler Coat" "Stone Tower Shield" "Utility Belt" "Spiked Club" "Ultimate Mana Flask" "Intricate Crest Shield" "Amethyst Charm" "Desolate Crossbow" "Thawing Charm" "Utility Wraps"
+BaseType == "Stone Tower Shield" "Thawing Charm" "Embroidered Gloves" "Grand Visage" "Primed Quiver" "Vase Relic"
 SetFontSize 45
 SetTextColor 255 0 0 255
 SetBorderColor 255 0 0 255
@@ -1947,9 +1974,10 @@ PlayEffect Red
 MinimapIcon 0 Red Star
 
 Show
-Class "Buckler"
-BaseType "Array Buckler" # Sunsplinter / +[1–3] to elemental skills, +[1–3] to max elemental res
-DropLevel == 55
+Rarity Unique
+BaseType == "Garment" # Tabula Rasa / has 6 jewel sockets
+DropLevel == 1
+Sockets >= 5
 SetFontSize 45
 SetTextColor 255 0 0 255
 SetBorderColor 255 0 0 255
@@ -1960,18 +1988,6 @@ MinimapIcon 0 Red Star
 
 Show
 Class "Fishing Rod"
-SetFontSize 45
-SetTextColor 255 0 0 255
-SetBorderColor 255 0 0 255
-SetBackgroundColor 255 255 255 255
-PlayAlertSound 6 300
-PlayEffect Red
-MinimapIcon 0 Red Star
-
-Show
-Rarity Unique
-BaseType == "Jade Amulet" # Defiance of Destiny / Recover 10% of Missing Life before being Hit by an Enemy
-DropLevel == 56
 SetFontSize 45
 SetTextColor 255 0 0 255
 SetBorderColor 255 0 0 255
@@ -2000,19 +2016,9 @@ MinimapIcon 0 Red Star
 
 Show
 Rarity Unique
+Class "Amulet"
 BaseType == "Stellar Amulet"
 DropLevel == 25 # Astramentis
-SetBorderColor 255 128 200
-SetBackgroundColor 0 0 0 210
-PlayEffect Pink
-MinimapIcon 1 Pink Star
-SetFontSize 40
-PlayAlertSound 7 300
-
-Show
-Rarity Unique
-BaseType == "Fine Belt"
-DropLevel == 62 # Shavronne's Satchel
 SetBorderColor 255 128 200
 SetBackgroundColor 0 0 0 210
 PlayEffect Pink
@@ -2033,6 +2039,18 @@ PlayAlertSound 7 300
 
 Show
 Rarity Unique
+Class "Ring"
+BaseType == "Pearl Ring" # Snakepit
+SetBorderColor 255 128 200
+SetBackgroundColor 0 0 0 210
+PlayEffect Pink
+MinimapIcon 1 Pink Star
+SetFontSize 40
+PlayAlertSound 7 300
+
+Show
+Rarity Unique
+Class "Amulet"
 BaseType == "Jade Amulet"
 DropLevel == 8 # Defiance of Destiny
 SetBorderColor 255 128 200
@@ -2044,6 +2062,7 @@ PlayAlertSound 7 300
 
 Show
 Rarity Unique
+Class "Belt"
 BaseType == "Heavy Belt"
 DropLevel == 50 # Headhunter
 SetBorderColor 255 128 200
@@ -2055,6 +2074,7 @@ PlayAlertSound 7 300
 
 Show
 Rarity Unique
+Class "Ring"
 BaseType == "Amethyst Ring"
 DropLevel == 20 # Original Sin
 SetBorderColor 255 128 200
@@ -2066,6 +2086,7 @@ PlayAlertSound 7 300
 
 Show
 Rarity Unique
+Class "Amulet"
 BaseType == "Bloodstone Amulet"
 DropLevel == 18 # Yoke of Suffering
 SetBorderColor 255 128 200
@@ -2193,6 +2214,19 @@ Show
 Class "Jewel"
 BaseType == "Diamond"
 Rarity == Unique
+Corrupted True
+SetFontSize 45
+SetTextColor 255 0 0 255
+SetBorderColor 255 0 0 255
+SetBackgroundColor 255 255 255 255
+PlayAlertSound 6 300
+PlayEffect Red
+MinimapIcon 0 Red Star
+
+Show
+Class "Jewel" # default styles for new cheap diamond in future
+BaseType == "Diamond"
+Rarity == Unique
 SetBorderColor 255 140 0 255
 SetTextColor 255 207 132
 SetBackgroundColor 122 122 122 200
@@ -2200,6 +2234,127 @@ PlayAlertSound 3 300
 SetFontSize 40
 MinimapIcon 2 Cyan Diamond
 PlayEffect Brown
+
+#   [1305] mid-tier uniques
+# special styles for uniques with potencial price in 2–40 chaos orbs: now its a permanent brown beam
+
+## weapons:
+Show
+Rarity Unique
+BaseType == "Spiked Club" "Torment Club" "Pointed Maul" "Totemic Greatclub" "Winged Spear" "Barbed Spear" "Helix Spear" "Crescent Quarterstaff" "Wyrm Quarterstaff" "Siphoning Wand" "Permafrost Staff" "Crude Bow" "Composite Bow" "Dualstring Bow" "Heavy Bow" "Tense Crossbow" "Fanatic Bow"
+PlayAlertSound 3 300
+PlayEffect Brown
+SetBackgroundColor 0 0 0 210
+MinimapIcon 2 Brown Star
+
+## armors:
+Show
+Rarity Unique
+BaseType == "Fur Plate" "Champion Cuirass" "Quilted Vest" "Pathfinder Coat" "Serpentscale Coat" "Strider Vest" "Armoured Vest" "Tattered Robe" "Votive Raiment" "Altar Robe" "Havoc Raiment" "Enlightened Robe" "Explorer Armour" "Scale Mail" "Knight Armour" "Ancestral Mail" "Heroic Armour" "Pilgrim Vestments" "Cleric Vestments" "Tideseer Mantle" "Corvus Mantle" "Wayfarer Jacket" "Scalper's Jacket" "Assassin Garb" "Wrapped Greathelm" "Spired Greathelm" "Fierce Greathelm" "Felt Cap" "Viper Cap" "Velvet Cap" "Covert Hood" "Twig Circlet" "Chain Tiara" "Feathered Tiara" "Vermeil Circlet" "Jade Tiara" "Magus Tiara" "Brimmed Helm" "Decorated Helm" "Iron Crown" "Cultist Crown" "Martyr Crown" "Heavy Crown" "Spiritbone Crown" "Face Mask" "Death Mask" "Gold Circlet" "Riveted Mitts" "Spined Bracers" "Torn Gloves" "Sombre Gloves" "Pauascale Gloves" "Layered Gauntlets" "Doubled Gauntlets" "Burnished Gauntlets" "Rope Cuffs" "Gauze Wraps" "Spiral Wraps" "Furtive Wraps" "Utility Wraps" "Trimmed Greaves" "Laced Boots" "Wrapped Sandals" "Feathered Sandals" "Secured Leggings" "Hunting Shoes" "Heraldric Tower Shield" "Crucible Tower Shield" "Emblem Crest Shield" "Iron Buckler" "Woven Focus" "Antler Focus" "Engraved Focus" "Voodoo Focus" "Grand Regalia" "Grand Manchettes" "Grand Cuisses"
+PlayAlertSound 3 300
+PlayEffect Brown
+SetBackgroundColor 0 0 0 210
+MinimapIcon 2 Brown Star
+
+Show
+Rarity Unique
+BaseType == "Silk Robe"
+DropLevel == 22
+PlayAlertSound 3 300
+PlayEffect Brown
+SetBackgroundColor 0 0 0 210
+MinimapIcon 2 Brown Star
+
+Show
+Rarity Unique
+BaseType == "Tribal Mask"
+DropLevel == 33
+PlayAlertSound 3 300
+PlayEffect Brown
+SetBackgroundColor 0 0 0 210
+MinimapIcon 2 Brown Star
+
+Show
+Rarity Unique
+BaseType == "Moulded Mitts"
+DropLevel == 33
+PlayAlertSound 3 300
+PlayEffect Brown
+SetBackgroundColor 0 0 0 210
+MinimapIcon 2 Brown Star
+
+Show
+Rarity Unique
+BaseType == "Garment"
+Sockets < 4
+PlayAlertSound 3 300
+PlayEffect Brown
+SetBackgroundColor 0 0 0 210
+MinimapIcon 2 Brown Star
+
+## misc:
+
+Show
+Rarity Unique
+BaseType == "Broadhead Quiver" "Crimson Amulet" "Azure Amulet" "Solar Amulet" "Gold Amulet" "Gold Ring" "Ornate Belt" "Fine Belt" "Staunching Charm" "Antidote Charm" "Grounding Charm" "Stone Charm" "Ruby Charm" "Sapphire Charm" "Topaz Charm" "Amethyst Charm"
+PlayAlertSound 3 300
+PlayEffect Brown
+SetBackgroundColor 0 0 0 210
+MinimapIcon 2 Brown Star
+
+# some unique items cannot be distinguished from others by lootfilter in an unidentified state — a white beam is used for them
+Show
+Rarity Unique
+BaseType == "Crimson Amulet" "Lazuli Ring" "Rawhide Belt"
+PlayAlertSound 3 300
+PlayEffect White
+SetBackgroundColor 0 0 0 210
+MinimapIcon 2 Brown Star
+
+Show
+Rarity Unique
+BaseType == "Azure Amulet"
+DropLevel == 1
+PlayAlertSound 3 300
+PlayEffect Brown
+SetBackgroundColor 0 0 0 210
+MinimapIcon 2 Brown Star
+
+Show
+Rarity Unique
+BaseType == "Stellar Amulet"
+DropLevel == 52
+PlayAlertSound 3 300
+PlayEffect Brown
+SetBackgroundColor 0 0 0 210
+MinimapIcon 2 Brown Star
+
+Show
+Rarity Unique
+BaseType == "Iron Ring"
+DropLevel == 1
+PlayAlertSound 3 300
+PlayEffect Brown
+SetBackgroundColor 0 0 0 210
+MinimapIcon 2 Brown Star
+
+Show
+Rarity Unique
+BaseType == "Sapphire Ring"
+DropLevel == 12
+PlayAlertSound 3 300
+PlayEffect Brown
+SetBackgroundColor 0 0 0 210
+MinimapIcon 2 Brown Star
+
+Show
+Rarity Unique
+BaseType == "Topaz Ring"
+DropLevel == 16
+PlayAlertSound 3 300
+PlayEffect Brown
+SetBackgroundColor 0 0 0 210
+MinimapIcon 2 Brown Star
 
 #--------------------------
 # [[1400]] Things of the Atlas
@@ -2217,7 +2372,7 @@ MinimapIcon 1 Orange Circle
 SetFontSize 40
 
 Show
-BaseType ==  "Simulacrum"
+BaseType == "Simulacrum"
 SetTextColor 255 255 255 255
 SetBorderColor 255 255 255 255
 SetBackgroundColor 240 90 35 200
@@ -2893,6 +3048,18 @@ PlayEffect White
 MinimapIcon 0 Brown Triangle
 
 #   [1503] Sekhemas: relics
+
+Show
+Class "Relic"
+Rarity Unique
+BaseType == "Amphora Relic" "Seal Relic" "Tapestry Relic" # cheap relics with default fontsize
+SetBorderColor 255 140 0 255
+SetTextColor 0 240 190
+SetBackgroundColor 0 0 0 210
+MinimapIcon 2 Orange Triangle
+PlayAlertSound 2 200
+PlayEffect Orange
+
 Show
 Class "Relic"
 Rarity Unique
@@ -4618,7 +4785,7 @@ SetFontSize 40
 Show
 Rarity Unique
 PlayAlertSound 3 300
-PlayEffect Brown
+PlayEffect Brown Temp
 SetBackgroundColor 0 0 0 210
 MinimapIcon 2 Brown Star
 
