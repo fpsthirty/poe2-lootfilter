@@ -11,12 +11,19 @@
 # basic principles of this lootfilter:
 # 1. Take everything you see on the ground. At Area levels 1+ / 65+ / 71+ / 75+ you see fewer and fewer items that have str- & dex-requirements on them and other useless items for your class.
 # 2. Minimalism for equipment: 99% of the equipment is garbage that doesn't deserve much custom styling, but you'll see a colorful design of map-specific items etc.
-# Special equipment stylization applies in four cases:
+# Special equipment stylization applies in the following cases:
 # - for the best bases of the corresponding slot, on which the maximum affix tier (81–82 itemLevel) can be generated;
 # - for some infrequent items on low-level characters: jewelry, belts, and Chiming staff;
 # - items with additional quality;
 # - bases for crafting uniques with Chance Orb.
-# - unid uniques with great potencial to be expensive but find with the same search parameters as trash uniques.
+# - unique items in depending on their cost:
+#  - orange text without beam: preliminary price less than 1 chaos orbs
+#  - orange text with ping border and pink mean: for base that theoretically can be either very expensive (Astramentis, etc.) or very cheap (~1 chaos);
+#  - orange text with beam: for cheap Schrodinger bases with price ~1–20 chaos;
+#  - orange text with brown beam: preliminary price ~2–30 chaos orbs;
+#  - orange text with brown beam and big fontsize: unique with extra socket;
+#  - divine styles with red beam: price ~1div *(these styles are also used for other expensive non-unique items)*;
+#  - divine styles with purple beam: price 2+ div.
 #
 # I also recommend check out the short documentation for before using it: in just a couple minutes you can familiarize yourself with the styles of ~95% of the items in the game and ~95% of the rules for showing/hiding items: https://github.com/fpsthirty/poe2-lootfilter/blob/main/README.md
 #
@@ -116,7 +123,7 @@
 #   [2101] rings, amulets and belts
 # [[2200]] Low-priority rules
 #   [2201] flasks
-#   [2202] illumination for unknown objects
+#   [2202] styles for unknown objects
 #
 # ====================================
 #
@@ -231,7 +238,6 @@ Class == "Claws" "Daggers" "Flails" "One Hand Axes" "One Hand Maces" "One Hand S
 Corrupted False
 Sockets >= 2
 Quality >= 21
-DropLevel > 63
 SetFontSize 45
 SetTextColor 255 0 0 255
 SetBorderColor 255 0 0 255
@@ -244,7 +250,6 @@ Show
 Corrupted False
 Sockets >= 3
 Quality >= 21
-DropLevel > 63
 SetFontSize 45
 SetTextColor 255 0 0 255
 SetBorderColor 255 0 0 255
@@ -256,11 +261,25 @@ MinimapIcon 0 Red Star
 # ------------------
 # socket only:
 # S-tier:
+
 Show
-Class "Boots"
-BaseType "Quickslip Shoes"
+Class "Boots" "Focus" "Gloves" "Helmet" "Shields"
+DropLevel >= 75
 Corrupted False
 Sockets >= 2
+SetFontSize 45
+SetTextColor 255 0 0 255
+SetBorderColor 255 0 0 255
+SetBackgroundColor 255 255 255 255
+PlayAlertSound 6 300
+PlayEffect Red
+MinimapIcon 0 Red Star
+
+Show
+Class "Body"
+DropLevel >= 65
+Corrupted False
+Sockets >= 3
 SetFontSize 45
 SetTextColor 255 0 0 255
 SetBorderColor 255 0 0 255
@@ -301,7 +320,6 @@ Show
 Class == "Claws" "Daggers" "Flails" "One Hand Axes" "One Hand Maces" "One Hand Swords" "Sceptres" "Spears" "Wands" "Quivers" "Foci" "Helmets" "Boots" "Gloves" "Shields" "Bucklers"
 Corrupted False
 Sockets >= 2
-DropLevel > 63
 Rarity <= Rare
 SetTextColor 255 255 255 255
 SetBorderColor 255 255 255 255
@@ -313,7 +331,6 @@ MinimapIcon 1 White Square
 Show
 Corrupted False
 Sockets >= 3
-DropLevel > 63
 Rarity <= Rare
 SetTextColor 255 255 255 255
 SetBorderColor 255 255 255 255
@@ -339,7 +356,6 @@ SetFontSize 40
 Show
 Class "Body" "Helmet" "Boots" "Gloves" "Shields" "Focus" "Foci" "Wands" "Staff" "Sceptres"
 Quality >= 21
-DropLevel > 63
 Rarity <= Rare
 SetBorderColor 200 200 200
 SetBackgroundColor 63 63 63 222
@@ -414,6 +430,15 @@ PlayEffect Orange Temp
 MinimapIcon 1 Orange Square
 PlayAlertSound 12 300
 
+Show
+BaseType "Desolate Crossbow" # The Last Lament / Sacrifice 300 Life to not consume the last bolt when firing
+Rarity Normal
+SetBorderColor 255 128 200
+SetBackgroundColor 63 63 63 222
+PlayEffect Orange Temp
+MinimapIcon 1 Orange Square
+PlayAlertSound 12 300
+
 # Show
 # BaseType "Jade Amulet" # Defiance of Destiny / Recover 10% of Missing Life before being Hit by an Enemy
 # Rarity Normal
@@ -472,17 +497,15 @@ PlayEffect Orange Temp
 MinimapIcon 1 Orange Square
 PlayAlertSound 12 300
 
-Show
-BaseType "Stone Charm" # For Utopia / Defend with 200% of Armour during effect
-Rarity Normal
-ItemLevel >= 8
-SetBorderColor 255 128 200
-SetBackgroundColor 63 63 63 222
-PlayEffect Orange Temp
-MinimapIcon 1 Orange Square
-PlayAlertSound 12 300
-
-# A-tier:
+# Show
+# BaseType "Stone Charm" # For Utopia / Defend with 200% of Armour during effect
+# Rarity Normal
+# ItemLevel >= 8
+# SetBorderColor 255 128 200
+# SetBackgroundColor 63 63 63 222
+# PlayEffect Orange Temp
+# MinimapIcon 1 Orange Square
+# PlayAlertSound 12 300
 
 Show
 BaseType "Pearl Ring" # Snakepit / chain-fork
@@ -493,6 +516,17 @@ SetBackgroundColor 63 63 63 222
 PlayEffect Orange Temp
 MinimapIcon 1 Orange Square
 PlayAlertSound 12 300
+
+Show
+BaseType "Fine Bracers" # Maligaro's Virtuosity / Your Critical Damage Bonus is 250%
+Rarity Normal
+SetBorderColor 255 128 200
+SetBackgroundColor 63 63 63 222
+PlayEffect Orange Temp
+MinimapIcon 1 Orange Square
+PlayAlertSound 12 300
+
+# A-tier:
 
 # Show
 # BaseType "Spiked Club" # Trenchtimbre / +(1–2) to Level of all Minion Skills
@@ -638,9 +672,9 @@ MinimapIcon 1 Purple Circle
 PlayAlertSound 16 300
 
 Show
-BaseType "Robe"
+BaseType "Robe" "Raiment"
 ItemLevel >= 82
-DropLevel = 65 # that base "vile robe" have a max ES; robe 65lvl: 184 ES; raiment 70lvl: 153 ES + mana regen; robe 75lvl: 153 ES + faster ES recharge
+DropLevel = 65 # that base "vile robe" and "havoc raiment" have a max ES; robe 65lvl: 184 ES; raiment 70lvl: 153 ES + mana regen; robe 75lvl: 153 ES + faster ES recharge
 Rarity <= Rare
 SetBorderColor 95 0 160
 SetBackgroundColor 0 0 0 210
@@ -870,13 +904,13 @@ PlayAlertSound 10 100
 
 #   [0801] For T15+ maps / area level 79+
 Show
-BaseType "Robe"
-DropLevel = 65 # that base "vile robe" have a max ES; robe 65lvl: 184 ES; raiment 70lvl: 153 ES + mana regen; robe 75lvl: 153 ES + faster ES recharge
+BaseType "Robe" "Raiment"
+DropLevel = 65 # that base "vile robe" and "havoc raiment" have a max ES; robe 65lvl: 184 ES; raiment 70lvl: 153 ES + mana regen; robe 75lvl: 153 ES + faster ES recharge
 Rarity <= Rare
 SetBackgroundColor 0 0 0 210
 
 Hide
-Class "Body" "Helmet" "Shields" "Focus"
+Class "Helmet" "Shields" "Focus"
 DropLevel < 75
 Rarity <= Rare
 AreaLevel > 78
@@ -2238,6 +2272,27 @@ PlayEffect Brown
 #   [1305] mid-tier uniques
 # special styles for uniques with potencial price in 2–40 chaos orbs: now its a permanent brown beam
 
+Show
+Rarity == Unique
+Class == "Claws" "Daggers" "Flails" "One Hand Axes" "One Hand Maces" "One Hand Swords" "Sceptres" "Spears" "Wands" "Quivers" "Foci" "Helmets" "Boots" "Gloves" "Shields" "Bucklers"
+Corrupted False
+Sockets >= 2
+SetFontSize 40
+PlayAlertSound 3 300
+PlayEffect Brown
+SetBackgroundColor 0 0 0 210
+MinimapIcon 2 Brown Star
+
+Show
+Rarity == Unique
+Corrupted False
+Sockets >= 3
+SetFontSize 40
+PlayAlertSound 3 300
+PlayEffect Brown
+SetBackgroundColor 0 0 0 210
+MinimapIcon 2 Brown Star
+
 ## weapons:
 Show
 Rarity Unique
@@ -2294,20 +2349,20 @@ MinimapIcon 2 Brown Star
 
 ## misc:
 
-Show
-Rarity Unique
-BaseType == "Broadhead Quiver" "Crimson Amulet" "Azure Amulet" "Solar Amulet" "Gold Amulet" "Gold Ring" "Ornate Belt" "Fine Belt" "Staunching Charm" "Antidote Charm" "Grounding Charm" "Stone Charm" "Ruby Charm" "Sapphire Charm" "Topaz Charm" "Amethyst Charm"
-PlayAlertSound 3 300
-PlayEffect Brown
-SetBackgroundColor 0 0 0 210
-MinimapIcon 2 Brown Star
-
 # some unique items cannot be distinguished from others by lootfilter in an unidentified state — a white beam is used for them
 Show
 Rarity Unique
 BaseType == "Crimson Amulet" "Lazuli Ring" "Rawhide Belt"
 PlayAlertSound 3 300
 PlayEffect White
+SetBackgroundColor 0 0 0 210
+MinimapIcon 2 Brown Star
+
+Show
+Rarity Unique
+BaseType == "Broadhead Quiver" "Azure Amulet" "Solar Amulet" "Gold Amulet" "Gold Ring" "Ornate Belt" "Fine Belt" "Staunching Charm" "Antidote Charm" "Grounding Charm" "Stone Charm" "Ruby Charm" "Sapphire Charm" "Topaz Charm" "Amethyst Charm"
+PlayAlertSound 3 300
+PlayEffect Brown
 SetBackgroundColor 0 0 0 210
 MinimapIcon 2 Brown Star
 
@@ -4868,7 +4923,7 @@ BaseType "Mana"
 SetBackgroundColor 50 50 130 200
 AreaLevel < 65
 
-#   [2202] illumination for unknown objects:
+#   [2202] styles for unknown objects:
 #weapons / offhands / misc: visibility are overridden in higher priority rules
 Hide
 Class "Flask" "Wand" "Staff" "Sceptre" "One Hand Axe" "One Hand Mace" "One Hand Sword" "Dagger" "Quiver" "Focus" "Shield" "Flail" "Claw" "Quarter" "Bow" "Crossbow" "Two Hand Axe" "Two Hand Mace" "Two Hand Sword" "Spear" "Trap" "Buckler"
