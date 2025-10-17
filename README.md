@@ -113,7 +113,7 @@ If you want to customize one of my lootfilters, create a separate import file so
 > there is an weapon item that has "Crossbow" in its name, and depending on the rarity of the item, different rules are applied to show/hide it:
 > <br>⚪ normal Crossbow: will be hidden at any area level _(**1-99**)_;
 > <br>🔵 magic Crossbow: will only show on area levels **1-64**;
-> <br>🟡 rare Crossbow: will only show on area levels **1-74**;
+> <br>🟡 rare Crossbow: will only show on area levels **1-70**;
 > <br>🟠 unique Crossbow: will be shown in any area level _(**1-99**)_.
 
 > [!TIP]
