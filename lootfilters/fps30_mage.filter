@@ -895,8 +895,15 @@ Rarity Rare
 AreaLevel >= 75
 
 Show
-Class "Wand" "Focus" # "Staff"
+Class "Wand" # "Staff"
+Rarity <= Rare
 SetBackgroundColor 0 0 0 210
+
+Show
+Class "Focus"
+Rarity <= Rare
+SetBackgroundColor 0 0 0 210
+AreaLevel < 78
 
 #--------------------------
 # [[0800]] Endgame custom rules:
@@ -3149,6 +3156,10 @@ SetFontSize 40
 MinimapIcon 2 Cyan Triangle
 PlayAlertSound 2 200
 PlayEffect Cyan
+
+#Hide
+#Rarity <= Rare
+#BaseType == "Vase Relic" "Incense Relic" "Coffer Relic" # todo: lootfilter does not hide any relics https://www.pathofexile.com/forum/view-thread/3869369
 
 Show
 Class "Relic"
