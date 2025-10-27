@@ -4255,7 +4255,7 @@ SetFontSize 40
 
 Show
 Class "Currency"
-BaseType "Perfect Essence of Flames"
+BaseType "Perfect Essence of Flames" "Perfect Essence of Insulation"
 SetTextColor 85 40 40
 SetBorderColor 255 207 132
 SetBackgroundColor 255 167 30 200
