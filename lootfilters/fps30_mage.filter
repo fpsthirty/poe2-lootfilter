@@ -276,6 +276,19 @@ PlayEffect Red
 MinimapIcon 0 Red Star
 
 Show
+Class "Bows"
+BaseType "Gemini Bow" "Gemini Crossbow"
+Corrupted False
+Sockets >= 3
+SetFontSize 45
+SetTextColor 255 0 0 255
+SetBorderColor 255 0 0 255
+SetBackgroundColor 255 255 255 255
+PlayAlertSound 6 300
+PlayEffect Purple
+MinimapIcon 0 Purple Star
+
+Show
 Class "Body"
 DropLevel >= 65
 Corrupted False
@@ -289,17 +302,17 @@ PlayEffect Red
 MinimapIcon 0 Red Star
 
 Show
-Class "Bows"
-BaseType "Gemini Bow" "Gemini Crossbow"
+Class "Gloves"
+BaseType "Elegant Wraps"
 Corrupted False
-Sockets >= 3
+Sockets >= 2
 SetFontSize 45
 SetTextColor 255 0 0 255
 SetBorderColor 255 0 0 255
 SetBackgroundColor 255 255 255 255
 PlayAlertSound 6 300
-PlayEffect Purple
-MinimapIcon 0 Purple Star
+PlayEffect Red
+MinimapIcon 0 Red Star
 
 # A-tier:
 Show
@@ -650,17 +663,6 @@ PlayAlertSound 16 300
 
 #   [0502] armor pieces:
 Show
-BaseType "Raiment"
-ItemLevel >= 82
-DropLevel = 80
-Rarity <= Rare
-SetBorderColor 95 0 160
-SetBackgroundColor 0 0 0 210
-PlayEffect White Temp
-MinimapIcon 1 Purple Circle
-PlayAlertSound 16 300
-
-Show
 BaseType "Tiara" "Gloves" "Sandals" "Crest Shield"
 ItemLevel >= 82
 DropLevel >= 75
@@ -672,9 +674,20 @@ MinimapIcon 1 Purple Circle
 PlayAlertSound 16 300
 
 Show
-BaseType "Robe" "Raiment"
+BaseType "Vile Robe"
 ItemLevel >= 82
 DropLevel = 65 # that base "vile robe" and "havoc raiment" have a max ES; robe 65lvl: 184 ES; raiment 70lvl: 153 ES + mana regen; robe 75lvl: 153 ES + faster ES recharge
+Rarity <= Rare
+SetBorderColor 95 0 160
+SetBackgroundColor 0 0 0 210
+PlayEffect White Temp
+MinimapIcon 1 Purple Circle
+PlayAlertSound 16 300
+
+Show
+BaseType "Raiment" "Robe"
+ItemLevel >= 82
+DropLevel > 65
 Rarity <= Rare
 SetBorderColor 95 0 160
 SetBackgroundColor 0 0 0 210
@@ -898,6 +911,7 @@ Show
 Class "Wand" # "Staff"
 Rarity <= Rare
 SetBackgroundColor 0 0 0 210
+AreaLevel < 78
 
 Show
 Class "Focus"
@@ -915,6 +929,11 @@ BaseType "Robe" "Raiment"
 DropLevel = 65 # that base "vile robe" and "havoc raiment" have a max ES; robe 65lvl: 184 ES; raiment 70lvl: 153 ES + mana regen; robe 75lvl: 153 ES + faster ES recharge
 Rarity <= Rare
 SetBackgroundColor 0 0 0 210
+
+Hide
+Class "Body"
+Rarity <= Rare
+AreaLevel > 78
 
 Hide
 Class "Helmet" "Shields" "Focus"
@@ -2367,7 +2386,7 @@ MinimapIcon 2 Brown Star
 
 Show
 Rarity Unique
-BaseType == "Broadhead Quiver" "Azure Amulet" "Solar Amulet" "Gold Amulet" "Gold Ring" "Ornate Belt" "Fine Belt" "Staunching Charm" "Antidote Charm" "Grounding Charm" "Stone Charm" "Ruby Charm" "Sapphire Charm" "Topaz Charm" "Amethyst Charm"
+BaseType == "Broadhead Quiver" "Azure Amulet" "Solar Amulet" "Gold Amulet" "Gold Ring" "Ornate Belt" "Fine Belt" # "Staunching Charm" "Antidote Charm" "Grounding Charm" "Stone Charm" "Ruby Charm" "Sapphire Charm" "Topaz Charm" "Amethyst Charm"
 PlayAlertSound 3 300
 PlayEffect Brown
 SetBackgroundColor 0 0 0 210
