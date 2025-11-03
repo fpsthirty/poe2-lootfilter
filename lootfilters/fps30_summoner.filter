@@ -40,6 +40,20 @@
 # 1) Paste this file into the following folder: %userprofile%/Documents/My Games/Path of Exile 2
 # 2) INGAME: Escape -> Options -> UI -> Scroll down -> Select the filter from the Dropdown box
 #
+#------------------------------------
+# tags for lootfilters:
+#------------------------------------
+# (I think I'll add this in December'2025)
+# filter-nossf, filter-ssf, filter-ssf-summoner, filter-ssf-mage, filter-summoner, filter-mage, filter-rarity, filter-norarity
+# 
+# excluded tags in lootfilters:
+# summoner-nossf: filter-rarity, filter-ssf, filter-ssf-mage
+# summoner-ssf: filter-rarity, filter-nossf, filter-ssf-mage, filter-mage
+# mage-nossf: filter-rarity, filter-ssf, filter-ssf-summoner
+# mage-ssf: filter-rarity, filter-nossf, filter-ssf-summoner, filter-summoner
+# rarity: filter-ssf, filter-summoner, filter-mage, filter-norarity
+#
+#
 #===============================================================================================================
 # [WELCOME] TABLE OF CONTENTS + QUICKJUMP TABLE
 #===============================================================================================================
@@ -162,6 +176,7 @@ Class "Quarter"
 Rarity Normal
 
 # not to be confused with a "Plate" / "Mail" as body armor
+# filter-norarity
 Show
 Class "Belts"
 BaseType "Plate Belt" "Mail Belt"
@@ -174,7 +189,7 @@ PlayEffect Yellow
 MinimapIcon 1 Yellow Diamond
 AreaLevel < 71
 
-# filter-nossf
+# filter-nossf filter-norarity
 Show
 UnidentifiedItemTier >= 4
 Class "Body" "Helmet" "Boots" "Gloves" "Shields" "Focus" "Sceptres" "Wands" "Staff"
@@ -186,7 +201,7 @@ PlayEffect Grey
 MinimapIcon 1 Grey Square
 PlayAlertSound 10 200
 
-# filter-nossf
+# filter-nossf filter-norarity
 Show
 UnidentifiedItemTier >= 4
 Class "Claws" "Daggers" "Flails" "One Hand Axes" "One Hand Maces" "One Hand Swords" "Sceptres" "Wands" "Staff" "Spears" "Quivers" "Foci" "Body" "Helmets" "Boots" "Gloves" "Shields" "Bucklers"
@@ -194,6 +209,7 @@ Rarity <= Rare
 DropLevel >= 75
 SetBackgroundColor 0 0 0 210
 
+# filter-nossf filter-norarity
 Show
 UnidentifiedItemTier >= 4
 Class "Claws" "Daggers" "Flails" "One Hand Axes" "One Hand Maces" "One Hand Swords" "Sceptres" "Wands" "Staff" "Spears" "Quivers" "Foci" "Body" "Helmets" "Boots" "Gloves" "Shields" "Bucklers"
@@ -202,6 +218,7 @@ DropLevel < 75
 SetBackgroundColor 0 0 0 210
 AreaLevel < 75
 
+# filter-norarity
 Show
 Class "Belts"
 BaseType "Plate Belt" "Mail Belt"
@@ -210,6 +227,7 @@ SetBackgroundColor 0 0 0 210
 SetFontSize 40
 AreaLevel < 71
 
+# filter-norarity
 Show
 Class "Belts"
 SetBackgroundColor 0 0 0 210
@@ -355,8 +373,7 @@ MinimapIcon 1 White Square
 # ------------------
 # quality only:
 Show
-Class "Staff"
-BaseType "Chiming Staff"
+Class "Staff" "Wand"
 Quality >= 21
 Rarity <= Rare
 SetBorderColor 200 200 200
@@ -377,6 +394,7 @@ MinimapIcon 1 Grey Square
 PlayAlertSound 10 200
 SetFontSize 40
 
+# filter-norarity
 Show
 Class "Flask"
 Quality >= 21
@@ -414,6 +432,7 @@ PlayEffect Orange Temp
 MinimapIcon 1 Orange Square
 PlayAlertSound 12 300
 
+# filter-mage
 Show
 BaseType "Sacred Focus" # Rathpith Globe / Non-Channelling Spells gain +5% crit chance + +10% damage per 100 hp
 Rarity Normal
@@ -423,6 +442,7 @@ PlayEffect Orange Temp
 MinimapIcon 1 Orange Square
 PlayAlertSound 12 300
 
+# filter-summoner
 Show
 BaseType "Intricate Crest Shield" # Prism Guardian / +1 to Maximum Spirit per 25 Maximum Life
 Rarity Normal
@@ -433,6 +453,7 @@ PlayEffect Orange Temp
 MinimapIcon 1 Orange Square
 PlayAlertSound 12 300
 
+# filter-summoner
 Show
 BaseType "Lattice Sandals" # Bones of Ullr / +(20-30)% increased Reservation Efficiency of Skills which create Undead Minions
 Rarity Normal
@@ -443,6 +464,7 @@ PlayEffect Orange Temp
 MinimapIcon 1 Orange Square
 PlayAlertSound 12 300
 
+# filter-nossf filter-norarity
 Show
 BaseType "Desolate Crossbow" # The Last Lament / Sacrifice 300 Life to not consume the last bolt when firing
 Rarity Normal
@@ -452,6 +474,7 @@ PlayEffect Orange Temp
 MinimapIcon 1 Orange Square
 PlayAlertSound 12 300
 
+# filter-nossf filter-norarity
 # Show
 # BaseType "Jade Amulet" # Defiance of Destiny / Recover 10% of Missing Life before being Hit by an Enemy
 # Rarity Normal
@@ -462,6 +485,7 @@ PlayAlertSound 12 300
 # MinimapIcon 1 Orange Square
 # PlayAlertSound 12 300
 
+# filter-nossf filter-norarity
 # Show
 # BaseType "Bloodstone Amulet" # Yoke of Suffering / Enemies take (15-20)% increased Damage for each Elemental Ailment type among your Ailments on them
 # Rarity Normal
@@ -472,6 +496,7 @@ PlayAlertSound 12 300
 # MinimapIcon 1 Orange Square
 # PlayAlertSound 12 300
 
+# filter-nossf filter-norarity
 # Show
 # BaseType "Stone Tower Shield" # The Surrender / Recover 4% of Life when you Block
 # Rarity Normal
@@ -481,6 +506,7 @@ PlayAlertSound 12 300
 # MinimapIcon 1 Orange Square
 # PlayAlertSound 12 300
 
+# filter-nossf filter-norarity
 # Show
 # BaseType "Helix Spear" # Spire of Ire / Chaos damage + Life Leech recovers based on your Chaos damage + When you Consume a Charge Trigger Chaotic Surge to gain 2 Chaos Surges
 # Rarity Normal
@@ -490,6 +516,7 @@ PlayAlertSound 12 300
 # MinimapIcon 1 Orange Square
 # PlayAlertSound 12 300
 
+# filter-nossf filter-norarity
 Show
 BaseType "Stellar Amulet" # Astramentis / +(80–100) to all Attributes
 Rarity Normal
@@ -500,6 +527,7 @@ PlayEffect Orange Temp
 MinimapIcon 1 Orange Square
 PlayAlertSound 12 300
 
+# filter-norarity
 Show
 BaseType "Silver Charm" # The Fall of the Axe / Grants Onslaught during effect
 Rarity Normal
@@ -510,6 +538,7 @@ PlayEffect Orange Temp
 MinimapIcon 1 Orange Square
 PlayAlertSound 12 300
 
+# filter-norarity
 # Show
 # BaseType "Stone Charm" # For Utopia / Defend with 200% of Armour during effect
 # Rarity Normal
@@ -520,6 +549,7 @@ PlayAlertSound 12 300
 # MinimapIcon 1 Orange Square
 # PlayAlertSound 12 300
 
+# filter-nossf filter-norarity
 Show
 BaseType "Pearl Ring" # Snakepit / chain-fork
 Rarity Normal
@@ -530,6 +560,7 @@ PlayEffect Orange Temp
 MinimapIcon 1 Orange Square
 PlayAlertSound 12 300
 
+# filter-norarity
 Show
 BaseType "Fine Bracers" # Maligaro's Virtuosity / Your Critical Damage Bonus is 250%
 Rarity Normal
@@ -541,6 +572,7 @@ PlayAlertSound 12 300
 
 # A-tier:
 
+# filter-ssf-summoner
 # Show
 # BaseType "Spiked Club" # Trenchtimbre / +(1–2) to Level of all Minion Skills
 # Rarity Normal
@@ -551,6 +583,7 @@ PlayAlertSound 12 300
 # MinimapIcon 1 Orange Square
 # PlayAlertSound 12 300
 
+# filter-mage
 # Show
 # BaseType "Sapphire Ring"
 # # Dream Fragments / +20% mana & +(30–50)% mana regen
@@ -572,6 +605,7 @@ PlayEffect Orange Temp
 MinimapIcon 1 Orange Square
 PlayAlertSound 12 300
 
+# filter-norarity
 # Show
 # BaseType "Solar Amulet"
 # # Beacon of Azis / Critical Hits ignore Enemy Monster Elemental Resistances
@@ -584,7 +618,7 @@ PlayAlertSound 12 300
 # MinimapIcon 1 Orange Square
 # PlayAlertSound 12 300
 
-# filter-nossf
+# filter-nossf filter-norarity
 # Show
 # BaseType "Ornate Belt" # Ryslatha's Coil / [-40–-30%; 30–40%] min-max Physical Attack Damage
 # Rarity Normal
@@ -596,6 +630,8 @@ PlayAlertSound 12 300
 # PlayAlertSound 12 300
 
 # B-tier:
+
+# filter-mage
 Show
 BaseType "Gold Circlet" # Atziri's Disdain / 10% of Damage taken bypasses Energy Shield + Gain (10-15)% of Maximum Life as Extra Maximum Energy Shield
 Rarity Normal
@@ -605,6 +641,7 @@ SetBackgroundColor 63 63 63 222
 PlayEffect Orange Temp
 MinimapIcon 1 Orange Square
 
+# filter-norarity
 Show
 BaseType "Tattered Robe" # Ghostwrithe / 50% of Maximum Life Converted to Energy Shield
 Rarity Normal
@@ -614,6 +651,7 @@ SetBackgroundColor 63 63 63 222
 PlayEffect Orange Temp
 MinimapIcon 1 Orange Square
 
+# filter-norarity
 #Show
 #BaseType "Silk Robe" # Cloak of Flame Silk Robe / 40% of Physical Damage taken as Fire Damage
 #Rarity Normal
@@ -626,6 +664,7 @@ MinimapIcon 1 Orange Square
 
 # C-tier:
 
+# filter-norarity
 #Show
 #BaseType "Plate Belt" # Infernoclasp / +(3–5)% to Maximum Fire Resistance
 #Rarity Normal
@@ -635,6 +674,7 @@ MinimapIcon 1 Orange Square
 #PlayEffect Orange Temp
 #MinimapIcon 1 Orange Square
 
+# filter-norarity
 #Show
 #BaseType "Pilgrim Vestments" # Enfolding Dawn / +100 to Spirit
 #Rarity Normal
@@ -662,8 +702,32 @@ MinimapIcon 1 Purple Circle
 PlayAlertSound 16 300
 
 #   [0502] armor pieces:
+# filter-norarity
 Show
-BaseType "Tiara" "Gloves" "Sandals" "Crest Shield"
+BaseType "Tiara" "Gloves"
+ItemLevel >= 82
+DropLevel >= 75
+Rarity <= Rare
+SetBorderColor 95 0 160
+SetBackgroundColor 0 0 0 210
+PlayEffect White Temp
+MinimapIcon 1 Purple Circle
+PlayAlertSound 16 300
+
+# filter-summoner
+Show
+BaseType "Crest Shield"
+ItemLevel >= 82
+DropLevel >= 75
+Rarity <= Rare
+SetBorderColor 95 0 160
+SetBackgroundColor 0 0 0 210
+PlayEffect White Temp
+MinimapIcon 1 Purple Circle
+PlayAlertSound 16 300
+
+Show
+BaseType "Sandals"
 ItemLevel >= 82
 DropLevel >= 75
 Rarity <= Rare
@@ -684,6 +748,7 @@ PlayEffect White Temp
 MinimapIcon 1 Purple Circle
 PlayAlertSound 16 300
 
+# filter-norarity
 Show
 BaseType "Raiment" "Robe"
 ItemLevel >= 82
@@ -695,6 +760,7 @@ PlayEffect White Temp
 MinimapIcon 1 Purple Circle
 PlayAlertSound 16 300
 
+# filter-nossf
 Show
 Class "Boots"
 ItemLevel >= 82
@@ -743,6 +809,7 @@ Class "Quarterstaff"
 Rarity <= Rare
 AreaLevel >= 75
 
+# filter-norarity
 Show
 Class "Quarterstaff"
 Rarity <= Rare
@@ -754,12 +821,14 @@ Class "Quarterstaff"
 Rarity <= Magic
 AreaLevel >= 65
 
+# filter-norarity
 Show
 Class "Quarterstaff"
 Rarity <= Magic
 AreaLevel < 65
 
 # typical caster stuffs:
+# filter-norarity
 Show
 Quality >= 1
 Class "Wand" "Sceptre" "Staff"
@@ -771,6 +840,7 @@ PlayEffect Grey
 MinimapIcon 1 Grey Square
 PlayAlertSound 10 100
 
+# filter-norarity
 Show
 Class "Flask"
 Quality >= 7
@@ -782,6 +852,7 @@ PlayEffect Grey
 MinimapIcon 1 Grey Square
 PlayAlertSound 10 100
 
+# filter-norarity
 Show
 Class "Flask"
 Quality >= 1
@@ -793,6 +864,7 @@ MinimapIcon 1 Grey Square
 PlayAlertSound 2 100
 AreaLevel < 71
 
+# filter-norarity
 Show
 Class "Charm"
 Quality >= 1
@@ -803,6 +875,7 @@ SetTextColor 0 240 190
 PlayEffect Cyan Temp
 MinimapIcon 1 Grey Square
 
+# filter-norarity
 Show
 Class "Body" "Helmet" "Boots" "Gloves" "Shields" "Focus"
 Quality >= 7
@@ -823,6 +896,7 @@ PlayAlertSound 10 100
 #Class "Quarterstaff"
 #Rarity < Unique
 #
+## filter-norarity
 #Show
 #Class "Focus"
 #Quality >= 7
@@ -833,16 +907,7 @@ PlayAlertSound 10 100
 #MinimapIcon 1 Grey Square
 #PlayAlertSound 10 100
 #
-#Show
-#Class "Wand"
-#BaseType "Withered Wand" "Attuned Wand" "Siphoning Wand" "Acrid Wand" "Galvanic Wand" "Dueling Wand"
-#ItemLevel >= 81
-#Rarity Normal
-#SetBorderColor 95 0 160
-#PlayEffect White
-#MinimapIcon 1 Purple Circle
-#PlayAlertSound 16 300
-#
+## filter-mage
 #Show
 #Class "Wand"
 #ItemLevel >= 81
@@ -853,6 +918,7 @@ PlayAlertSound 10 100
 #MinimapIcon 1 Purple Circle
 #PlayAlertSound 16 100
 #
+## filter-mage
 #Show
 #Class "Focus"
 #ItemLevel >= 82
@@ -864,6 +930,7 @@ PlayAlertSound 10 100
 #MinimapIcon 1 Purple Circle
 #PlayAlertSound 16 300
 #
+## filter-norarity
 #Show
 #Quality >= 1
 #Rarity <= Rare
@@ -887,32 +954,38 @@ PlayAlertSound 10 100
 #DropLevel < 65
 #AreaLevel >= 75
 #
+## filter-ssf-mage
 #Hide
 #Class "Sceptre" "Shield"
 #Rarity Normal
 #AreaLevel > 40
 #
+## filter-ssf-mage
 #Hide
 #Class "Sceptre"
 #Rarity Magic
 #AreaLevel >= 65
 #
+## filter-ssf-mage
 #Hide
 #Class "Shield"
 #Rarity Magic
 #AreaLevel >= 71
 #
+## filter-ssf-mage
 #Hide
 #Class "Sceptre" "Shield"
 #Rarity Rare
 #AreaLevel >= 75
 #
+## filter-ssf-mage
 #Show
 #Class "Wand" # "Staff"
 #Rarity <= Rare
 #SetBackgroundColor 0 0 0 210
 #AreaLevel < 78
 #
+## filter-ssf-mage
 #Show
 #Class "Focus"
 #Rarity <= Rare
@@ -985,11 +1058,6 @@ SetBackgroundColor 240 90 35 200
 PlayAlertSound 1 150
 PlayEffect White
 MinimapIcon 1 Orange Circle
-
-#Hide
-#BaseType "Uncut Skill Gem" "Uncut Spirit Gem"
-#ItemLevel <= 18
-#AreaLevel > 78
 
 Hide
 Class == "Socketable"
@@ -1070,6 +1138,7 @@ Rarity <= Rare
 DropLevel <= 60
 AreaLevel >= 75
 
+# filter-norarity
 Show
 BaseType "Chiming Staff"
 SetBackgroundColor 0 0 0 210
@@ -1209,13 +1278,14 @@ BaseType "Leggings" " Shoes" "Cuisses"
 Rarity <= Rare
 AreaLevel >= 75
 
+# filter-norarity
 Show
 BaseType "Crest Shield"
 SetBackgroundColor 0 0 0 210
 Rarity Magic Rare
 
 #   [0905] int-bases:-----------
-
+# filter-norarity
 Show
 Class "Helmet"
 BaseType "Tiara" "Circlet"
@@ -1223,6 +1293,7 @@ Rarity <= Rare
 SetBackgroundColor 0 0 0 210
 DropLevel >= 65
 
+# filter-norarity
 Show
 Class "Body"
 BaseType "Robe" "Raiment"
@@ -1230,6 +1301,7 @@ Rarity <= Rare
 SetBackgroundColor 0 0 0 210
 DropLevel >= 65
 
+# filter-norarity
 Show
 Class "Gloves"
 BaseType "Gloves"
@@ -1237,6 +1309,7 @@ Rarity <= Rare
 SetBackgroundColor 0 0 0 210
 DropLevel >= 65
 
+# filter-norarity
 Show
 Class "Boots"
 BaseType "Sandals" "Slippers"
@@ -1271,6 +1344,7 @@ Rarity <= Magic
 DropLevel <= 60
 AreaLevel >= 71
 
+# filter-norarity
 Show
 BaseType "Chiming Staff"
 AreaLevel >= 71
@@ -1382,31 +1456,35 @@ BaseType "Cuffs" "Wraps" "Manchettes"
 Rarity <= Magic
 AreaLevel >= 71
 
-#shield:
+# filter-norarity
 Show
 BaseType "Crest Shield"
 SetBackgroundColor 0 0 0 210
 Rarity Magic Rare
 
 #   [1004] int-bases:
+# filter-norarity
 Show
 Class "Body"
 BaseType "Raiment" "Robe"
 SetBackgroundColor 0 0 0 210
 Rarity <= Rare
 
+# filter-norarity
 Show
 Class "Helmet"
 BaseType "Tiara" "Circlet"
 SetBackgroundColor 0 0 0 210
 Rarity <= Rare
 
+# filter-norarity
 Show
 Class "Gloves"
 BaseType "Gloves"
 SetBackgroundColor 0 0 0 210
 Rarity <= Rare
 
+# filter-norarity
 Show
 Class "Boots"
 BaseType "Slippers" "Sandals"
@@ -1442,6 +1520,7 @@ SetBackgroundColor 0 0 0 210
 AreaLevel >= 71
 
 #   [1006] set low priority styles for cheap currency:
+# filter-norarity
 Show
 Class "Currency"
 BaseType "Lesser Jeweller's Orb" "Glassblower's Bauble" "Artificer's Orb"
@@ -1461,6 +1540,7 @@ AreaLevel >= 71
 # [[1100]] First steps on the maps / area level 65+:
 #--------------------------
 
+# filter-norarity
 Show
 BaseType "Chiming Staff"
 SetBackgroundColor 0 0 0 210
@@ -1582,6 +1662,7 @@ AreaLevel >= 65
 # [[1200]] To start for any class of casters:
 #--------------------------
 
+# filter-norarity
 Show
 Quality >= 1
 BaseType "Chiming Staff"
@@ -1591,6 +1672,7 @@ PlayEffect Blue
 MinimapIcon 1 Grey Square
 PlayAlertSound 16 300
 
+# filter-norarity
 Show
 BaseType "Chiming Staff"
 PlayEffect Blue
@@ -1598,11 +1680,13 @@ MinimapIcon 2 Blue Circle
 SetBackgroundColor 0 0 0 210
 PlayAlertSound 16 300
 
+# filter-norarity
 Show
 Class "Quiver" "One Hand Axe" "One Hand Mace" "One Hand Sword" "Dagger"  "Flail" "Claw"
 Rarity Magic Rare
 SetBackgroundColor 0 0 0 210
 
+# filter-norarity
 Show
 Class "Quarter" "Bow" "Crossbow" "Two Hand Axe" "Two Hand Mace" "Two Hand Sword" "Spear" "Trap"
 Rarity Magic Rare
@@ -1616,19 +1700,23 @@ Hide
 Class "Quarter" "Bow" "Crossbow" "Two Hand Axe" "Two Hand Mace" "Two Hand Sword" "Spear" "Trap"
 Rarity Normal
 
+# filter-summoner filter-norarity
 Show
 BaseType "Sceptre"
 SetBackgroundColor 0 0 0 210
 
+# filter-mage filter-norarity
 Show
 Class "Wand" "Focus" "Staff"
 Rarity Normal
 SetBackgroundColor 0 0 0 210
 AreaLevel <= 40
 
+# filter-mage filter-norarity
 Show
 Class "Wand" "Focus" "Staff"
 SetBackgroundColor 0 0 0 210
+Rarity Magic Rare
 
 Hide
 Class "Shields"
@@ -1639,17 +1727,20 @@ Hide
 Class "Buckler"
 Rarity Normal
 
+# filter-summoner filter-norarity
 Show
 BaseType "Crest Shield"
 Rarity <= Rare
 SetBackgroundColor 0 0 0 210
 
+# filter-norarity
 Show
 Class "Shields" "Buckler"
 BaseType "Buckler" "Targe" "Tower Shield"
 Rarity Magic Rare
 SetBackgroundColor 0 0 0 210
 
+# filter-norarity
 Show
 BaseType "Garment"
 Rarity <= Rare
@@ -1660,6 +1751,7 @@ Hide
 BaseType "Scroll of Wisdom"
 AreaLevel > 48
 
+# filter-norarity
 Show
 BaseType "Scroll of Wisdom"
 AreaLevel <= 48
@@ -1672,12 +1764,14 @@ Class "Helmet"
 BaseType "Greathelm" " Cap" " Hood"
 Rarity Normal
 
+# filter-norarity
 Show
 Class "Helmet"
 BaseType "Greathelm" " Cap" " Hood"
 Rarity Magic
 SetBackgroundColor 0 0 0 210
 
+# filter-norarity
 Show
 Class "Helmet"
 BaseType "Greathelm" " Cap" " Hood"
@@ -1695,6 +1789,7 @@ BaseType " Coat" "Cuirass" " Plate" " Vest"
 Rarity Magic
 AreaLevel >= 65
 
+# filter-norarity
 Show
 Class "Body"
 BaseType " Coat" "Cuirass" " Plate" " Vest"
@@ -1702,6 +1797,7 @@ Rarity Magic
 SetBackgroundColor 0 0 0 210
 AreaLevel < 65
 
+# filter-norarity
 Show
 Class "Body"
 BaseType " Coat" "Cuirass" " Plate" " Vest"
@@ -1713,12 +1809,14 @@ Class "Gloves"
 BaseType "Bracers" "Mitts"
 Rarity Normal
 
+# filter-norarity
 Show
 Class "Gloves"
 BaseType "Bracers" "Mitts"
 Rarity Magic
 SetBackgroundColor 0 0 0 210
 
+# filter-norarity
 Show
 Class "Gloves"
 BaseType "Bracers" "Mitts"
@@ -1730,12 +1828,14 @@ Class "Boots"
 BaseType "Greaves" "Boots" "Sabatons"
 Rarity Normal
 
+# filter-norarity
 Show
 Class "Boots"
 BaseType "Greaves" "Boots" "Sabatons"
 Rarity Magic
 SetBackgroundColor 0 0 0 210
 
+# filter-norarity
 Show
 Class "Boots"
 BaseType "Greaves" "Boots" "Sabatons"
@@ -1748,12 +1848,14 @@ Class "Helmet"
 BaseType "Crown" "Mask" " Helm" " Visage"
 Rarity Normal
 
+# filter-norarity
 Show
 Class "Helmet"
 BaseType "Crown" "Mask" " Helm" " Visage"
 Rarity Magic
 SetBackgroundColor 0 0 0 210
 
+# filter-norarity
 Show
 Class "Helmet"
 BaseType "Crown" "Mask" " Helm" " Visage"
@@ -1771,6 +1873,7 @@ BaseType " Jacket" " Mail" " Armour" "Mantle" " Garb" "Vestments" "Regalia"
 Rarity Magic
 AreaLevel >= 65
 
+# filter-norarity
 Show
 Class "Body"
 BaseType " Jacket" " Mail" " Armour" "Mantle" " Garb" "Vestments" "Regalia"
@@ -1778,6 +1881,7 @@ Rarity Magic
 SetBackgroundColor 0 0 0 210
 AreaLevel < 65
 
+# filter-norarity
 Show
 Class "Body"
 BaseType " Jacket" " Mail" " Armour" "Mantle" " Garb" "Vestments" "Regalia"
@@ -1789,12 +1893,14 @@ Class "Gloves"
 BaseType "Cuffs" "Wraps" "Gauntlets" "Manchettes"
 Rarity Normal
 
+# filter-norarity
 Show
 Class "Gloves"
 BaseType "Cuffs" "Wraps" "Gauntlets" "Manchettes"
 Rarity Magic
 SetBackgroundColor 0 0 0 210
 
+# filter-norarity
 Show
 Class "Gloves"
 BaseType "Cuffs" "Wraps" "Gauntlets" "Manchettes"
@@ -1806,12 +1912,14 @@ Class "Boots"
 BaseType "Sabatons" "Leggings" " Shoes" "Cuisses"
 Rarity Normal
 
+# filter-norarity
 Show
 Class "Boots"
 BaseType "Sabatons" "Leggings" " Shoes" "Cuisses"
 Rarity Magic
 SetBackgroundColor 0 0 0 210
 
+# filter-norarity
 Show
 Class "Boots"
 BaseType "Sabatons" "Leggings" " Shoes" "Cuisses"
@@ -1819,24 +1927,28 @@ Rarity Rare
 SetBackgroundColor 0 0 0 210
 
 #   [1203] int-bases:-----------
+# filter-norarity
 Show
 Class "Body"
 BaseType "Raiment" "Robe"
 Rarity <= Rare
 SetBackgroundColor 0 0 0 210
 
+# filter-norarity
 Show
 Class "Gloves"
 BaseType "Gloves"
 Rarity <= Rare
 SetBackgroundColor 0 0 0 210
 
+# filter-norarity
 Show
 Class "Helmet"
 BaseType "Tiara" "Circlet"
 Rarity <= Rare
 SetBackgroundColor 0 0 0 210
 
+# filter-norarity
 Show
 Class "Boots"
 BaseType "Slippers" "Sandals"
@@ -3097,6 +3209,7 @@ PlayEffect White
 SetFontSize 40
 MinimapIcon 1 Purple Square
 
+# filter-norarity
 Show
 Class "Trial Coin" "Inscribed Ultimatum"
 BaseType "Barya" "Ultimatum"
@@ -3215,6 +3328,7 @@ StackSize <= 100
 BaseType == "Gold"
 AreaLevel >= 65
 
+# filter-norarity
 Show
 BaseType == "Gold"
 SetTextColor 180 180 180
@@ -3247,6 +3361,7 @@ PlayAlertSound 2 300
 PlayEffect Brown
 MinimapIcon 1 Cyan Diamond
 
+# filter-norarity
 Show
 Class "Uncut Skill Gem"
 BaseType = 14
@@ -3257,6 +3372,7 @@ PlayAlertSound 2 300
 PlayEffect Cyan
 MinimapIcon 1 Cyan Triangle
 
+# filter-norarity
 Show
 Class "Uncut Skill Gem"
 BaseType = 13
@@ -3268,6 +3384,7 @@ PlayAlertSound 2 300
 PlayEffect Cyan
 MinimapIcon 1 Cyan Triangle
 
+# filter-norarity
 Show
 Class "Uncut Skill Gem"
 BaseType = 12
@@ -3279,6 +3396,7 @@ PlayAlertSound 2 300
 PlayEffect Cyan
 MinimapIcon 1 Cyan Triangle
 
+# filter-norarity
 Show
 Class "Uncut Skill Gem"
 BaseType = 11
@@ -3290,6 +3408,7 @@ PlayAlertSound 2 300
 PlayEffect Cyan
 MinimapIcon 1 Cyan Triangle
 
+# filter-norarity
 Show
 Class "Uncut Skill Gem"
 BaseType = 10
@@ -3301,6 +3420,7 @@ PlayAlertSound 2 300
 PlayEffect Cyan
 MinimapIcon 1 Cyan Triangle
 
+# filter-norarity
 Show
 Class "Uncut Skill Gem"
 BaseType = 9
@@ -3312,6 +3432,7 @@ PlayAlertSound 2 300
 PlayEffect Cyan
 MinimapIcon 1 Cyan Triangle
 
+# filter-norarity
 Show
 Class "Uncut Skill Gem"
 BaseType = 8
@@ -3323,6 +3444,7 @@ PlayAlertSound 2 300
 PlayEffect Cyan
 MinimapIcon 1 Cyan Triangle
 
+# filter-norarity
 Show
 Class "Uncut Skill Gem"
 BaseType = 7
@@ -3334,6 +3456,7 @@ PlayAlertSound 2 300
 PlayEffect Cyan
 MinimapIcon 1 Cyan Triangle
 
+# filter-norarity
 Show
 Class "Uncut Skill Gem"
 BaseType = 6
@@ -3345,6 +3468,7 @@ PlayAlertSound 2 300
 PlayEffect Cyan
 MinimapIcon 1 Cyan Triangle
 
+# filter-norarity
 Show
 Class "Uncut Skill Gem"
 BaseType = 5
@@ -3356,6 +3480,7 @@ PlayAlertSound 2 300
 PlayEffect Cyan
 MinimapIcon 1 Cyan Triangle
 
+# filter-norarity
 Show
 Class "Uncut Skill Gem"
 BaseType = 4
@@ -3367,6 +3492,7 @@ PlayAlertSound 2 300
 PlayEffect Cyan
 MinimapIcon 1 Cyan Triangle
 
+# filter-norarity
 Show
 Class "Uncut Skill Gem"
 BaseType = 3
@@ -3378,6 +3504,7 @@ PlayAlertSound 2 300
 PlayEffect Cyan
 MinimapIcon 1 Cyan Triangle
 
+# filter-norarity
 Show
 Class "Uncut Skill Gem"
 BaseType = 2
@@ -3389,6 +3516,7 @@ PlayAlertSound 2 300
 PlayEffect Cyan
 MinimapIcon 1 Cyan Triangle
 
+# filter-norarity
 Show
 Class "Uncut Skill Gem"
 SetTextColor 20 240 240
@@ -3420,6 +3548,7 @@ PlayAlertSound 2 300
 PlayEffect Brown
 MinimapIcon 1 White Diamond
 
+# filter-norarity
 Show
 Class "Uncut Spirit Gem"
 BaseType = 14
@@ -3430,6 +3559,7 @@ PlayAlertSound 2 300
 PlayEffect Grey
 MinimapIcon 1 White Triangle
 
+# filter-norarity
 Show
 Class "Uncut Spirit Gem"
 BaseType = 13
@@ -3441,6 +3571,7 @@ PlayAlertSound 2 300
 PlayEffect Grey
 MinimapIcon 1 White Triangle
 
+# filter-norarity
 Show
 Class "Uncut Spirit Gem"
 BaseType = 12
@@ -3452,6 +3583,7 @@ PlayAlertSound 2 300
 PlayEffect Grey
 MinimapIcon 1 White Triangle
 
+# filter-norarity
 Show
 Class "Uncut Spirit Gem"
 BaseType = 11
@@ -3463,6 +3595,7 @@ PlayAlertSound 2 300
 PlayEffect Grey
 MinimapIcon 1 White Triangle
 
+# filter-norarity
 Show
 Class "Uncut Spirit Gem"
 BaseType = 10
@@ -3474,6 +3607,7 @@ PlayAlertSound 2 300
 PlayEffect Grey
 MinimapIcon 1 White Triangle
 
+# filter-norarity
 Show
 Class "Uncut Spirit Gem"
 BaseType = 9
@@ -3485,6 +3619,7 @@ PlayAlertSound 2 300
 PlayEffect Grey
 MinimapIcon 1 White Triangle
 
+# filter-norarity
 Show
 Class "Uncut Spirit Gem"
 BaseType = 8
@@ -3496,6 +3631,7 @@ PlayAlertSound 2 300
 PlayEffect Grey
 MinimapIcon 1 White Triangle
 
+# filter-norarity
 Show
 Class "Uncut Spirit Gem"
 BaseType = 7
@@ -3507,6 +3643,7 @@ PlayAlertSound 2 300
 PlayEffect Grey
 MinimapIcon 1 White Triangle
 
+# filter-norarity
 Show
 Class "Uncut Spirit Gem"
 BaseType = 6
@@ -3518,6 +3655,7 @@ PlayAlertSound 2 300
 PlayEffect Cyan
 MinimapIcon 1 White Triangle
 
+# filter-norarity
 Show
 Class "Uncut Spirit Gem"
 BaseType = 5
@@ -3529,6 +3667,7 @@ PlayAlertSound 2 300
 PlayEffect Grey
 MinimapIcon 1 White Triangle
 
+# filter-norarity
 Show
 Class "Uncut Spirit Gem"
 BaseType = 4
@@ -3540,6 +3679,7 @@ PlayAlertSound 2 300
 PlayEffect Grey
 MinimapIcon 1 White Triangle
 
+# filter-norarity
 Show
 Class "Uncut Spirit Gem"
 BaseType = 3
@@ -3551,6 +3691,7 @@ PlayAlertSound 2 300
 PlayEffect Grey
 MinimapIcon 1 White Triangle
 
+# filter-norarity
 Show
 Class "Uncut Spirit Gem"
 BaseType = 2
@@ -3562,6 +3703,7 @@ PlayAlertSound 2 300
 PlayEffect Grey
 MinimapIcon 1 White Triangle
 
+# filter-norarity
 Show
 Class "Uncut Spirit Gem"
 SetTextColor 140 140 140
@@ -3929,6 +4071,7 @@ PlayAlertSound 2 100
 MinimapIcon 2 Cyan Circle
 SetFontSize 40
 
+# filter-norarity
 Show
 Class "Socketable"
 BaseType "Greater" # Greater Rune {runeName} / Greater {runeName} Rune
@@ -3938,6 +4081,7 @@ PlayEffect Cyan Temp
 PlayAlertSound 2 100
 MinimapIcon 2 Cyan Circle
 
+# filter-norarity
 Show
 Class "Socketable"
 BaseType "Lesser" # Lesser {runeName} Rune
@@ -3964,6 +4108,7 @@ PlayAlertSound 3 300
 MinimapIcon 2 Brown Star
 PlayEffect Brown
 
+# filter-norarity
 Show
 Class "Charm"
 SetTextColor 0 240 190
@@ -4018,7 +4163,6 @@ PlayEffect Purple
 MinimapIcon 0 Purple Star
 SetFontSize 45
 
-
 Show
 Class "Socketable"
 BaseType "Tecrod's Gaze"
@@ -4050,7 +4194,6 @@ PlayEffect Green
 PlayAlertSound 2 200
 MinimapIcon 1 Green Circle
 SetFontSize 40
-
 
 #--------------------------
 # [[1900]] Craft and Currency
@@ -4175,6 +4318,7 @@ PlayEffect White
 MinimapIcon 1 White Circle
 SetFontSize 40
 
+# filter-norarity
 Show
 Class "Currency"
 BaseType "Glassblower's Bauble"
@@ -4185,6 +4329,7 @@ PlayEffect White
 MinimapIcon 1 White Circle
 
 #   [1904] currency Tier C: quality things, blue orbs, shards, etc
+# filter-norarity
 Show
 Class "Currency"
 BaseType "Arcanist's Etcher"
@@ -4203,6 +4348,7 @@ SetBackgroundColor 0 0 0 210
 MinimapIcon 2 Grey Circle
 SetFontSize 40
 
+# filter-norarity
 Show
 Class "Currency"
 BaseType "Greater Orb of Transmutation"
@@ -4212,6 +4358,7 @@ SetBackgroundColor 0 0 0 210
 PlayAlertSound 2 150
 MinimapIcon 2 Grey Circle
 
+# filter-norarity
 Show
 Class "Currency"
 BaseType "Blacksmith's Whetstone" "Orb of Augmentation" "Orb of Transmutation" "Regal Shard" "Alchemy Shard"
@@ -4880,6 +5027,7 @@ SetFontSize 40
 # [[2200]] Low-priority rules
 #--------------------------
 
+# filter-norarity
 Show
 Rarity Unique
 PlayAlertSound 3 300
@@ -4945,6 +5093,7 @@ Rarity Normal
 DropLevel <= 10
 AreaLevel >= 16
 
+# filter-norarity
 Show
 Class "Flask"
 BaseType "Life"
@@ -4952,6 +5101,7 @@ Rarity Normal
 SetBackgroundColor 130 50 50 200
 AreaLevel < 65
 
+# filter-norarity
 Show
 Class "Flask"
 BaseType "Life"
@@ -4960,6 +5110,7 @@ SetBackgroundColor 130 50 50 200
 SetTextColor 100 200 255
 AreaLevel < 65
 
+# filter-norarity
 Show
 Class "Flask"
 BaseType "Mana"
