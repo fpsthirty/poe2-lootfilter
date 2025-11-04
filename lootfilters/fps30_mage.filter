@@ -421,6 +421,46 @@ SetFontSize 40
 # [[0400]] White items for unique craft:
 #--------------------------
 
+# bases with extra socket:
+Show
+Rarity Normal
+Corrupted False
+Sockets >= 2
+BaseType "Intricate Crest Shield" "Lattice Sandals" "Fine Bracers" "Gold Circlet" "Martyr Crown" "Sacred Focus"
+SetFontSize 45
+SetTextColor 255 0 0 255
+SetBorderColor 255 0 0 255
+SetBackgroundColor 255 255 255 255
+PlayAlertSound 6 300
+PlayEffect Purple
+MinimapIcon 0 Purple Star
+
+Show
+Rarity Normal
+Corrupted False
+Sockets >= 3
+BaseType "Desolate Crossbow"
+SetFontSize 45
+SetTextColor 255 0 0 255
+SetBorderColor 255 0 0 255
+SetBackgroundColor 255 255 255 255
+PlayAlertSound 6 300
+PlayEffect Purple
+MinimapIcon 0 Purple Star
+
+Show
+Rarity Normal
+Corrupted False
+Sockets >= 3
+BaseType "Tattered Robe"
+SetFontSize 45
+SetTextColor 255 0 0 255
+SetBorderColor 255 0 0 255
+SetBackgroundColor 255 255 255 255
+PlayAlertSound 6 300
+PlayEffect Red
+MinimapIcon 0 Red Star
+
 # S-Tier:
 Show
 BaseType "Heavy Belt" # Headhunter / When you Kill a Rare monster, you gain its Modifiers for 20 seconds
