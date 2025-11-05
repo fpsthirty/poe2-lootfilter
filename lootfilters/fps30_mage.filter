@@ -1043,17 +1043,20 @@ DropLevel = 65 # that base "vile robe" and "havoc raiment" have a max ES; robe 6
 Rarity <= Rare
 SetBackgroundColor 0 0 0 210
 
+# filter-nossf
 Hide
 Class "Body"
 Rarity <= Rare
 AreaLevel > 78
 
+# filter-nossf
 Hide
 Class "Helmet" "Shields" "Focus"
 DropLevel < 75
 Rarity <= Rare
 AreaLevel > 78
 
+# filter-nossf
 Hide
 Class "Boots" "Gloves"
 DropLevel < 70
