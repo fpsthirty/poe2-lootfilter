@@ -307,6 +307,33 @@ PlayEffect Purple
 MinimapIcon 0 Purple Star
 
 Show
+Class "Wands"
+BaseType "Dueling Wand"
+Corrupted False
+Sockets >= 2
+ItemLevel >= 81 # high item level base
+SetFontSize 45
+SetTextColor 255 0 0 255
+SetBorderColor 255 0 0 255
+SetBackgroundColor 255 255 255 255
+PlayAlertSound 6 300
+PlayEffect Purple
+MinimapIcon 0 Purple Star
+
+Show
+Class "Wands"
+BaseType "Dueling Wand" # low item level base
+Corrupted False
+Sockets >= 2
+SetFontSize 45
+SetTextColor 255 0 0 255
+SetBorderColor 255 0 0 255
+SetBackgroundColor 255 255 255 255
+PlayAlertSound 6 300
+PlayEffect Red
+MinimapIcon 0 Red Star
+
+Show
 Class "Body"
 DropLevel >= 65
 Corrupted False
