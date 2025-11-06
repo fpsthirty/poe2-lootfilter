@@ -847,25 +847,25 @@ AreaLevel >= 75
 Hide
 Class "Quarterstaff"
 Rarity <= Rare
-AreaLevel >= 75
+AreaLevel >= 71
 
 # filter-norarity
 Show
 Class "Quarterstaff"
 Rarity <= Rare
 SetBackgroundColor 0 0 0 210
-AreaLevel < 75
+AreaLevel < 71
 
 Hide
 Class "Quarterstaff"
 Rarity <= Magic
-AreaLevel >= 65
+AreaLevel >= 41
 
 # filter-norarity
 Show
 Class "Quarterstaff"
 Rarity <= Magic
-AreaLevel < 65
+AreaLevel < 41
 
 # typical caster stuffs:
 # filter-norarity
@@ -1376,7 +1376,7 @@ Rarity <= Rare
 AreaLevel >= 71
 
 Hide
-Class "Quiver" "One Hand Mace" "Quarter" "Bow" "Crossbow" "One Hand Sword" "One Hand Sword" "Two Hand Sword" "Dagger" "Spear" "One Hand Axe" "Two Hand Axe" "Two Hand Mace" "Flail" "Trap" "Claw"
+Class "One Hand Mace" "One Hand Sword" "One Hand Sword" "Dagger" "Spear" "One Hand Axe" "Flail" "Trap" "Claw"
 Rarity <= Rare
 AreaLevel >= 71
 
@@ -1596,7 +1596,7 @@ Rarity Normal
 AreaLevel >= 65
 
 Hide
-Class "Quiver" "One Hand Mace" "Two Hand Mace" "Quarter" "Bow" "Crossbow" "One Hand Sword" "Two Hand Sword" "Dagger" "Spear" "One Hand Axe" "Two Hand Axe"  "Flail" "Trap" "Claw"
+Class "One Hand Mace" "One Hand Sword" "Dagger" "Spear" "One Hand Axe" "Flail" "Trap" "Claw"
 Rarity <= Magic
 AreaLevel >= 65
 
@@ -1723,6 +1723,11 @@ MinimapIcon 2 Blue Circle
 SetBackgroundColor 0 0 0 210
 PlayAlertSound 16 300
 
+Hide
+Class "Quiver" "Quarter" "Bow" "Crossbow" "Two Hand Sword" "Two Hand Axe" "Two Hand Mace"
+Rarity <= Magic
+AreaLevel >= 41
+
 # filter-norarity
 Show
 Class "Quiver" "One Hand Axe" "One Hand Mace" "One Hand Sword" "Dagger"  "Flail" "Claw"
@@ -1746,6 +1751,14 @@ Rarity Normal
 # filter-summoner filter-norarity
 Show
 BaseType "Sceptre"
+Rarity Normal
+SetBackgroundColor 0 0 0 210
+AreaLevel <= 40
+
+# filter-summoner filter-norarity
+Show
+BaseType "Sceptre"
+Rarity Magic Rare
 SetBackgroundColor 0 0 0 210
 
 # filter-mage filter-norarity
@@ -1799,7 +1812,6 @@ Show
 BaseType "Scroll of Wisdom"
 AreaLevel <= 48
 SetBackgroundColor 0 0 0 210
-
 
 #   [1201] dex- / str-bases:-----------
 Hide
