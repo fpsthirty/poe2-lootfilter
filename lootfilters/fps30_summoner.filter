@@ -169,7 +169,7 @@ AreaLevel >= 75
 Hide
 Class "Quarter"
 Rarity <= Magic
-AreaLevel >= 65
+AreaLevel >= 41
 
 Hide
 Class "Quarter"
