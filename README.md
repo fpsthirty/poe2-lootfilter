@@ -22,12 +22,12 @@ Special equipment stylization applies in the following cases:
    - bases for crafting uniques with Chance Orb;
    - unique items in depending on their cost:
      - orange text without beam: preliminary price less than 1 chaos orbs
-     - orange text with ping border and pink mean: for base that theoretically can be either very expensive (Astramentis, etc.) or very cheap (~1 chaos);
-     - orange text with beam: for cheap Schrodinger bases with price ~1–20 chaos;
-     - orange text with brown beam: preliminary price ~2–30 chaos orbs;
-     - cyan text with brown border: for unique charms and relics;
+     - orange text with white beam: for cheap Schrodinger bases with price ~1–20 chaos;
+     - orange text with pink border and pink beam: for Schrodinger base that theoretically can be either very expensive (Astramentis, etc.) or very cheap (~1 chaos);
+     - orange text with brown beam: preliminary price ~2–20 chaos orbs;
+     - cyan text with orange border: for cheap unique charms and relics;
      - orange text with brown beam and big fontsize: unique with extra socket;
-     - divine styles with red beam: price ~1div *(these styles are also used for other expensive non-unique items)*;
+     - divine styles with red beam: price ~1div (these styles are also used for other expensive non-unique items);
      - divine styles with purple beam: price 2+ div.
 3. 📖 <ins>Ultimate documentation</ins>: in just a couple minutes you can familiarize yourself with the styles of ~95% of the items in the game and ~95% of the rules for showing/hiding items - there are over a dozen screenshots of how lootfilter works at end of the article. If you're only interested in individual rules/styles, you can find them in the table of contents *(look at the beginning of the lootfilter file)*
 
@@ -145,17 +145,10 @@ If you want to customize one of my lootfilters, create a separate import file so
 >  ![delirium](https://github.com/fpsthirty/poe2-lootfilter/raw/main/img/loot/delirium.jpg)
 
 > ### equipment:
-> note about uniques:
-> - orange text without beam: preliminary price less than 1 chaos orbs;
-> - orange text with ping border and pink mean: for base that theoretically can be either very expensive (Astramentis, etc.) or very cheap (~1 chaos);
-> - orange text with beam: for cheap Schrodinger bases with price ~1–20 chaos;
-> - orange text with brown beam: preliminary price ~2–30 chaos orbs;
-> - cyan text with brown border: for unique charms and relics;
-> - orange text with brown beam and big fontsize: unique with extra socket;
-> - divine styles with red beam: price ~1div;
-> - divine styles with purple beam: price 2+ div.
->
 >  ![equipment](https://github.com/fpsthirty/poe2-lootfilter/raw/main/img/loot/equip-main.jpg)
+
+> ### uniques:
+>  ![uniques](https://github.com/fpsthirty/poe2-lootfilter/raw/main/img/loot/uniques.jpg)
 
 > ### equipment (high-end):
 >  ![equip_high-end](https://github.com/fpsthirty/poe2-lootfilter/raw/main/img/loot/equip-highend.jpg)

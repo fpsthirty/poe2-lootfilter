@@ -2490,16 +2490,17 @@ MinimapIcon 2 Cyan Diamond
 PlayEffect Brown
 
 #   [1305] mid-tier uniques
-# special styles for uniques with potencial price in 2–40 chaos orbs: now its a permanent brown beam
 
+# uniques with extra socket
 Show
 Rarity == Unique
 Class == "Claws" "Daggers" "Flails" "One Hand Axes" "One Hand Maces" "One Hand Swords" "Sceptres" "Spears" "Wands" "Quivers" "Foci" "Helmets" "Boots" "Gloves" "Shields" "Bucklers"
 Corrupted False
 Sockets >= 2
 SetFontSize 40
-PlayAlertSound 3 300
+PlayAlertSound 7 300
 PlayEffect Brown
+SetBorderColor 255 140 0 255
 SetBackgroundColor 0 0 0 210
 MinimapIcon 2 Brown Star
 
@@ -2508,11 +2509,13 @@ Rarity == Unique
 Corrupted False
 Sockets >= 3
 SetFontSize 40
-PlayAlertSound 3 300
+PlayAlertSound 7 300
 PlayEffect Brown
+SetBorderColor 255 140 0 255
 SetBackgroundColor 0 0 0 210
 MinimapIcon 2 Brown Star
 
+# special styles for uniques with potencial price in 2–20 chaos orbs: now its a permanent brown beam
 ## weapons:
 Show
 Rarity Unique
