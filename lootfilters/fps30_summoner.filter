@@ -1407,6 +1407,11 @@ Class "One Hand Mace" "One Hand Sword" "One Hand Sword" "Dagger" "Spear" "One Ha
 Rarity <= Rare
 AreaLevel >= 71
 
+Hide
+Class "Crossbows" "Quarterstaves" "Two Hand Axes" "Two Hand Maces" "Two Hand Swords"
+Rarity <= Rare
+AreaLevel >= 71
+
 #   [1001] hide low-level bases:
 Hide
 Class "Helmet" "Body" "Gloves" "Boots" "Shields"
@@ -4191,7 +4196,7 @@ SetBorderColor 255 140 0 255
 SetBackgroundColor 0 0 0 210
 PlayAlertSound 3 300
 MinimapIcon 2 Brown Star
-PlayEffect Brown
+PlayEffect Orange
 
 # filter-norarity
 Show
