@@ -18,10 +18,10 @@
 # - bases for crafting uniques with Chance Orb.
 # - unique items in depending on their cost:
 #  - orange text without beam: preliminary price less than 1 chaos orbs
-#  - orange text with ping border and pink mean: for base that theoretically can be either very expensive (Astramentis, etc.) or very cheap (~1 chaos);
-#  - orange text with beam: for cheap Schrodinger bases with price ~1–20 chaos;
-#  - orange text with brown beam: preliminary price ~2–30 chaos orbs;
-#  - orange text with brown beam and big fontsize: unique with extra socket;
+#  - orange text with white border and white beam: for cheap Schrodinger bases with price ~2–20 chaos;
+#  - orange text with orange border and brown beam: preliminary price ~2–20 chaos orbs;
+#  - orange large text with pink border and pink beam: for base that theoretically can be either very expensive (Astramentis, etc.) or very cheap (~1 chaos);
+#  - orange large text with brown beam: unique with extra socket;
 #  - divine styles with red beam: price ~1div *(these styles are also used for other expensive non-unique items)*;
 #  - divine styles with purple beam: price 2+ div.
 #
@@ -2505,8 +2505,8 @@ Sockets >= 2
 SetFontSize 40
 PlayAlertSound 7 300
 PlayEffect Brown
-SetBorderColor 255 140 0 255
 SetBackgroundColor 0 0 0 210
+SetBorderColor 255 140 0 255
 MinimapIcon 2 Brown Star
 
 Show
@@ -2516,11 +2516,11 @@ Sockets >= 3
 SetFontSize 40
 PlayAlertSound 7 300
 PlayEffect Brown
-SetBorderColor 255 140 0 255
 SetBackgroundColor 0 0 0 210
+SetBorderColor 255 140 0 255
 MinimapIcon 2 Brown Star
 
-# special styles for uniques with potencial price in 2–20 chaos orbs: now its a permanent brown beam
+# special styles for uniques with potencial price in 2–20 chaos orbs: now its a permanent brown beam + orange border
 ## weapons:
 Show
 Rarity Unique
@@ -2528,6 +2528,7 @@ BaseType == "Spiked Club" "Torment Club" "Pointed Maul" "Totemic Greatclub" "Win
 PlayAlertSound 3 300
 PlayEffect Brown
 SetBackgroundColor 0 0 0 210
+SetBorderColor 255 140 0 255
 MinimapIcon 2 Brown Star
 
 ## armors:
@@ -2537,6 +2538,7 @@ BaseType == "Fur Plate" "Champion Cuirass" "Quilted Vest" "Pathfinder Coat" "Ser
 PlayAlertSound 3 300
 PlayEffect Brown
 SetBackgroundColor 0 0 0 210
+SetBorderColor 255 140 0 255
 MinimapIcon 2 Brown Star
 
 Show
@@ -2546,6 +2548,7 @@ DropLevel == 22
 PlayAlertSound 3 300
 PlayEffect Brown
 SetBackgroundColor 0 0 0 210
+SetBorderColor 255 140 0 255
 MinimapIcon 2 Brown Star
 
 Show
@@ -2555,6 +2558,7 @@ DropLevel == 33
 PlayAlertSound 3 300
 PlayEffect Brown
 SetBackgroundColor 0 0 0 210
+SetBorderColor 255 140 0 255
 MinimapIcon 2 Brown Star
 
 Show
@@ -2564,6 +2568,7 @@ DropLevel == 33
 PlayAlertSound 3 300
 PlayEffect Brown
 SetBackgroundColor 0 0 0 210
+SetBorderColor 255 140 0 255
 MinimapIcon 2 Brown Star
 
 Show
@@ -2573,25 +2578,17 @@ Sockets < 4
 PlayAlertSound 3 300
 PlayEffect Brown
 SetBackgroundColor 0 0 0 210
+SetBorderColor 255 140 0 255
 MinimapIcon 2 Brown Star
 
 ## misc:
-
-# some unique items cannot be distinguished from others by lootfilter in an unidentified state — a white beam is used for them
-Show
-Rarity Unique
-BaseType == "Crimson Amulet" "Lazuli Ring" "Rawhide Belt"
-PlayAlertSound 3 300
-PlayEffect White
-SetBackgroundColor 0 0 0 210
-MinimapIcon 2 Brown Star
-
 Show
 Rarity Unique
 BaseType == "Broadhead Quiver" "Azure Amulet" "Solar Amulet" "Gold Amulet" "Gold Ring" "Ornate Belt" "Fine Belt" # "Staunching Charm" "Antidote Charm" "Grounding Charm" "Stone Charm" "Ruby Charm" "Sapphire Charm" "Topaz Charm" "Amethyst Charm"
 PlayAlertSound 3 300
 PlayEffect Brown
 SetBackgroundColor 0 0 0 210
+SetBorderColor 255 140 0 255
 MinimapIcon 2 Brown Star
 
 Show
@@ -2601,6 +2598,7 @@ DropLevel == 1
 PlayAlertSound 3 300
 PlayEffect Brown
 SetBackgroundColor 0 0 0 210
+SetBorderColor 255 140 0 255
 MinimapIcon 2 Brown Star
 
 Show
@@ -2610,6 +2608,7 @@ DropLevel == 52
 PlayAlertSound 3 300
 PlayEffect Brown
 SetBackgroundColor 0 0 0 210
+SetBorderColor 255 140 0 255
 MinimapIcon 2 Brown Star
 
 Show
@@ -2619,6 +2618,7 @@ DropLevel == 1
 PlayAlertSound 3 300
 PlayEffect Brown
 SetBackgroundColor 0 0 0 210
+SetBorderColor 255 140 0 255
 MinimapIcon 2 Brown Star
 
 Show
@@ -2628,6 +2628,7 @@ DropLevel == 12
 PlayAlertSound 3 300
 PlayEffect Brown
 SetBackgroundColor 0 0 0 210
+SetBorderColor 255 140 0 255
 MinimapIcon 2 Brown Star
 
 Show
@@ -2637,6 +2638,17 @@ DropLevel == 16
 PlayAlertSound 3 300
 PlayEffect Brown
 SetBackgroundColor 0 0 0 210
+SetBorderColor 255 140 0 255
+MinimapIcon 2 Brown Star
+
+# some unique items cannot be distinguished from others by lootfilter in an unidentified state — a white beam + white border is used for them
+Show
+Rarity Unique
+BaseType == "Crimson Amulet" "Lazuli Ring" "Rawhide Belt"
+PlayAlertSound 3 300
+PlayEffect White
+SetBackgroundColor 0 0 0 210
+SetBorderColor 255 255 255 255
 MinimapIcon 2 Brown Star
 
 #--------------------------
@@ -3606,15 +3618,23 @@ PlayAlertSound 2 300
 PlayEffect Cyan
 MinimapIcon 1 Cyan Triangle
 
-# filter-norarity
 Show
-Class "Uncut Skill Gem"
+Class "Skill Gem" "Uncut Skill Gem"
 SetTextColor 20 240 240
 SetBorderColor 20 240 240
 SetBackgroundColor 0 0 0 210
 PlayAlertSound 2 300
 PlayEffect Cyan Temp
 MinimapIcon 1 Cyan Triangle
+
+Show
+BaseType "Cast on" # todo "Meta Skill Gem" Class is not supported by lootfilter core: https://www.pathofexile.com/forum/view-thread/3876617
+SetTextColor 20 240 240
+SetBorderColor 20 240 240
+SetBackgroundColor 0 0 0 210
+PlayAlertSound 2 300
+PlayEffect White
+MinimapIcon 1 White Triangle
 
 # Uncut Spirit Gems: ----------
 Show
@@ -3793,9 +3813,8 @@ PlayAlertSound 2 300
 PlayEffect Grey
 MinimapIcon 1 White Triangle
 
-# filter-norarity
 Show
-Class "Uncut Spirit Gem"
+Class "Spirit Gem" "Uncut Spirit Gem"
 SetTextColor 140 140 140
 SetBorderColor 20 240 240
 SetBackgroundColor 0 0 0 220
