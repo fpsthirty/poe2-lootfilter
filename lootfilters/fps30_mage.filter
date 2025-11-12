@@ -176,6 +176,7 @@ Class "Quarter"
 Rarity Normal
 
 # not to be confused with a "Plate" / "Mail" as body armor
+
 # filter-norarity
 Show
 Class "Belts"
@@ -757,6 +758,7 @@ MinimapIcon 1 Orange Square
 #--------------------------
 
 #   [0501] weapons:
+
 # filter-summoner
 Show
 BaseType "Omen Sceptre" "Rattling Sceptre" "Lupine Sceptre" "Ochre Sceptre" "Devouring Sceptre" "Clasped Sceptre" "Devotional Sceptre" "Wrath Sceptre" "Aromatic Sceptre" "Pious Sceptre" "Hallowed Sceptre" "Wrath Sceptre"
@@ -769,6 +771,7 @@ MinimapIcon 1 Purple Circle
 PlayAlertSound 16 300
 
 #   [0502] armor pieces:
+
 # filter-norarity
 Show
 BaseType "Tiara" "Gloves"
@@ -895,6 +898,7 @@ Rarity <= Magic
 AreaLevel < 41
 
 # typical caster stuffs:
+
 # filter-norarity
 Show
 Quality >= 1
@@ -1355,6 +1359,7 @@ SetBackgroundColor 0 0 0 210
 Rarity Magic Rare
 
 #   [0905] int-bases:-----------
+
 # filter-norarity
 Show
 Class "Helmet"
@@ -1538,6 +1543,7 @@ SetBackgroundColor 0 0 0 210
 Rarity Magic Rare
 
 #   [1004] int-bases:
+
 # filter-norarity
 Show
 Class "Body"
@@ -1595,6 +1601,7 @@ SetBackgroundColor 0 0 0 210
 AreaLevel >= 71
 
 #   [1006] set low priority styles for cheap currency:
+
 # filter-norarity
 Show
 Class "Currency"
@@ -2014,6 +2021,7 @@ Rarity Rare
 SetBackgroundColor 0 0 0 210
 
 #   [1203] int-bases:-----------
+
 # filter-norarity
 Show
 Class "Body"
@@ -4438,6 +4446,7 @@ PlayEffect White
 MinimapIcon 1 White Circle
 
 #   [1904] currency Tier C: quality things, blue orbs, shards, etc
+
 # filter-norarity
 Show
 Class "Currency"
