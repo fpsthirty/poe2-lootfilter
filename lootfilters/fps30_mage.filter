@@ -855,7 +855,17 @@ PlayEffect Pink Temp
 SetFontSize 40
 
 Show
-BaseType " Ring" " Amulet" " Belt"
+BaseType " Ring" " Amulet"
+Rarity <= Rare
+ItemLevel >= 82
+SetBorderColor 95 0 160
+SetBackgroundColor 0 0 0 210
+MinimapIcon 1 Purple Circle
+PlayAlertSound 16 300
+
+# filter-norarity
+Show
+BaseType " Belt"
 Rarity <= Rare
 ItemLevel >= 82
 SetBorderColor 95 0 160
@@ -1573,6 +1583,8 @@ SetBackgroundColor 0 0 0 210
 Rarity <= Rare
 
 #   [1005] set default font size for belts and jewellery:
+
+# filter-norarity
 Show
 Class "Belts"
 Rarity <= Rare
@@ -3307,15 +3319,15 @@ PlayEffect Blue
 MinimapIcon 1 Blue Square
 
 Show
-Class "Trial Coin" "Inscribed Ultimatum"
-BaseType "Barya" "Ultimatum"
+Class "Trial Coin"
+BaseType "Barya"
 Rarity < Magic
 ItemLevel > 82
 SetTextColor 255 207 255
 SetBorderColor 255 207 255
 SetBackgroundColor 65 20 80 200
 PlayAlertSound 2 200
-PlayEffect White
+PlayEffect Orange
 SetFontSize 40
 MinimapIcon 1 Purple Square
 
@@ -3902,7 +3914,7 @@ MinimapIcon 1 White Triangle
 # S-Tier:
 Show
 Class == "Socketable"
-BaseType == "Guatelitzi's Soul Core of Endurance" "Opiloti's Soul Core of Assault" "Tzamoto's Soul Core of Ferocity" "Xopec's Soul Core of Power"
+BaseType == "Soul Core of Jiquani"
 SetFontSize 45
 SetTextColor 255 0 0 255
 SetBorderColor 255 0 0 255
@@ -3914,7 +3926,7 @@ MinimapIcon 0 Red Star
 # A-Tier:
 Show
 Class == "Socketable"
-BaseType == "Soul Core of Ticaba" "Soul Core of Jiquani" "Estazunti's Soul Core of Convalescence" "Tacati's Soul Core of Affliction" "Xipocado's Soul Core of Dominion" "Soul Core of Tacati"
+BaseType == "Opiloti's Soul Core of Assault" "Tzamoto's Soul Core of Ferocity" "Xopec's Soul Core of Power" "Soul Core of Ticaba" "Guatelitzi's Soul Core of Endurance" "Estazunti's Soul Core of Convalescence" "Tacati's Soul Core of Affliction" "Xipocado's Soul Core of Dominion" "Soul Core of Tacati" "Soul Core of Quipolatl" "Soul Core of Azcapa"
 SetTextColor 255 255 255 255
 SetBorderColor 255 255 255 255
 SetFontSize 40
@@ -4426,7 +4438,19 @@ SetFontSize 40
 
 Show
 Class "Currency"
-BaseType "Lesser Jeweller's Orb" "Artificer's Orb" "Regal Orb" "Chance Shard" "Perfect Orb of Transmutation"
+BaseType "Regal Orb" "Chance Shard" "Perfect Orb of Transmutation"
+SetTextColor 255 207 132
+SetBorderColor 255 207 132
+SetBackgroundColor 76 51 12 200
+PlayAlertSound 2 300
+PlayEffect White
+MinimapIcon 1 White Circle
+SetFontSize 40
+
+# filter-norarity
+Show
+Class "Currency"
+BaseType "Lesser Jeweller's Orb" "Artificer's Orb"
 SetTextColor 255 207 132
 SetBorderColor 255 207 132
 SetBackgroundColor 76 51 12 200
