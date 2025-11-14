@@ -1423,7 +1423,7 @@ Rarity <= Rare
 AreaLevel >= 71
 
 Hide
-Class "Crossbows" "Quarterstaves" "Two Hand Axes" "Two Hand Maces" "Two Hand Swords"
+Class "Bows" "Crossbows" "Quarterstaves" "Two Hand Axes" "Two Hand Maces" "Two Hand Swords"
 Rarity <= Rare
 AreaLevel >= 71
 
