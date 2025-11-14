@@ -2917,6 +2917,7 @@ PlayAlertSound 1 100
 PlayEffect Orange
 MinimapIcon 1 Orange Circle
 
+# filter-norarity
 Show
 Class == "Omen"
 BaseType == "Omen of the Liege"
