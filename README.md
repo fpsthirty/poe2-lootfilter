@@ -8,8 +8,8 @@
   - **[fpsthirty-6961/item-filters](https://www.pathofexile.com/account/view-profile/fpsthirty-6961/item-filters)**
 - ### local files:
   Follow one of the github-links and click download icon in the upper right corner:
-    - **[lootfilter for summoners](https://github.com/fpsthirty/poe2-lootfilter/raw/main/lootfilters/fps30_summoner.filter)**
-    - **[lootfilter for mages](https://github.com/fpsthirty/poe2-lootfilter/raw/main/lootfilters/fps30_mage.filter)**
+    - **[lootfilter for summoners](https://github.com/fpsthirty/poe2-lootfilter/blob/main/lootfilters/fps30_summoner.filter)**
+    - **[lootfilter for mages](https://github.com/fpsthirty/poe2-lootfilter/blob/main/lootfilters/fps30_mage.filter)**
   > ![download-icon](https://github.com/fpsthirty/poe2-lootfilter/raw/main/img/settings/download-icon.png)
 
 ## Basic principles of this project:
