@@ -133,10 +133,14 @@ var TagMap = map[string][]string{
 // Global variables
 var debugMode bool = false
 var localMode bool = true
+var styleMap map[string]string
 
 func main() {
 	fmt.Println("Filter generator started")
 	fmt.Println("Enter 'exit' to quit, 'debug' to toggle debug mode, 'local' to toggle local mode")
+	
+	// Load styles configuration
+	loadStyles()
 	
 	// Main application loop
 	for {
@@ -179,6 +183,161 @@ func main() {
 			printGenerationResult(choice, success, filteredBlocks)
 		}
 	}
+}
+
+func loadStyles() {
+	styleMap = make(map[string]string)
+	configFile := "config/styles.cfg"
+	
+	content, err := readFile(configFile)
+	if err != nil {
+		printfRed("Warning: Could not load styles configuration: %v\n", err)
+		printfRed("Style substitution will be disabled\n")
+		return
+	}
+	
+	var currentStyle string
+	var styleContent []string
+	
+	scanner := bufio.NewScanner(strings.NewReader(content))
+	for scanner.Scan() {
+		line := strings.TrimSpace(scanner.Text())
+		
+		if line == "" {
+			// Save previous style if exists
+			if currentStyle != "" && len(styleContent) > 0 {
+				styleMap[currentStyle] = strings.Join(styleContent, "\n")
+				currentStyle = ""
+				styleContent = nil
+			}
+			continue
+		}
+		
+		if strings.HasSuffix(line, ":") && strings.HasPrefix(line, "style-") {
+			// New style definition
+			if currentStyle != "" && len(styleContent) > 0 {
+				styleMap[currentStyle] = strings.Join(styleContent, "\n")
+			}
+			currentStyle = strings.TrimSuffix(line, ":")
+			styleContent = nil
+		} else if currentStyle != "" {
+			// Style content line
+			styleContent = append(styleContent, line)
+		}
+	}
+	
+	// Don't forget the last style
+	if currentStyle != "" && len(styleContent) > 0 {
+		styleMap[currentStyle] = strings.Join(styleContent, "\n")
+	}
+	
+	printfCyan("Loaded %d style definitions\n", len(styleMap))
+}
+
+func applyStyles(blocks [][]string, filterName string) [][]string {
+	var styledBlocks [][]string
+	firstNonInformativeProcessed := false
+	
+	// debugPrintfCyan("Applying styles to %d blocks\n", len(blocks))
+	
+	for _, block := range blocks {
+		var styledBlock []string
+		
+		/*debugPrintfCyan("Block %d before styles (informative: %t):\n", blockIndex, isInformativeBlock(block))
+		for i, line := range block {
+			debugPrintfCyan("  [%d] %s\n", i, line)
+		}*/
+		
+		for _, line := range block {
+			// Check if line is a style reference (with or without comment)
+			styleName, prefix := extractStyleInfo(line)
+			
+			if styleName != "" {
+				if styleContent, exists := styleMap[styleName]; exists {
+					// debugPrintfCyan("Applied style '%s' with prefix '%s'\n", styleName, prefix)
+					
+					// Split style content into lines and apply prefix
+					styleLines := strings.Split(styleContent, "\n")
+					for _, styleLine := range styleLines {
+						if styleLine != "" {
+							styledBlock = append(styledBlock, prefix+styleLine)
+						}
+					}
+				} else {
+					// Style not found, keep original line
+					printfRed("Warning: Style '%s' not found in configuration\n", styleName)
+					styledBlock = append(styledBlock, line)
+				}
+			} else {
+				// Regular line, keep as is
+				styledBlock = append(styledBlock, line)
+			}
+		}
+		
+		/*debugPrintfCyan("Block %d after styles (informative: %t):\n", blockIndex, isInformativeBlock(styledBlock))
+		for i, line := range styledBlock {
+			debugPrintfCyan("  [%d] %s\n", i, line)
+		}*/
+		
+		// Add filename comment to first non-informative block
+		if !firstNonInformativeProcessed && !isInformativeBlock(styledBlock) && len(styledBlock) >= 2 {
+			// Replace second line with filename comment
+			filenameComment := fmt.Sprintf("# %s — Path of Exile 2", filterName)
+			if len(styledBlock) > 1 {
+				styledBlock[1] = filenameComment
+			}
+			firstNonInformativeProcessed = true
+			// debugPrintfCyan("Added filename comment to first non-informative block: %s\n", filenameComment)
+		}
+		
+		styledBlocks = append(styledBlocks, styledBlock)
+	}
+	
+	debugPrintfCyan("Blocks of rules AND comments after styles: %d\n", len(styledBlocks))
+	
+	return styledBlocks
+}
+
+// extractStyleInfo extracts style name and prefix from line
+func extractStyleInfo(line string) (string, string) {
+	trimmedLine := strings.TrimSpace(line)
+	
+	// Check if it's a commented style
+	if strings.HasPrefix(trimmedLine, "#") {
+		// Find where "style-" starts
+		styleIndex := strings.Index(trimmedLine, "style-")
+		if styleIndex != -1 {
+			// Get the text between "#" and "style-"
+			betweenChars := trimmedLine[1:styleIndex]
+			
+			// Check if between characters contains only whitespace
+			// If there are any non-whitespace characters, this is NOT a valid style reference
+			for _, char := range betweenChars {
+				if char != ' ' && char != '\t' {
+					// Found non-whitespace character between # and style-, skip replacement
+					return "", ""
+				}
+			}
+			
+			// Prefix is everything before "style-" (including # and spaces)
+			prefix := line[:strings.Index(line, "style-")]
+			styleName := strings.TrimSpace(trimmedLine[styleIndex:])
+			
+			// Remove any trailing colon from style name
+			styleName = strings.TrimSuffix(styleName, ":")
+			
+			return styleName, prefix
+		}
+	}
+	
+	// Regular style (no comment) - check it's exactly a style reference
+	if strings.HasPrefix(trimmedLine, "style-") && !strings.Contains(trimmedLine, " ") {
+		styleName := strings.TrimSpace(trimmedLine)
+		styleName = strings.TrimSuffix(styleName, ":")
+		return styleName, ""
+	}
+	
+	return "", ""
 }
 
 func generateAllFiles() {
@@ -284,15 +443,23 @@ func processChoice(choice string) (bool, [][]string) {
 	filteredBlocks := filterBlocks(blocks, choice)
 	debugPrintfCyan("Blocks of rules AND comments after filtering: %d\n", len(filteredBlocks))
 	
-	// 4. Count informative blocks after filtering
-	informativeBlocks := countInformativeBlocks(filteredBlocks)
-	debugPrintfCyan("Blocks of rules after filtering: %d\n", informativeBlocks)
+	// 4. Count informative blocks BEFORE applying styles
+	informativeBlocksBeforeStyles := countInformativeBlocks(filteredBlocks)
+	debugPrintfCyan("Blocks of rules before styles: %d\n", informativeBlocksBeforeStyles)
 	
 	// 5. Check generation success (at least one informative block)
-	if informativeBlocks == 0 {
+	if informativeBlocksBeforeStyles == 0 {
 		printRed("No suitable informative blocks found for filter\n")
 		return false, filteredBlocks
 	}
+	
+	// 6. Apply style substitutions
+	filterName := "fps30_" + choice + ".filter"
+	filteredBlocks = applyStyles(filteredBlocks, filterName)
+	
+	// 7. Count informative blocks after applying styles (for debug info)
+	informativeBlocksAfterStyles := countInformativeBlocks(filteredBlocks)
+	debugPrintfCyan("Blocks of rules after styles: %d\n", informativeBlocksAfterStyles)
 	
 	return true, filteredBlocks
 }
