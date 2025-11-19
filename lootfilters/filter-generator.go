@@ -139,9 +139,6 @@ func main() {
 	fmt.Println("Filter generator started")
 	fmt.Println("Enter 'exit' to quit, 'debug' to toggle debug mode, 'local' to toggle local mode")
 	
-	// Load styles configuration
-	loadStyles()
-	
 	// Main application loop
 	for {
 		// Show selection menu
@@ -231,7 +228,7 @@ func loadStyles() {
 		styleMap[currentStyle] = strings.Join(styleContent, "\n")
 	}
 	
-	printfCyan("Loaded %d style definitions\n", len(styleMap))
+	debugPrintfCyan("Loaded %d style definitions\n", len(styleMap))
 }
 
 func applyStyles(blocks [][]string, filterName string) [][]string {
@@ -427,6 +424,9 @@ func readChoice() string {
 func processChoice(choice string) (bool, [][]string) {
 	debugPrintfCyan("\nSelected: %s\n", choice)
 	debugPrintfCyan("Excluded tags: %v\n", TagMap[choice])
+	
+	// Load styles configuration before each generation
+	loadStyles()
 	
 	// 1. Read overall.filter content
 	content, err := readFile("overall.filter")

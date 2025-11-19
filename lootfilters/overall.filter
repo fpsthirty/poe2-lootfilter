@@ -194,7 +194,7 @@ AreaLevel < 71
 Show
 UnidentifiedItemTier >= 4
 Class "Body" "Helmet" "Boots" "Gloves" "Shields" "Focus" "Sceptres" "Wands" "Staff"
-Quality >= 8
+Quality >= 7
 Rarity <= Rare
 style-eq-quality
 PlayAlertSound 10 200
@@ -566,7 +566,7 @@ style-base-craft-unique
 
 # filter-summoner
 Show
-BaseType "Omen Sceptre" "Rattling Sceptre" "Lupine Sceptre" "Ochre Sceptre" "Devouring Sceptre" "Clasped Sceptre" "Devotional Sceptre" "Wrath Sceptre" "Aromatic Sceptre" "Pious Sceptre" "Hallowed Sceptre" "Wrath Sceptre"
+Class "Sceptre"
 ItemLevel >= 81
 Rarity <= Rare
 style-eq-endgame
@@ -708,12 +708,20 @@ style-eq-quality
 PlayAlertSound 2 100
 AreaLevel < 71
 
-# filter-norarity
 Show
 Class "Charm"
 Quality >= 1
 Rarity <= Rare
 style-charm-quality
+
+# filter-rarity
+Hide
+Class "Body" "Helmet" "Boots" "Gloves" "Shields" "Focus"
+Quality >= 7
+Rarity <= Rare
+style-eq-quality
+MinimapIcon 1 Grey Square
+PlayAlertSound 10 100
 
 # filter-norarity
 Show
@@ -778,25 +786,25 @@ Rarity <= Rare
 DropLevel < 65
 AreaLevel >= 75
 
-# filter-ssf-mage
+# filter-mage
 Hide
 Class "Sceptre" "Shield"
 Rarity Normal
 AreaLevel > 40
 
-# filter-ssf-mage
+# filter-mage
 Hide
 Class "Sceptre"
 Rarity Magic
 AreaLevel >= 65
 
-# filter-ssf-mage
+# filter-mage
 Hide
 Class "Shield"
 Rarity Magic
 AreaLevel >= 71
 
-# filter-ssf-mage
+# filter-mage
 Hide
 Class "Sceptre" "Shield"
 Rarity Rare
@@ -826,6 +834,27 @@ BaseType "Robe" "Raiment"
 DropLevel = 65 # that base "vile robe" and "havoc raiment" have a max ES; robe 65lvl: 184 ES; raiment 70lvl: 153 ES + mana regen; robe 75lvl: 153 ES + faster ES recharge
 Rarity <= Rare
 style-bg-translucent
+
+Show
+Class "Amulets"
+BaseType "Crimson Amulet" "Azure Amulet" "Amber Amulet" "Jade Amulet" "Lapis Amulet" "Lunar Amulet" "Bloodstone Amulet" "Stellar Amulet" "Solar Amulet" "Gold Amulet"
+Rarity <= Rare
+style-bg-translucent
+AreaLevel > 78
+
+Show
+Class "Rings"
+BaseType "Iron Ring" "Emerald Ring" "Lazuli Ring" "Pearl Ring" "Ruby Ring" "Sapphire Ring" "Topaz Ring" "Amethyst Ring" "Prismatic Ring" "Gold Ring" "Unset Ring"
+Rarity Magic Rare
+style-bg-translucent
+AreaLevel > 78
+
+Show
+Class "Rings"
+BaseType "Lazuli Ring" "Pearl Ring" "Ruby Ring" "Sapphire Ring" "Topaz Ring" "Amethyst Ring" "Prismatic Ring" "Gold Ring" "Unset Ring"
+Rarity Normal
+style-bg-translucent
+AreaLevel > 78
 
 # filter-nossf
 Hide
@@ -859,17 +888,21 @@ Class "Socketable"
 BaseType "Rune"
 DropLevel <= 62
 AreaLevel > 78
+style-rune
 
 Hide
 Class "Currency"
 BaseType "Orb of Augmentation" "Orb of Transmutation"
 DropLevel < 45
 AreaLevel > 78
+style-orb-cheap
 
 Hide
 Class "Currency"
 BaseType "Lesser Jeweller's Orb" "Regal Shard" "Glassblower's Bauble" "Artificer's Orb" "Blacksmith's Whetstone"
+style-orb-cheap
 AreaLevel > 78
+style-orb-cheap
 
 Show
 Class "Currency"
@@ -881,6 +914,7 @@ Hide
 Class == "Socketable"
 BaseType "Lesser" # Lesser {runeName} Rune
 AreaLevel > 78
+style-rune
 
 # REMOVE THE BASES YOU --DO-- WANT TO HIDE
 
@@ -1138,6 +1172,7 @@ Hide
 StackSize < 250
 BaseType == "Gold"
 AreaLevel >= 75
+style-gold
 
 #--------------------------
 # [[1000]] For T7+ maps / area level 71+:
@@ -1148,6 +1183,7 @@ Class "Charm"
 Quality < 1
 Rarity <= Rare
 AreaLevel >= 71
+style-charm
 
 Hide
 Class "One Hand Mace" "One Hand Sword" "One Hand Sword" "Dagger" "Spear" "One Hand Axe" "Flail" "Trap" "Claw" "Quiver"
@@ -1316,6 +1352,13 @@ Rarity <= Rare
 
 #   [1005] set default font size for belts and jewellery:
 
+# filter-rarity
+Show
+Class "Belts"
+Rarity Rare
+style-bg-translucent
+AreaLevel >= 71
+
 # filter-norarity
 Show
 Class "Belts"
@@ -1335,6 +1378,7 @@ Hide
 Class "Rings"
 BaseType "Iron Ring" "Emerald Ring"
 Rarity Normal
+style-bg-translucent
 AreaLevel >= 71
 
 Show
@@ -1358,6 +1402,7 @@ Hide
 StackSize <= 250
 BaseType == "Gold"
 AreaLevel >= 71
+style-gold
 
 #--------------------------
 # [[1100]] First steps on the maps / area level 65+:
@@ -1389,13 +1434,33 @@ AreaLevel >= 65
 #   [1102] hide cheap currency, normal charms and flasks
 Hide
 Class "Flask"
+BaseType "Life"
 Rarity <= Magic
+SetBackgroundColor 130 50 50 200
 Quality < 1
 AreaLevel >= 65
 
 Hide
 Class "Flask"
+BaseType "Mana"
 Rarity <= Magic
+SetBackgroundColor 50 50 130 200
+Quality < 1
+AreaLevel >= 65
+
+Hide
+Class "Flask"
+BaseType "Life"
+Rarity <= Magic
+SetBackgroundColor 130 50 50 200
+Quality < 7
+AreaLevel >= 71
+
+Hide
+Class "Flask"
+BaseType "Mana"
+Rarity <= Magic
+SetBackgroundColor 50 50 130 200
 Quality < 7
 AreaLevel >= 71
 
@@ -1408,17 +1473,20 @@ Hide
 StackSize <= 100
 BaseType == "Gold"
 AreaLevel >= 65
+style-gold
 
 Hide
 Class "Charm"
 Rarity Normal
 Quality < 1
 AreaLevel >= 65
+style-charm
 
 Hide
 Class "Currency"
 BaseType "Artificer's Shard" "Transmutation Shard"
 AreaLevel >= 65
+style-orb-cheap
 
 #   [1103] hide dex- or/and str-bases
 Hide
@@ -2346,6 +2414,12 @@ Class == "Omen"
 BaseType == "Omen of Sinistral Necromancy" "Omen of Corruption"  "Omen of Secret Compartments" "Omen of Chaotic Quantity" "Omen of Chaotic Rarity" "Omen of Catalysing Exaltation"
 style-orb-chance
 
+# filter-rarity
+Hide
+Class == "Omen"
+BaseType == "Omen of the Liege"
+style-orb-regal
+
 # filter-norarity
 Show
 Class == "Omen"
@@ -2749,6 +2823,33 @@ PlayEffect Orange
 SetFontSize 40
 MinimapIcon 1 Purple Square
 
+# filter-nossf
+Hide
+Class "Trial Coin"
+BaseType "Barya"
+Rarity < Magic
+ItemLevel <= 82
+AreaLevel >= 78
+SetTextColor 255 207 255
+SetBorderColor 255 207 255
+SetBackgroundColor 65 20 80 200
+PlayAlertSound 2 200
+PlayEffect White
+MinimapIcon 1 Purple Square
+
+# filter-nossf
+Hide
+Class "Inscribed Ultimatum"
+BaseType "Ultimatum"
+Rarity < Magic
+AreaLevel >= 78
+SetTextColor 255 207 255
+SetBorderColor 255 207 255
+SetBackgroundColor 65 20 80 200
+PlayAlertSound 2 200
+PlayEffect White
+MinimapIcon 1 Purple Square
+
 # filter-norarity
 Show
 Class "Trial Coin" "Inscribed Ultimatum"
@@ -2861,8 +2962,8 @@ Hide
 StackSize <= 100
 BaseType == "Gold"
 AreaLevel >= 65
+style-gold
 
-# filter-norarity
 Show
 BaseType == "Gold"
 style-gold
@@ -3402,9 +3503,7 @@ PlayEffect Orange
 # filter-norarity
 Show
 Class "Charm"
-SetTextColor 0 240 190
-style-bg-translucent
-PlayEffect Cyan Temp
+style-charm
 
 #   [1806] talismans
 # S-Tier
@@ -3479,6 +3578,21 @@ BaseType "Gemcutter's Prism"
 style-orb-chance
 
 #   [1903] currency Tier B: Vaal, Chaos, Exalt and advanced orbs
+
+# filter-rarity
+Hide
+Class "Currency"
+BaseType "Lesser Jeweller's Orb" "Artificer's Orb"
+style-orb-regal
+AreaLevel >= 75
+
+# filter-rarity
+Hide
+Class "Currency"
+BaseType "Glassblower's Bauble"
+style-orb-regal-mini
+AreaLevel >= 75
+
 Show
 Class "Currency"
 BaseType "Vaal Orb"
@@ -3504,13 +3618,11 @@ Class "Currency"
 BaseType "Regal Orb" "Chance Shard" "Perfect Orb of Transmutation"
 style-orb-regal
 
-# filter-norarity
 Show
 Class "Currency"
 BaseType "Lesser Jeweller's Orb" "Artificer's Orb"
 style-orb-regal
 
-# filter-norarity
 Show
 Class "Currency"
 BaseType "Glassblower's Bauble"
@@ -3518,7 +3630,29 @@ style-orb-regal-mini
 
 #   [1904] currency Tier C: quality things, blue orbs, shards, etc
 
-# filter-norarity
+# filter-rarity
+Hide
+Class "Currency"
+BaseType "Arcanist's Etcher"
+style-orb-cheap
+# SetFontSize 40 # this item has become practically useless. Hopefully it will be fixed and I'll return that line
+AreaLevel >= 75
+
+# filter-rarity
+Hide
+Class "Currency"
+BaseType "Greater Orb of Transmutation"
+style-orb-cheap
+PlayAlertSound 2 150
+AreaLevel >= 75
+
+# filter-rarity
+Hide
+Class "Currency"
+BaseType "Blacksmith's Whetstone" "Orb of Augmentation" "Orb of Transmutation" "Regal Shard" "Alchemy Shard"
+style-orb-cheap
+AreaLevel >= 75
+
 Show
 Class "Currency"
 BaseType "Arcanist's Etcher"
@@ -3530,14 +3664,12 @@ Class "Currency"
 BaseType "Armourer's Scrap"
 style-orb-cheap-large
 
-# filter-norarity
 Show
 Class "Currency"
 BaseType "Greater Orb of Transmutation"
 style-orb-cheap
 PlayAlertSound 2 150
 
-# filter-norarity
 Show
 Class "Currency"
 BaseType "Blacksmith's Whetstone" "Orb of Augmentation" "Orb of Transmutation" "Regal Shard" "Alchemy Shard"
@@ -3743,12 +3875,8 @@ SetFontSize 40
 Show
 Class "Currency"
 BaseType "Essence of the Abyss"
-SetTextColor 169 208 56
-SetBorderColor 255 207 132
-SetBackgroundColor 16 82 16 200
-PlayAlertSound 2 300
+style-abyss-craft
 PlayEffect White
-MinimapIcon 1 White Circle
 SetFontSize 40
 
 Show
@@ -4180,42 +4308,84 @@ PlayEffect White
 #   [2201] flasks:
 Hide
 Class "Flask"
-BaseType "Life" "Mana"
+BaseType "Life"
 Rarity Normal
 DropLevel <= 50
 AreaLevel >= 60
 
 Hide
 Class "Flask"
-BaseType "Life" "Mana"
+BaseType "Mana"
+Rarity Normal
+DropLevel <= 50
+AreaLevel >= 60
+
+Hide
+Class "Flask"
+BaseType "Life"
 Rarity Normal
 DropLevel <= 40
 AreaLevel >= 50
 
 Hide
 Class "Flask"
-BaseType "Life" "Mana"
+BaseType "Mana"
+Rarity Normal
+DropLevel <= 40
+AreaLevel >= 50
+
+Hide
+Class "Flask"
+BaseType "Life"
 Rarity Normal
 DropLevel <= 30
 AreaLevel >= 40
 
 Hide
 Class "Flask"
-BaseType "Life" "Mana"
+BaseType "Mana"
+Rarity Normal
+DropLevel <= 30
+AreaLevel >= 40
+
+Hide
+Class "Flask"
+BaseType "Life"
 Rarity Normal
 DropLevel <= 23
 AreaLevel >= 30
 
 Hide
 Class "Flask"
-BaseType "Life" "Mana"
+BaseType "Mana"
+Rarity Normal
+DropLevel <= 23
+AreaLevel >= 30
+
+Hide
+Class "Flask"
+BaseType "Life"
 Rarity Normal
 DropLevel <= 16
 AreaLevel >= 23
 
 Hide
 Class "Flask"
-BaseType "Life" "Mana"
+BaseType "Mana"
+Rarity Normal
+DropLevel <= 16
+AreaLevel >= 23
+
+Hide
+Class "Flask"
+BaseType "Life"
+Rarity Normal
+DropLevel <= 10
+AreaLevel >= 16
+
+Hide
+Class "Flask"
+BaseType "Mana"
 Rarity Normal
 DropLevel <= 10
 AreaLevel >= 16
@@ -4254,6 +4424,10 @@ Rarity <= Rare
 Hide
 BaseType "Circlet" "Tiara" "Crown" "Mask" "Visage" "Greathelm" "Cap" "Hood" "Helm" "Raiment" "Robe" "Mantle" "Vestments" "Jacket" "Garb" "Regalia" "Cuirass" "Plate" "Coat" "Vest" "Armour" "Mail" "Garment" "Sandals" "Slippers" "Leggings" "Shoes" "Cuisses" "Greaves" "Boots" "Sabatons" "Crest Shield" "Tower Shield" "Buckler" "Targe" "Gloves" "Cuffs" "Wraps" "Manchettes" "Mitts" "Bracers" "Gauntlets"
 Rarity <= Rare
+
+# filter-rarity
+Hide
+Rarity Unique
 
 # items without any other rules:
 Show
