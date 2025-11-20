@@ -783,13 +783,13 @@ style-bg-translucent
 AreaLevel >= 75
 AreaLevel <= 78
 
-# Hide # todo its bugged; add link to forum
+# Hide # todo bugged; add link to forum
 # Class "Wand" "Focus" # "Staff"
 # Rarity <= Rare
 # DropLevel < 61
 # AreaLevel >= 71
 
-# Hide # todo its bugged; add link to forum
+# Hide
 # Class "Wand" "Focus" # "Staff"
 # Rarity <= Rare
 # DropLevel < 65
@@ -831,13 +831,14 @@ Class "Sceptre" "Shield"
 Rarity Rare
 AreaLevel >= 75
 
-# filter-ssf-mage
+# filter-ssf-mage filter-norarity
 Show
 Class "Wand" # "Staff"
 Rarity <= Rare
 style-bg-translucent
 AreaLevel < 78
 
+# filter-norarity
 Show
 Class "Focus"
 Rarity <= Rare
@@ -1262,6 +1263,19 @@ Show
 BaseType "Chiming Staff"
 AreaLevel >= 71
 
+# filter-norarity filter-mage
+Show
+Class "Wands"
+Rarity <= Rare
+AreaLevel >= 71
+
+# filter-ssf-summoner filter-norarity
+Show
+Class "Staff"
+style-bg-translucent
+Rarity Rare
+AreaLevel <= 70
+
 # rules for ex advanced bases:
 Hide
 Rarity <= Magic
@@ -1653,14 +1667,13 @@ Hide
 Class "Quarter" "Bow" "Crossbow" "Two Hand Axe" "Two Hand Mace" "Two Hand Sword" "Spear" "Trap"
 Rarity Normal
 
-# filter-summoner filter-norarity
+# filter-ssf-summoner filter-norarity
 Show
 BaseType "Sceptre"
 Rarity Normal
 style-bg-translucent
-AreaLevel <= 40
 
-# filter-summoner filter-norarity
+# filter-ssf-summoner filter-norarity
 Show
 BaseType "Sceptre"
 Rarity Magic Rare
@@ -1673,11 +1686,38 @@ Rarity Normal
 style-bg-translucent
 AreaLevel <= 40
 
+# filter-ssf-mage filter-norarity
+Show
+Class "Staff"
+style-bg-translucent
+Rarity Rare
+
 # filter-mage filter-norarity
 Show
-Class "Wand" "Focus" "Staff"
+Class "Wand" "Focus"
 style-bg-translucent
 Rarity Magic Rare
+
+# filter-ssf-summoner filter-norarity
+Show
+Class "Staff"
+style-bg-translucent
+Rarity Magic
+AreaLevel <= 64
+
+# filter-ssf-summoner filter-norarity
+Show
+Class "Staff"
+style-bg-translucent
+Rarity Normal
+AreaLevel <= 20
+
+# filter-ssf-mage filter-norarity
+Show
+Class "Staff"
+style-bg-translucent
+Rarity Normal
+AreaLevel <= 40
 
 Hide
 Class "Shields"
@@ -2880,6 +2920,19 @@ PlayEffect Orange
 SetFontSize 40
 MinimapIcon 1 Purple Square
 
+# filter-rarity
+Hide
+Class "Trial Coin" "Inscribed Ultimatum"
+BaseType "Ultimatum" "Barya"
+Rarity < Magic
+ItemLevel <= 82
+SetTextColor 255 207 255
+SetBorderColor 255 207 255
+SetBackgroundColor 65 20 80 200
+PlayAlertSound 2 200
+PlayEffect White
+MinimapIcon 1 Purple Square
+
 # filter-nossf
 Hide
 Class "Trial Coin"
@@ -3556,6 +3609,13 @@ style-bg-translucent
 PlayAlertSound 3 300
 MinimapIcon 2 Brown Star
 PlayEffect Orange
+
+# filter-rarity
+Hide
+Class "Charm"
+Rarity < Rare
+Quality < 1
+style-charm
 
 # filter-norarity
 Show

@@ -95,7 +95,7 @@ If you want to customize one of my lootfilters, create a separate import file so
 > An example of how to navigate the table:
 > there is an armor item that has "Greathelm" in its name, and depending on rarity of the item, different rules are applied to show/hide it:
 > <br>⚪ **normal** Greathelm: will be hidden at any area level _(**1-99**)_;
-> <br>🔵 **magic** Greathelm: will only show on area levels **1-70**;
+> <br>🔵 **magic** Greathelm: will only show on area levels **1-64**;
 > <br>🟡 **rare** Greathelm: will only show on area levels **1-74**;
 > <br>🟠 **unique** Greathelm: will be shown in any area level _(**1-99**)_.
 
