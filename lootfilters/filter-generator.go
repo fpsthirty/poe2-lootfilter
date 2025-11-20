@@ -645,12 +645,20 @@ func filterBlocks(blocks [][]string, choice string) [][]string {
 		
 		// Check if first line starts with "#"
 		if strings.HasPrefix(trimmedFirstLine, "#") {
-			// Look for tags to exclude
+			// Split line into words to find exact tag matches
+			words := strings.Fields(trimmedFirstLine)
+			
+			// Look for tags to exclude (exact match in words)
 			shouldExclude := false
 			for _, tag := range tagsToExclude {
-				if strings.Contains(trimmedFirstLine, tag) {
-					shouldExclude = true
-					debugPrintfCyan("Excluded block with tag '%s': %s\n", tag, getFirstLinePreview(trimmedFirstLine))
+				for _, word := range words {
+					if word == tag {
+						shouldExclude = true
+						debugPrintfCyan("Excluded block with exact tag match '%s': %s\n", tag, getFirstLinePreview(trimmedFirstLine))
+						break
+					}
+				}
+				if shouldExclude {
 					break
 				}
 			}

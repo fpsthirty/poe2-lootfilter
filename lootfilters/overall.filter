@@ -202,7 +202,7 @@ PlayAlertSound 10 200
 # filter-nossf filter-norarity
 Show
 UnidentifiedItemTier >= 4
-Class "Claws" "Daggers" "Flails" "One Hand Axes" "One Hand Maces" "One Hand Swords" "Sceptres" "Wands" "Staff" "Spears" "Quivers" "Foci" "Body" "Helmets" "Boots" "Gloves" "Shields" "Bucklers"
+Class "Claws" "Daggers" "Flails" "One Hand Axes" "One Hand Maces" "One Hand Swords" "Sceptres" "Wands" "Staff" "Spears" "Quivers" "Focus" "Body" "Helmets" "Boots" "Gloves" "Shields" "Bucklers"
 Rarity <= Rare
 DropLevel >= 75
 style-bg-translucent
@@ -210,7 +210,7 @@ style-bg-translucent
 # filter-nossf filter-norarity
 Show
 UnidentifiedItemTier >= 4
-Class "Claws" "Daggers" "Flails" "One Hand Axes" "One Hand Maces" "One Hand Swords" "Sceptres" "Wands" "Staff" "Spears" "Quivers" "Foci" "Body" "Helmets" "Boots" "Gloves" "Shields" "Bucklers"
+Class "Claws" "Daggers" "Flails" "One Hand Axes" "One Hand Maces" "One Hand Swords" "Sceptres" "Wands" "Staff" "Spears" "Quivers" "Focus" "Body" "Helmets" "Boots" "Gloves" "Shields" "Bucklers"
 Rarity <= Rare
 DropLevel < 75
 style-bg-translucent
@@ -244,7 +244,7 @@ style-orb-div-purple
 #   [0302] extra socket / quality:
 # socket and quality:
 Show
-Class == "Claws" "Daggers" "Flails" "One Hand Axes" "One Hand Maces" "One Hand Swords" "Sceptres" "Spears" "Wands" "Quivers" "Foci" "Helmets" "Boots" "Gloves" "Shields" "Bucklers"
+Class == "Claws" "Daggers" "Flails" "One Hand Axes" "One Hand Maces" "One Hand Swords" "Sceptres" "Spears" "Wands" "Quivers" "Focus" "Helmets" "Boots" "Gloves" "Shields" "Bucklers"
 Corrupted False
 Sockets >= 2
 Quality >= 21
@@ -313,7 +313,7 @@ style-eq-tier-a
 
 # other
 Show
-Class == "Claws" "Daggers" "Flails" "One Hand Axes" "One Hand Maces" "One Hand Swords" "Sceptres" "Spears" "Wands" "Quivers" "Foci" "Helmets" "Boots" "Gloves" "Shields" "Bucklers"
+Class == "Claws" "Daggers" "Flails" "One Hand Axes" "One Hand Maces" "One Hand Swords" "Sceptres" "Spears" "Wands" "Quivers" "Focus" "Helmets" "Boots" "Gloves" "Shields" "Bucklers"
 Corrupted False
 Sockets >= 2
 Rarity <= Rare
@@ -336,7 +336,7 @@ PlayAlertSound 10 200
 SetFontSize 40
 
 Show
-Class "Body" "Helmet" "Boots" "Gloves" "Shields" "Focus" "Foci" "Wands" "Staff" "Sceptres"
+Class "Body" "Helmet" "Boots" "Gloves" "Shields" "Focus" "Wands" "Staff" "Sceptres"
 Quality >= 21
 Rarity <= Rare
 style-eq-quality
@@ -412,7 +412,7 @@ Rarity Normal
 ItemLevel >= 16
 style-base-craft-unique
 
-# filter-nossf filter-norarity
+# filter-mage filter-norarity
 Show
 BaseType "Desolate Crossbow" # The Last Lament / Sacrifice 300 Life to not consume the last bolt when firing
 Rarity Normal
@@ -581,18 +581,26 @@ DropLevel >= 75
 Rarity <= Rare
 style-eq-endgame
 
+# filter-norarity
+Show
+Class "Focus"
+ItemLevel >= 82
+Rarity <= Rare
+DropLevel > 65
+style-eq-endgame
+
 # filter-summoner
 Show
 BaseType "Crest Shield"
 ItemLevel >= 82
-DropLevel >= 75
+DropLevel >= 70
 Rarity <= Rare
 style-eq-endgame
 
 Show
-BaseType "Sandals"
+BaseType "Sandals" "Slippers"
 ItemLevel >= 82
-DropLevel >= 75
+DropLevel >= 70
 Rarity <= Rare
 style-eq-endgame
 
@@ -615,8 +623,8 @@ style-eq-endgame
 Show
 Class "Boots"
 ItemLevel >= 82
+DropLevel >= 70
 Rarity <= Rare
-DropLevel > 65
 style-eq-endgame
 
 #   [0503] jewellery:
@@ -718,6 +726,7 @@ style-charm-quality
 Hide
 Class "Body" "Helmet" "Boots" "Gloves" "Shields" "Focus"
 Quality >= 7
+ItemLevel < 81
 Rarity <= Rare
 style-eq-quality
 MinimapIcon 1 Grey Square
@@ -757,14 +766,6 @@ ItemLevel >= 81
 Rarity <= Rare
 style-eq-endgame
 
-# filter-mage
-Show
-Class "Focus"
-ItemLevel >= 82
-Rarity <= Rare
-DropLevel > 65
-style-eq-endgame
-
 # filter-norarity
 Show
 Quality >= 1
@@ -774,37 +775,57 @@ AreaLevel < 75
 style-eq-quality
 PlayAlertSound 2 100
 
-Hide
-Class "Wand" "Focus" # "Staff"
+# filter-mage
+Show
+Class "Wands"
 Rarity <= Rare
-DropLevel < 61
-AreaLevel >= 71
+style-bg-translucent
+AreaLevel >= 75
+AreaLevel <= 78
+
+# Hide # todo its bugged; add link to forum
+# Class "Wand" "Focus" # "Staff"
+# Rarity <= Rare
+# DropLevel < 61
+# AreaLevel >= 71
+
+# Hide # todo its bugged; add link to forum
+# Class "Wand" "Focus" # "Staff"
+# Rarity <= Rare
+# DropLevel < 65
+# AreaLevel >= 75
 
 Hide
-Class "Wand" "Focus" # "Staff"
+Class "Focus"
 Rarity <= Rare
 DropLevel < 65
 AreaLevel >= 75
 
-# filter-mage
+# filter-norarity
+Show
+Class "Focus"
+Rarity <= Rare
+style-bg-translucent
+
+# filter-ssf-mage
 Hide
 Class "Sceptre" "Shield"
 Rarity Normal
 AreaLevel > 40
 
-# filter-mage
+# filter-ssf-mage
 Hide
 Class "Sceptre"
 Rarity Magic
 AreaLevel >= 65
 
-# filter-mage
+# filter-ssf-mage
 Hide
 Class "Shield"
 Rarity Magic
 AreaLevel >= 71
 
-# filter-mage
+# filter-ssf-mage
 Hide
 Class "Sceptre" "Shield"
 Rarity Rare
@@ -817,7 +838,6 @@ Rarity <= Rare
 style-bg-translucent
 AreaLevel < 78
 
-# filter-ssf-mage
 Show
 Class "Focus"
 Rarity <= Rare
@@ -862,16 +882,23 @@ Class "Body"
 Rarity <= Rare
 AreaLevel > 78
 
+Hide
+Class "Sceptre"
+Rarity <= Rare
+Quality < 1
+ItemLevel < 81
+AreaLevel > 78
+
 # filter-nossf
 Hide
-Class "Helmet" "Shields" "Focus"
+Class "Helmet" "Focus"
 DropLevel < 75
 Rarity <= Rare
 AreaLevel > 78
 
 # filter-nossf
 Hide
-Class "Boots" "Gloves"
+Class "Boots" "Gloves" "Shields"
 DropLevel < 70
 Rarity <= Rare
 AreaLevel > 78
@@ -992,6 +1019,32 @@ BaseType "Chiming Staff"
 style-bg-translucent
 AreaLevel >= 75
 
+# filter-ssf-summoner filter-norarity
+Show
+Class "Sceptre"
+Rarity <= Rare
+style-bg-translucent
+AreaLevel >= 75
+AreaLevel <= 78
+
+# filter-mage filter-norarity
+Show
+Class "Wands"
+Rarity <= Rare
+Quality < 1
+style-bg-translucent
+AreaLevel >= 75
+AreaLevel <= 78
+
+# filter-norarity
+Show
+Class "Focus"
+Rarity <= Rare
+Quality < 1
+style-bg-translucent
+AreaLevel >= 75
+AreaLevel <= 78
+
 # rules for ex advanced bases and a few more:
 Hide
 Rarity <= Rare
@@ -1013,8 +1066,10 @@ DropLevel <= 64
 AreaLevel >= 75
 
 #caster weapons/offhands:
+
+# filter-ssf-summoner
 Hide
-Class "Staff" "Wand" "Focus"
+Class "Staff" "Wand"
 Rarity <= Rare
 AreaLevel >= 75
 
@@ -1426,8 +1481,10 @@ Rarity <= Magic
 AreaLevel >= 65
 
 #   [1101] caster weapons/offhands:
+
+# filter-ssf-summoner
 Hide
-Class "Staff" "Wand" "Focus"
+Class "Staff" "Wand"
 Rarity <= Magic
 AreaLevel >= 65
 
@@ -2165,7 +2222,7 @@ PlayEffect Brown
 # uniques with extra socket
 Show
 Rarity == Unique
-Class == "Claws" "Daggers" "Flails" "One Hand Axes" "One Hand Maces" "One Hand Swords" "Sceptres" "Spears" "Wands" "Quivers" "Foci" "Helmets" "Boots" "Gloves" "Shields" "Bucklers"
+Class == "Claws" "Daggers" "Flails" "One Hand Axes" "One Hand Maces" "One Hand Swords" "Sceptres" "Spears" "Wands" "Quivers" "Focus" "Helmets" "Boots" "Gloves" "Shields" "Bucklers"
 Corrupted False
 Sockets >= 2
 SetFontSize 40
