@@ -589,7 +589,7 @@ Rarity <= Rare
 DropLevel > 65
 style-eq-endgame
 
-# filter-summoner
+# filter-summoner filter-norarity
 Show
 BaseType "Crest Shield"
 ItemLevel >= 82
@@ -775,7 +775,7 @@ AreaLevel < 75
 style-eq-quality
 PlayAlertSound 2 100
 
-# filter-mage
+# filter-ssf-mage filter-norarity
 Show
 Class "Wands"
 Rarity <= Rare
@@ -789,7 +789,7 @@ AreaLevel <= 78
 # DropLevel < 61
 # AreaLevel >= 71
 
-# Hide
+# Hide # todo bugged; add link to forum
 # Class "Wand" "Focus" # "Staff"
 # Rarity <= Rare
 # DropLevel < 65
@@ -1020,6 +1020,13 @@ BaseType "Chiming Staff"
 style-bg-translucent
 AreaLevel >= 75
 
+# filter-ssf-mage filter-norarity
+Show
+BaseType "Sceptre"
+Rarity Rare
+style-bg-translucent
+AreaLevel < 75
+
 # filter-ssf-summoner filter-norarity
 Show
 Class "Sceptre"
@@ -1028,7 +1035,7 @@ style-bg-translucent
 AreaLevel >= 75
 AreaLevel <= 78
 
-# filter-mage filter-norarity
+# filter-ssf-mage filter-norarity
 Show
 Class "Wands"
 Rarity <= Rare
@@ -1073,6 +1080,20 @@ Hide
 Class "Staff" "Wand"
 Rarity <= Rare
 AreaLevel >= 75
+
+# filter-ssf-summoner filter-norarity
+Hide
+Class "Wand"
+Rarity <= Rare
+style-bg-translucent
+AreaLevel >= 75
+
+# filter-ssf-summoner filter-norarity
+Show
+Class "Wand"
+Rarity Rare
+style-bg-translucent
+AreaLevel < 75
 
 #   [0902] waystones: additional rules for low waystones
 Hide
@@ -1263,13 +1284,13 @@ Show
 BaseType "Chiming Staff"
 AreaLevel >= 71
 
-# filter-norarity filter-mage
+# filter-norarity filter-ssf-mage
 Show
 Class "Wands"
 Rarity <= Rare
 AreaLevel >= 71
 
-# filter-ssf-summoner filter-norarity
+# filter-norarity
 Show
 Class "Staff"
 style-bg-translucent
@@ -1496,7 +1517,7 @@ AreaLevel >= 65
 
 #   [1101] caster weapons/offhands:
 
-# filter-ssf-summoner
+# filter-summoner
 Hide
 Class "Staff" "Wand"
 Rarity <= Magic
@@ -1667,11 +1688,20 @@ Hide
 Class "Quarter" "Bow" "Crossbow" "Two Hand Axe" "Two Hand Mace" "Two Hand Sword" "Spear" "Trap"
 Rarity Normal
 
-# filter-ssf-summoner filter-norarity
+
+# filter-ssf-mage filter-norarity
+Show
+BaseType "Sceptre"
+Rarity Magic Rare
+style-bg-translucent
+AreaLevel <= 64
+
+# filter-ssf-mage filter-norarity
 Show
 BaseType "Sceptre"
 Rarity Normal
 style-bg-translucent
+AreaLevel <= 40
 
 # filter-ssf-summoner filter-norarity
 Show
@@ -1679,18 +1709,31 @@ BaseType "Sceptre"
 Rarity Magic Rare
 style-bg-translucent
 
-# filter-mage filter-norarity
+# filter-ssf-summoner filter-norarity
 Show
-Class "Wand" "Focus" "Staff"
+BaseType "Sceptre"
 Rarity Normal
 style-bg-translucent
-AreaLevel <= 40
+
+# filter-norarity
+Show
+Class "Focus"
+Rarity Normal
+style-bg-translucent
 
 # filter-ssf-mage filter-norarity
 Show
 Class "Staff"
 style-bg-translucent
 Rarity Rare
+AreaLevel <= 64
+
+# filter-norarity
+Show
+Class "Staff"
+style-bg-translucent
+Rarity Magic
+AreaLevel <= 64
 
 # filter-mage filter-norarity
 Show
@@ -1700,10 +1743,17 @@ Rarity Magic Rare
 
 # filter-ssf-summoner filter-norarity
 Show
-Class "Staff"
-style-bg-translucent
+Class "Wand"
 Rarity Magic
+style-bg-translucent
 AreaLevel <= 64
+
+# filter-ssf-summoner filter-norarity
+Show
+Class "Wand"
+Rarity Normal
+style-bg-translucent
+AreaLevel <= 40
 
 # filter-ssf-summoner filter-norarity
 Show
@@ -1727,6 +1777,13 @@ Rarity Normal
 Hide
 Class "Buckler"
 Rarity Normal
+
+# filter-ssf-mage filter-norarity
+Show
+BaseType "Crest Shield"
+style-bg-translucent
+Rarity Normal
+AreaLevel <= 40
 
 # filter-summoner filter-norarity
 Show
@@ -4427,6 +4484,7 @@ Hide
 Class "Flask"
 BaseType "Life"
 Rarity Normal
+SetBackgroundColor 130 50 50 200
 DropLevel <= 50
 AreaLevel >= 60
 
@@ -4434,6 +4492,7 @@ Hide
 Class "Flask"
 BaseType "Mana"
 Rarity Normal
+SetBackgroundColor 50 50 130 200
 DropLevel <= 50
 AreaLevel >= 60
 
@@ -4441,6 +4500,7 @@ Hide
 Class "Flask"
 BaseType "Life"
 Rarity Normal
+SetBackgroundColor 130 50 50 200
 DropLevel <= 40
 AreaLevel >= 50
 
@@ -4448,6 +4508,7 @@ Hide
 Class "Flask"
 BaseType "Mana"
 Rarity Normal
+SetBackgroundColor 50 50 130 200
 DropLevel <= 40
 AreaLevel >= 50
 
@@ -4455,6 +4516,7 @@ Hide
 Class "Flask"
 BaseType "Life"
 Rarity Normal
+SetBackgroundColor 130 50 50 200
 DropLevel <= 30
 AreaLevel >= 40
 
@@ -4462,6 +4524,7 @@ Hide
 Class "Flask"
 BaseType "Mana"
 Rarity Normal
+SetBackgroundColor 50 50 130 200
 DropLevel <= 30
 AreaLevel >= 40
 
@@ -4469,6 +4532,7 @@ Hide
 Class "Flask"
 BaseType "Life"
 Rarity Normal
+SetBackgroundColor 130 50 50 200
 DropLevel <= 23
 AreaLevel >= 30
 
@@ -4476,6 +4540,7 @@ Hide
 Class "Flask"
 BaseType "Mana"
 Rarity Normal
+SetBackgroundColor 50 50 130 200
 DropLevel <= 23
 AreaLevel >= 30
 
@@ -4483,6 +4548,7 @@ Hide
 Class "Flask"
 BaseType "Life"
 Rarity Normal
+SetBackgroundColor 130 50 50 200
 DropLevel <= 16
 AreaLevel >= 23
 
@@ -4490,6 +4556,7 @@ Hide
 Class "Flask"
 BaseType "Mana"
 Rarity Normal
+SetBackgroundColor 50 50 130 200
 DropLevel <= 16
 AreaLevel >= 23
 
@@ -4497,6 +4564,7 @@ Hide
 Class "Flask"
 BaseType "Life"
 Rarity Normal
+SetBackgroundColor 130 50 50 200
 DropLevel <= 10
 AreaLevel >= 16
 
@@ -4504,6 +4572,7 @@ Hide
 Class "Flask"
 BaseType "Mana"
 Rarity Normal
+SetBackgroundColor 50 50 130 200
 DropLevel <= 10
 AreaLevel >= 16
 
