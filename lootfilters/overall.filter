@@ -759,13 +759,6 @@ Rarity <= Rare
 style-eq-quality
 PlayAlertSound 10 100
 
-# filter-mage
-Show
-Class "Wand"
-ItemLevel >= 81
-Rarity <= Rare
-style-eq-endgame
-
 # filter-norarity
 Show
 Quality >= 1
@@ -775,6 +768,20 @@ AreaLevel < 75
 style-eq-quality
 PlayAlertSound 2 100
 
+Hide
+Class "Wands"
+Rarity <= Rare
+style-bg-translucent
+ItemLevel < 81
+AreaLevel >= 78
+
+# filter-mage
+Show
+Class "Wand"
+ItemLevel >= 81
+Rarity <= Rare
+style-eq-endgame
+
 # filter-ssf-mage filter-norarity
 Show
 Class "Wands"
@@ -783,13 +790,13 @@ style-bg-translucent
 AreaLevel >= 75
 AreaLevel <= 78
 
-# Hide # todo bugged; add link to forum
+# Hide # todo bug report: "rules with "DropLevel < 17" and lower mistakenly affect Wands / Staves with reqLevel 70+" https://www.pathofexile.com/forum/view-thread/3880752
 # Class "Wand" "Focus" # "Staff"
 # Rarity <= Rare
 # DropLevel < 61
 # AreaLevel >= 71
 
-# Hide # todo bugged; add link to forum
+# Hide # todo bug report: "rules with "DropLevel < 17" and lower mistakenly affect Wands / Staves with reqLevel 70+" https://www.pathofexile.com/forum/view-thread/3880752
 # Class "Wand" "Focus" # "Staff"
 # Rarity <= Rare
 # DropLevel < 65
