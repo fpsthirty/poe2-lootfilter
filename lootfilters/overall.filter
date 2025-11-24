@@ -571,6 +571,14 @@ ItemLevel >= 81
 Rarity <= Rare
 style-eq-endgame
 
+# filter-mage
+Show
+Class "Staff"
+BaseType "Reaping Staff"
+ItemLevel >= 81
+Rarity <= Rare
+style-eq-endgame
+
 #   [0502] armor pieces:
 
 # filter-norarity
