@@ -237,11 +237,28 @@ AreaLevel <= 78
 #--------------------------
 
 #   [0301] event-specific things (speedruns etc):
+
 Show
 BaseType "Golden Mantle" "Golden Bracers" "Golden Caligae" "Golden Wreath" "Golden Visage" "Golden Flame" "Golden Shield"
 style-orb-div-purple
 
 #   [0302] extra socket / quality:
+# tier A uniques with inner extra socket:
+
+Show
+Rarity Unique
+Class "Body"
+BaseType "Grand Regalia" # Morior Invictus
+Sockets >= 4
+style-uniq-tier-a
+
+Show
+Rarity Unique
+Class "Shield"
+BaseType "Omen Crest Shield" # Mahuxotl's Machination
+Sockets >= 2
+style-uniq-tier-a
+
 # socket and quality:
 Show
 Class == "Claws" "Daggers" "Flails" "One Hand Axes" "One Hand Maces" "One Hand Swords" "Sceptres" "Spears" "Wands" "Quivers" "Focus" "Helmets" "Boots" "Gloves" "Shields" "Bucklers"
