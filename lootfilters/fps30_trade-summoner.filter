@@ -1201,7 +1201,7 @@ Rarity <= Rare
 AreaLevel > 78
 
 Show
-Class "Augments"
+Class "Augment"
 BaseType "Greater Body Rune" "Greater Glacial Rune" "Greater Inspiration Rune" "Greater Iron Rune" "Greater Storm Rune"
 DropLevel <= 62
 AreaLevel > 78
@@ -1212,7 +1212,7 @@ PlayEffect Cyan Temp
 MinimapIcon 2 Cyan Circle
 
 Hide
-Class "Augments"
+Class "Augment"
 BaseType "Rune"
 DropLevel <= 62
 AreaLevel > 78
@@ -1257,7 +1257,7 @@ MinimapIcon 1 Orange Circle
 PlayEffect White
 
 Hide
-Class == "Augments"
+Class == "Augment"
 BaseType "Lesser" # Lesser {runeName} Rune
 AreaLevel > 78
 SetTextColor 0 240 190
@@ -4184,7 +4184,7 @@ MinimapIcon 1 White Triangle
 #   [1801] soul cores
 # S-Tier:
 Show
-Class == "Augments"
+Class == "Augment"
 BaseType == "Soul Core of Jiquani"
 SetTextColor 255 0 0 255
 SetBorderColor 255 0 0 255
@@ -4196,7 +4196,7 @@ SetFontSize 45
 
 # A-Tier:
 Show
-Class == "Augments"
+Class == "Augment"
 BaseType == "Opiloti's Soul Core of Assault" "Tzamoto's Soul Core of Ferocity" "Xopec's Soul Core of Power" "Soul Core of Ticaba" "Guatelitzi's Soul Core of Endurance" "Estazunti's Soul Core of Convalescence" "Tacati's Soul Core of Affliction" "Xipocado's Soul Core of Dominion" "Soul Core of Tacati" "Soul Core of Quipolatl" "Soul Core of Azcapa"
 SetTextColor 255 255 255 255
 SetBorderColor 255 255 255 255
@@ -4207,7 +4207,7 @@ MinimapIcon 1 Orange Circle
 SetFontSize 40
 
 Show
-Class == "Augments"
+Class == "Augment"
 BaseType "Soul Core"
 SetTextColor 0 240 190
 SetBorderColor 0 240 190
@@ -4375,7 +4375,7 @@ PlayEffect Cyan
 #   [1804] any runes
 # S-Tier:
 Show
-Class "Augments"
+Class "Augment"
 BaseType "Countess Seske's Rune of Archery" "Farrul's Rune of the Chase" "Hedgewitch Assandra's Rune of Wisdom"
 SetTextColor 255 0 0 255
 SetBorderColor 255 0 0 255
@@ -4386,7 +4386,7 @@ MinimapIcon 0 Purple Star
 SetFontSize 45
 
 Show
-Class "Augments"
+Class "Augment"
 BaseType "The Greatwolf's Rune of Willpower"
 SetTextColor 255 0 0 255
 SetBorderColor 255 0 0 255
@@ -4398,7 +4398,7 @@ SetFontSize 45
 
 # A-tier:
 Show
-Class "Augments"
+Class "Augment"
 BaseType "Courtesan Mannan's Rune of Cruelty" "Saqawal's Rune of the Sky" "Thane Girt's Rune of Wildness" "Thane Leld's Rune of Spring" "Greater Rune of Tithing" "Saqawal's Rune of Memory"
 SetTextColor 255 0 0 255
 SetBorderColor 255 0 0 255
@@ -4409,7 +4409,7 @@ MinimapIcon 0 Red Star
 SetFontSize 45
 
 Show
-Class "Augments"
+Class "Augment"
 BaseType "Fenumus' Rune of Draining" "Thane Grannell's Rune of Mastery" "Farrul's Rune of Grace"
 SetTextColor 255 255 255 255
 SetBorderColor 255 255 255 255
@@ -4421,7 +4421,7 @@ SetFontSize 40
 
 # any other runes:
 Show
-Class "Augments"
+Class "Augment"
 BaseType "Desert Rune" # Fire Resistance
 AreaLevel <= 60
 PlayEffect Red Temp
@@ -4431,7 +4431,7 @@ SetBackgroundColor 0 0 0 210
 MinimapIcon 2 Cyan Circle
 
 Show
-Class "Augments"
+Class "Augment"
 BaseType "Glacial Rune" # Cold Resistance
 AreaLevel <= 60
 PlayEffect Blue Temp
@@ -4441,7 +4441,7 @@ SetBackgroundColor 0 0 0 210
 MinimapIcon 2 Cyan Circle
 
 Show
-Class "Augments"
+Class "Augment"
 BaseType "Storm Rune" # Lightning Resistance
 AreaLevel <= 60
 PlayEffect Yellow Temp
@@ -4451,7 +4451,7 @@ SetBackgroundColor 0 0 0 210
 MinimapIcon 2 Cyan Circle
 
 Show
-Class "Augments"
+Class "Augment"
 BaseType "Greater Iron Rune"
 SetTextColor 0 240 190
 SetBackgroundColor 0 0 0 210
@@ -4461,7 +4461,7 @@ MinimapIcon 2 Cyan Circle
 SetFontSize 40
 
 Show
-Class "Augments"
+Class "Augment"
 BaseType "Rune"
 DropLevel >= 65
 SetTextColor 0 240 190
@@ -4473,7 +4473,7 @@ SetFontSize 40
 
 # filter-norarity
 Show
-Class "Augments"
+Class "Augment"
 BaseType "Greater" # Greater Rune {runeName} / Greater {runeName} Rune
 SetTextColor 0 240 190
 SetBackgroundColor 0 0 0 210
@@ -4483,13 +4483,13 @@ MinimapIcon 2 Cyan Circle
 
 # filter-norarity
 Show
-Class "Augments"
+Class "Augment"
 BaseType "Lesser" # Lesser {runeName} Rune
 SetTextColor 0 240 190
 SetBackgroundColor 0 0 0 210
 
 Show
-Class "Augments"
+Class "Augment"
 BaseType "Rune"
 SetTextColor 0 240 190
 SetBackgroundColor 0 0 0 210
@@ -4520,7 +4520,7 @@ PlayEffect Cyan Temp
 #   [1806] idols (ex-talismans)
 # S-Tier
 Show
-Class "Augments"
+Class "Augment"
 BaseType "Idol of Ralakesh" "Idol of Sirrius"
 SetTextColor 255 0 0 255
 SetBorderColor 255 0 0 255
@@ -4532,7 +4532,7 @@ SetFontSize 45
 
 # A-Tier
 Show
-Class "Augments"
+Class "Augment"
 BaseType "Primate Idol" "Snake Idol" "Idol of Grold" "Idol of Thruldana" "Fox Idol" "Rabbit Idol" "Idol of Egrin"
 SetTextColor 255 255 255 255
 SetBorderColor 255 255 255 255
@@ -4544,7 +4544,7 @@ SetFontSize 40
 
 # any other idols
 Show
-Class "Augments"
+Class "Augment"
 BaseType "Idol"
 SetTextColor 104 238 170
 SetBackgroundColor 0 0 0 210
@@ -4555,7 +4555,7 @@ SetFontSize 40
 
 #   [1807] "Abyss" league: gazes
 Show
-Class "Augments"
+Class "Augment"
 BaseType "Amanamu's Gaze"
 SetTextColor 255 0 0 255
 SetBorderColor 255 0 0 255
@@ -4566,7 +4566,7 @@ MinimapIcon 0 Purple Star
 SetFontSize 45
 
 Show
-Class "Augments"
+Class "Augment"
 BaseType "Tecrod's Gaze"
 SetTextColor 255 0 0 255
 SetBorderColor 255 0 0 255
@@ -4577,7 +4577,7 @@ MinimapIcon 0 Red Star
 SetFontSize 45
 
 Show
-Class "Augments"
+Class "Augment"
 BaseType "Kurgal's Gaze" "Ulaman's Gaze"
 SetTextColor 255 255 255 255
 SetBorderColor 255 255 255 255
@@ -4588,7 +4588,7 @@ MinimapIcon 1 Orange Circle
 SetFontSize 40
 
 Show
-Class "Augments"
+Class "Augment"
 BaseType "Gaze"
 SetTextColor 47 191 78
 SetBackgroundColor 43 61 30 200
@@ -4599,7 +4599,7 @@ SetFontSize 40
 
 #   [1808] "Fate of the Vaal" league: thesis
 Show
-Class "Augments"
+Class "Augment"
 BaseType "Thesis"
 SetTextColor 255 255 255
 SetBackgroundColor 124 25 22 200

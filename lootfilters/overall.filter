@@ -962,14 +962,14 @@ Rarity <= Rare
 AreaLevel > 78
 
 Show
-Class "Augments"
+Class "Augment"
 BaseType "Greater Body Rune" "Greater Glacial Rune" "Greater Inspiration Rune" "Greater Iron Rune" "Greater Storm Rune"
 DropLevel <= 62
 AreaLevel > 78
 style-rune
 
 Hide
-Class "Augments"
+Class "Augment"
 BaseType "Rune"
 DropLevel <= 62
 AreaLevel > 78
@@ -996,7 +996,7 @@ BaseType "Greater Jeweller's Orb" "Orb of Chance"
 style-orb-chance
 
 Hide
-Class == "Augments"
+Class == "Augment"
 BaseType "Lesser" # Lesser {runeName} Rune
 AreaLevel > 78
 style-rune
@@ -3494,18 +3494,18 @@ style-supportgem
 #   [1801] soul cores
 # S-Tier:
 Show
-Class == "Augments"
+Class == "Augment"
 BaseType == "Soul Core of Jiquani"
 style-orb-div
 
 # A-Tier:
 Show
-Class == "Augments"
+Class == "Augment"
 BaseType == "Opiloti's Soul Core of Assault" "Tzamoto's Soul Core of Ferocity" "Xopec's Soul Core of Power" "Soul Core of Ticaba" "Guatelitzi's Soul Core of Endurance" "Estazunti's Soul Core of Convalescence" "Tacati's Soul Core of Affliction" "Xipocado's Soul Core of Dominion" "Soul Core of Tacati" "Soul Core of Quipolatl" "Soul Core of Azcapa"
 style-orb-annul
 
 Show
-Class == "Augments"
+Class == "Augment"
 BaseType "Soul Core"
 style-soulcore
 
@@ -3643,29 +3643,29 @@ PlayEffect Cyan
 #   [1804] any runes
 # S-Tier:
 Show
-Class "Augments"
+Class "Augment"
 BaseType "Countess Seske's Rune of Archery" "Farrul's Rune of the Chase" "Hedgewitch Assandra's Rune of Wisdom"
 style-orb-div-purple
 
 Show
-Class "Augments"
+Class "Augment"
 BaseType "The Greatwolf's Rune of Willpower"
 style-orb-div
 
 # A-tier:
 Show
-Class "Augments"
+Class "Augment"
 BaseType "Courtesan Mannan's Rune of Cruelty" "Saqawal's Rune of the Sky" "Thane Girt's Rune of Wildness" "Thane Leld's Rune of Spring" "Greater Rune of Tithing" "Saqawal's Rune of Memory"
 style-orb-div
 
 Show
-Class "Augments"
+Class "Augment"
 BaseType "Fenumus' Rune of Draining" "Thane Grannell's Rune of Mastery" "Farrul's Rune of Grace"
 style-orb-annul
 
 # any other runes:
 Show
-Class "Augments"
+Class "Augment"
 BaseType "Desert Rune" # Fire Resistance
 AreaLevel <= 60
 PlayEffect Red Temp
@@ -3675,7 +3675,7 @@ style-bg-translucent
 MinimapIcon 2 Cyan Circle
 
 Show
-Class "Augments"
+Class "Augment"
 BaseType "Glacial Rune" # Cold Resistance
 AreaLevel <= 60
 PlayEffect Blue Temp
@@ -3685,7 +3685,7 @@ style-bg-translucent
 MinimapIcon 2 Cyan Circle
 
 Show
-Class "Augments"
+Class "Augment"
 BaseType "Storm Rune" # Lightning Resistance
 AreaLevel <= 60
 PlayEffect Yellow Temp
@@ -3695,31 +3695,31 @@ style-bg-translucent
 MinimapIcon 2 Cyan Circle
 
 Show
-Class "Augments"
+Class "Augment"
 BaseType "Greater Iron Rune"
 style-rune-large
 
 Show
-Class "Augments"
+Class "Augment"
 BaseType "Rune"
 DropLevel >= 65
 style-rune-large
 
 # filter-norarity
 Show
-Class "Augments"
+Class "Augment"
 BaseType "Greater" # Greater Rune {runeName} / Greater {runeName} Rune
 style-rune
 
 # filter-norarity
 Show
-Class "Augments"
+Class "Augment"
 BaseType "Lesser" # Lesser {runeName} Rune
 SetTextColor 0 240 190
 style-bg-translucent
 
 Show
-Class "Augments"
+Class "Augment"
 BaseType "Rune"
 style-rune
 
@@ -3751,46 +3751,46 @@ style-charm
 #   [1806] idols (ex-talismans)
 # S-Tier
 Show
-Class "Augments"
+Class "Augment"
 BaseType "Idol of Ralakesh" "Idol of Sirrius"
 style-orb-div-purple
 
 # A-Tier
 Show
-Class "Augments"
+Class "Augment"
 BaseType "Primate Idol" "Snake Idol" "Idol of Grold" "Idol of Thruldana" "Fox Idol" "Rabbit Idol" "Idol of Egrin"
 style-orb-annul
 
 # any other idols
 Show
-Class "Augments"
+Class "Augment"
 BaseType "Idol"
 style-idol
 
 #   [1807] "Abyss" league: gazes
 Show
-Class "Augments"
+Class "Augment"
 BaseType "Amanamu's Gaze"
 style-orb-div-purple
 
 Show
-Class "Augments"
+Class "Augment"
 BaseType "Tecrod's Gaze"
 style-orb-div
 
 Show
-Class "Augments"
+Class "Augment"
 BaseType "Kurgal's Gaze" "Ulaman's Gaze"
 style-orb-annul
 
 Show
-Class "Augments"
+Class "Augment"
 BaseType "Gaze"
 style-abyss-socket
 
 #   [1808] "Fate of the Vaal" league: thesis
 Show
-Class "Augments"
+Class "Augment"
 BaseType "Thesis"
 style-vaal-socket
 
