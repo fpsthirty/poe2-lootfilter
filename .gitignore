@@ -1,0 +1,44 @@
+# Lighthouse CI
+.lighthouseci/
+lhci_reports/
+*.lighthouse.report.html
+
+# Node.js
+node_modules/
+.npm
+.pnpm
+.yarn-integrity
+package-lock.json
+pnpm-lock.yaml
+yarn.lock
+
+# Logs and cache
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# System files
+.DS_Store
+.idea/
+.vscode/
+*.swp
+*.swo
+*.env
+.env.local
+
+# Auto-generated files
+dist/
+build/
+out/
+.next/
+.temp/
+.cache/
+
+# GitHub Pages
+_site/
+.sass-cache/
+.jekyll-cache/
+
+# Execution files
+lootfilters/filter-generator.exe

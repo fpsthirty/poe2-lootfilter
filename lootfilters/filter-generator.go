@@ -123,10 +123,10 @@ func printfBgRed(format string, args ...interface{}) {
 
 // TagMap defines which tags to exclude for each filter type
 var TagMap = map[string][]string{
-	"summoner-nossf": {"filter-rarity", "filter-ssf", "filter-ssf-mage"},
-	"summoner-ssf":   {"filter-rarity", "filter-nossf", "filter-ssf-mage", "filter-mage"},
-	"mage-nossf":     {"filter-rarity", "filter-ssf", "filter-ssf-summoner"},
-	"mage-ssf":       {"filter-rarity", "filter-nossf", "filter-ssf-summoner", "filter-summoner"},
+	"trade-summoner": {"filter-rarity", "filter-ssf", "filter-ssf-mage"},
+	"ssf-summoner":   {"filter-rarity", "filter-nossf", "filter-ssf-mage", "filter-mage"},
+	"trade-mage":     {"filter-rarity", "filter-ssf", "filter-ssf-summoner"},
+	"ssf-mage":       {"filter-rarity", "filter-nossf", "filter-ssf-summoner", "filter-summoner"},
 	"rarity":         {"filter-ssf", "filter-summoner", "filter-mage", "filter-norarity"},
 }
 
@@ -341,7 +341,7 @@ func generateAllFiles() {
 	fmt.Println("\nGenerating all files...")
 	
 	// List of all variants for generation
-	variants := []string{"summoner-nossf", "summoner-ssf", "mage-nossf", "mage-ssf", "rarity"}
+	variants := []string{"trade-summoner", "ssf-summoner", "trade-mage", "ssf-mage", "rarity"}
 	
 	for _, variant := range variants {
 		success, filteredBlocks := processChoice(variant)
@@ -353,10 +353,10 @@ func showMenu() {
 	fmt.Println("\n" + strings.Repeat("=", 50))
 	fmt.Println("Select filter type:")
 	fmt.Println("0. All files")
-	fmt.Println("1. summoner-nossf")
-	fmt.Println("2. summoner-ssf") 
-	fmt.Println("3. mage-nossf")
-	fmt.Println("4. mage-ssf")
+	fmt.Println("1. trade-summoner")
+	fmt.Println("2. ssf-summoner") 
+	fmt.Println("3. trade-mage")
+	fmt.Println("4. ssf-mage")
 	fmt.Println("5. rarity")
 	fmt.Println()
 	fmt.Println("Commands:")
@@ -406,13 +406,13 @@ func readChoice() string {
 	case "0":
 		return "all"
 	case "1":
-		return "summoner-nossf"
+		return "trade-summoner"
 	case "2":
-		return "summoner-ssf"
+		return "ssf-summoner"
 	case "3":
-		return "mage-nossf"
+		return "trade-mage"
 	case "4":
-		return "mage-ssf"
+		return "ssf-mage"
 	case "5":
 		return "rarity"
 	default:

@@ -8,8 +8,10 @@
   - **[fpsthirty-6961/item-filters](https://www.pathofexile.com/account/view-profile/fpsthirty-6961/item-filters)**
 - ### local files:
   Follow one of the github-links and click download icon in the upper right corner:
-    - **[lootfilter for summoners](https://github.com/fpsthirty/poe2-lootfilter/blob/main/lootfilters/fps30_summoner.filter)**
-    - **[lootfilter for mages](https://github.com/fpsthirty/poe2-lootfilter/blob/main/lootfilters/fps30_mage.filter)**
+    - **[summoner: trade league](https://github.com/fpsthirty/poe2-lootfilter/blob/main/lootfilters/fps30_trade-summoner.filter)**
+    - **[summoner: ssf league](https://github.com/fpsthirty/poe2-lootfilter/blob/main/lootfilters/fps30_ssf-summoner.filter)**
+    - **[mage: trade league](https://github.com/fpsthirty/poe2-lootfilter/blob/main/lootfilters/fps30_trade-mage.filter)**
+    - **[mage: ssf league](https://github.com/fpsthirty/poe2-lootfilter/blob/main/lootfilters/fps30_ssf-mage.filter)**
   > ![download-icon](https://github.com/fpsthirty/poe2-lootfilter/raw/main/img/settings/download-icon.png)
 
 ## Basic principles of this project:
@@ -60,8 +62,10 @@ In this case you can make your own edits, including activating additionally prep
 
 🧾 **Instruction:**
 1. Follow one of the github-links and click download icon in the upper right corner:
-    - **[lootfilter for summoners](https://github.com/fpsthirty/poe2-lootfilter/raw/main/lootfilters/fps30_summoner.filter)**
-    - **[lootfilter for mages](https://github.com/fpsthirty/poe2-lootfilter/raw/main/lootfilters/fps30_mage.filter)**
+    - **[summoner: trade league](https://github.com/fpsthirty/poe2-lootfilter/blob/main/lootfilters/fps30_trade-summoner.filter)**
+    - **[summoner: ssf league](https://github.com/fpsthirty/poe2-lootfilter/blob/main/lootfilters/fps30_ssf-summoner.filter)**
+    - **[mage: trade league](https://github.com/fpsthirty/poe2-lootfilter/blob/main/lootfilters/fps30_trade-mage.filter)**
+    - **[mage: ssf league](https://github.com/fpsthirty/poe2-lootfilter/blob/main/lootfilters/fps30_ssf-mage.filter)**
   > ![download-icon](https://github.com/fpsthirty/poe2-lootfilter/raw/main/img/settings/download-icon.png)
 2. Move this file into the following folder: `%userprofile%/Documents/My Games/Path of Exile 2` *(you can paste this correct link into File Explorer)*
 3. Turn on filter in the game settings : `Escape` -> Options -> Game -> select filter from the Dropdown box of "Item Filter" section — name of lootfilter will be **white** color.
