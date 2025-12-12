@@ -12,6 +12,7 @@
     - **[summoner: ssf league](https://github.com/fpsthirty/poe2-lootfilter/blob/main/lootfilters/fps30_ssf-summoner.filter)**
     - **[mage: trade league](https://github.com/fpsthirty/poe2-lootfilter/blob/main/lootfilters/fps30_trade-mage.filter)**
     - **[mage: ssf league](https://github.com/fpsthirty/poe2-lootfilter/blob/main/lootfilters/fps30_ssf-mage.filter)**
+    - **[rarity only for any casters](https://github.com/fpsthirty/poe2-lootfilter/blob/main/lootfilters/fps30_rarity.filter)**
   > ![download-icon](https://github.com/fpsthirty/poe2-lootfilter/raw/main/img/settings/download-icon.png)
 
 ## Basic principles of this project:
@@ -66,6 +67,7 @@ In this case you can make your own edits, including activating additionally prep
     - **[summoner: ssf league](https://github.com/fpsthirty/poe2-lootfilter/blob/main/lootfilters/fps30_ssf-summoner.filter)**
     - **[mage: trade league](https://github.com/fpsthirty/poe2-lootfilter/blob/main/lootfilters/fps30_trade-mage.filter)**
     - **[mage: ssf league](https://github.com/fpsthirty/poe2-lootfilter/blob/main/lootfilters/fps30_ssf-mage.filter)**
+    - **[rarity only for any casters](https://github.com/fpsthirty/poe2-lootfilter/blob/main/lootfilters/fps30_rarity.filter)**
   > ![download-icon](https://github.com/fpsthirty/poe2-lootfilter/raw/main/img/settings/download-icon.png)
 2. Move this file into the following folder: `%userprofile%/Documents/My Games/Path of Exile 2` *(you can paste this correct link into File Explorer)*
 3. Turn on filter in the game settings : `Escape` -> Options -> Game -> select filter from the Dropdown box of "Item Filter" section — name of lootfilter will be **white** color.
