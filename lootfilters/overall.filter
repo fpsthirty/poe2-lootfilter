@@ -233,7 +233,7 @@ Show
 Class "Belts"
 style-bg-translucent
 BaseType "Plate Belt" "Mail Belt"
-AreaLevel <= 78
+Rarity <= Rare
 
 #--------------------------
 # [[0300]] Stylized collection of specific stuff
@@ -1125,7 +1125,7 @@ AreaLevel >= 75
 
 Hide
 Rarity <= Rare
-BaseType "Circlet" "Tiara" "Crown" "Mask" "Visage" "Greathelm" "Cap" "Hood" "Helm" "Raiment" "Robe" "Mantle" "Vestments" "Jacket" "Garb" "Regalia" "Cuirass" "Plate" "Coat" "Vest" "Mail" "Garment" "Sandals" "Slippers" "Leggings" "Shoes" "Cuisses" "Greaves" "Boots" "Sabatons" "Crest Shield" "Tower Shield" "Buckler" "Targe" "Gloves" "Cuffs" "Wraps" "Manchettes" "Mitts" "Bracers" "Gauntlets"
+BaseType "Circlet" "Tiara" "Crown" "Mask" "Visage" "Greathelm" "Cap" "Hood" "Helm" "Raiment" "Robe" "Mantle" "Vestments" "Jacket" "Garb" "Cuirass" "Plate" "Coat" "Vest" "Mail" "Garment" "Sandals" "Slippers" "Leggings" "Shoes" "Cuisses" "Greaves" "Boots" "Sabatons" "Crest Shield" "Tower Shield" "Buckler" "Targe" "Gloves" "Cuffs" "Wraps" "Manchettes" "Mitts" "Bracers" "Gauntlets"
 DropLevel <= 64
 AreaLevel >= 75
 
@@ -1252,7 +1252,7 @@ AreaLevel >= 75
 
 Hide
 Class "Body"
-BaseType " Jacket" "Mantle" " Garb" "Vestments" "Regalia"
+BaseType " Jacket" "Mantle" " Garb" "Vestments"
 Rarity <= Rare
 AreaLevel >= 75
 
@@ -1375,7 +1375,7 @@ AreaLevel >= 71
 
 Hide
 Rarity <= Magic
-BaseType "Circlet" "Tiara" "Crown" "Mask" "Visage" "Greathelm" "Cap" "Hood" "Helm" "Raiment" "Robe" "Mantle" "Vestments" "Jacket" "Garb" "Regalia" "Cuirass" "Plate" "Coat" "Vest" "Mail" "Garment" "Sandals" "Slippers" "Leggings" "Shoes" "Cuisses" "Greaves" "Boots" "Sabatons" "Crest Shield" "Tower Shield" "Buckler" "Targe" "Gloves" "Cuffs" "Wraps" "Manchettes" "Mitts" "Bracers" "Gauntlets"
+BaseType "Circlet" "Tiara" "Crown" "Mask" "Visage" "Greathelm" "Cap" "Hood" "Helm" "Raiment" "Robe" "Mantle" "Vestments" "Jacket" "Garb" "Cuirass" "Plate" "Coat" "Vest" "Mail" "Garment" "Sandals" "Slippers" "Leggings" "Shoes" "Cuisses" "Greaves" "Boots" "Sabatons" "Crest Shield" "Tower Shield" "Buckler" "Targe" "Gloves" "Cuffs" "Wraps" "Manchettes" "Mitts" "Bracers" "Gauntlets"
 DropLevel <= 60
 AreaLevel >= 71
 
@@ -1457,7 +1457,7 @@ AreaLevel >= 71
 
 #Hide # already hidden at AreaLevel >= 65
 #Class "Body"
-#BaseType " Jacket" "Mantle" " Garb" "Vestments" "Regalia"
+#BaseType " Jacket" "Mantle" " Garb" "Vestments"
 #Rarity <= Magic
 #AreaLevel >= 71
 
@@ -1990,19 +1990,19 @@ style-bg-translucent
 
 Hide
 Class "Body"
-BaseType " Jacket" " Mail" " Armour" "Mantle" " Garb" "Vestments" "Regalia"
+BaseType " Jacket" " Mail" " Armour" "Mantle" " Garb" "Vestments"
 Rarity Normal
 
 Hide
 Class "Body"
-BaseType " Jacket" " Mail" " Armour" "Mantle" " Garb" "Vestments" "Regalia"
+BaseType " Jacket" " Mail" " Armour" "Mantle" " Garb" "Vestments"
 Rarity Magic
 AreaLevel >= 65
 
 # filter-norarity
 Show
 Class "Body"
-BaseType " Jacket" " Mail" " Armour" "Mantle" " Garb" "Vestments" "Regalia"
+BaseType " Jacket" " Mail" " Armour" "Mantle" " Garb" "Vestments"
 Rarity Magic
 style-bg-translucent
 AreaLevel < 65
@@ -2010,7 +2010,7 @@ AreaLevel < 65
 # filter-norarity
 Show
 Class "Body"
-BaseType " Jacket" " Mail" " Armour" "Mantle" " Garb" "Vestments" "Regalia"
+BaseType " Jacket" " Mail" " Armour" "Mantle" " Garb" "Vestments"
 Rarity Rare
 style-bg-translucent
 
@@ -2122,11 +2122,12 @@ style-bg-translucent
 # Sacred Flame, Shrine Sceptre
 # The Gnashing Sash, Wide Belt
 # Headhunter, Heavy Belt
+# Hyrri's Ire, Armoured Vest
 # ----------------------------------
 
 Show
 Rarity Unique
-BaseType == "Incense Relic" "Ultimate Life Flask" "Armoured Cap" "Blacksteel Tower Shield" "Sacred Focus" "Ornate Gauntlets" "Fine Bracers" "Golden Charm" "Silver Charm" "Lattice Sandals" "Conqueror Plate" "Desolate Crossbow" "Intricate Crest Shield" "Timeless Jewel" "Ruby" "Emerald"
+BaseType == "Incense Relic" "Ultimate Life Flask" "Armoured Cap" "Blacksteel Tower Shield" "Sacred Focus" "Ornate Gauntlets" "Fine Bracers" "Golden Charm" "Silver Charm" "Lattice Sandals" "Conqueror Plate" "Desolate Crossbow" "Intricate Crest Shield" "Timeless Jewel" "Ruby" "Emerald" "Armoured Vest"
 style-orb-div-purple
 
 Show
@@ -2419,7 +2420,7 @@ style-uniq-tier-a
 ## armors:
 Show
 Rarity Unique
-BaseType == "Fur Plate" "Champion Cuirass" "Quilted Vest" "Pathfinder Coat" "Serpentscale Coat" "Strider Vest" "Armoured Vest" "Tattered Robe" "Votive Raiment" "Altar Robe" "Havoc Raiment" "Enlightened Robe" "Explorer Armour" "Scale Mail" "Knight Armour" "Ancestral Mail" "Heroic Armour" "Pilgrim Vestments" "Cleric Vestments" "Tideseer Mantle" "Corvus Mantle" "Wayfarer Jacket" "Scalper's Jacket" "Assassin Garb" "Wrapped Greathelm" "Spired Greathelm" "Fierce Greathelm" "Felt Cap" "Viper Cap" "Velvet Cap" "Covert Hood" "Twig Circlet" "Chain Tiara" "Feathered Tiara" "Vermeil Circlet" "Jade Tiara" "Magus Tiara" "Brimmed Helm" "Decorated Helm" "Iron Crown" "Cultist Crown" "Martyr Crown" "Heavy Crown" "Spiritbone Crown" "Face Mask" "Death Mask" "Gold Circlet" "Riveted Mitts" "Spined Bracers" "Torn Gloves" "Sombre Gloves" "Pauascale Gloves" "Layered Gauntlets" "Doubled Gauntlets" "Burnished Gauntlets" "Rope Cuffs" "Gauze Wraps" "Spiral Wraps" "Furtive Wraps" "Utility Wraps" "Trimmed Greaves" "Laced Boots" "Wrapped Sandals" "Feathered Sandals" "Secured Leggings" "Hunting Shoes" "Heraldric Tower Shield" "Crucible Tower Shield" "Emblem Crest Shield" "Iron Buckler" "Woven Focus" "Antler Focus" "Engraved Focus" "Voodoo Focus" "Grand Regalia" "Grand Manchettes" "Grand Cuisses"
+BaseType == "Fur Plate" "Champion Cuirass" "Quilted Vest" "Pathfinder Coat" "Serpentscale Coat" "Strider Vest" "Tattered Robe" "Votive Raiment" "Altar Robe" "Havoc Raiment" "Enlightened Robe" "Explorer Armour" "Scale Mail" "Knight Armour" "Ancestral Mail" "Heroic Armour" "Pilgrim Vestments" "Cleric Vestments" "Tideseer Mantle" "Corvus Mantle" "Wayfarer Jacket" "Scalper's Jacket" "Assassin Garb" "Wrapped Greathelm" "Spired Greathelm" "Fierce Greathelm" "Felt Cap" "Viper Cap" "Velvet Cap" "Covert Hood" "Twig Circlet" "Chain Tiara" "Feathered Tiara" "Vermeil Circlet" "Jade Tiara" "Magus Tiara" "Brimmed Helm" "Decorated Helm" "Iron Crown" "Cultist Crown" "Martyr Crown" "Heavy Crown" "Spiritbone Crown" "Face Mask" "Death Mask" "Gold Circlet" "Riveted Mitts" "Spined Bracers" "Torn Gloves" "Sombre Gloves" "Pauascale Gloves" "Layered Gauntlets" "Doubled Gauntlets" "Burnished Gauntlets" "Rope Cuffs" "Gauze Wraps" "Spiral Wraps" "Furtive Wraps" "Utility Wraps" "Trimmed Greaves" "Laced Boots" "Wrapped Sandals" "Feathered Sandals" "Secured Leggings" "Hunting Shoes" "Heraldric Tower Shield" "Crucible Tower Shield" "Emblem Crest Shield" "Iron Buckler" "Woven Focus" "Antler Focus" "Engraved Focus" "Voodoo Focus" "Grand Regalia" "Grand Manchettes" "Grand Cuisses" "Array Buckler"
 style-uniq-tier-a
 
 Show
@@ -4570,6 +4571,10 @@ Show
 Class "Map Fragments"
 style-mapfragment
 PlayEffect White
+
+Show
+Class "Body"
+BaseType "Regalia"
 
 #   [2201] flasks:
 Hide
