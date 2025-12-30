@@ -257,6 +257,20 @@ style-uniq-tier-a
 
 Show
 Rarity Unique
+Class "Body"
+BaseType "Sacrificial Regalia" # Atziri's Splendour from v0.4.0
+Sockets >= 6
+style-orb-div-purple
+
+Show
+Rarity Unique
+Class "Helmets"
+BaseType "Decorated Helm" # The Bringer of Rain
+Sockets >= 4
+style-uniq-tier-a
+
+Show
+Rarity Unique
 Class "Shield"
 BaseType "Omen Crest Shield" # Mahuxotl's Machination
 Sockets >= 2
@@ -432,11 +446,11 @@ Rarity Normal
 ItemLevel >= 16
 style-base-craft-unique
 
-# filter-mage filter-norarity
-Show
-BaseType "Desolate Crossbow" # The Last Lament / Sacrifice 300 Life to not consume the last bolt when firing
-Rarity Normal
-style-base-craft-unique
+# # filter-mage filter-norarity
+# Show
+# BaseType "Desolate Crossbow" # The Last Lament / Sacrifice 300 Life to not consume the last bolt when firing # nerfed in v0.4.0
+# Rarity Normal
+# style-base-craft-unique
 
 # filter-nossf filter-norarity
 # Show
@@ -682,6 +696,155 @@ MinimapIcon 1 Purple Circle
 PlayAlertSound 16 300
 PlayEffect Pink Temp
 SetFontSize 40
+
+#  dognail timeless-jewels section for rarity filter
+
+# filter-rarity
+Show
+Class "Jewel"
+BaseType == "Time-lost Sapphire"
+Rarity <= Rare
+style-jewel-sapphire
+SetBorderColor 0 240 190
+MinimapIcon 2 Blue Diamond
+PlayEffect Cyan
+
+# filter-rarity
+Show
+Class "Jewel"
+BaseType == "Time-lost Ruby"
+Rarity <= Rare
+style-jewel-ruby
+SetBorderColor 0 240 190
+MinimapIcon 2 Red Diamond
+PlayEffect Cyan
+
+# filter-rarity
+Show
+Class "Jewel"
+BaseType == "Time-lost Emerald"
+Rarity <= Rare
+style-jewel-emerald
+SetBorderColor 0 240 190
+MinimapIcon 2 Green Diamond
+PlayEffect Cyan
+
+# filter-rarity
+Show
+Class "Jewel"
+BaseType == "Time-lost Diamond"
+Rarity <= Rare
+style-jewel-diamond
+SetBorderColor 244 222 94
+MinimapIcon 2 Cyan Triangle
+PlayEffect Cyan Temp
+
+# filter-rarity
+Show
+Class "Jewel"
+BaseType "Timeless"
+SetTextColor 0 240 190
+SetBorderColor 0 240 190
+style-bg-translucent
+SetFontSize 40
+MinimapIcon 0 Cyan Diamond
+PlayAlertSound 2 300
+PlayEffect Cyan
+
+# filter-rarity
+Hide
+BaseType "Ring"
+AreaLevel >= 79
+Rarity <= Rare
+style-bg-translucent
+
+# filter-rarity
+Hide
+Class "Jewel"
+BaseType == "Ruby"
+Rarity == Rare
+style-jewel-ruby
+AreaLevel >= 79
+SetBorderColor 244 222 94
+MinimapIcon 2 Cyan Triangle
+PlayEffect Cyan Temp
+
+# filter-rarity
+Hide
+Class "Jewel"
+BaseType == "Ruby"
+Rarity == Magic
+style-jewel-ruby
+AreaLevel >= 79
+SetBorderColor 127 153 230
+MinimapIcon 2 Cyan Triangle
+PlayEffect Cyan Temp
+
+# filter-rarity
+Hide
+Class "Jewel"
+BaseType == "Emerald"
+Rarity == Rare
+style-jewel-emerald
+AreaLevel >= 79
+SetBorderColor 244 222 94
+MinimapIcon 2 Cyan Triangle
+PlayEffect Cyan Temp
+
+# filter-rarity
+Hide
+Class "Jewel"
+BaseType == "Emerald"
+Rarity == Magic
+style-jewel-emerald
+AreaLevel >= 79
+SetBorderColor 127 153 230
+MinimapIcon 2 Cyan Triangle
+PlayEffect Cyan Temp
+
+## filter-rarity
+#Hide
+#Class "Jewel"
+#BaseType == "Sapphire"
+#Rarity == Rare
+#style-jewel-sapphire
+#AreaLevel >= 79
+#SetBorderColor 244 222 94
+#MinimapIcon 2 Cyan Triangle
+#PlayEffect Cyan Temp
+
+## filter-rarity
+#Hide
+#Class "Jewel"
+#BaseType == "Sapphire"
+#Rarity == Magic
+#style-jewel-sapphire
+#AreaLevel >= 79
+#SetBorderColor 127 153 230
+#MinimapIcon 2 Cyan Triangle
+#PlayEffect Cyan Temp
+
+# filter-rarity
+Hide
+Class "Jewel"
+BaseType == "Diamond"
+Rarity == Rare
+style-jewel-diamond
+AreaLevel >= 79
+SetBorderColor 244 222 94
+MinimapIcon 2 Cyan Triangle
+PlayEffect Cyan Temp
+
+# filter-rarity
+Hide
+Class "Jewel"
+BaseType == "Diamond"
+Rarity == Magic
+style-jewel-diamond
+AreaLevel >= 79
+SetBorderColor 127 153 230
+MinimapIcon 2 Cyan Triangle
+PlayEffect Cyan Temp
 
 Show
 BaseType " Ring" " Amulet"
@@ -963,7 +1126,15 @@ AreaLevel > 78
 
 Show
 Class "Augment"
-BaseType "Greater Body Rune" "Greater Glacial Rune" "Greater Inspiration Rune" "Greater Iron Rune" "Greater Storm Rune"
+BaseType "Greater Iron Rune"
+DropLevel <= 62
+AreaLevel > 78
+style-rune
+
+# filter-norarity
+Show
+Class "Augment"
+BaseType "Greater Body Rune" "Greater Inspiration Rune" "Greater Glacial Rune" "Greater Storm Rune" "Greater Desert Rune"
 DropLevel <= 62
 AreaLevel > 78
 style-rune
@@ -982,12 +1153,18 @@ DropLevel < 45
 AreaLevel > 78
 style-orb-cheap
 
+# filter-nossf
 Hide
 Class "Currency"
-BaseType "Lesser Jeweller's Orb" "Regal Shard" "Glassblower's Bauble" "Artificer's Orb" "Blacksmith's Whetstone"
+BaseType "Artificer's Orb"
 style-orb-cheap
 AreaLevel > 78
+
+Hide
+Class "Currency"
+BaseType "Lesser Jeweller's Orb" "Regal Shard" "Glassblower's Bauble" "Blacksmith's Whetstone"
 style-orb-cheap
+AreaLevel > 78
 
 Show
 Class "Currency"
@@ -1000,6 +1177,20 @@ Class == "Augment"
 BaseType "Lesser" # Lesser {runeName} Rune
 AreaLevel > 78
 style-rune
+
+# filter-rarity
+Hide
+Class "Belts"
+Rarity <= Rare
+style-bg-translucent
+AreaLevel >= 75
+
+# filter-rarity
+Hide
+StackSize < 4900
+BaseType == "Gold"
+AreaLevel >= 78
+style-gold
 
 # REMOVE THE BASES YOU --DO-- WANT TO HIDE
 
@@ -2118,22 +2309,39 @@ style-bg-translucent
 # The Fall of the Axe, Silver Charm
 # Rite of Passage, Golden Charm
 # Kalandra's Touch, Ring
-# Chernobog's Pillar, Blacksteel Tower Shield
 # Sacred Flame, Shrine Sceptre
 # The Gnashing Sash, Wide Belt
 # Headhunter, Heavy Belt
 # Hyrri's Ire, Armoured Vest
+# Abyss Precursor Tablet
+# Fury of the King, Ashbark Talisman
+# Atziri's Splendour, Sacrificial Regalia
+# Atziri's Contempt, Pronged Spear
+# Flesh Crucible, Diamond
+# The Vertex, Tribal Mask
 # ----------------------------------
 
 Show
 Rarity Unique
-BaseType == "Incense Relic" "Ultimate Life Flask" "Armoured Cap" "Blacksteel Tower Shield" "Sacred Focus" "Ornate Gauntlets" "Fine Bracers" "Golden Charm" "Silver Charm" "Lattice Sandals" "Conqueror Plate" "Desolate Crossbow" "Intricate Crest Shield" "Timeless Jewel" "Ruby" "Emerald" "Armoured Vest"
+BaseType == "Incense Relic" "Ultimate Life Flask" "Armoured Cap" "Sacred Focus" "Ornate Gauntlets" "Fine Bracers" "Golden Charm" "Silver Charm" "Lattice Sandals" "Conqueror Plate" "Desolate Crossbow" "Intricate Crest Shield" "Timeless Jewel" "Ruby" "Emerald" "Armoured Vest" "Ashbark Talisman" "Pronged Spear"
 style-orb-div-purple
 
 Show
 Rarity Unique
 BaseType == "Silk Robe" # Temporalis / Skills have (-2–-1) seconds to Cooldown
 DropLevel == 64
+style-orb-div-purple
+
+Show
+Rarity == Unique
+Class "Tablet"
+BaseType == "Abyss Precursor Tablet"
+style-orb-div-purple
+
+Show
+Rarity Unique
+BaseType == "Tribal Mask"
+DropLevel == 33
 style-orb-div-purple
 
 Show
@@ -2196,6 +2404,7 @@ style-orb-div-purple
 # The Surrender, Stone Tower Shield
 # Sekhema's Resolve, Ring
 # The Desperate Alliance, Vase Relic
+# Lavianga's Spirits, Mana Flask 
 # ----------------------------------
 
 Show
@@ -2223,6 +2432,13 @@ Rarity Unique
 Class == "Ring"
 BaseType == "Ring"
 Sockets > 0
+style-orb-div
+
+Show
+Rarity Unique
+Class "Flask"
+BaseType "Mana"
+DropLevel == 49
 style-orb-div
 
 #   [1303] Schrodinger's uniques
@@ -2389,7 +2605,7 @@ PlayEffect Brown
 # uniques with extra socket
 Show
 Rarity == Unique
-Class == "Claws" "Daggers" "Flails" "One Hand Axes" "One Hand Maces" "One Hand Swords" "Sceptres" "Spears" "Wands" "Quivers" "Foci" "Talismans" "Helmets" "Boots" "Gloves" "Shields" "Bucklers"
+Class == "Claws" "Daggers" "Flails" "One Hand Axes" "One Hand Maces" "One Hand Swords" "Sceptres" "Spears" "Wands" "Quivers" "Foci" "Helmets" "Boots" "Gloves" "Shields" "Bucklers"
 Corrupted False
 Sockets >= 2
 SetFontSize 40
@@ -2414,25 +2630,19 @@ MinimapIcon 2 Brown Star
 ## weapons:
 Show
 Rarity Unique
-BaseType == "Spiked Club" "Torment Club" "Pointed Maul" "Totemic Greatclub" "Winged Spear" "Barbed Spear" "Helix Spear" "Crescent Quarterstaff" "Wyrm Quarterstaff" "Siphoning Wand" "Permafrost Staff" "Crude Bow" "Composite Bow" "Dualstring Bow" "Heavy Bow" "Tense Crossbow" "Fanatic Bow"
+BaseType == "Spiked Club" "Torment Club" "Pointed Maul" "Totemic Greatclub" "Winged Spear" "Barbed Spear" "Helix Spear" "Crescent Quarterstaff" "Wyrm Quarterstaff" "Siphoning Wand" "Permafrost Staff" "Crude Bow" "Recurve Bow" "Composite Bow" "Dualstring Bow" "Heavy Bow" "Tense Crossbow" "Fanatic Bow" "Reflecting Staff" "Penetrating Quiver" "Familial Talisman" "Vicious Talisman"
 style-uniq-tier-a
 
 ## armors:
 Show
 Rarity Unique
-BaseType == "Fur Plate" "Champion Cuirass" "Quilted Vest" "Pathfinder Coat" "Serpentscale Coat" "Strider Vest" "Tattered Robe" "Votive Raiment" "Altar Robe" "Havoc Raiment" "Enlightened Robe" "Explorer Armour" "Scale Mail" "Knight Armour" "Ancestral Mail" "Heroic Armour" "Pilgrim Vestments" "Cleric Vestments" "Tideseer Mantle" "Corvus Mantle" "Wayfarer Jacket" "Scalper's Jacket" "Assassin Garb" "Wrapped Greathelm" "Spired Greathelm" "Fierce Greathelm" "Felt Cap" "Viper Cap" "Velvet Cap" "Covert Hood" "Twig Circlet" "Chain Tiara" "Feathered Tiara" "Vermeil Circlet" "Jade Tiara" "Magus Tiara" "Brimmed Helm" "Decorated Helm" "Iron Crown" "Cultist Crown" "Martyr Crown" "Heavy Crown" "Spiritbone Crown" "Face Mask" "Death Mask" "Gold Circlet" "Riveted Mitts" "Spined Bracers" "Torn Gloves" "Sombre Gloves" "Pauascale Gloves" "Layered Gauntlets" "Doubled Gauntlets" "Burnished Gauntlets" "Rope Cuffs" "Gauze Wraps" "Spiral Wraps" "Furtive Wraps" "Utility Wraps" "Trimmed Greaves" "Laced Boots" "Wrapped Sandals" "Feathered Sandals" "Secured Leggings" "Hunting Shoes" "Heraldric Tower Shield" "Crucible Tower Shield" "Emblem Crest Shield" "Iron Buckler" "Woven Focus" "Antler Focus" "Engraved Focus" "Voodoo Focus" "Grand Regalia" "Grand Manchettes" "Grand Cuisses" "Array Buckler"
+BaseType == "Fur Plate" "Champion Cuirass" "Quilted Vest" "Pathfinder Coat" "Serpentscale Coat" "Strider Vest" "Tattered Robe" "Votive Raiment" "Altar Robe" "Havoc Raiment" "Enlightened Robe" "Explorer Armour" "Scale Mail" "Knight Armour" "Ancestral Mail" "Heroic Armour" "Pilgrim Vestments" "Cleric Vestments" "Tideseer Mantle" "Corvus Mantle" "Wayfarer Jacket" "Scalper's Jacket" "Assassin Garb" "Wrapped Greathelm" "Spired Greathelm" "Fierce Greathelm" "Felt Cap" "Viper Cap" "Velvet Cap" "Covert Hood" "Twig Circlet" "Chain Tiara" "Feathered Tiara" "Vermeil Circlet" "Jade Tiara" "Magus Tiara" "Brimmed Helm" "Decorated Helm" "Iron Crown" "Cultist Crown" "Martyr Crown" "Heavy Crown" "Spiritbone Crown" "Face Mask" "Death Mask" "Gold Circlet" "Riveted Mitts" "Spined Bracers" "Torn Gloves" "Sombre Gloves" "Pauascale Gloves" "Layered Gauntlets" "Doubled Gauntlets" "Burnished Gauntlets" "Rope Cuffs" "Gauze Wraps" "Spiral Wraps" "Furtive Wraps" "Utility Wraps" "Trimmed Greaves" "Laced Boots" "Wrapped Sandals" "Feathered Sandals" "Secured Leggings" "Hunting Shoes" "Heraldric Tower Shield" "Crucible Tower Shield" "Emblem Crest Shield" "Iron Buckler" "Woven Focus" "Antler Focus" "Engraved Focus" "Voodoo Focus" "Grand Regalia" "Grand Manchettes" "Grand Cuisses" "Array Buckler" "Long Belt" "Blacksteel Tower Shield" "Gilded Vestments" "Cinched Boots"
 style-uniq-tier-a
 
 Show
 Rarity Unique
 BaseType == "Silk Robe"
 DropLevel == 22
-style-uniq-tier-a
-
-Show
-Rarity Unique
-BaseType == "Tribal Mask"
-DropLevel == 33
 style-uniq-tier-a
 
 Show
@@ -2445,6 +2655,12 @@ Show
 Rarity Unique
 BaseType == "Garment"
 Sockets < 4
+style-uniq-tier-a
+
+Show
+Rarity Unique
+BaseType == "Wide Belt" # Byrnabas / Cannot be Shocked
+DropLevel == 14
 style-uniq-tier-a
 
 ## misc:
@@ -2608,6 +2824,7 @@ SetTextColor 255 207 132
 SetBorderColor 104 238 170
 style-bg-translucent
 PlayAlertSound 2 100
+PlayEffect White
 MinimapIcon 2 Cyan Circle
 SetFontSize 40
 
@@ -2619,19 +2836,13 @@ style-orb-div-purple
 
 Show
 Class == "Omen"
-BaseType == "Omen of Homogenising Exaltation"
+BaseType == "Omen of Homogenising Exaltation" "Omen of Dextral Crystallisation"
 style-orb-div
 
 Show
 Class == "Omen"
-BaseType == "Omen of Abyssal Echoes" "Omen of Dextral Crystallisation" "Omen of Sinistral Crystallisation" "Omen of Homogenising Coronation" "Omen of Recombination"
-SetTextColor 255 255 255 255
-SetBorderColor 255 255 255 255
-SetBackgroundColor 240 90 35 200
-PlayAlertSound 1 100
-PlayEffect Orange
-MinimapIcon 1 Orange Circle
-SetFontSize 40
+BaseType == "Omen of Abyssal Echoes" "Omen of Sinistral Crystallisation" "Omen of Homogenising Coronation" "Omen of Recombination"
+style-orb-annul
 
 Show
 Class == "Omen"
@@ -2662,6 +2873,7 @@ SetTextColor 255 207 132
 SetBorderColor 60 0 90
 style-bg-translucent
 PlayAlertSound 2 100
+PlayEffect White
 MinimapIcon 2 Pink Circle
 SetFontSize 40
 
@@ -2674,6 +2886,7 @@ SetTextColor 255 207 132
 SetBorderColor 132 255 207
 style-bg-translucent
 PlayAlertSound 2 100
+PlayEffect White
 MinimapIcon 2 Cyan Circle
 SetFontSize 40
 
@@ -2787,6 +3000,7 @@ SetTextColor 255 207 132
 SetBorderColor 239 34 255
 style-bg-translucent
 MinimapIcon 2 Pink Circle
+PlayEffect White
 PlayAlertSound 2 100
 SetFontSize 40
 
@@ -3440,6 +3654,11 @@ BaseType = 2
 AreaLevel <= 5
 style-spiritgem
 
+# filter-rarity
+Hide
+Class "Uncut Support Gem"
+style-skillgem
+
 Show
 Class "Spirit Gem" "Uncut Spirit Gem"
 SetTextColor 140 140 140
@@ -3455,7 +3674,7 @@ MinimapIcon 1 White Triangle
 Show
 Class "Support Gem"
 DropLevel >= 65
-BaseType == "Dialla's Desire" "Rakiata's Flow" "Arjun's Medal" "Uhtred's Augury" "Uul-Netol's Embrace" "Uhtred's Omen" "Atalui's Bloodletting" "Ratha's Assault"
+BaseType == "Garukhan's Resolve" "Uhtred's Augury" "Rakiata's Flow" "Dialla's Desire" "Uhtred's Omen" "Uul-Netol's Embrace" "Ixchel's Torment" "Xoph's Pyre" "Tul's Stillness" "Rigwald's Ferocity" "Esh's Radiance" "Uhtred's Exodus" "Atalui's Bloodletting" "Arbiter's Ignition" "Tecrod's Revenge" "Brutus' Brain" "Ahn's Citadel" "Sione's Temper"
 style-orb-div-purple
 
 # A-tier:
@@ -3494,15 +3713,15 @@ style-supportgem
 
 #   [1801] soul cores
 # S-Tier:
-Show
-Class == "Augment"
-BaseType == "Soul Core of Jiquani"
-style-orb-div
+#Show
+#Class == "Augment"
+#BaseType == "Soul Core of Jiquani"
+#style-orb-div
 
 # A-Tier:
 Show
 Class == "Augment"
-BaseType == "Opiloti's Soul Core of Assault" "Tzamoto's Soul Core of Ferocity" "Xopec's Soul Core of Power" "Soul Core of Ticaba" "Guatelitzi's Soul Core of Endurance" "Estazunti's Soul Core of Convalescence" "Tacati's Soul Core of Affliction" "Xipocado's Soul Core of Dominion" "Soul Core of Tacati" "Soul Core of Quipolatl" "Soul Core of Azcapa"
+BaseType == "Opiloti's Soul Core of Assault" "Tzamoto's Soul Core of Ferocity" "Xopec's Soul Core of Power" "Soul Core of Ticaba" "Guatelitzi's Soul Core of Endurance" "Estazunti's Soul Core of Convalescence" "Tacati's Soul Core of Affliction" "Xipocado's Soul Core of Dominion" "Soul Core of Tacati" "Soul Core of Quipolatl" "Soul Core of Azcapa" "Soul Core of Jiquani"
 style-orb-annul
 
 Show
@@ -3645,7 +3864,7 @@ PlayEffect Cyan
 # S-Tier:
 Show
 Class "Augment"
-BaseType "Countess Seske's Rune of Archery" "Farrul's Rune of the Chase" "Hedgewitch Assandra's Rune of Wisdom"
+BaseType "Countess Seske's Rune of Archery" "Hedgewitch Assandra's Rune of Wisdom"
 style-orb-div-purple
 
 Show
@@ -3656,12 +3875,12 @@ style-orb-div
 # A-tier:
 Show
 Class "Augment"
-BaseType "Courtesan Mannan's Rune of Cruelty" "Saqawal's Rune of the Sky" "Thane Girt's Rune of Wildness" "Thane Leld's Rune of Spring" "Greater Rune of Tithing" "Saqawal's Rune of Memory"
+BaseType "Thane Girt's Rune of Wildness" "Greater Rune of Tithing" "Saqawal's Rune of Memory"
 style-orb-div
 
 Show
 Class "Augment"
-BaseType "Fenumus' Rune of Draining" "Thane Grannell's Rune of Mastery" "Farrul's Rune of Grace"
+BaseType "Fenumus' Rune of Draining" "Thane Grannell's Rune of Mastery" "Farrul's Rune of Grace" "Saqawal's Rune of the Sky" "Farrul's Rune of the Chase" "Thane Leld's Rune of Spring" "Courtesan Mannan's Rune of Cruelty"
 style-orb-annul
 
 # any other runes:
@@ -3753,13 +3972,18 @@ style-charm
 # S-Tier
 Show
 Class "Augment"
-BaseType "Idol of Ralakesh" "Idol of Sirrius"
+BaseType "Idol of Ralakesh"
 style-orb-div-purple
+
+Show
+Class "Augment"
+BaseType "Idol of Sirrius"
+style-orb-div
 
 # A-Tier
 Show
 Class "Augment"
-BaseType "Primate Idol" "Snake Idol" "Idol of Grold" "Idol of Thruldana" "Fox Idol" "Rabbit Idol" "Idol of Egrin"
+BaseType "Primate Idol" "Snake Idol" "Idol of Grold" "Idol of Thruldana" "Fox Idol" "Rabbit Idol" "Idol of Egrin" "Idol of Eeshta"
 style-orb-annul
 
 # any other idols
@@ -3793,7 +4017,8 @@ style-abyss-socket
 Show
 Class "Augment"
 BaseType "Thesis"
-style-vaal-socket
+style-orb-div-purple
+# style-vaal-socket
 
 #--------------------------
 # [[1900]] Craft and Currency
@@ -3802,8 +4027,13 @@ style-vaal-socket
 #   [1901] currency Tier S: Mirror, Divine
 Show
 Class "Currency"
-BaseType "Mirror of Kalandra" "Hinekora's Lock" "Perfect Jeweller's Orb" "Perfect Exalted Orb" "Perfect Chaos Orb"
+BaseType "Mirror of Kalandra" "Hinekora's Lock"
 style-orb-div-purple
+
+Show
+Class "Currency"
+BaseType "Perfect Jeweller's Orb" "Perfect Exalted Orb" "Perfect Chaos Orb"
+style-orb-div
 
 Show
 Class "Currency"
@@ -3843,6 +4073,13 @@ BaseType "Glassblower's Bauble"
 style-orb-regal-mini
 AreaLevel >= 75
 
+# filter-rarity
+Hide
+Class "Currency"
+BaseType "Vaal Orb"
+style-orb-vaal
+AreaLevel >= 79
+
 Show
 Class "Currency"
 BaseType "Vaal Orb"
@@ -3858,10 +4095,24 @@ Class "Currency"
 BaseType "Exalted Orb" "Perfect Orb of Augmentation" "Greater Regal Orb"
 style-orb-exalt
 
+# filter-rarity
+Hide
+Class "Currency"
+BaseType "Orb of Alchemy"
+style-orb-alch
+AreaLevel >= 79
+
 Show
 Class "Currency"
 BaseType "Orb of Alchemy"
 style-orb-alch
+
+# filter-rarity
+Hide
+Class "Currency"
+BaseType "Regal Orb" "Chance Shard"
+style-orb-regal
+AreaLevel >= 79
 
 Show
 Class "Currency"
@@ -4166,26 +4417,32 @@ Class "Currency"
 BaseType "Gnawed Jawbone" "Preserved Jawbone" "Gnawed Rib" "Gnawed Collarbone" "Preserved Vertebrae"
 style-abyss-craft
 
-# Unknown currency
-Show
-Class "Currency"
-style-item-unknown
-
 #   [1908] "Fate of the Vaal" league
+
 Show
 Class "Currency"
-BaseType "Core Destabiliser" "Vaal Infuser" "Architect's Orb" "Ancient Infuser" "Crystallised Corruption" "Vaal Cultivation Orb"
+BaseType "Crystallised Corruption" "Vaal Cultivation Orb" "Architect's Orb" "Vaal Infuser"
+style-orb-annul
+
+Show
+Class "Currency"
+BaseType "Core Destabiliser" "Ancient Infuser" "Orb of Extraction"
 style-vaal-socket
 
-Show
-Class "Currency"
-BaseType "Orb of Extraction"
-style-orb-exalt
+# Show
+# Class "Currency"
+# BaseType "Orb of Extraction"
+# style-orb-exalt
 
 Show
 Class "Incubators"
 BaseType "Vaal Siphoner"
 style-vaal-socket
+
+# Unknown currency
+Show
+Class "Currency"
+style-item-unknown
 
 #--------------------------
 # [[2000]] Waystones
@@ -4709,8 +4966,8 @@ BaseType "Circlet" "Tiara" "Crown" "Mask" "Visage" "Greathelm" "Cap" "Hood" "Hel
 Rarity <= Rare
 
 # filter-rarity # todo uncomment after the league prices update (approximately two weeks after the start)
-# Hide
-# Rarity Unique
+Hide
+Rarity Unique
 
 # items without any other rules:
 Show
