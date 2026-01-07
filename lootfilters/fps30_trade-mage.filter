@@ -2,7 +2,7 @@
 # fps30_trade-mage.filter — Path of Exile 2
 #===============================================================================================================
 #
-# VERSION: 	0.4.0-1 (actual for PoE2 v0.4.0 and higher, does not support v0.3.1 and lower)
+# VERSION: 	0.4.0-3 (actual for PoE2 v0.4.0 and higher, does not support v0.3.1 and lower)
 # AUTHOR: 	fpsthirty
 # SOURCE: 	https://github.com/fpsthirty/poe2-lootfilter
 #
@@ -294,6 +294,17 @@ PlayAlertSound 3 300
 
 Show
 Rarity Unique
+Class "Helmets"
+BaseType "Brimmed Helm" # Greymake
+Sockets >= 4
+SetBackgroundColor 0 0 0 210
+SetBorderColor 255 140 0 255
+PlayEffect Brown
+MinimapIcon 2 Brown Star
+PlayAlertSound 3 300
+
+Show
+Rarity Unique
 Class "Shield"
 BaseType "Omen Crest Shield" # Mahuxotl's Machination
 Sockets >= 2
@@ -313,8 +324,8 @@ SetTextColor 255 0 0 255
 SetBorderColor 255 0 0 255
 SetBackgroundColor 255 255 255 255
 PlayAlertSound 6 300
-PlayEffect Red
-MinimapIcon 0 Red Star
+PlayEffect Purple
+MinimapIcon 0 Purple Star
 SetFontSize 45
 
 Show
@@ -325,8 +336,8 @@ SetTextColor 255 0 0 255
 SetBorderColor 255 0 0 255
 SetBackgroundColor 255 255 255 255
 PlayAlertSound 6 300
-PlayEffect Red
-MinimapIcon 0 Red Star
+PlayEffect Purple
+MinimapIcon 0 Purple Star
 SetFontSize 45
 
 # ------------------
@@ -371,6 +382,19 @@ SetBackgroundColor 255 255 255 255
 PlayAlertSound 6 300
 PlayEffect Purple
 MinimapIcon 0 Purple Star
+SetFontSize 45
+
+Show
+Class "Wands"
+Corrupted False
+Sockets >= 2
+ItemLevel >= 81
+SetTextColor 255 0 0 255
+SetBorderColor 255 0 0 255
+SetBackgroundColor 255 255 255 255
+PlayAlertSound 6 300
+PlayEffect Red
+MinimapIcon 0 Red Star
 SetFontSize 45
 
 Show
@@ -914,7 +938,7 @@ PlayAlertSound 16 300
 
 # filter-norarity
 Show
-BaseType "Raiment" "Robe"
+BaseType "Raiment" " Robe"
 ItemLevel >= 82
 DropLevel > 65
 Rarity <= Rare
@@ -1174,6 +1198,15 @@ Class "Sceptre" "Shield"
 Rarity Rare
 AreaLevel >= 75
 
+# filter-norarity
+Show
+BaseType "Chiming Staff"
+AreaLevel < 64
+PlayEffect Blue
+MinimapIcon 2 Blue Circle
+SetBackgroundColor 0 0 0 210
+PlayAlertSound 16 300
+
 # filter-ssf-mage filter-norarity
 Show
 Class "Wand" "Staff"
@@ -1194,7 +1227,7 @@ AreaLevel < 78
 
 #   [0801] For T15+ maps / area level 79+
 Show
-BaseType "Robe" "Raiment"
+BaseType " Robe" "Raiment"
 DropLevel = 65 # that base "vile robe" and "havoc raiment" have a max ES; robe 65lvl: 184 ES; raiment 70lvl: 153 ES + mana regen; robe 75lvl: 153 ES + faster ES recharge
 Rarity <= Rare
 SetBackgroundColor 0 0 0 210
@@ -1458,7 +1491,7 @@ AreaLevel >= 75
 
 Hide
 Rarity <= Rare
-BaseType "Circlet" "Tiara" "Crown" "Mask" "Visage" "Greathelm" "Cap" "Hood" "Helm" "Raiment" "Robe" "Mantle" "Vestments" "Jacket" "Garb" "Cuirass" "Plate" "Coat" "Vest" "Mail" "Garment" "Sandals" "Slippers" "Leggings" "Shoes" "Cuisses" "Greaves" "Boots" "Sabatons" "Crest Shield" "Tower Shield" "Buckler" "Targe" "Gloves" "Cuffs" "Wraps" "Manchettes" "Mitts" "Bracers" "Gauntlets"
+BaseType "Circlet" "Tiara" " Crown" " Mask" "Visage" "Greathelm" " Cap" " Hood" "Helm" "Raiment" " Robe" " Mantle" " Vestments" " Jacket" " Garb" "Cuirass" " Plate" " Coat" " Vest" " Mail" "Garment" "Sandals" "Slippers" "Leggings" "Shoes" "Cuisses" "Greaves" "Boots" "Sabatons" "Crest Shield" "Tower Shield" "Buckler" " Targe" "Gloves" " Cuffs" " Wraps" "Manchettes" " Mitts" "Bracers" "Gauntlets"
 DropLevel <= 64
 AreaLevel >= 75
 
@@ -1510,7 +1543,7 @@ AreaLevel >= 75
 # 
 # Hide
 # Class "Body"
-# BaseType " Coat" "Cuirass" "Plate" " Vest"
+# BaseType " Coat" "Cuirass" " Plate" " Vest"
 # Rarity <= Rare
 # AreaLevel >= 75
 # 
@@ -1522,7 +1555,7 @@ AreaLevel >= 75
 # 
 # Hide
 # Class "Gloves"
-# BaseType "Bracers" "Mitts"
+# BaseType "Bracers" " Mitts"
 # Rarity <= Rare
 # AreaLevel >= 75
 # 
@@ -1552,7 +1585,7 @@ AreaLevel >= 75
 # 
 # Hide
 # Class "Shields"
-# BaseType "Targe"
+# BaseType " Targe"
 # Rarity <= Rare
 # AreaLevel >= 75
 
@@ -1565,13 +1598,13 @@ AreaLevel >= 75
 
 Hide
 Class "Body"
-BaseType " Jacket" "Mantle" " Garb" "Vestments"
+BaseType " Jacket" " Mantle" " Garb" " Vestments"
 Rarity <= Rare
 AreaLevel >= 75
 
 Hide
 Class "Gloves"
-BaseType "Cuffs" "Wraps" "Manchettes"
+BaseType " Cuffs" " Wraps" "Manchettes"
 Rarity <= Rare
 AreaLevel >= 75
 
@@ -1600,7 +1633,7 @@ DropLevel >= 65
 # filter-norarity
 Show
 Class "Body"
-BaseType "Robe" "Raiment"
+BaseType " Robe" "Raiment"
 Rarity <= Rare
 SetBackgroundColor 0 0 0 210
 DropLevel >= 65
@@ -1691,7 +1724,7 @@ AreaLevel >= 71
 
 Hide
 Rarity <= Magic
-BaseType "Circlet" "Tiara" "Crown" "Mask" "Visage" "Greathelm" "Cap" "Hood" "Helm" "Raiment" "Robe" "Mantle" "Vestments" "Jacket" "Garb" "Cuirass" "Plate" "Coat" "Vest" "Mail" "Garment" "Sandals" "Slippers" "Leggings" "Shoes" "Cuisses" "Greaves" "Boots" "Sabatons" "Crest Shield" "Tower Shield" "Buckler" "Targe" "Gloves" "Cuffs" "Wraps" "Manchettes" "Mitts" "Bracers" "Gauntlets"
+BaseType "Circlet" "Tiara" " Crown" " Mask" "Visage" "Greathelm" " Cap" " Hood" "Helm" "Raiment" " Robe" " Mantle" " Vestments" " Jacket" " Garb" "Cuirass" " Plate" " Coat" " Vest" " Mail" "Garment" "Sandals" "Slippers" "Leggings" "Shoes" "Cuisses" "Greaves" "Boots" "Sabatons" "Crest Shield" "Tower Shield" "Buckler" " Targe" "Gloves" " Cuffs" " Wraps" "Manchettes" " Mitts" "Bracers" "Gauntlets"
 DropLevel <= 60
 AreaLevel >= 71
 
@@ -1718,7 +1751,7 @@ AreaLevel >= 71
 
 Hide
 Class "Body"
-BaseType " Coat" "Cuirass" "Plate" " Vest"
+BaseType " Coat" "Cuirass" " Plate" " Vest"
 Rarity <= Rare
 AreaLevel >= 71
 
@@ -1730,7 +1763,7 @@ AreaLevel >= 71
 
 Hide
 Class "Gloves"
-BaseType "Bracers" "Mitts"
+BaseType "Bracers" " Mitts"
 Rarity <= Rare
 AreaLevel >= 71
 
@@ -1760,7 +1793,7 @@ AreaLevel >= 71
 
 Hide
 Class "Shields"
-BaseType "Targe"
+BaseType " Targe"
 Rarity <= Rare
 AreaLevel >= 71
 
@@ -1773,7 +1806,7 @@ AreaLevel >= 71
 
 #Hide # already hidden at AreaLevel >= 65
 #Class "Body"
-#BaseType " Jacket" "Mantle" " Garb" "Vestments"
+#BaseType " Jacket" " Mantle" " Garb" " Vestments"
 #Rarity <= Magic
 #AreaLevel >= 71
 
@@ -1785,7 +1818,7 @@ AreaLevel >= 71
 
 Hide
 Class "Gloves"
-BaseType "Cuffs" "Wraps" "Manchettes"
+BaseType " Cuffs" " Wraps" "Manchettes"
 Rarity <= Magic
 AreaLevel >= 71
 
@@ -1800,7 +1833,7 @@ Rarity Magic Rare
 # filter-norarity
 Show
 Class "Body"
-BaseType "Raiment" "Robe"
+BaseType "Raiment" " Robe"
 SetBackgroundColor 0 0 0 210
 Rarity <= Rare
 
@@ -1934,7 +1967,7 @@ AreaLevel >= 71
 
 Hide
 Class "Currency"
-BaseType "Wisdom"
+BaseType "Scroll of Wisdom"
 AreaLevel >= 65
 
 Hide
@@ -1977,7 +2010,7 @@ AreaLevel >= 65
 
 Hide
 Class "Body"
-BaseType " Coat" "Cuirass" "Plate" " Vest"
+BaseType " Coat" "Cuirass" " Plate" " Vest"
 Rarity <= Magic
 AreaLevel >= 65
 
@@ -1989,7 +2022,7 @@ AreaLevel >= 65
 
 Hide
 Class "Gloves"
-BaseType "Bracers" "Mitts"
+BaseType "Bracers" " Mitts"
 Rarity <= Magic
 AreaLevel >= 65
 
@@ -2019,7 +2052,7 @@ AreaLevel >= 65
 
 Hide
 Class "Shields"
-BaseType "Targe"
+BaseType " Targe"
 Rarity <= Magic
 AreaLevel >= 65
 
@@ -2119,7 +2152,7 @@ AreaLevel <= 74
 
 Hide
 Class "Shields"
-BaseType "Targe" "Tower Shield"
+BaseType " Targe" "Tower Shield"
 Rarity Normal
 
 Hide
@@ -2142,7 +2175,7 @@ SetBackgroundColor 0 0 0 210
 # filter-norarity
 Show
 Class "Shields" "Buckler"
-BaseType "Buckler" "Targe" "Tower Shield"
+BaseType "Buckler" " Targe" "Tower Shield"
 Rarity Magic Rare
 SetBackgroundColor 0 0 0 210
 
@@ -2154,11 +2187,13 @@ SetBackgroundColor 0 0 0 210
 
 # "Scroll of Wisdom" is only shown in acts 1–4
 Hide
+Class "Currency"
 BaseType "Scroll of Wisdom"
 AreaLevel > 48
 
 # filter-norarity
 Show
+Class "Currency"
 BaseType "Scroll of Wisdom"
 AreaLevel <= 48
 SetBackgroundColor 0 0 0 210
@@ -2211,20 +2246,20 @@ SetBackgroundColor 0 0 0 210
 
 Hide
 Class "Gloves"
-BaseType "Bracers" "Mitts"
+BaseType "Bracers" " Mitts"
 Rarity Normal
 
 # filter-norarity
 Show
 Class "Gloves"
-BaseType "Bracers" "Mitts"
+BaseType "Bracers" " Mitts"
 Rarity Magic
 SetBackgroundColor 0 0 0 210
 
 # filter-norarity
 Show
 Class "Gloves"
-BaseType "Bracers" "Mitts"
+BaseType "Bracers" " Mitts"
 Rarity Rare
 SetBackgroundColor 0 0 0 210
 
@@ -2250,38 +2285,38 @@ SetBackgroundColor 0 0 0 210
 #   [1202] mix-bases:-----------
 Hide
 Class "Helmet"
-BaseType "Crown" "Mask" " Helm" " Visage"
+BaseType " Crown" " Mask" " Helm" " Visage"
 Rarity Normal
 
 # filter-norarity
 Show
 Class "Helmet"
-BaseType "Crown" "Mask" " Helm" " Visage"
+BaseType " Crown" " Mask" " Helm" " Visage"
 Rarity Magic
 SetBackgroundColor 0 0 0 210
 
 # filter-norarity
 Show
 Class "Helmet"
-BaseType "Crown" "Mask" " Helm" " Visage"
+BaseType " Crown" " Mask" " Helm" " Visage"
 Rarity Rare
 SetBackgroundColor 0 0 0 210
 
 Hide
 Class "Body"
-BaseType " Jacket" " Mail" " Armour" "Mantle" " Garb" "Vestments"
+BaseType " Jacket" " Mail" " Armour" " Mantle" " Garb" " Vestments"
 Rarity Normal
 
 Hide
 Class "Body"
-BaseType " Jacket" " Mail" " Armour" "Mantle" " Garb" "Vestments"
+BaseType " Jacket" " Mail" " Armour" " Mantle" " Garb" " Vestments"
 Rarity Magic
 AreaLevel >= 65
 
 # filter-norarity
 Show
 Class "Body"
-BaseType " Jacket" " Mail" " Armour" "Mantle" " Garb" "Vestments"
+BaseType " Jacket" " Mail" " Armour" " Mantle" " Garb" " Vestments"
 Rarity Magic
 SetBackgroundColor 0 0 0 210
 AreaLevel < 65
@@ -2289,26 +2324,26 @@ AreaLevel < 65
 # filter-norarity
 Show
 Class "Body"
-BaseType " Jacket" " Mail" " Armour" "Mantle" " Garb" "Vestments"
+BaseType " Jacket" " Mail" " Armour" " Mantle" " Garb" " Vestments"
 Rarity Rare
 SetBackgroundColor 0 0 0 210
 
 Hide
 Class "Gloves"
-BaseType "Cuffs" "Wraps" "Gauntlets" "Manchettes"
+BaseType " Cuffs" " Wraps" "Gauntlets" "Manchettes"
 Rarity Normal
 
 # filter-norarity
 Show
 Class "Gloves"
-BaseType "Cuffs" "Wraps" "Gauntlets" "Manchettes"
+BaseType " Cuffs" " Wraps" "Gauntlets" "Manchettes"
 Rarity Magic
 SetBackgroundColor 0 0 0 210
 
 # filter-norarity
 Show
 Class "Gloves"
-BaseType "Cuffs" "Wraps" "Gauntlets" "Manchettes"
+BaseType " Cuffs" " Wraps" "Gauntlets" "Manchettes"
 Rarity Rare
 SetBackgroundColor 0 0 0 210
 
@@ -2336,7 +2371,7 @@ SetBackgroundColor 0 0 0 210
 # filter-norarity
 Show
 Class "Body"
-BaseType "Raiment" "Robe"
+BaseType "Raiment" " Robe"
 Rarity <= Rare
 SetBackgroundColor 0 0 0 210
 
@@ -2506,18 +2541,6 @@ SetFontSize 45
 
 Show
 Rarity Unique
-BaseType == "Ornate Belt" # Ryslatha's Coil / [-40–-30%; 30–40%] min-max Physical Attack Damage
-DropLevel == 31
-SetTextColor 255 0 0 255
-SetBorderColor 255 0 0 255
-SetBackgroundColor 255 255 255 255
-PlayAlertSound 6 300
-PlayEffect Purple
-MinimapIcon 0 Purple Star
-SetFontSize 45
-
-Show
-Rarity Unique
 BaseType == "Unset Ring" # Bursting Decay / Attacks have added Physical damage equal to 3% of maximum Life
 DropLevel == 60
 SetTextColor 255 0 0 255
@@ -2544,7 +2567,6 @@ SetFontSize 45
 # ======================================
 #   [1302] red beam: price ~1 divine orb
 ### ~1 div (October, 2025):
-# Leopold's Applause, Embroidered Gloves
 # Tabula Rasa, Garment
 # Solus Ipse, Grand Visage
 # Megalomaniac, unid Diamond
@@ -2558,12 +2580,13 @@ SetFontSize 45
 # The Surrender, Stone Tower Shield
 # Sekhema's Resolve, Ring
 # The Desperate Alliance, Vase Relic
-# Lavianga's Spirits, Mana Flask 
+# Lavianga's Spirits, Mana Flask
+# Essentia Sanguis, Furtive Wraps
 # ----------------------------------
 
 Show
 Rarity Unique
-BaseType == "Stone Tower Shield" "Thawing Charm" "Embroidered Gloves" "Grand Visage" "Primed Quiver" "Vase Relic"
+BaseType == "Stone Tower Shield" "Thawing Charm" "Grand Visage" "Primed Quiver" "Vase Relic" "Furtive Wraps"
 SetTextColor 255 0 0 255
 SetBorderColor 255 0 0 255
 SetBackgroundColor 255 255 255 255
@@ -2621,8 +2644,7 @@ SetFontSize 45
 Show
 Rarity Unique
 Class "Flask"
-BaseType "Mana"
-DropLevel == 49
+BaseType "Gargantuan Mana Flask"
 SetTextColor 255 0 0 255
 SetBorderColor 255 0 0 255
 SetBackgroundColor 255 255 255 255
@@ -2903,7 +2925,7 @@ PlayAlertSound 3 300
 ## armors:
 Show
 Rarity Unique
-BaseType == "Fur Plate" "Champion Cuirass" "Quilted Vest" "Pathfinder Coat" "Serpentscale Coat" "Strider Vest" "Tattered Robe" "Votive Raiment" "Altar Robe" "Havoc Raiment" "Enlightened Robe" "Explorer Armour" "Scale Mail" "Knight Armour" "Ancestral Mail" "Heroic Armour" "Pilgrim Vestments" "Cleric Vestments" "Tideseer Mantle" "Corvus Mantle" "Wayfarer Jacket" "Scalper's Jacket" "Assassin Garb" "Wrapped Greathelm" "Spired Greathelm" "Fierce Greathelm" "Felt Cap" "Viper Cap" "Velvet Cap" "Covert Hood" "Twig Circlet" "Chain Tiara" "Feathered Tiara" "Vermeil Circlet" "Jade Tiara" "Magus Tiara" "Brimmed Helm" "Decorated Helm" "Iron Crown" "Cultist Crown" "Martyr Crown" "Heavy Crown" "Spiritbone Crown" "Face Mask" "Death Mask" "Gold Circlet" "Riveted Mitts" "Spined Bracers" "Torn Gloves" "Sombre Gloves" "Pauascale Gloves" "Layered Gauntlets" "Doubled Gauntlets" "Burnished Gauntlets" "Rope Cuffs" "Gauze Wraps" "Spiral Wraps" "Furtive Wraps" "Utility Wraps" "Trimmed Greaves" "Laced Boots" "Wrapped Sandals" "Feathered Sandals" "Secured Leggings" "Hunting Shoes" "Heraldric Tower Shield" "Crucible Tower Shield" "Emblem Crest Shield" "Iron Buckler" "Woven Focus" "Antler Focus" "Engraved Focus" "Voodoo Focus" "Grand Regalia" "Grand Manchettes" "Grand Cuisses" "Array Buckler" "Long Belt" "Blacksteel Tower Shield" "Gilded Vestments" "Cinched Boots"
+BaseType == "Fur Plate" "Champion Cuirass" "Pathfinder Coat" "Serpentscale Coat" "Strider Vest" "Tattered Robe" "Votive Raiment" "Altar Robe" "Havoc Raiment" "Enlightened Robe" "Explorer Armour" "Scale Mail" "Knight Armour" "Ancestral Mail" "Heroic Armour" "Pilgrim Vestments" "Cleric Vestments" "Tideseer Mantle" "Corvus Mantle" "Wayfarer Jacket" "Scalper's Jacket" "Wrapped Greathelm" "Spired Greathelm" "Fierce Greathelm" "Felt Cap" "Viper Cap" "Velvet Cap" "Covert Hood" "Twig Circlet" "Chain Tiara" "Feathered Tiara" "Vermeil Circlet" "Jade Tiara" "Magus Tiara" "Brimmed Helm" "Decorated Helm" "Iron Crown" "Cultist Crown" "Martyr Crown" "Heavy Crown" "Spiritbone Crown" "Face Mask" "Death Mask" "Gold Circlet" "Riveted Mitts" "Spined Bracers" "Torn Gloves" "Pauascale Gloves" "Layered Gauntlets" "Doubled Gauntlets" "Burnished Gauntlets" "Rope Cuffs" "Gauze Wraps" "Spiral Wraps" "Utility Wraps" "Trimmed Greaves" "Laced Boots" "Wrapped Sandals" "Feathered Sandals" "Secured Leggings" "Hunting Shoes" "Heraldric Tower Shield" "Crucible Tower Shield" "Emblem Crest Shield" "Iron Buckler" "Woven Focus" "Antler Focus" "Voodoo Focus" "Grand Regalia" "Grand Manchettes" "Grand Cuisses" "Array Buckler" "Long Belt" "Blacksteel Tower Shield" "Gilded Vestments" "Cinched Boots" "Embroidered Gloves" "Plate Belt"
 SetBackgroundColor 0 0 0 210
 SetBorderColor 255 140 0 255
 PlayEffect Brown
@@ -2951,9 +2973,11 @@ MinimapIcon 2 Brown Star
 PlayAlertSound 3 300
 
 ## misc:
+
 Show
 Rarity Unique
-BaseType == "Broadhead Quiver" "Azure Amulet" "Solar Amulet" "Gold Amulet" "Gold Ring" "Ornate Belt" "Fine Belt" # "Staunching Charm" "Antidote Charm" "Grounding Charm" "Stone Charm" "Ruby Charm" "Sapphire Charm" "Topaz Charm" "Amethyst Charm"
+BaseType == "Broadhead Quiver" "Azure Amulet" "Solar Amulet" "Gold Amulet" "Gold Ring" "Ornate Belt" "Fine Belt"
+# "Staunching Charm" "Antidote Charm" "Grounding Charm" "Stone Charm" "Ruby Charm" "Sapphire Charm" "Topaz Charm" "Amethyst Charm"
 SetBackgroundColor 0 0 0 210
 SetBorderColor 255 140 0 255
 PlayEffect Brown
@@ -3582,6 +3606,7 @@ PlayEffect White
 MinimapIcon 1 Pink Raindrop
 
 #   [1406] tablets
+
 Show
 Rarity == Unique
 Class "Tablet"
@@ -3640,7 +3665,8 @@ Show
 Class "Quest Item" "Instance Local Item"
 BaseType == "Rotten Satchel Charge"
 SetTextColor 0 209 0
-SetBackgroundColor 0 0 0 220
+SetBackgroundColor 0 0 0 210
+PlayAlertSound 2 100
 SetFontSize 40
 
 #--------------------------
@@ -4231,7 +4257,7 @@ MinimapIcon 1 White Triangle
 Show
 Class "Support Gem"
 DropLevel >= 65
-BaseType == "Garukhan's Resolve" "Uhtred's Augury" "Rakiata's Flow" "Dialla's Desire" "Uhtred's Omen" "Uul-Netol's Embrace" "Ixchel's Torment" "Xoph's Pyre" "Tul's Stillness" "Rigwald's Ferocity" "Esh's Radiance" "Uhtred's Exodus" "Atalui's Bloodletting" "Arbiter's Ignition" "Tecrod's Revenge" "Brutus' Brain" "Ahn's Citadel" "Sione's Temper"
+BaseType == "Garukhan's Resolve" "Uhtred's Augury" "Rakiata's Flow" "Dialla's Desire" "Uhtred's Omen" "Uul-Netol's Embrace" "Ixchel's Torment" "Xoph's Pyre" "Tul's Stillness" "Rigwald's Ferocity" "Esh's Radiance" "Uhtred's Exodus" "Atalui's Bloodletting" "Arbiter's Ignition" "Tecrod's Revenge" "Brutus' Brain" "Ahn's Citadel" "Sione's Temper" "Zerphi's Infamy"
 SetTextColor 255 0 0 255
 SetBorderColor 255 0 0 255
 SetBackgroundColor 255 255 255 255
@@ -4495,21 +4521,10 @@ PlayEffect Purple
 MinimapIcon 0 Purple Star
 SetFontSize 45
 
-Show
-Class "Augment"
-BaseType "The Greatwolf's Rune of Willpower"
-SetTextColor 255 0 0 255
-SetBorderColor 255 0 0 255
-SetBackgroundColor 255 255 255 255
-PlayAlertSound 6 300
-PlayEffect Red
-MinimapIcon 0 Red Star
-SetFontSize 45
-
 # A-tier:
 Show
 Class "Augment"
-BaseType "Thane Girt's Rune of Wildness" "Greater Rune of Tithing" "Saqawal's Rune of Memory"
+BaseType  "Saqawal's Rune of Memory" "Farrul's Rune of the Chase"
 SetTextColor 255 0 0 255
 SetBorderColor 255 0 0 255
 SetBackgroundColor 255 255 255 255
@@ -4520,7 +4535,7 @@ SetFontSize 45
 
 Show
 Class "Augment"
-BaseType "Fenumus' Rune of Draining" "Thane Grannell's Rune of Mastery" "Farrul's Rune of Grace" "Saqawal's Rune of the Sky" "Farrul's Rune of the Chase" "Thane Leld's Rune of Spring" "Courtesan Mannan's Rune of Cruelty"
+BaseType "Fenumus' Rune of Draining" "Thane Grannell's Rune of Mastery" "Farrul's Rune of Grace" "Saqawal's Rune of the Sky" "Thane Leld's Rune of Spring" "Courtesan Mannan's Rune of Cruelty" "Thane Girt's Rune of Wildness" "Greater Rune of Tithing" "The Greatwolf's Rune of Willpower"
 SetTextColor 255 255 255 255
 SetBorderColor 255 255 255 255
 SetBackgroundColor 240 90 35 200
@@ -4780,13 +4795,20 @@ SetFontSize 45
 Show
 Class "Currency"
 BaseType "Fracturing Orb"
-SetTextColor 255 255 255 255
-SetBorderColor 255 255 255 255
-SetBackgroundColor 240 90 35 200
-PlayAlertSound 1 150
-PlayEffect White
-MinimapIcon 1 Orange Circle
-SetFontSize 40
+SetTextColor 255 0 0 255
+SetBorderColor 255 0 0 255
+SetBackgroundColor 255 255 255 255
+PlayAlertSound 6 300
+PlayEffect Red
+MinimapIcon 0 Red Star
+SetFontSize 45
+#SetTextColor 255 255 255 255
+#SetBorderColor 255 255 255 255
+#SetBackgroundColor 240 90 35 200
+#PlayAlertSound 1 150
+#PlayEffect White
+#MinimapIcon 1 Orange Circle
+#SetFontSize 40
 #SetTextColor 132 229 255
 #SetBorderColor 255 207 132
 #SetBackgroundColor 76 51 12 200
@@ -5796,7 +5818,7 @@ Rarity <= Rare
 
 #armors: visibility are overridden in higher priority rules
 Hide
-BaseType "Circlet" "Tiara" "Crown" "Mask" "Visage" "Greathelm" "Cap" "Hood" "Helm" "Raiment" "Robe" "Mantle" "Vestments" "Jacket" "Garb" "Regalia" "Cuirass" "Plate" "Coat" "Vest" "Armour" "Mail" "Garment" "Sandals" "Slippers" "Leggings" "Shoes" "Cuisses" "Greaves" "Boots" "Sabatons" "Crest Shield" "Tower Shield" "Buckler" "Targe" "Gloves" "Cuffs" "Wraps" "Manchettes" "Mitts" "Bracers" "Gauntlets"
+BaseType "Circlet" "Tiara" " Crown" " Mask" "Visage" "Greathelm" " Cap" " Hood" "Helm" "Raiment" " Robe" " Mantle" " Vestments" " Jacket" " Garb" "Regalia" "Cuirass" " Plate" " Coat" " Vest" "Armour" " Mail" "Garment" "Sandals" "Slippers" "Leggings" "Shoes" "Cuisses" "Greaves" "Boots" "Sabatons" "Crest Shield" "Tower Shield" "Buckler" " Targe" "Gloves" " Cuffs" " Wraps" "Manchettes" " Mitts" "Bracers" "Gauntlets"
 Rarity <= Rare
 
 # items without any other rules:
