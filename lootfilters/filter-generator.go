@@ -298,7 +298,7 @@ func applyStyles(blocks [][]string, filterName string) [][]string {
 // extractStyleInfo extracts style name and prefix from line
 func extractStyleInfo(line string) (string, string) {
 	trimmedLine := strings.TrimSpace(line)
-	
+
 	// Check if it's a commented style
 	if strings.HasPrefix(trimmedLine, "#") {
 		// Find where "style-" starts
@@ -352,17 +352,17 @@ func generateAllFiles() {
 func showMenu() {
 	fmt.Println("\n" + strings.Repeat("=", 50))
 	fmt.Println("Select filter type:")
-	fmt.Println("0. All files")
-	fmt.Println("1. trade-summoner")
-	fmt.Println("2. ssf-summoner") 
-	fmt.Println("3. trade-mage")
-	fmt.Println("4. ssf-mage")
-	fmt.Println("5. rarity")
+	fmt.Println("  0. All files")
+	fmt.Println("  1. trade-summoner")
+	fmt.Println("  2. ssf-summoner")
+	fmt.Println("  3. trade-mage")
+	fmt.Println("  4. ssf-mage")
+	fmt.Println("  5. rarity")
 	fmt.Println()
 	fmt.Println("Commands:")
-	fmt.Println("  debug - toggle debug mode")
-	fmt.Println("  local - toggle local mode")
-	fmt.Println("  exit - quit program")
+	fmt.Println("  debug (d) - toggle debug mode")
+	fmt.Println("  local (l) - toggle local mode")
+	fmt.Println("  exit (q) - quit program")
 	
 	// Show current debug status
 	if debugMode {
@@ -457,7 +457,10 @@ func processChoice(choice string) (bool, [][]string) {
 	filterName := "fps30_" + choice + ".filter"
 	filteredBlocks = applyStyles(filteredBlocks, filterName)
 	
-	// 7. Count informative blocks after applying styles (for debug info)
+	// 7. Remove duplicate style lines within each block
+	filteredBlocks = removeDuplicateStyleLines(filteredBlocks)
+
+	// 8. Count informative blocks after applying styles (for debug info)
 	informativeBlocksAfterStyles := countInformativeBlocks(filteredBlocks)
 	debugPrintfCyan("Blocks of rules after styles: %d\n", informativeBlocksAfterStyles)
 	
@@ -684,6 +687,7 @@ func getFirstLinePreview(line string) string {
 	return line
 }
 
+// Saving content to the specified file
 func writeOutputFile(filename string, blocks [][]string) error {
 	file, err := os.Create(filename)
 	if err != nil {
@@ -712,4 +716,82 @@ func writeOutputFile(filename string, blocks [][]string) error {
 	}
 	
 	return writer.Flush()
+}
+
+// Removing duplicate lines when applying multiple lines with overlapping styles
+func removeDuplicateStyleLines(blocks [][]string) [][]string {
+	var cleanedBlocks [][]string
+
+	// Words that are allowed to have duplicates
+	allowedDuplicates := map[string]bool{
+		"AreaLevel": true,
+		"ItemLevel": true,
+		"DropLevel": true,
+	}
+
+	for _, block := range blocks {
+		var cleanedBlock []string
+		seenFirstWords := make(map[string]bool)
+
+		for _, line := range block {
+			trimmedLine := strings.TrimSpace(line)
+
+			// Skip empty lines
+			if trimmedLine == "" {
+				cleanedBlock = append(cleanedBlock, line)
+				continue
+			}
+
+			// Skip comment lines (start with #)
+			if strings.HasPrefix(trimmedLine, "#") {
+				cleanedBlock = append(cleanedBlock, line)
+				continue
+			}
+
+			// Get first word of the line
+			firstWord := getFirstWord(trimmedLine)
+
+			// Check if this word is allowed to have duplicates
+			if allowedDuplicates[firstWord] {
+				// Always add lines with allowed duplicate words
+				cleanedBlock = append(cleanedBlock, line)
+			} else if firstWord == "" || !seenFirstWords[firstWord] {
+				// If first word is empty or we haven't seen it before, add the line
+				cleanedBlock = append(cleanedBlock, line)
+				seenFirstWords[firstWord] = true
+			} else {
+				// This is a duplicate of a non-allowed word, skip it
+				debugPrintfCyan("Removed duplicate line with first word '%s': %s\n", firstWord, getLinePreview(line))
+			}
+		}
+
+		cleanedBlocks = append(cleanedBlocks, cleanedBlock)
+	}
+
+	return cleanedBlocks
+}
+
+// getFirstWord extracts the first word from a line
+func getFirstWord(line string) string {
+	// Remove leading/trailing spaces
+	trimmed := strings.TrimSpace(line)
+
+	// Find first space
+	spaceIndex := strings.Index(trimmed, " ")
+	if spaceIndex == -1 {
+		// No space found, entire line is the first word
+		return trimmed
+	}
+
+	// Return everything before first space
+	return trimmed[:spaceIndex]
+}
+
+// getLinePreview returns a preview of the line for logging
+func getLinePreview(line string) string {
+	trimmed := strings.TrimSpace(line)
+	if len(trimmed) > 50 {
+		return trimmed[:50] + "..."
+	}
+	return trimmed
 }

@@ -6,7 +6,7 @@
 # AUTHOR: 	fpsthirty
 # SOURCE: 	https://github.com/fpsthirty/poe2-lootfilter
 #
-# --- based on NeverSink's lootfilter v0.1.1 ---
+# --- based on NeverSink's lootfilter v0.1.1 (Dec 9, 2024) ---
 #
 # basic principles of this lootfilter:
 # 1. Take everything you see on the ground. At Area levels 1+ / 65+ / 71+ / 75+ you see fewer and fewer items that have str- & dex-requirements on them and other useless items for your class.
@@ -986,7 +986,6 @@ Quality >= 7
 ItemLevel < 81
 Rarity <= Rare
 style-eq-quality
-MinimapIcon 1 Grey Square
 PlayAlertSound 10 100
 
 # filter-norarity
@@ -995,7 +994,6 @@ Class "Body" "Helmet" "Boots" "Gloves" "Shields" "Foci" "Talismans"
 Quality >= 7
 Rarity <= Rare
 style-eq-quality
-MinimapIcon 1 Grey Square
 PlayAlertSound 10 100
 
 #--------------------------
@@ -3332,9 +3330,8 @@ SetTextColor 255 207 255
 SetBorderColor 255 207 255
 SetBackgroundColor 65 20 80 200
 PlayAlertSound 2 300
-PlayEffect White
-SetFontSize 40
 PlayEffect Blue
+SetFontSize 40
 MinimapIcon 1 Blue Square
 
 Show

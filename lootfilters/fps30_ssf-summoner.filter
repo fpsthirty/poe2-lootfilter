@@ -6,7 +6,7 @@
 # AUTHOR: 	fpsthirty
 # SOURCE: 	https://github.com/fpsthirty/poe2-lootfilter
 #
-# --- based on NeverSink's lootfilter v0.1.1 ---
+# --- based on NeverSink's lootfilter v0.1.1 (Dec 9, 2024) ---
 #
 # basic principles of this lootfilter:
 # 1. Take everything you see on the ground. At Area levels 1+ / 65+ / 71+ / 75+ you see fewer and fewer items that have str- & dex-requirements on them and other useless items for your class.
@@ -916,7 +916,6 @@ Rarity <= Rare
 SetBorderColor 200 200 200
 SetBackgroundColor 63 63 63 222
 PlayEffect Grey
-MinimapIcon 1 Grey Square
 MinimapIcon 1 Grey Square
 PlayAlertSound 10 100
 
@@ -3427,9 +3426,8 @@ SetTextColor 255 207 255
 SetBorderColor 255 207 255
 SetBackgroundColor 65 20 80 200
 PlayAlertSound 2 300
-PlayEffect White
-SetFontSize 40
 PlayEffect Blue
+SetFontSize 40
 MinimapIcon 1 Blue Square
 
 Show
@@ -3442,7 +3440,6 @@ SetBackgroundColor 65 20 80 200
 PlayAlertSound 2 300
 PlayEffect White
 SetFontSize 40
-PlayEffect Blue
 MinimapIcon 1 Blue Square
 
 Show
@@ -4978,7 +4975,6 @@ SetFontSize 40
 PlayAlertSound 2 200
 PlayEffect Red Temp
 MinimapIcon 1 Red Circle
-SetFontSize 40
 
 # Show
 # Class "Currency"
@@ -5001,7 +4997,6 @@ SetFontSize 40
 PlayAlertSound 2 200
 PlayEffect Red Temp
 MinimapIcon 1 Red Circle
-SetFontSize 40
 
 # Unknown currency
 Show
