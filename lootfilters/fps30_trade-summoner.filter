@@ -672,6 +672,17 @@ PlayEffect Orange Temp
 PlayAlertSound 12 300
 MinimapIcon 1 Orange Square
 
+# filter-mage
+Show
+BaseType "Tribal Mask" # The Vertex / use vaal cultivation orb for +[2–4] to Level of all Skills
+Rarity Normal
+ItemLevel >= 33
+SetBorderColor 255 128 200
+SetBackgroundColor 63 63 63 222
+PlayEffect Orange Temp
+PlayAlertSound 12 300
+MinimapIcon 1 Orange Square
+
 # filter-norarity
 Show
 BaseType "Silver Charm" # The Fall of the Axe / Grants Onslaught during effect
@@ -2423,6 +2434,7 @@ SetBackgroundColor 0 0 0 210
 # Atziri's Contempt, Pronged Spear
 # Flesh Crucible, Diamond
 # The Vertex, Tribal Mask
+# Choir of the Storm, Jade Amulet (Droplevel 90)
 # ----------------------------------
 
 Show
@@ -2440,6 +2452,19 @@ Show
 Rarity Unique
 BaseType == "Silk Robe" # Temporalis / Skills have (-2–-1) seconds to Cooldown
 DropLevel == 64
+SetTextColor 255 0 0 255
+SetBorderColor 255 0 0 255
+SetBackgroundColor 255 255 255 255
+PlayAlertSound 6 300
+PlayEffect Purple
+MinimapIcon 0 Purple Star
+SetFontSize 45
+
+Show
+Rarity Unique
+Class "Amulet"
+BaseType == "Jade Amulet" # Choir of the Storm / Level 20 Lightning Bolt
+DropLevel == 90
 SetTextColor 255 0 0 255
 SetBorderColor 255 0 0 255
 SetBackgroundColor 255 255 255 255
@@ -4778,8 +4803,8 @@ SetTextColor 255 0 0 255
 SetBorderColor 255 0 0 255
 SetBackgroundColor 255 255 255 255
 PlayAlertSound 6 300
-PlayEffect Red
-MinimapIcon 0 Red Star
+PlayEffect Purple
+MinimapIcon 0 Purple Star
 SetFontSize 45
 #SetTextColor 255 255 255 255
 #SetBorderColor 255 255 255 255

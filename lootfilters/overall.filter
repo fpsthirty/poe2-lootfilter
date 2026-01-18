@@ -507,6 +507,13 @@ Rarity Normal
 ItemLevel >= 24
 style-base-craft-unique
 
+# filter-mage
+Show
+BaseType "Tribal Mask" # The Vertex / use vaal cultivation orb for +[2–4] to Level of all Skills
+Rarity Normal
+ItemLevel >= 33
+style-base-craft-unique
+
 # filter-norarity
 Show
 BaseType "Silver Charm" # The Fall of the Axe / Grants Onslaught during effect
@@ -782,6 +789,7 @@ PlayEffect Cyan
 
 # filter-rarity
 Hide
+Class "Ring"
 BaseType "Ring"
 AreaLevel >= 79
 Rarity <= Rare
@@ -2384,6 +2392,7 @@ style-bg-translucent
 # Atziri's Contempt, Pronged Spear
 # Flesh Crucible, Diamond
 # The Vertex, Tribal Mask
+# Choir of the Storm, Jade Amulet (Droplevel 90)
 # ----------------------------------
 
 Show
@@ -2395,6 +2404,13 @@ Show
 Rarity Unique
 BaseType == "Silk Robe" # Temporalis / Skills have (-2–-1) seconds to Cooldown
 DropLevel == 64
+style-orb-div-purple
+
+Show
+Rarity Unique
+Class "Amulet"
+BaseType == "Jade Amulet" # Choir of the Storm / Level 20 Lightning Bolt
+DropLevel == 90
 style-orb-div-purple
 
 Show
@@ -4138,7 +4154,7 @@ style-orb-div
 Show
 Class "Currency"
 BaseType "Fracturing Orb"
-style-orb-div
+style-orb-div-purple
 #style-orb-annul
 #style-orb-fracturing
 
