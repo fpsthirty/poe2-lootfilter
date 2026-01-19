@@ -64,9 +64,10 @@
 #   [0302] extra socket / quality
 # [[0400]] White items for unique craft
 # [[0500]] High itemLevel bases
-#   [0501] weapons
-#   [0502] armor pieces
-#   [0503] jewellery
+#   [0501] DropLevel overcap
+#   [0502] weapons
+#   [0503] armor pieces
+#   [0504] jewellery
 # [[0600]] Salvagable items & items with +quality
 # [[0700]] Section for non-summoner casters / mages
 # [[0800]] Endgame custom rules
@@ -625,7 +626,20 @@ style-base-craft-unique
 # [[0500]] High itemLevel bases:
 #--------------------------
 
-#   [0501] weapons:
+#   [0501] DropLevel overcap
+Show # todo bug report: "rules with "DropLevel < 17" and lower mistakenly affect Wands / Staves with reqLevel 70+" https://www.pathofexile.com/forum/view-thread/3880752
+Class "Wands"
+BaseType "Dueling Wand"
+DropLevel >= 90
+style-orb-div-purple
+
+Show # todo bug report: "rules with "DropLevel < 17" and lower mistakenly affect Wands / Staves with reqLevel 70+" https://www.pathofexile.com/forum/view-thread/3880752
+Class "Staff"
+BaseType "Reaping Staff"
+DropLevel >= 90
+style-orb-div-purple
+
+#   [0502] weapons:
 
 # filter-summoner
 Show
@@ -649,7 +663,7 @@ ItemLevel >= 81
 Rarity <= Rare
 style-eq-endgame
 
-#   [0502] armor pieces:
+#   [0503] armor pieces:
 
 # filter-norarity
 Show
@@ -720,7 +734,7 @@ DropLevel >= 70
 Rarity <= Rare
 style-eq-endgame
 
-#   [0503] jewellery:
+#   [0504] jewellery:
 Show
 BaseType == "Breach Ring"
 ItemLevel >= 82

@@ -64,9 +64,10 @@
 #   [0302] extra socket / quality
 # [[0400]] White items for unique craft
 # [[0500]] High itemLevel bases
-#   [0501] weapons
-#   [0502] armor pieces
-#   [0503] jewellery
+#   [0501] DropLevel overcap
+#   [0502] weapons
+#   [0503] armor pieces
+#   [0504] jewellery
 # [[0600]] Salvagable items & items with +quality
 # [[0700]] Section for non-summoner casters / mages
 # [[0800]] Endgame custom rules
@@ -713,7 +714,32 @@ MinimapIcon 1 Orange Square
 # [[0500]] High itemLevel bases:
 #--------------------------
 
-#   [0501] weapons:
+#   [0501] DropLevel overcap
+Show # todo bug report: "rules with "DropLevel < 17" and lower mistakenly affect Wands / Staves with reqLevel 70+" https://www.pathofexile.com/forum/view-thread/3880752
+Class "Wands"
+BaseType "Dueling Wand"
+DropLevel >= 90
+SetTextColor 255 0 0 255
+SetBorderColor 255 0 0 255
+SetBackgroundColor 255 255 255 255
+PlayAlertSound 6 300
+PlayEffect Purple
+MinimapIcon 0 Purple Star
+SetFontSize 45
+
+Show # todo bug report: "rules with "DropLevel < 17" and lower mistakenly affect Wands / Staves with reqLevel 70+" https://www.pathofexile.com/forum/view-thread/3880752
+Class "Staff"
+BaseType "Reaping Staff"
+DropLevel >= 90
+SetTextColor 255 0 0 255
+SetBorderColor 255 0 0 255
+SetBackgroundColor 255 255 255 255
+PlayAlertSound 6 300
+PlayEffect Purple
+MinimapIcon 0 Purple Star
+SetFontSize 45
+
+#   [0502] weapons:
 
 # filter-mage v0.4.0
 Show
@@ -738,7 +764,7 @@ PlayEffect White Temp
 MinimapIcon 1 Purple Circle
 PlayAlertSound 16 300
 
-#   [0502] armor pieces:
+#   [0503] armor pieces:
 
 # filter-norarity
 Show
@@ -810,7 +836,7 @@ PlayEffect White Temp
 MinimapIcon 1 Purple Circle
 PlayAlertSound 16 300
 
-#   [0503] jewellery:
+#   [0504] jewellery:
 Show
 BaseType == "Breach Ring"
 ItemLevel >= 82
