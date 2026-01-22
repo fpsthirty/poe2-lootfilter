@@ -61,7 +61,8 @@
 # [[0200]] Hide/Show stuff with specific names or affixes
 # [[0300]] Stylized collection of specific stuff
 #   [0301] event-specific things (speedruns etc)
-#   [0302] extra socket / quality
+#   [0302] cheap extra socket / quality
+#   [0303] expensive extra socket / quality
 # [[0400]] White items for unique craft
 # [[0500]] High itemLevel bases
 #   [0501] DropLevel overcap
@@ -255,7 +256,14 @@ PlayEffect Purple
 MinimapIcon 0 Purple Star
 SetFontSize 45
 
-#   [0302] extra socket / quality:
+#   [0302] cheap extra socket / quality:
+Hide
+Class "Shields"
+Rarity Normal
+BaseType "Golden Targe"
+Sockets == 2
+
+#   [0303] expensive extra socket / quality:
 # tier A uniques with inner extra socket:
 
 Show
@@ -344,6 +352,19 @@ SetFontSize 45
 # ------------------
 # socket only:
 # S-tier:
+
+Show
+Class "Helmet"
+BaseType "Tribal Mask"
+Corrupted False
+Sockets >= 2
+SetTextColor 255 0 0 255
+SetBorderColor 255 0 0 255
+SetBackgroundColor 255 255 255 255
+PlayAlertSound 6 300
+PlayEffect Purple
+MinimapIcon 0 Purple Star
+SetFontSize 45
 
 Show
 Class "Boots" "Foci" "Gloves" "Helmet" "Shields"

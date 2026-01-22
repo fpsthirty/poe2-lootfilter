@@ -61,7 +61,8 @@
 # [[0200]] Hide/Show stuff with specific names or affixes
 # [[0300]] Stylized collection of specific stuff
 #   [0301] event-specific things (speedruns etc)
-#   [0302] extra socket / quality
+#   [0302] cheap extra socket / quality
+#   [0303] expensive extra socket / quality
 # [[0400]] White items for unique craft
 # [[0500]] High itemLevel bases
 #   [0501] DropLevel overcap
@@ -246,7 +247,14 @@ Show
 BaseType "Golden Mantle" "Golden Bracers" "Golden Caligae" "Golden Wreath" "Golden Visage" "Golden Flame" "Golden Shield"
 style-orb-div-purple
 
-#   [0302] extra socket / quality:
+#   [0302] cheap extra socket / quality:
+Hide
+Class "Shields"
+Rarity Normal
+BaseType "Golden Targe"
+Sockets == 2
+
+#   [0303] expensive extra socket / quality:
 # tier A uniques with inner extra socket:
 
 Show
@@ -309,6 +317,13 @@ style-orb-div-purple
 # ------------------
 # socket only:
 # S-tier:
+
+Show
+Class "Helmet"
+BaseType "Tribal Mask"
+Corrupted False
+Sockets >= 2
+style-orb-div-purple
 
 Show
 Class "Boots" "Foci" "Gloves" "Helmet" "Shields"
@@ -802,6 +817,22 @@ PlayAlertSound 2 300
 PlayEffect Cyan
 
 # filter-rarity
+Show
+Class "Ring"
+BaseType "Gold Ring"
+ItemLevel >= 82
+Rarity <= Rare
+style-eq-endgame
+
+# filter-rarity
+Show
+Class "Ring"
+BaseType "Gold Ring"
+AreaLevel >= 79
+Rarity <= Rare
+style-bg-translucent
+
+# filter-rarity
 Hide
 Class "Ring"
 BaseType "Ring"
@@ -900,7 +931,7 @@ PlayEffect Cyan Temp
 # filter-rarity
 Show
 Class "Amulet"
-BaseType "Solar Amulet" "Lunar Amulet"
+BaseType "Solar Amulet" "Lunar Amulet" "Gold Amulet"
 Rarity <= Rare
 ItemLevel >= 82
 style-eq-endgame
@@ -908,7 +939,7 @@ style-eq-endgame
 # filter-rarity
 Show
 Class "Amulet"
-BaseType "Solar Amulet" "Lunar Amulet"
+BaseType "Solar Amulet" "Lunar Amulet" "Gold Amulet"
 Rarity <= Rare
 style-bg-translucent
 
