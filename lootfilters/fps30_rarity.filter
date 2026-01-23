@@ -277,7 +277,9 @@ PlayEffect Brown
 MinimapIcon 2 Brown Star
 PlayAlertSound 3 300
 
+# ------------------
 # socket and quality:
+
 Show
 Class == "Claws" "Daggers" "Flails" "One Hand Axes" "One Hand Maces" "One Hand Swords" "Sceptres" "Spears" "Wands" "Quivers" "Foci" "Helmets" "Boots" "Gloves" "Shields" "Bucklers"
 Corrupted False
@@ -336,6 +338,19 @@ SetFontSize 45
 Show
 Class "Bows"
 BaseType "Gemini Bow" "Gemini Crossbow"
+Corrupted False
+Sockets >= 3
+SetTextColor 255 0 0 255
+SetBorderColor 255 0 0 255
+SetBackgroundColor 255 255 255 255
+PlayAlertSound 6 300
+PlayEffect Purple
+MinimapIcon 0 Purple Star
+SetFontSize 45
+
+Show
+Class "Talisman"
+BaseType "Maji Talisman" "Voltfang Talisman" "Thunder Talisman"
 Corrupted False
 Sockets >= 3
 SetTextColor 255 0 0 255

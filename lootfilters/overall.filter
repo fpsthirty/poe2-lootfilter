@@ -300,7 +300,9 @@ BaseType "Omen Crest Shield" # Mahuxotl's Machination
 Sockets >= 2
 style-uniq-tier-a
 
+# ------------------
 # socket and quality:
+
 Show
 Class == "Claws" "Daggers" "Flails" "One Hand Axes" "One Hand Maces" "One Hand Swords" "Sceptres" "Spears" "Wands" "Quivers" "Foci" "Helmets" "Boots" "Gloves" "Shields" "Bucklers"
 Corrupted False
@@ -335,6 +337,13 @@ style-orb-div
 Show
 Class "Bows"
 BaseType "Gemini Bow" "Gemini Crossbow"
+Corrupted False
+Sockets >= 3
+style-orb-div-purple
+
+Show
+Class "Talisman"
+BaseType "Maji Talisman" "Voltfang Talisman" "Thunder Talisman"
 Corrupted False
 Sockets >= 3
 style-orb-div-purple
