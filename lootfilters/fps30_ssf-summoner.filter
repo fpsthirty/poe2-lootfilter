@@ -864,6 +864,17 @@ PlayAlertSound 16 300
 PlayEffect Pink Temp
 SetFontSize 40
 
+Show
+Rarity Rare
+BaseType == "Dusk Ring" "Gloam Ring" "Penumbra Ring" "Tenebrous Ring" "Dusk Amulet" "Gloam Amulet" "Penumbra Amulet" "Tenebrous Amulet"
+SetTextColor 132 229 255
+SetBorderColor 132 229 255
+SetBackgroundColor 0 0 0 230
+SetFontSize 40
+MinimapIcon 1 Cyan Diamond
+PlayEffect Cyan Temp
+PlayAlertSound 2 300
+
 #  dognail timeless-jewels section for rarity filter
 
 Show

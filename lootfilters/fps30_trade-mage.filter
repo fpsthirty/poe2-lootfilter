@@ -905,6 +905,7 @@ SetFontSize 45
 Show
 Class "Wands"
 BaseType "Dueling Wand"
+Rarity <= Rare
 ItemLevel >= 81
 SetBorderColor 95 0 160
 SetBackgroundColor 0 0 0 210
@@ -916,6 +917,7 @@ PlayAlertSound 16 300
 Show
 Class "Staff"
 BaseType "Reaping Staff"
+Rarity <= Rare
 ItemLevel >= 81
 SetBorderColor 95 0 160
 SetBackgroundColor 0 0 0 210
@@ -1067,6 +1069,17 @@ MinimapIcon 1 Purple Circle
 PlayAlertSound 16 300
 PlayEffect Pink Temp
 SetFontSize 40
+
+Show
+Rarity Rare
+BaseType == "Dusk Ring" "Gloam Ring" "Penumbra Ring" "Tenebrous Ring" "Dusk Amulet" "Gloam Amulet" "Penumbra Amulet" "Tenebrous Amulet"
+SetTextColor 132 229 255
+SetBorderColor 132 229 255
+SetBackgroundColor 0 0 0 230
+SetFontSize 40
+MinimapIcon 1 Cyan Diamond
+PlayEffect Cyan Temp
+PlayAlertSound 2 300
 
 #  dognail timeless-jewels section for rarity filter
 
