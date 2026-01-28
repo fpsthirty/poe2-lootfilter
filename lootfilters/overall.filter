@@ -2561,11 +2561,12 @@ style-orb-div-purple
 # The Desperate Alliance, Vase Relic
 # Lavianga's Spirits, Mana Flask
 # Essentia Sanguis, Furtive Wraps
+# The Covenant, Altar Robe
 # ----------------------------------
 
 Show
 Rarity Unique
-BaseType == "Stone Tower Shield" "Thawing Charm" "Grand Visage" "Primed Quiver" "Vase Relic" "Furtive Wraps"
+BaseType == "Stone Tower Shield" "Thawing Charm" "Grand Visage" "Primed Quiver" "Vase Relic" "Furtive Wraps" "Altar Robe"
 style-orb-div
 
 Show
@@ -2791,7 +2792,7 @@ style-uniq-tier-a
 ## armors:
 Show
 Rarity Unique
-BaseType == "Fur Plate" "Champion Cuirass" "Pathfinder Coat" "Serpentscale Coat" "Strider Vest" "Tattered Robe" "Votive Raiment" "Altar Robe" "Havoc Raiment" "Enlightened Robe" "Explorer Armour" "Scale Mail" "Knight Armour" "Ancestral Mail" "Heroic Armour" "Pilgrim Vestments" "Cleric Vestments" "Tideseer Mantle" "Corvus Mantle" "Wayfarer Jacket" "Scalper's Jacket" "Wrapped Greathelm" "Spired Greathelm" "Fierce Greathelm" "Felt Cap" "Viper Cap" "Velvet Cap" "Covert Hood" "Twig Circlet" "Chain Tiara" "Feathered Tiara" "Vermeil Circlet" "Jade Tiara" "Magus Tiara" "Brimmed Helm" "Decorated Helm" "Iron Crown" "Cultist Crown" "Martyr Crown" "Heavy Crown" "Spiritbone Crown" "Face Mask" "Death Mask" "Gold Circlet" "Riveted Mitts" "Spined Bracers" "Torn Gloves" "Pauascale Gloves" "Layered Gauntlets" "Doubled Gauntlets" "Burnished Gauntlets" "Rope Cuffs" "Gauze Wraps" "Spiral Wraps" "Utility Wraps" "Trimmed Greaves" "Laced Boots" "Wrapped Sandals" "Feathered Sandals" "Secured Leggings" "Hunting Shoes" "Heraldric Tower Shield" "Crucible Tower Shield" "Emblem Crest Shield" "Iron Buckler" "Woven Focus" "Antler Focus" "Voodoo Focus" "Grand Regalia" "Grand Manchettes" "Grand Cuisses" "Array Buckler" "Long Belt" "Blacksteel Tower Shield" "Gilded Vestments" "Cinched Boots" "Embroidered Gloves" "Plate Belt" "Threaded Shoes"
+BaseType == "Fur Plate" "Champion Cuirass" "Pathfinder Coat" "Serpentscale Coat" "Strider Vest" "Tattered Robe" "Votive Raiment" "Havoc Raiment" "Enlightened Robe" "Explorer Armour" "Scale Mail" "Knight Armour" "Ancestral Mail" "Heroic Armour" "Pilgrim Vestments" "Cleric Vestments" "Tideseer Mantle" "Corvus Mantle" "Wayfarer Jacket" "Scalper's Jacket" "Wrapped Greathelm" "Spired Greathelm" "Fierce Greathelm" "Felt Cap" "Viper Cap" "Velvet Cap" "Covert Hood" "Twig Circlet" "Chain Tiara" "Feathered Tiara" "Vermeil Circlet" "Jade Tiara" "Magus Tiara" "Brimmed Helm" "Decorated Helm" "Iron Crown" "Cultist Crown" "Martyr Crown" "Heavy Crown" "Spiritbone Crown" "Face Mask" "Death Mask" "Gold Circlet" "Riveted Mitts" "Spined Bracers" "Torn Gloves" "Pauascale Gloves" "Layered Gauntlets" "Doubled Gauntlets" "Burnished Gauntlets" "Rope Cuffs" "Gauze Wraps" "Spiral Wraps" "Utility Wraps" "Trimmed Greaves" "Laced Boots" "Wrapped Sandals" "Feathered Sandals" "Secured Leggings" "Hunting Shoes" "Heraldric Tower Shield" "Crucible Tower Shield" "Emblem Crest Shield" "Iron Buckler" "Woven Focus" "Antler Focus" "Voodoo Focus" "Grand Regalia" "Grand Manchettes" "Grand Cuisses" "Array Buckler" "Long Belt" "Blacksteel Tower Shield" "Gilded Vestments" "Cinched Boots" "Embroidered Gloves" "Plate Belt" "Threaded Shoes"
 style-uniq-tier-a
 
 Show
