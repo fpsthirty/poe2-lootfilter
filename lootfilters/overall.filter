@@ -2915,7 +2915,7 @@ PlayEffect Orange
 # S-Tier:
 Show
 Class "Vault Key"
-BaseType == "Zarokh's Reliquary Key: Against the Darkness" "Olroth's Reliquary Key" "The Arbiter's Reliquary Key" "Zarokh's Reliquary Key: Temporalis"
+BaseType == "Zarokh's Reliquary Key: Against the Darkness" "Olroth's Reliquary Key" "The Arbiter's Reliquary Key" "Zarokh's Reliquary Key: Temporalis" "The Trialmaster's Reliquary Key"
 style-orb-div-purple
 
 # A-Tier:
@@ -2927,13 +2927,13 @@ style-orb-div
 # B-Tier:
 Show
 Class "Vault Key"
-BaseType == "Twilight Reliquary Key" "Ritualistic Reliquary Key" "The Trialmaster's Reliquary Key" "Zarokh's Reliquary Key: Sandstorm Visage"
+BaseType == "Ritualistic Reliquary Key" "Zarokh's Reliquary Key: Sandstorm Visage"
 style-orb-annul
 
 # C-Tier:
 Show
 Class "Vault Key"
-BaseType == "Zarokh's Reliquary Key: Blessed Bonds" "Zarokh's Reliquary Key: Sekhema's Resolve"
+BaseType == "Twilight Reliquary Key" "Zarokh's Reliquary Key: Blessed Bonds" "Zarokh's Reliquary Key: Sekhema's Resolve"
 style-orb-chance
 
 Show

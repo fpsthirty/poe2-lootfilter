@@ -2972,7 +2972,7 @@ PlayEffect Orange
 # S-Tier:
 Show
 Class "Vault Key"
-BaseType == "Zarokh's Reliquary Key: Against the Darkness" "Olroth's Reliquary Key" "The Arbiter's Reliquary Key" "Zarokh's Reliquary Key: Temporalis"
+BaseType == "Zarokh's Reliquary Key: Against the Darkness" "Olroth's Reliquary Key" "The Arbiter's Reliquary Key" "Zarokh's Reliquary Key: Temporalis" "The Trialmaster's Reliquary Key"
 SetTextColor 255 0 0 255
 SetBorderColor 255 0 0 255
 SetBackgroundColor 255 255 255 255
@@ -2996,7 +2996,7 @@ SetFontSize 45
 # B-Tier:
 Show
 Class "Vault Key"
-BaseType == "Twilight Reliquary Key" "Ritualistic Reliquary Key" "The Trialmaster's Reliquary Key" "Zarokh's Reliquary Key: Sandstorm Visage"
+BaseType == "Ritualistic Reliquary Key" "Zarokh's Reliquary Key: Sandstorm Visage"
 SetTextColor 255 255 255 255
 SetBorderColor 255 255 255 255
 SetBackgroundColor 240 90 35 200
@@ -3008,7 +3008,7 @@ SetFontSize 40
 # C-Tier:
 Show
 Class "Vault Key"
-BaseType == "Zarokh's Reliquary Key: Blessed Bonds" "Zarokh's Reliquary Key: Sekhema's Resolve"
+BaseType == "Twilight Reliquary Key" "Zarokh's Reliquary Key: Blessed Bonds" "Zarokh's Reliquary Key: Sekhema's Resolve"
 SetTextColor 255 255 255 255
 SetBorderColor 255 255 255 255
 SetBackgroundColor 240 90 35 200
