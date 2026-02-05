@@ -301,7 +301,7 @@ Sockets >= 2
 style-uniq-tier-a
 
 # ------------------
-# socket and quality:
+# extra socket and extra quality:
 
 Show
 Class == "Claws" "Daggers" "Flails" "One Hand Axes" "One Hand Maces" "One Hand Swords" "Sceptres" "Spears" "Wands" "Quivers" "Foci" "Helmets" "Boots" "Gloves" "Shields" "Bucklers"
@@ -317,7 +317,7 @@ Quality >= 21
 style-orb-div-purple
 
 # ------------------
-# socket only:
+# extra socket only:
 # S-tier:
 
 Show
@@ -333,6 +333,13 @@ DropLevel >= 75
 Corrupted False
 Sockets >= 2
 style-orb-div
+
+Show
+Class "Boots"
+ItemLevel >= 82
+Corrupted False
+Sockets >= 2
+style-orb-div-purple
 
 Show
 Class "Bows"
@@ -358,8 +365,17 @@ style-orb-div-purple
 
 Show
 Class "Wands"
+BaseType " Wand"
 Corrupted False
 Sockets >= 2
+ItemLevel >= 81
+style-orb-div
+
+Show
+Class "Staff"
+BaseType " Staff"
+Corrupted False
+Sockets >= 3
 ItemLevel >= 81
 style-orb-div
 

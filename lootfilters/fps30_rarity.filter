@@ -278,7 +278,7 @@ MinimapIcon 2 Brown Star
 PlayAlertSound 3 300
 
 # ------------------
-# socket and quality:
+# extra socket and extra quality:
 
 Show
 Class == "Claws" "Daggers" "Flails" "One Hand Axes" "One Hand Maces" "One Hand Swords" "Sceptres" "Spears" "Wands" "Quivers" "Foci" "Helmets" "Boots" "Gloves" "Shields" "Bucklers"
@@ -306,7 +306,7 @@ MinimapIcon 0 Purple Star
 SetFontSize 45
 
 # ------------------
-# socket only:
+# extra socket only:
 # S-tier:
 
 Show
@@ -333,6 +333,19 @@ SetBackgroundColor 255 255 255 255
 PlayAlertSound 6 300
 PlayEffect Red
 MinimapIcon 0 Red Star
+SetFontSize 45
+
+Show
+Class "Boots"
+ItemLevel >= 82
+Corrupted False
+Sockets >= 2
+SetTextColor 255 0 0 255
+SetBorderColor 255 0 0 255
+SetBackgroundColor 255 255 255 255
+PlayAlertSound 6 300
+PlayEffect Purple
+MinimapIcon 0 Purple Star
 SetFontSize 45
 
 Show
@@ -377,8 +390,23 @@ SetFontSize 45
 
 Show
 Class "Wands"
+BaseType " Wand"
 Corrupted False
 Sockets >= 2
+ItemLevel >= 81
+SetTextColor 255 0 0 255
+SetBorderColor 255 0 0 255
+SetBackgroundColor 255 255 255 255
+PlayAlertSound 6 300
+PlayEffect Red
+MinimapIcon 0 Red Star
+SetFontSize 45
+
+Show
+Class "Staff"
+BaseType " Staff"
+Corrupted False
+Sockets >= 3
 ItemLevel >= 81
 SetTextColor 255 0 0 255
 SetBorderColor 255 0 0 255
