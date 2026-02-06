@@ -3199,6 +3199,13 @@ MinimapIcon 2 Pink Diamond
 PlayEffect Pink Temp
 
 # catalysts
+
+Show
+Class "Currency"
+BaseType " Catalyst"
+StackSize >= 10
+style-orb-div
+
 Show
 Class "Currency"
 BaseType "Adaptive Catalyst"
