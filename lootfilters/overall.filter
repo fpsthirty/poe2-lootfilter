@@ -2577,11 +2577,12 @@ style-orb-div-purple
 # Lavianga's Spirits, Mana Flask
 # Essentia Sanguis, Furtive Wraps
 # The Covenant, Altar Robe
+# Lioneye's Glare, Heavy Bow
 # ----------------------------------
 
 Show
 Rarity Unique
-BaseType == "Stone Tower Shield" "Thawing Charm" "Grand Visage" "Primed Quiver" "Vase Relic" "Furtive Wraps" "Altar Robe"
+BaseType == "Stone Tower Shield" "Thawing Charm" "Grand Visage" "Primed Quiver" "Vase Relic" "Furtive Wraps" "Altar Robe" "Heavy Bow"
 style-orb-div
 
 Show

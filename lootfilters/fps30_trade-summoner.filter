@@ -2713,11 +2713,12 @@ SetFontSize 45
 # Lavianga's Spirits, Mana Flask
 # Essentia Sanguis, Furtive Wraps
 # The Covenant, Altar Robe
+# Lioneye's Glare, Heavy Bow
 # ----------------------------------
 
 Show
 Rarity Unique
-BaseType == "Stone Tower Shield" "Thawing Charm" "Grand Visage" "Primed Quiver" "Vase Relic" "Furtive Wraps" "Altar Robe"
+BaseType == "Stone Tower Shield" "Thawing Charm" "Grand Visage" "Primed Quiver" "Vase Relic" "Furtive Wraps" "Altar Robe" "Heavy Bow"
 SetTextColor 255 0 0 255
 SetBorderColor 255 0 0 255
 SetBackgroundColor 255 255 255 255
