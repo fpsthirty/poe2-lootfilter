@@ -185,6 +185,9 @@ If you want to customize one of my lootfilters, create a separate import file so
 > ### trials overall:
 >  ![trials_overall](https://github.com/fpsthirty/poe2-lootfilter/raw/main/img/loot/trials-overall.jpg)
 
+> ### vaal league:
+>  ![vaal_league](https://github.com/fpsthirty/poe2-lootfilter/raw/main/img/loot/vaal-league.jpg)
+
 > ### waystones:
 >  ![waystones](https://github.com/fpsthirty/poe2-lootfilter/raw/main/img/loot/waystones.jpg)
 
