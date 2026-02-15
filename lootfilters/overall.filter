@@ -679,6 +679,12 @@ BaseType "Reaping Staff"
 DropLevel >= 90
 style-orb-div-purple
 
+Class "Amulets" # todo bug report: "rules with "DropLevel < 17" and lower mistakenly affect Wands / Staves with reqLevel 70+" https://www.pathofexile.com/forum/view-thread/3880752
+BaseType "Jade Amulet"
+DropLevel >= 90
+Rarity Unique
+style-orb-div-purple
+
 # filter-mage
 Show
 Class "Wands"
@@ -1333,7 +1339,7 @@ Show
 Class "Currency"
 AreaLevel > 78
 BaseType "Greater Jeweller's Orb" "Orb of Chance"
-style-orb-chance
+style-orb-annul-min
 
 Hide
 Class == "Augment"
@@ -2889,17 +2895,17 @@ style-uniq-crux-tier-a
 Show
 Class "Map Fragments"
 BaseType == "An Audience with the King"
-style-orb-annul
+style-orb-annul-max
 
 Show
 Class "Map Fragments"
 BaseType == "Simulacrum"
-style-orb-annul
+style-orb-annul-max
 
 Show
 Class == "Breachstone"
 BaseType == Breachstone
-style-orb-annul
+style-orb-annul-max
 
 Show
 Class "Map Fragments"
@@ -2953,7 +2959,7 @@ style-orb-annul
 Show
 Class "Vault Key"
 BaseType == "Twilight Reliquary Key" "Zarokh's Reliquary Key: Blessed Bonds" "Zarokh's Reliquary Key: Sekhema's Resolve"
-style-orb-chance
+style-orb-annul-min
 
 Show
 Class "Vault Key"
@@ -2963,24 +2969,14 @@ style-orb-div
 Show
 BaseType "Expedition Logbook"
 ItemLevel >= 79
-SetTextColor 255 255 255 255
-SetBorderColor 255 255 255 255
-SetBackgroundColor 240 90 35 200
-PlayAlertSound 1 100
-PlayEffect Orange
 MinimapIcon 1 Orange Square
-SetFontSize 40
+style-orb-annul-max
 
 Show
 BaseType "Expedition Logbook"
 ItemLevel < 79
-SetTextColor 255 255 255 255
-SetBorderColor 255 255 255 255
-SetBackgroundColor 240 90 35 200
-PlayAlertSound 1 100
-PlayEffect White
 MinimapIcon 1 White Square
-SetFontSize 40
+style-orb-annul
 
 Show
 Class "Currency"
@@ -3023,7 +3019,7 @@ style-orb-annul
 Show
 Class == "Omen"
 BaseType == "Omen of Sinistral Necromancy" "Omen of Corruption"  "Omen of Secret Compartments" "Omen of Chaotic Quantity" "Omen of Chaotic Rarity" "Omen of Catalysing Exaltation"
-style-orb-chance
+style-orb-annul-min
 
 # filter-rarity
 Hide
@@ -3907,17 +3903,17 @@ BaseType == "Ixchel's Torment" "Brutus' Brain"
 style-orb-div
 
 # B-tier:
-Show
-Class "Support Gem"
-DropLevel >= 65
-BaseType == "Rigwald's Ferocity" "Tul's Stillness" "Esh's Radiance"
-SetTextColor 255 255 255 255
-SetBorderColor 255 255 255 255
-SetBackgroundColor 240 90 35 200
-PlayAlertSound 1 100
-PlayEffect Brown
-MinimapIcon 1 White Circle
-SetFontSize 40
+#Show
+#Class "Support Gem"
+#DropLevel >= 65
+#BaseType == "Rigwald's Ferocity"
+#SetTextColor 255 255 255 255
+#SetBorderColor 255 255 255 255
+#SetBackgroundColor 240 90 35 200
+#PlayAlertSound 1 100
+#PlayEffect Brown
+#MinimapIcon 1 White Circle
+#SetFontSize 40
 
 # other:
 Show
@@ -4273,7 +4269,7 @@ style-orb-annul
 Show
 Class "Currency"
 BaseType "Gemcutter's Prism"
-style-orb-chance
+style-orb-annul-min
 
 #   [1903] currency Tier B: Vaal, Chaos, Exalt and advanced orbs
 
@@ -4623,12 +4619,12 @@ style-orb-div-purple
 Show
 Class "Currency"
 BaseType "Preserved Collarbone" "Preserved Cranium"
-style-orb-annul
+style-orb-annul-max
 
 Show
 Class "Currency"
 BaseType "Preserved Rib"
-style-orb-chance
+style-orb-annul
 
 Show
 Class "Currency"

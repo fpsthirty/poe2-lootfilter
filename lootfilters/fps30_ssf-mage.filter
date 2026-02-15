@@ -803,6 +803,18 @@ PlayEffect Purple
 MinimapIcon 0 Purple Star
 SetFontSize 45
 
+Class "Amulets" # todo bug report: "rules with "DropLevel < 17" and lower mistakenly affect Wands / Staves with reqLevel 70+" https://www.pathofexile.com/forum/view-thread/3880752
+BaseType "Jade Amulet"
+DropLevel >= 90
+Rarity Unique
+SetTextColor 255 0 0 255
+SetBorderColor 255 0 0 255
+SetBackgroundColor 255 255 255 255
+PlayAlertSound 6 300
+PlayEffect Purple
+MinimapIcon 0 Purple Star
+SetFontSize 45
+
 # filter-mage
 Show
 Class "Wands"
@@ -3003,9 +3015,9 @@ BaseType == "An Audience with the King"
 SetTextColor 255 255 255 255
 SetBorderColor 255 255 255 255
 SetBackgroundColor 240 90 35 200
-PlayAlertSound 1 150
-PlayEffect White
-MinimapIcon 1 Orange Circle
+PlayAlertSound 1 100
+PlayEffect Orange
+MinimapIcon 1 Orange Square
 SetFontSize 40
 
 Show
@@ -3014,9 +3026,9 @@ BaseType == "Simulacrum"
 SetTextColor 255 255 255 255
 SetBorderColor 255 255 255 255
 SetBackgroundColor 240 90 35 200
-PlayAlertSound 1 150
-PlayEffect White
-MinimapIcon 1 Orange Circle
+PlayAlertSound 1 100
+PlayEffect Orange
+MinimapIcon 1 Orange Square
 SetFontSize 40
 
 Show
@@ -3025,9 +3037,9 @@ BaseType == Breachstone
 SetTextColor 255 255 255 255
 SetBorderColor 255 255 255 255
 SetBackgroundColor 240 90 35 200
-PlayAlertSound 1 150
-PlayEffect White
-MinimapIcon 1 Orange Circle
+PlayAlertSound 1 100
+PlayEffect Orange
+MinimapIcon 1 Orange Square
 SetFontSize 40
 
 Show
@@ -3146,23 +3158,23 @@ SetFontSize 45
 Show
 BaseType "Expedition Logbook"
 ItemLevel >= 79
+MinimapIcon 1 Orange Square
 SetTextColor 255 255 255 255
 SetBorderColor 255 255 255 255
 SetBackgroundColor 240 90 35 200
 PlayAlertSound 1 100
 PlayEffect Orange
-MinimapIcon 1 Orange Square
 SetFontSize 40
 
 Show
 BaseType "Expedition Logbook"
 ItemLevel < 79
+MinimapIcon 1 White Square
 SetTextColor 255 255 255 255
 SetBorderColor 255 255 255 255
 SetBackgroundColor 240 90 35 200
-PlayAlertSound 1 100
+PlayAlertSound 1 150
 PlayEffect White
-MinimapIcon 1 White Square
 SetFontSize 40
 
 Show
@@ -4212,17 +4224,17 @@ MinimapIcon 0 Red Star
 SetFontSize 45
 
 # B-tier:
-Show
-Class "Support Gem"
-DropLevel >= 65
-BaseType == "Rigwald's Ferocity" "Tul's Stillness" "Esh's Radiance"
-SetTextColor 255 255 255 255
-SetBorderColor 255 255 255 255
-SetBackgroundColor 240 90 35 200
-PlayAlertSound 1 100
-PlayEffect Brown
-MinimapIcon 1 White Circle
-SetFontSize 40
+#Show
+#Class "Support Gem"
+#DropLevel >= 65
+#BaseType == "Rigwald's Ferocity"
+#SetTextColor 255 255 255 255
+#SetBorderColor 255 255 255 255
+#SetBackgroundColor 240 90 35 200
+#PlayAlertSound 1 100
+#PlayEffect Brown
+#MinimapIcon 1 White Circle
+#SetFontSize 40
 
 # other:
 Show
@@ -5144,9 +5156,9 @@ BaseType "Preserved Collarbone" "Preserved Cranium"
 SetTextColor 255 255 255 255
 SetBorderColor 255 255 255 255
 SetBackgroundColor 240 90 35 200
-PlayAlertSound 1 150
-PlayEffect White
-MinimapIcon 1 Orange Circle
+PlayAlertSound 1 100
+PlayEffect Orange
+MinimapIcon 1 Orange Square
 SetFontSize 40
 
 Show
@@ -5155,9 +5167,10 @@ BaseType "Preserved Rib"
 SetTextColor 255 255 255 255
 SetBorderColor 255 255 255 255
 SetBackgroundColor 240 90 35 200
-PlayAlertSound 1 100
-MinimapIcon 1 Orange Circle
+PlayAlertSound 1 150
 PlayEffect White
+MinimapIcon 1 Orange Circle
+SetFontSize 40
 
 Show
 Class "Currency"
