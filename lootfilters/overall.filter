@@ -4231,7 +4231,7 @@ Show
 Class "Augment"
 BaseType "Thesis"
 style-orb-div-purple
-# style-vaal-socket
+# style-league-vaal
 
 #--------------------------
 # [[1900]] Craft and Currency
@@ -4646,7 +4646,7 @@ style-orb-annul
 Show
 Class "Currency"
 BaseType "Core Destabiliser" "Ancient Infuser" "Orb of Extraction"
-style-vaal-socket
+style-league-vaal
 
 # Show
 # Class "Currency"
@@ -4656,7 +4656,7 @@ style-vaal-socket
 Show
 Class "Incubators"
 BaseType "Vaal Siphoner"
-style-vaal-socket
+style-league-vaal
 
 # Unknown currency
 Show

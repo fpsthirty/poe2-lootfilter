@@ -4901,7 +4901,7 @@ PlayAlertSound 6 300
 PlayEffect Purple
 MinimapIcon 0 Purple Star
 SetFontSize 45
-# SetTextColor 255 255 255
+# SetTextColor 255 207 132
 # SetBackgroundColor 124 25 22 200
 # SetBorderColor 77 27 27
 # SetFontSize 40
@@ -5421,7 +5421,7 @@ SetFontSize 40
 Show
 Class "Currency"
 BaseType "Core Destabiliser" "Ancient Infuser" "Orb of Extraction"
-SetTextColor 255 255 255
+SetTextColor 255 207 132
 SetBackgroundColor 124 25 22 200
 SetBorderColor 77 27 27
 SetFontSize 40
@@ -5443,7 +5443,7 @@ MinimapIcon 1 Red Circle
 Show
 Class "Incubators"
 BaseType "Vaal Siphoner"
-SetTextColor 255 255 255
+SetTextColor 255 207 132
 SetBackgroundColor 124 25 22 200
 SetBorderColor 77 27 27
 SetFontSize 40
