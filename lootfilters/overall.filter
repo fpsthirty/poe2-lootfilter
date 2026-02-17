@@ -397,14 +397,6 @@ Sockets >= 2
 style-orb-div-purple
 
 Show
-Class "Sceptre"
-BaseType "Shrine Sceptre" "Stoic Sceptre"
-Rarity Normal
-Corrupted False
-Sockets >= 2
-style-orb-div-purple
-
-Show
 Class "Spear"
 BaseType "War Spear" "Forked Spear" "Barbed Spear" "Akoyan Spear"
 Rarity Normal
@@ -515,6 +507,14 @@ Sockets >= 2
 style-orb-div-purple
 
 Show
+Class "Sceptre"
+BaseType "Shrine Sceptre" "Stoic Sceptre" "Rattling Sceptre"
+Rarity Normal
+Corrupted False
+Sockets >= 2
+style-orb-div
+
+Show
 Class "Body"
 DropLevel >= 65
 Corrupted False
@@ -565,7 +565,7 @@ Class "Body"
 BaseType "Sacramental Robe" "Feathered Raiment"
 Rarity Normal
 Corrupted False
-Sockets >= 2
+Sockets >= 3
 style-orb-div
 
 # A-tier:
