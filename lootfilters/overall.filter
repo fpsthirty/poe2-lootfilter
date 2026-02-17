@@ -318,11 +318,184 @@ style-orb-div-purple
 
 # ------------------
 # extra socket only:
+## extra socket and 81+ ilvl:
+
+Show
+Class "Bow"
+Rarity Normal
+Corrupted False
+Sockets >= 3
+ItemLevel >= 81
+style-orb-div
+
+Show
+Class "Staff"
+BaseType "Ashen Staff" "Gelid Staff" "Voltaic Staff" "Spriggan Staff" "Pyrophyte Staff" "Chiming Staff" "Rending Staff" "Reaping Staff" "Icicle Staff" "Roaring Staff" "Paralysing Staff" "Sanctified Staff" "Dark Staff" "Ravenous Staff" "Permafrost Staff" "Reflecting Staff"
+Rarity Normal
+Corrupted False
+Sockets >= 3
+ItemLevel >= 81
+style-orb-div
+
+Show
+Class "Spear"
+BaseType "Crossblade Spear" "Soaring Spear"
+Rarity Normal
+Corrupted False
+Sockets >= 2
+ItemLevel >= 81
+style-orb-div
+
+Show
+Class "Sceptre"
+Rarity Normal
+Corrupted False
+Sockets >= 2
+ItemLevel >= 81
+style-orb-div-purple
+
+Show
+Class "Wands"
+Rarity Normal
+Corrupted False
+Sockets >= 2
+ItemLevel >= 81
+style-orb-div-purple
+
+Show
+Class "Crossbow"
+Rarity Normal
+Corrupted False
+Sockets >= 3
+ItemLevel >= 81
+style-orb-div-purple
+
+Show
+Class "Quarter"
+BaseType "Slicing Quarterstaff" "Sinister Quarterstaff" "Lunar Quarterstaff" "Bolting Quarterstaff" "Dreaming Quarterstaff"
+Rarity Normal
+Corrupted False
+Sockets >= 3
+ItemLevel >= 81
+style-orb-div-purple
+
+Show
+Class "Boots"
+ItemLevel >= 82
+Corrupted False
+Sockets >= 2
+style-orb-div-purple
+
+## extra socket with any ilvl:
 # S-tier:
 
 Show
 Class "Helmet"
 BaseType "Tribal Mask"
+Corrupted False
+Sockets >= 2
+style-orb-div-purple
+
+Show
+Class "Sceptre"
+BaseType "Shrine Sceptre" "Stoic Sceptre"
+Rarity Normal
+Corrupted False
+Sockets >= 2
+style-orb-div-purple
+
+Show
+Class "Spear"
+BaseType "War Spear" "Forked Spear" "Barbed Spear" "Akoyan Spear"
+Rarity Normal
+Corrupted False
+Sockets >= 2
+style-orb-div-purple
+
+Show
+Class "Bow"
+BaseType "Crude Bow" "Recurve Bow" "Composite Bow" "Obliterator Bow"
+Rarity Normal
+Corrupted False
+Sockets >= 3
+style-orb-div-purple
+
+Show
+Class "Staff"
+BaseType "Chiming Staff"
+Rarity Normal
+Corrupted False
+Sockets >= 3
+style-orb-div-purple
+
+Show
+Class "Quarter"
+BaseType "Sinister Quarterstaff" "Dreaming Quarterstaff" "Wyrm Quarterstaff"
+Rarity Normal
+Corrupted False
+Sockets >= 3
+style-orb-div-purple
+
+Show
+Class "Crossbow"
+BaseType "Dyad Crossbow" "Alloy Crossbow" "Siege Crossbow" "Desolate Crossbow"
+Rarity Normal
+Corrupted False
+Sockets >= 3
+style-orb-div-purple
+
+Show
+Class "Talisman"
+BaseType "Rabid Talisman" "Maji Talisman" "Voltfang Talisman" "Thunder Talisman"
+Rarity Normal
+Corrupted False
+Sockets >= 3
+style-orb-div-purple
+
+Show
+Class "Shield"
+BaseType "Tawhoan Tower Shield"
+Rarity Normal
+Corrupted False
+Sockets >= 2
+style-orb-div-purple
+
+Show
+Class "Foci"
+BaseType "Woven Focus" "Antler Focus" "Sacred Focus" "Tasalian Focus"
+Rarity Normal
+Corrupted False
+Sockets >= 2
+style-orb-div-purple
+
+Show
+Class "Gloves"
+BaseType "Moulded Mitts" "Sectioned Bracers" "Fine Bracers" "Torn Gloves" "Sombre Gloves" "Stitched Gloves" "Intricate Gloves" "Pauascale Gloves" "Rope Cuffs" "Aged Cuffs" "Gauze Wraps" "Gold Gloves" "Massive Mitts" "Grim Gloves" "Opulent Gloves" "Vaal Gloves" "Sirenscale Gloves" "Secured Wraps"
+Rarity Normal
+Corrupted False
+Sockets >= 2
+style-orb-div-purple
+
+Show
+Class "Boots"
+BaseType "Trimmed Greaves" "Laced Boots" "Lattice Sandals" "Feathered Sandals" "Sandsworn Sandals" "Sekhema Sandals" "Daggerfoot Shoes"
+Rarity Normal
+Corrupted False
+Sockets >= 2
+style-orb-div-purple
+
+Show
+Class "Body"
+BaseType "Champion Cuirass" "Conqueror Plate" "Shrouded Vest" "Smuggler Coat" "Armoured Vest" "Tattered Robe" "Silk Robe" "Altar Robe" "Knight Armour" "Corvus Mantle" "Wayfarer Jacket" "Ornate Plate" "Vile Robe" "Conjurer Mantle" "Sleek Jacket"
+Rarity Normal
+Corrupted False
+Sockets >= 3
+style-orb-div-purple
+
+Show
+Class "Helmet"
+BaseType "Viper Cap" "Armoured Cap" "Gold Circlet" "Magus Tiara" "Tribal Mask" "Imperial Greathelm" "Kamasan Tiara" "Ancestral Tiara"
+Rarity Normal
 Corrupted False
 Sockets >= 2
 style-orb-div-purple
@@ -335,56 +508,11 @@ Sockets >= 2
 style-orb-div
 
 Show
-Class "Boots"
-ItemLevel >= 82
-Corrupted False
-Sockets >= 2
-style-orb-div-purple
-
-Show
-Class "Bows"
-BaseType "Gemini Bow" "Gemini Crossbow"
-Corrupted False
-Sockets >= 3
-style-orb-div-purple
-
-Show
-Class "Talisman"
-BaseType "Maji Talisman" "Voltfang Talisman" "Thunder Talisman"
-Corrupted False
-Sockets >= 3
-style-orb-div-purple
-
-Show
-Class "Wands"
-BaseType "Dueling Wand"
-Corrupted False
-Sockets >= 2
-ItemLevel >= 81 # high item level base
-style-orb-div-purple
-
-Show
-Class "Wands"
-BaseType " Wand"
-Corrupted False
-Sockets >= 2
-ItemLevel >= 81
-style-orb-div
-
-Show
-Class "Staff"
-BaseType " Staff"
-Corrupted False
-Sockets >= 3
-ItemLevel >= 81
-style-orb-div
-
-Show
 Class "Wands"
 BaseType "Dueling Wand" # low item level base
 Corrupted False
 Sockets >= 2
-style-orb-div
+style-orb-div-purple
 
 Show
 Class "Body"
@@ -396,6 +524,46 @@ style-orb-div
 Show
 Class "Gloves"
 BaseType "Elegant Wraps"
+Corrupted False
+Sockets >= 2
+style-orb-div
+
+Show
+Class "Bow"
+BaseType "Dualstring Bow"
+Rarity Normal
+Corrupted False
+Sockets >= 3
+style-orb-div
+
+Show
+Class "Crossbow"
+BaseType "Bombard Crossbow" "Blackfire Crossbow"
+Rarity Normal
+Corrupted False
+Sockets >= 3
+style-orb-div
+
+Show
+Class "Talisman"
+BaseType "Spiny Talisman"
+Rarity Normal
+Corrupted False
+Sockets >= 3
+style-orb-div
+
+Show
+Class "Gloves"
+BaseType "Baroque Gloves" "Polished Bracers"
+Rarity Normal
+Corrupted False
+Sockets >= 2
+style-orb-div
+
+Show
+Class "Body"
+BaseType "Sacramental Robe" "Feathered Raiment"
+Rarity Normal
 Corrupted False
 Sockets >= 2
 style-orb-div
