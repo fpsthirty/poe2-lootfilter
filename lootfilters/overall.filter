@@ -2974,11 +2974,11 @@ BaseType == "Reflecting Staff"
 DropLevel == 70
 style-uniq-up-vaal
 
-# Show
-# Rarity Unique
-# BaseType == "Atziri's Splendour"
-# DropLevel == 65
-# style-uniq-up-vaal
+Show
+Rarity Unique
+BaseType == "Sacrificial Regalia"
+DropLevel == 65
+style-uniq-up-vaal
 
 Show
 Rarity Unique
