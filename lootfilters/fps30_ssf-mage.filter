@@ -3171,15 +3171,15 @@ PlayEffect Brown
 MinimapIcon 2 Brown Star
 PlayAlertSound 3 300
 
-Show
-Rarity Unique
-BaseType == "Atziri's Splendour"
-DropLevel == 65
-SetBorderColor 224 25 25 200
-SetBackgroundColor 0 0 0 210
-PlayEffect Brown
-MinimapIcon 2 Brown Star
-PlayAlertSound 3 300
+# Show
+# Rarity Unique
+# BaseType == "Atziri's Splendour"
+# DropLevel == 65
+# SetBorderColor 224 25 25 200
+# SetBackgroundColor 0 0 0 210
+# PlayEffect Brown
+# MinimapIcon 2 Brown Star
+# PlayAlertSound 3 300
 
 Show
 Rarity Unique
