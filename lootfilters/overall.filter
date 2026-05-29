@@ -2,7 +2,7 @@
 # fpsthirty overall caster LootFilter — Path of Exile 2
 #===============================================================================================================
 #
-# VERSION: 	0.4.0-3 (actual for PoE2 v0.4.0 and higher, does not support v0.3.1 and lower)
+# VERSION: 	0.5.0-1 (actual for PoE2 v0.5.0 and higher, does not support v0.4.0 and lower)
 # AUTHOR: 	fpsthirty
 # SOURCE: 	https://github.com/fpsthirty/poe2-lootfilter
 #
@@ -100,13 +100,15 @@
 #   [1302] red beam: price ~1 divine orb
 #   [1303] Schrodinger's uniques
 #   [1304] high-end jewels
-#   [1305] mid-tier uniques
+#   [1305] Vaal league: upgradable uniques
+#   [1306] Expedition league: upgradable uniques
+#   [1307] mid-tier uniques
 # [[1400]] Things of the Atlas
 #   [1401] pinnacle keys
 #   [1402] Expedition / logbooks, artifacts & exotic coinage
 #   [1403] Altar / omens
 #   [1404] Delirium / distilled emotions
-#   [1405] Breach / catalysts and breach rings
+#   [1405] Breach / catalysts, wombgifts and breach rings
 #   [1406] tablets
 #   [1407] Fractured Lake
 #   [1408] quest items in unique maps
@@ -126,6 +128,7 @@
 #   [1806] idols (ex-talismans)
 #   [1807] "Abyss" league: gazes
 #   [1808] "Fate of the Vaal" league: thesis
+#   [1809] "Return of the Ancients" league: runes and Legacy of Expedition 
 # [[1900]] Craft and Currency
 #   [1901] currency Tier S: Mirror, Divine
 #   [1902] currency Tier A: Gemcutter, Annullment, Fracturing and advanced orbs
@@ -135,6 +138,8 @@
 #   [1906] default styles for distillates, catalysts and essences
 #   [1907] "Abyss" league: bones
 #   [1908] "Fate of the Vaal" league
+#   [1909] "Return of the Ancients" league
+#   [1910] Unknown currency
 # [[2000]] Waystones
 #   [2001] distilled waystones
 #   [2002] default styles for waystones
@@ -390,13 +395,6 @@ style-orb-div-purple
 # S-tier:
 
 Show
-Class "Helmet"
-BaseType "Tribal Mask"
-Corrupted False
-Sockets >= 2
-style-orb-div-purple
-
-Show
 Class "Spear"
 BaseType "War Spear" "Forked Spear" "Barbed Spear" "Akoyan Spear"
 Rarity Normal
@@ -486,7 +484,7 @@ style-orb-div-purple
 
 Show
 Class "Helmet"
-BaseType "Viper Cap" "Armoured Cap" "Gold Circlet" "Magus Tiara" "Tribal Mask" "Imperial Greathelm" "Kamasan Tiara" "Ancestral Tiara"
+BaseType "Viper Cap" "Armoured Cap" "Gold Circlet" "Magus Tiara" "Imperial Greathelm" "Kamasan Tiara" "Ancestral Tiara"
 Rarity Normal
 Corrupted False
 Sockets >= 2
@@ -716,13 +714,6 @@ Rarity Normal
 ItemLevel >= 24
 style-base-craft-unique
 
-# filter-mage
-Show
-BaseType "Tribal Mask" # The Vertex / use vaal cultivation orb for +[2–4] to Level of all Skills
-Rarity Normal
-ItemLevel >= 33
-style-base-craft-unique
-
 # filter-norarity
 Show
 BaseType "Silver Charm" # The Fall of the Axe / Grants Onslaught during effect
@@ -944,7 +935,7 @@ style-eq-endgame
 Show
 BaseType "Vile Robe"
 ItemLevel >= 82
-DropLevel = 65 # that base "vile robe" and "havoc raiment" have a max ES; robe 65lvl: 184 ES; raiment 70lvl: 153 ES + mana regen; robe 75lvl: 153 ES + faster ES recharge
+DropLevel = 65 # that base "vile robe" and "havoc raiment" have a max ES; robe 65lvl: 184 ES (after v0.5.0: 171 ES); raiment 70lvl: 153 ES + mana regen; robe 75lvl: 153 ES + faster ES recharge
 Rarity <= Rare
 style-eq-endgame
 
@@ -1045,7 +1036,7 @@ PlayEffect Cyan
 # filter-rarity
 Show
 Class "Ring"
-BaseType "Gold Ring"
+BaseType "Gold Ring" "Two-Stone Ring" "Biostatic Ring" "Vitalic Ring" "Mnemonic Ring" "Kinetic Ring" "Oneiric Ring" "Grasping Ring"
 ItemLevel >= 82
 Rarity <= Rare
 style-eq-endgame
@@ -1053,7 +1044,7 @@ style-eq-endgame
 # filter-rarity
 Show
 Class "Ring"
-BaseType "Gold Ring"
+BaseType "Gold Ring" "Two-Stone Ring" "Biostatic Ring" "Vitalic Ring" "Mnemonic Ring" "Kinetic Ring" "Oneiric Ring" "Grasping Ring"
 AreaLevel >= 79
 Rarity <= Rare
 style-bg-translucent
@@ -1157,7 +1148,7 @@ PlayEffect Cyan Temp
 # filter-rarity
 Show
 Class "Amulet"
-BaseType "Solar Amulet" "Lunar Amulet" "Gold Amulet"
+BaseType "Solar Amulet" "Lunar Amulet" "Gold Amulet" "Veridical Chain" "Lament Amulet" "Portent Amulet" "Absent Amulet" "Corona Amulet" "Distorted Amulet" "Twisted Amulet"
 Rarity <= Rare
 ItemLevel >= 82
 style-eq-endgame
@@ -1165,7 +1156,7 @@ style-eq-endgame
 # filter-rarity
 Show
 Class "Amulet"
-BaseType "Solar Amulet" "Lunar Amulet" "Gold Amulet"
+BaseType "Solar Amulet" "Lunar Amulet" "Gold Amulet" "Veridical Chain" "Lament Amulet" "Portent Amulet" "Absent Amulet" "Corona Amulet" "Distorted Amulet" "Twisted Amulet" 
 Rarity <= Rare
 style-bg-translucent
 
@@ -1653,7 +1644,7 @@ AreaLevel >= 75
 
 Hide
 Rarity <= Rare
-BaseType "Circlet" "Tiara" " Crown" " Mask" "Visage" "Greathelm" " Cap" " Hood" "Helm" "Raiment" " Robe" " Mantle" " Vestments" " Jacket" " Garb" "Cuirass" " Plate" " Coat" " Vest" " Mail" "Garment" "Sandals" "Slippers" "Leggings" "Shoes" "Cuisses" "Greaves" "Boots" "Sabatons" "Crest Shield" "Tower Shield" "Buckler" " Targe" "Gloves" " Cuffs" " Wraps" "Manchettes" " Mitts" "Bracers" "Gauntlets"
+BaseType "Circlet" "Tiara" " Crown" " Visor" " Mask" "Visage" "Greathelm" " Cap" " Hood" "Helm" "Raiment" " Robe" " Mantle" " Vestments" " Jacket" " Garb" "Cuirass" " Plate" " Coat" " Vest" " Mail" " Ringmail" " Markings" "Garment" "Sandals" "Slippers" "Leggings" "Shoes" "Cuisses" "Greaves" "Boots" "Sabatons" "Crest Shield" "Tower Shield" "Buckler" " Targe" "Defender" "Fortress" "Gloves" " Cuffs" " Wraps" "Manchettes" " Mitts" "Bracers" "Gauntlets"
 DropLevel <= 64
 AreaLevel >= 75
 
@@ -1731,7 +1722,7 @@ AreaLevel >= 75
 # 
 # Hide
 # Class "Body"
-# BaseType " Mail" " Armour"
+# BaseType " Mail" " Armour" " Ringmail" " Markings"
 # Rarity <= Rare
 # AreaLevel >= 75
 # 
@@ -1767,14 +1758,14 @@ AreaLevel >= 75
 # 
 # Hide
 # Class "Shields"
-# BaseType " Targe"
+# BaseType " Targe" "Defender" "Fortress"
 # Rarity <= Rare
 # AreaLevel >= 75
 
 #   [0904] mix-bases:-----------
 Hide
 Class "Helmet"
-BaseType " Crown" " Mask" " Visage"
+BaseType " Crown" " Visor" " Mask" " Visage"
 Rarity <= Rare
 AreaLevel >= 75
 
@@ -1896,14 +1887,14 @@ DropLevel <= 60
 AreaLevel >= 71
 
 #Hide # todo bug report: "rules with "DropLevel < 17" and lower mistakenly affect Wands / Staves with reqLevel 70+" https://www.pathofexile.com/forum/view-thread/3880752
-#Rarity <= Magic 
-#BaseType "Wand" "Staff"
+#Rarity <= Magic
+#Class "Staff" "Wand"
 #DropLevel <= 60
 #AreaLevel >= 71
 
 Hide
 Rarity <= Magic
-BaseType "Circlet" "Tiara" " Crown" " Mask" "Visage" "Greathelm" " Cap" " Hood" "Helm" "Raiment" " Robe" " Mantle" " Vestments" " Jacket" " Garb" "Cuirass" " Plate" " Coat" " Vest" " Mail" "Garment" "Sandals" "Slippers" "Leggings" "Shoes" "Cuisses" "Greaves" "Boots" "Sabatons" "Crest Shield" "Tower Shield" "Buckler" " Targe" "Gloves" " Cuffs" " Wraps" "Manchettes" " Mitts" "Bracers" "Gauntlets"
+BaseType " Circlet" "Tiara" " Crown" " Visor" " Mask" " Visage" " Greathelm" " Cap" " Hood" "Helm" "Raiment" " Robe" " Mantle" " Vestments" " Jacket" " Garb" "Cuirass" " Plate" " Coat" " Vest" " Mail" " Ringmail" " Markings" "Garment" "Sandals" "Slippers" "Leggings" "Shoes" "Cuisses" "Greaves" "Boots" "Sabatons" "Crest Shield" "Tower Shield" "Buckler" " Targe" "Defender" "Fortress" "Gloves" " Cuffs" " Wraps" "Manchettes" " Mitts" "Bracers" "Gauntlets"
 DropLevel <= 60
 AreaLevel >= 71
 
@@ -1936,7 +1927,7 @@ AreaLevel >= 71
 
 Hide
 Class "Body"
-BaseType " Mail" " Armour"
+BaseType " Mail" " Armour" " Ringmail" " Markings"
 Rarity <= Rare
 AreaLevel >= 71
 
@@ -1972,14 +1963,14 @@ AreaLevel >= 71
 
 Hide
 Class "Shields"
-BaseType " Targe"
+BaseType " Targe" "Defender" "Fortress"
 Rarity <= Rare
 AreaLevel >= 71
 
 #   [1003] mix-bases:-----------
 Hide
 Class "Helmet"
-BaseType " Crown" " Mask" " Visage"
+BaseType " Crown" " Visor" " Mask" " Visage"
 Rarity <= Magic
 AreaLevel >= 71
 
@@ -2198,7 +2189,7 @@ AreaLevel >= 65
 
 Hide
 Class "Body"
-BaseType " Mail" " Armour"
+BaseType " Mail" " Armour" " Ringmail" " Markings"
 Rarity <= Magic
 AreaLevel >= 65
 
@@ -2234,7 +2225,7 @@ AreaLevel >= 65
 
 Hide
 Class "Shields"
-BaseType " Targe"
+BaseType " Targe" "Defender" "Fortress"
 Rarity <= Magic
 AreaLevel >= 65
 
@@ -2368,7 +2359,7 @@ AreaLevel <= 74
 
 Hide
 Class "Shields"
-BaseType " Targe" "Tower Shield"
+BaseType " Targe" "Tower Shield" "Defender" "Fortress"
 Rarity Normal
 
 Hide
@@ -2391,7 +2382,7 @@ style-bg-translucent
 # filter-norarity
 Show
 Class "Shields" "Buckler"
-BaseType "Buckler" " Targe" "Tower Shield"
+BaseType "Buckler" " Targe" "Tower Shield" "Defender" "Fortress"
 Rarity Magic Rare
 style-bg-translucent
 
@@ -2506,38 +2497,38 @@ style-bg-translucent
 #   [1202] mix-bases:-----------
 Hide
 Class "Helmet"
-BaseType " Crown" " Mask" " Helm" " Visage"
+BaseType " Crown" " Visor" " Mask" " Helm" " Visage"
 Rarity Normal
 
 # filter-norarity
 Show
 Class "Helmet"
-BaseType " Crown" " Mask" " Helm" " Visage"
+BaseType " Crown" " Visor" " Mask" " Helm" " Visage"
 Rarity Magic
 style-bg-translucent
 
 # filter-norarity
 Show
 Class "Helmet"
-BaseType " Crown" " Mask" " Helm" " Visage"
+BaseType " Crown" " Visor" " Mask" " Helm" " Visage"
 Rarity Rare
 style-bg-translucent
 
 Hide
 Class "Body"
-BaseType " Jacket" " Mail" " Armour" " Mantle" " Garb" " Vestments"
+BaseType " Jacket" " Mail" " Armour" " Mantle" " Garb" " Vestments" " Ringmail" " Markings"
 Rarity Normal
 
 Hide
 Class "Body"
-BaseType " Jacket" " Mail" " Armour" " Mantle" " Garb" " Vestments"
+BaseType " Jacket" " Mail" " Armour" " Mantle" " Garb" " Vestments" " Ringmail" " Markings"
 Rarity Magic
 AreaLevel >= 65
 
 # filter-norarity
 Show
 Class "Body"
-BaseType " Jacket" " Mail" " Armour" " Mantle" " Garb" " Vestments"
+BaseType " Jacket" " Mail" " Armour" " Mantle" " Garb" " Vestments" " Ringmail" " Markings"
 Rarity Magic
 style-bg-translucent
 AreaLevel < 65
@@ -2545,7 +2536,7 @@ AreaLevel < 65
 # filter-norarity
 Show
 Class "Body"
-BaseType " Jacket" " Mail" " Armour" " Mantle" " Garb" " Vestments"
+BaseType " Jacket" " Mail" " Armour" " Mantle" " Garb" " Vestments" " Ringmail" " Markings"
 Rarity Rare
 style-bg-translucent
 
@@ -2656,12 +2647,11 @@ style-bg-translucent
 # The Gnashing Sash, Wide Belt
 # Headhunter, Heavy Belt
 # Hyrri's Ire, Armoured Vest
-# Abyss Precursor Tablet
+# Abyss Tablet
 # Fury of the King, Ashbark Talisman
 # Atziri's Splendour, Sacrificial Regalia
 # Atziri's Contempt, Pronged Spear
 # Flesh Crucible, Diamond
-# The Vertex, Tribal Mask
 # Choir of the Storm, Jade Amulet (Droplevel 90)
 # ----------------------------------
 
@@ -2686,13 +2676,7 @@ style-orb-div-purple
 Show
 Rarity == Unique
 Class "Tablet"
-BaseType == "Abyss Precursor Tablet"
-style-orb-div-purple
-
-Show
-Rarity Unique
-BaseType == "Tribal Mask"
-DropLevel == 33
+BaseType == "Abyss Tablet"
 style-orb-div-purple
 
 Show
@@ -2839,11 +2823,11 @@ BaseType == "Bloodstone Amulet"
 DropLevel == 18 # Yoke of Suffering
 style-uniq-crux-tier-s
 
-# Show
-# Rarity Unique
-# BaseType == "Sapphire Ring"
-# DropLevel == 12 # Dream Fragments
-# style-uniq-crux-tier-s
+Show
+Rarity Unique
+BaseType == "Sapphire Ring"
+DropLevel == 12 # Dream Fragments
+style-uniq-crux-tier-s
 
 # Show
 # Rarity Unique
@@ -2946,7 +2930,631 @@ PlayAlertSound 3 300
 MinimapIcon 2 Cyan Diamond
 PlayEffect Brown
 
-#   [1305] mid-tier uniques
+#   [1305] Vaal league: upgradable uniques
+
+Show
+Rarity Unique
+BaseType == "Voodoo Focus"
+DropLevel == 33
+style-uniq-up-vaal
+
+Show
+Rarity Unique
+BaseType == "Sacrificial Regalia"
+DropLevel == 65
+style-uniq-up-vaal
+
+Show
+Rarity Unique
+BaseType == "Moulded Mitts"
+DropLevel == 33
+style-uniq-up-vaal
+
+Show
+Rarity Unique
+BaseType == "Moulded Mitts"
+DropLevel == 60
+style-uniq-up-vaal
+
+Show
+Rarity Unique
+BaseType == "Pronged Spear"
+DropLevel == 72
+style-uniq-up-vaal
+
+Show
+Rarity Unique
+BaseType == "Gold Circlet"
+DropLevel == 40
+style-uniq-up-vaal
+
+Show
+Rarity Unique
+BaseType == "Reflecting Staff"
+DropLevel == 70
+style-uniq-up-vaal
+
+Show
+Rarity Unique
+BaseType == "Atziri's Splendour"
+DropLevel == 65
+style-uniq-up-vaal
+
+Show
+Rarity Unique
+BaseType == "Cinched Boots"
+DropLevel == 65
+style-uniq-up-vaal
+
+Show
+Rarity Unique
+BaseType == "Explorer Armour"
+DropLevel == 33
+style-uniq-up-vaal
+
+Show
+Rarity Unique
+BaseType == "Iron Buckler"
+DropLevel == 16
+style-uniq-up-vaal
+
+Show
+Rarity Unique
+BaseType == "Viper Cap"
+DropLevel == 38
+style-uniq-up-vaal
+
+Show
+Rarity Unique
+BaseType == "Heavy Crown"
+DropLevel == 33
+style-uniq-up-vaal
+
+Show
+Rarity Unique
+BaseType == "Warrior Greathelm"
+DropLevel == 65
+style-uniq-up-vaal
+
+Show
+Rarity Unique
+BaseType == "Mail Belt"
+DropLevel == 40
+style-uniq-up-vaal
+
+Show
+Rarity Unique
+BaseType == "Intricate Gloves"
+DropLevel == 33
+style-uniq-up-vaal
+
+Show
+Rarity Unique
+BaseType == "Scale Mail"
+DropLevel == 37
+style-uniq-up-vaal
+
+Show
+Rarity Unique
+BaseType == "Sapphire Ring"
+DropLevel == 12
+style-uniq-up-vaal
+
+Show
+Rarity Unique
+BaseType == "Penetrating Quiver"
+DropLevel == 55
+style-uniq-up-vaal
+
+Show
+Rarity Unique
+BaseType == "Tribal Mask"
+DropLevel == 33
+style-uniq-up-vaal
+
+Show
+Rarity Unique
+BaseType == "Tribal Mask"
+DropLevel == 52
+style-uniq-up-vaal
+
+Show
+Rarity Unique
+BaseType == "Vaal Cuirass"
+DropLevel == 37
+style-uniq-up-vaal
+
+Show
+Rarity Unique
+BaseType == "Sectioned Bracers"
+DropLevel == 28
+style-uniq-up-vaal
+
+Show
+Rarity Unique
+BaseType == "Omen Crest Shield"
+DropLevel == 36
+style-uniq-up-vaal
+
+Show
+Rarity Unique
+BaseType == "Omen Crest Shield"
+DropLevel == 48
+style-uniq-up-vaal
+
+Show
+Rarity Unique
+BaseType == "Feathered Tiara"
+DropLevel == 33
+style-uniq-up-vaal
+
+Show
+Rarity Unique
+BaseType == "Gauze Wraps"
+DropLevel == 4
+style-uniq-up-vaal
+
+Show
+Rarity Unique
+BaseType == "Hunting Shoes"
+DropLevel == 33
+style-uniq-up-vaal
+
+Show
+Rarity Unique
+BaseType == "Serpentscale Coat"
+DropLevel == 36
+style-uniq-up-vaal
+
+Show
+Rarity Unique
+BaseType == "Crumbling Maul"
+DropLevel == 38
+style-uniq-up-vaal
+
+Show
+Rarity Unique
+BaseType == "Sacred Focus"
+DropLevel == 75
+style-uniq-up-vaal
+
+Show
+Rarity Unique
+BaseType == "Blunt Quiver"
+DropLevel == 33
+style-uniq-up-vaal
+
+Show
+Rarity Unique
+BaseType == "Anchorite Garb"
+DropLevel == 33
+style-uniq-up-vaal
+
+Show
+Rarity Unique
+BaseType == "Barbed Spear"
+DropLevel == 33
+style-uniq-up-vaal
+
+Show
+Rarity Unique
+BaseType == "Lazuli Ring"
+DropLevel == 1
+style-uniq-up-vaal
+
+Show
+Rarity Unique
+BaseType == "Gold Amulet"
+DropLevel == 35
+style-uniq-up-vaal
+
+Show
+Rarity Unique
+BaseType == "Tonal Focus"
+DropLevel == 22
+style-uniq-up-vaal
+
+Show
+Rarity Unique
+BaseType == "Aged Cuffs"
+DropLevel == 16
+style-uniq-up-vaal
+
+Show
+Rarity Unique
+BaseType == "Spined Bracers"
+DropLevel == 33
+style-uniq-up-vaal
+
+Show
+Rarity Unique
+BaseType == "Pearl Ring"
+DropLevel == 32
+style-uniq-up-vaal
+
+Show
+Rarity Unique
+BaseType == "Sacrificial Mantle"
+DropLevel == 36
+style-uniq-up-vaal
+
+Show
+Rarity Unique
+BaseType == "Long Belt"
+DropLevel == 20
+style-uniq-up-vaal
+
+Show
+Rarity Unique
+BaseType == "Votive Raiment"
+DropLevel == 33
+style-uniq-up-vaal
+
+Show
+Rarity Unique
+BaseType == "Altar Robe"
+DropLevel == 40
+style-uniq-up-vaal
+
+Show
+Rarity Unique
+BaseType == "Vicious Talisman"
+DropLevel == 40
+style-uniq-up-vaal
+
+Show
+Rarity Unique
+BaseType == "Heavy Belt"
+DropLevel == 56
+style-uniq-up-vaal
+
+#   [1306] Expedition league: upgradable uniques
+
+# todo: add uniques: "Duality", "Spiteful Floret", "A Worthy Foe", "Runeseeker's Call"
+
+Show
+Rarity Unique
+BaseType == "Rusted Cuirass"
+DropLevel == 1
+style-uniq-up-expedition
+
+Show
+Rarity Unique
+BaseType == "Fur Plate"
+DropLevel == 4
+style-uniq-up-expedition
+
+Show
+Rarity Unique
+BaseType == "Iron Cuirass"
+DropLevel == 11
+style-uniq-up-expedition
+
+Show
+Rarity Unique
+BaseType == "Full Plate"
+DropLevel == 33
+style-uniq-up-expedition
+
+Show
+Rarity Unique
+BaseType == "Leather Vest"
+DropLevel == 1
+style-uniq-up-expedition
+
+Show
+Rarity Unique
+BaseType == "Quilted Vest"
+DropLevel == 4
+style-uniq-up-expedition
+
+Show
+Rarity Unique
+BaseType == "Pathfinder Coat"
+DropLevel == 11
+style-uniq-up-expedition
+
+Show
+Rarity Unique
+BaseType == "Rhoahide Coat"
+DropLevel == 22
+style-uniq-up-expedition
+
+Show
+Rarity Unique
+BaseType == "Revered Vestments"
+DropLevel == 65
+style-uniq-up-expedition
+
+Show
+Rarity Unique
+BaseType == "Rusted Greathelm"
+DropLevel == 1
+style-uniq-up-expedition
+
+Show
+Rarity Unique
+BaseType == "Soldier Greathelm"
+DropLevel == 12
+style-uniq-up-expedition
+
+Show
+Rarity Unique
+BaseType == "Elite Greathelm"
+DropLevel == 33
+style-uniq-up-expedition
+
+Show
+Rarity Unique
+BaseType == "Hunter Hood"
+DropLevel == 33
+style-uniq-up-expedition
+
+Show
+Rarity Unique
+BaseType == "Leatherbound Hood"
+DropLevel == 50
+style-uniq-up-expedition
+
+Show
+Rarity Unique
+BaseType == "Twig Circlet"
+DropLevel == 1
+style-uniq-up-expedition
+
+Show
+Rarity Unique
+BaseType == "Brimmed Helm"
+DropLevel == 5
+style-uniq-up-expedition
+
+Show
+Rarity Unique
+BaseType == "Guarded Helm"
+DropLevel == 11
+style-uniq-up-expedition
+
+Show
+Rarity Unique
+BaseType == "Cowled Helm"
+DropLevel == 26
+style-uniq-up-expedition
+
+Show
+Rarity Unique
+BaseType == "Shielded Helm"
+DropLevel == 33
+style-uniq-up-expedition
+
+Show
+Rarity Unique
+BaseType == "Suede Bracers"
+DropLevel == 1
+style-uniq-up-expedition
+
+Show
+Rarity Unique
+BaseType == "Sombre Gloves"
+DropLevel == 12
+style-uniq-up-expedition
+
+Show
+Rarity Unique
+BaseType == "Doubled Gauntlets"
+DropLevel == 33
+style-uniq-up-expedition
+
+Show
+Rarity Unique
+BaseType == "Rough Greaves"
+DropLevel == 1
+style-uniq-up-expedition
+
+Show
+Rarity Unique
+BaseType == "Trimmed Greaves"
+DropLevel == 27
+style-uniq-up-expedition
+
+Show
+Rarity Unique
+BaseType == "Laced Boots"
+DropLevel == 11
+style-uniq-up-expedition
+
+Show
+Rarity Unique
+BaseType == "Lizardscale Boots"
+DropLevel == 33
+style-uniq-up-expedition
+
+Show
+Rarity Unique
+BaseType == "Wrapped Sandals"
+DropLevel == 11
+style-uniq-up-expedition
+
+Show
+Rarity Unique
+BaseType == "Mail Sabatons"
+DropLevel == 6
+style-uniq-up-expedition
+
+Show
+Rarity Unique
+BaseType == "Stacked Sabatons"
+DropLevel == 33
+style-uniq-up-expedition
+
+Show
+Rarity Unique
+BaseType == "Splintered Tower Shield"
+DropLevel == 1
+style-uniq-up-expedition
+
+Show
+Rarity Unique
+BaseType == "Painted Tower Shield"
+DropLevel == 6
+style-uniq-up-expedition
+
+Show
+Rarity Unique
+BaseType == "Blacksteel Tower Shield"
+DropLevel == 65
+style-uniq-up-expedition
+
+Show
+Rarity Unique
+BaseType == "Blazon Crest Shield"
+DropLevel == 1
+style-uniq-up-expedition
+
+Show
+Rarity Unique
+BaseType == "Sigil Crest Shield"
+DropLevel == 7
+style-uniq-up-expedition
+
+Show
+Rarity Unique
+BaseType == "Leather Buckler"
+DropLevel == 1
+style-uniq-up-expedition
+
+Show
+Rarity Unique
+BaseType == "Plated Buckler"
+DropLevel == 11
+style-uniq-up-expedition
+
+Show
+Rarity Unique
+BaseType == "Wooden Club"
+DropLevel == 1
+style-uniq-up-expedition
+
+Show
+Rarity Unique
+BaseType == "Spiked Club"
+DropLevel == 16
+style-uniq-up-expedition
+
+Show
+Rarity Unique
+BaseType == "Torment Club"
+DropLevel == 65
+style-uniq-up-expedition
+
+Show
+Rarity Unique
+BaseType == "Aberrant Sledge"
+DropLevel == 78
+style-uniq-up-expedition
+
+Show
+Rarity Unique
+BaseType == "Felled Greatclub"
+DropLevel == 1
+style-uniq-up-expedition
+
+Show
+Rarity Unique
+BaseType == "Oak Greathammer"
+DropLevel == 4
+style-uniq-up-expedition
+
+Show
+Rarity Unique
+BaseType == "Studded Greatclub"
+DropLevel == 16
+style-uniq-up-expedition
+
+Show
+Rarity Unique
+BaseType == "Attuned Wand"
+DropLevel == 2
+style-uniq-up-expedition
+
+Show
+Rarity Unique
+BaseType == "Ironhead Spear"
+DropLevel == 5
+style-uniq-up-expedition
+
+Show
+Rarity Unique
+BaseType == "Gothic Quarterstaff"
+DropLevel == 11
+style-uniq-up-expedition
+
+Show
+Rarity Unique
+BaseType == "Siphoning Wand"
+DropLevel == 65
+style-uniq-up-expedition
+
+Show
+Rarity Unique
+BaseType == "Acrid Wand"
+DropLevel == 33
+style-uniq-up-expedition
+
+Show
+Rarity Unique
+BaseType == "Ashen Staff"
+DropLevel == 1
+style-uniq-up-expedition
+
+Show
+Rarity Unique
+BaseType == "Wrapped Quarterstaff"
+DropLevel == 1
+style-uniq-up-expedition
+
+Show
+Rarity Unique
+BaseType == "Shortbow"
+DropLevel == 5
+style-uniq-up-expedition
+
+Show
+Rarity Unique
+BaseType == "Warden Bow"
+DropLevel == 11
+style-uniq-up-expedition
+
+Show
+Rarity Unique
+BaseType == "Changeling Talisman"
+DropLevel == 1
+style-uniq-up-expedition
+
+Show
+Rarity Unique
+BaseType == "Crucible Tower Shield"
+DropLevel == 60
+style-uniq-up-expedition
+
+Show
+Rarity Unique
+BaseType == "Spiritbone Crown"
+DropLevel == 62
+style-uniq-up-expedition
+
+Show
+Rarity Unique
+BaseType == "Kalguuran Forgehammer"
+DropLevel == 47
+style-uniq-up-expedition
+
+Show
+Rarity Unique
+BaseType == "Stocky Mitts"
+DropLevel == 1
+style-uniq-up-expedition
+
+#   [1307] mid-tier uniques
 
 # uniques with extra socket
 Show
@@ -3088,6 +3696,10 @@ style-mapfragment
 PlayEffect Green
 
 Show
+Class "Map Fragments"
+style-mapfragment
+
+Show
 Class == "Pinnacle Keys" # from citadels
 BaseType == "Primary Calamity Fragment" "Secondary Calamity Fragment" "Tertiary Calamity Fragment"
 style-mapfragment-high
@@ -3135,13 +3747,13 @@ style-orb-div
 
 #   [1402] Expedition / logbooks, artifacts & exotic coinage
 Show
-BaseType "Expedition Logbook"
+Class "Expedition Logbook"
 ItemLevel >= 79
 MinimapIcon 1 Orange Square
 style-orb-annul-max
 
 Show
-BaseType "Expedition Logbook"
+Class "Expedition Logbook"
 ItemLevel < 79
 MinimapIcon 1 White Square
 style-orb-annul
@@ -3160,13 +3772,8 @@ style-orb-exalt
 Show
 Class "Currency"
 BaseType "Runic Splinter"
-SetTextColor 255 207 132
-SetBorderColor 104 238 170
-style-bg-translucent
-PlayAlertSound 2 100
-PlayEffect White
-MinimapIcon 2 Cyan Circle
-SetFontSize 40
+style-league-expedition-currency
+
 
 #   [1403] Altar / omens
 Show
@@ -3205,30 +3812,20 @@ Show
 Class == "Omen"
 style-orb-exalt
 
+#todo: apply custom styles to new omens: "Aldur's Saga" "Medved's Saga" "Vorana's Saga" "Uhtred's Saga" "Olroth's Saga" "Omen of Chaotic Effectiveness" 
+
 # splinters
 Show
 Class "Currency"
 BaseType "Petition Splinter"
-SetTextColor 255 207 132
-SetBorderColor 60 0 90
-style-bg-translucent
-PlayAlertSound 2 100
-PlayEffect White
-MinimapIcon 2 Pink Circle
-SetFontSize 40
+style-league-ritual-currency
 
 #   [1404] Delirium / distilled emotions: -----------------------
 # splinters
 Show
 Class "Currency"
 BaseType "Simulacrum Splinter"
-SetTextColor 255 207 132
-SetBorderColor 132 255 207
-style-bg-translucent
-PlayAlertSound 2 100
-PlayEffect White
-MinimapIcon 2 Cyan Circle
-SetFontSize 40
+style-league-delirium-currency
 
 # emotion flasks
 Show
@@ -3331,18 +3928,17 @@ PlayAlertSound 6 300
 PlayEffect Red
 MinimapIcon 1 Red Circle
 
-#   [1405] Breach / catalysts and breach rings: -----------------------
+#   [1405] Breach / catalysts, wombgifts and breach rings: -----------------------
 # splinters
 Show
 Class "Currency"
 BaseType "Breach Splinter"
-SetTextColor 255 207 132
-SetBorderColor 239 34 255
-style-bg-translucent
-MinimapIcon 2 Pink Circle
-PlayEffect White
-PlayAlertSound 2 100
-SetFontSize 40
+style-league-breach-currency
+
+# wombgifts
+Show
+Class "Wombgifts"
+style-league-breach-currency
 
 # rings
 Show
@@ -3508,7 +4104,7 @@ MinimapIcon 1 Pink Raindrop
 # filter-rarity
 Hide
 Class "Tablet"
-BaseType "Breach Precursor Tablet" "Delirium Precursor Tablet" "Expedition Precursor Tablet" "Overseer Precursor Tablet"
+BaseType "Breach Tablet" "Delirium Tablet" "Expedition Tablet" "Overseer Tablet"
 Rarity == Unique
 SetTextColor 235 175 83
 SetBorderColor 255 140 0 255
@@ -3521,7 +4117,7 @@ SetFontSize 40
 # filter-rarity
 Show
 Class "Tablet"
-BaseType "Ritual Precursor Tablet"
+BaseType "Ritual Tablet"
 Rarity <= Rare
 SetTextColor 255 207 255
 SetBorderColor 255 207 255
@@ -4370,7 +4966,7 @@ style-orb-annul
 # any other idols
 Show
 Class "Augment"
-BaseType "Idol"
+BaseType " Idol" "Idol of "
 style-idol
 
 #   [1807] "Abyss" league: gazes
@@ -4392,7 +4988,7 @@ style-orb-annul
 Show
 Class "Augment"
 BaseType "Gaze"
-style-abyss-socket
+style-league-abyss-socket
 
 #   [1808] "Fate of the Vaal" league: thesis
 Show
@@ -4400,6 +4996,14 @@ Class "Augment"
 BaseType "Thesis"
 style-orb-div-purple
 # style-league-vaal
+
+#   [1809] "Return of the Ancients" league: runes and Legacy of Expedition 
+
+# extracted affixes of unique items
+Show
+Class "Augment"
+BaseType "Legacy of "
+style-league-expedition-currency
 
 #--------------------------
 # [[1900]] Craft and Currency
@@ -4736,13 +5340,17 @@ Show
 Class "Currency"
 BaseType "Essence of Hysteria"
 style-orb-div-purple
-#SetTextColor 255 207 132
-#SetBorderColor 255 207 132
-#SetBackgroundColor 95 75 75 200 # violet
-#PlayAlertSound 6 300
-#PlayEffect Purple
-#MinimapIcon 1 Red Circle
-#SetFontSize 40
+
+Show
+Class "Currency"
+BaseType "Essence of the Breach"
+SetTextColor 255 207 132
+SetBorderColor 255 207 132
+SetBackgroundColor 95 75 75 200 # violet
+PlayAlertSound 6 300
+PlayEffect Purple
+MinimapIcon 1 Red Circle
+SetFontSize 40
 
 Show
 Class "Currency"
@@ -4758,7 +5366,7 @@ SetFontSize 40
 Show
 Class "Currency"
 BaseType "Essence of the Abyss"
-style-abyss-craft
+style-league-abyss-craft
 PlayEffect White
 SetFontSize 40
 
@@ -4797,7 +5405,7 @@ style-orb-annul
 Show
 Class "Currency"
 BaseType "Gnawed Jawbone" "Preserved Jawbone" "Gnawed Rib" "Gnawed Collarbone" "Preserved Vertebrae"
-style-abyss-craft
+style-league-abyss-craft
 
 #   [1908] "Fate of the Vaal" league
 
@@ -4808,7 +5416,7 @@ style-orb-div
 
 Show
 Class "Currency"
-BaseType "Crystallised Corruption" "Vaal Cultivation Orb" "Architect's Orb" "Vaal Infuser"
+BaseType "Crystallised Corruption" "Vaal Cultivation Orb" "Architect's Orb" "Vaal Blacksmith's Infuser" "Vaal Arcanist's Infuser" "Vaal Catalysing Infuser" "Vaal Armourer's Infuser"
 style-orb-annul
 
 Show
@@ -4826,7 +5434,26 @@ Class "Incubators"
 BaseType "Vaal Siphoner"
 style-league-vaal
 
-# Unknown currency
+#   [1909] "Return of the Ancients" league
+
+Show
+Class "Currency"
+BaseType " Alloy" " Flux" " Starlit Ore" " Crest of the " "Verisium"
+style-league-expedition-currency
+
+Show
+Class "Currency"
+BaseType "Altered Collarbone"
+style-league-abyss-craft
+
+Show
+Class "Currency"
+BaseType "Ancient Potent Liquid "
+style-league-delirium-currency
+
+# todo: apply styles for "Cryptic Key", "Shattered Triskelion", "Emergent ", "Carved " "Raven-Touched Shard", "Serle's Triumph", "Cadigan's Epiphany", "Astrid's Creativity", "Uhtred's Sidereus", "Kolr's Hunt", "Vorana's Carnage", "Thrud's Might", "Medved's Tending", "Katla's Gloom", "Aldur's Legacy", new Distilled Emotions and Catalysts
+
+#   [1910] Unknown currency
 Show
 Class "Currency"
 style-item-unknown
@@ -5349,7 +5976,7 @@ Rarity <= Rare
 
 #armors: visibility are overridden in higher priority rules
 Hide
-BaseType "Circlet" "Tiara" " Crown" " Mask" "Visage" "Greathelm" " Cap" " Hood" "Helm" "Raiment" " Robe" " Mantle" " Vestments" " Jacket" " Garb" "Regalia" "Cuirass" " Plate" " Coat" " Vest" "Armour" " Mail" "Garment" "Sandals" "Slippers" "Leggings" "Shoes" "Cuisses" "Greaves" "Boots" "Sabatons" "Crest Shield" "Tower Shield" "Buckler" " Targe" "Gloves" " Cuffs" " Wraps" "Manchettes" " Mitts" "Bracers" "Gauntlets"
+BaseType "Circlet" "Tiara" " Crown" " Visor" " Mask" "Visage" "Greathelm" " Cap" " Hood" "Helm" "Raiment" " Robe" " Mantle" " Vestments" " Jacket" " Garb" "Regalia" "Cuirass" " Plate" " Coat" " Vest" "Armour" " Mail" " Ringmail" " Markings" "Garment" "Sandals" "Slippers" "Leggings" "Shoes" "Cuisses" "Greaves" "Boots" "Sabatons" "Crest Shield" "Tower Shield" "Buckler" " Targe" "Defender" "Fortress" "Gloves" " Cuffs" " Wraps" "Manchettes" " Mitts" "Bracers" "Gauntlets"
 Rarity <= Rare
 
 # filter-rarity # todo uncomment after the league prices update (approximately two weeks after the start)

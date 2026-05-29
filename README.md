@@ -1,6 +1,6 @@
 # poe2-lootfilter
 
-*based on NeverSink's lootfilter v0.1.1 and augmented with a few hundred of my additional rules*
+*based on NeverSink's lootfilter v0.1.1 (Dec 9, 2024) and augmented with a hundreds of my additional rules*
 
 ## TL;DR Installation / Connection<br>
 *Detailed instructions are provided a couple of paragraphs below. Please read the full instructions if you're first time to see this project.*
@@ -30,6 +30,8 @@ Special equipment stylization applies in the following cases:
      - orange text with brown beam: preliminary price ~2–20 chaos orbs;
      - cyan text with orange border: for cheap unique charms and relics;
      - orange text with brown beam and big fontsize: unique with extra socket;
+     - orange text with red border: upgradable uniques by items from the Vaal league (patch v0.4.0);
+     - orange text with blue border: upgradable uniques by items from the Expedition league (patch v0.5.0);
      - divine styles with red beam: price ~1div (these styles are also used for other expensive non-unique items);
      - divine styles with purple beam: price 2+ div.
 3. 📖 <ins>Ultimate documentation</ins>: in just a couple minutes you can familiarize yourself with the styles of ~95% of the items in the game and ~95% of the rules for showing/hiding items - there are over a dozen screenshots of how lootfilter works at end of the article. If you're only interested in individual rules/styles, you can find them in the table of contents *(look at the beginning of the lootfilter file)*
@@ -158,6 +160,9 @@ If you want to customize one of my lootfilters, create a separate import file so
 
 > ### uniques:
 >  ![uniques](https://github.com/fpsthirty/poe2-lootfilter/raw/main/img/loot/uniques.jpg)
+
+> ### upgradable uniques:
+>  *The image will be added shortly after release of the patch v0.5.0*
 
 > ### equipment (high-end):
 >  ![equip_high-end](https://github.com/fpsthirty/poe2-lootfilter/raw/main/img/loot/equip-highend.jpg)

@@ -2,7 +2,7 @@
 # fps30_trade-summoner.filter — Path of Exile 2
 #===============================================================================================================
 #
-# VERSION: 	0.4.0-3 (actual for PoE2 v0.4.0 and higher, does not support v0.3.1 and lower)
+# VERSION: 	0.5.0-1 (actual for PoE2 v0.5.0 and higher, does not support v0.4.0 and lower)
 # AUTHOR: 	fpsthirty
 # SOURCE: 	https://github.com/fpsthirty/poe2-lootfilter
 #
@@ -100,13 +100,15 @@
 #   [1302] red beam: price ~1 divine orb
 #   [1303] Schrodinger's uniques
 #   [1304] high-end jewels
-#   [1305] mid-tier uniques
+#   [1305] Vaal league: upgradable uniques
+#   [1306] Expedition league: upgradable uniques
+#   [1307] mid-tier uniques
 # [[1400]] Things of the Atlas
 #   [1401] pinnacle keys
 #   [1402] Expedition / logbooks, artifacts & exotic coinage
 #   [1403] Altar / omens
 #   [1404] Delirium / distilled emotions
-#   [1405] Breach / catalysts and breach rings
+#   [1405] Breach / catalysts, wombgifts and breach rings
 #   [1406] tablets
 #   [1407] Fractured Lake
 #   [1408] quest items in unique maps
@@ -126,6 +128,7 @@
 #   [1806] idols (ex-talismans)
 #   [1807] "Abyss" league: gazes
 #   [1808] "Fate of the Vaal" league: thesis
+#   [1809] "Return of the Ancients" league: runes and Legacy of Expedition 
 # [[1900]] Craft and Currency
 #   [1901] currency Tier S: Mirror, Divine
 #   [1902] currency Tier A: Gemcutter, Annullment, Fracturing and advanced orbs
@@ -135,6 +138,8 @@
 #   [1906] default styles for distillates, catalysts and essences
 #   [1907] "Abyss" league: bones
 #   [1908] "Fate of the Vaal" league
+#   [1909] "Return of the Ancients" league
+#   [1910] Unknown currency
 # [[2000]] Waystones
 #   [2001] distilled waystones
 #   [2002] default styles for waystones
@@ -473,19 +478,6 @@ SetFontSize 45
 # S-tier:
 
 Show
-Class "Helmet"
-BaseType "Tribal Mask"
-Corrupted False
-Sockets >= 2
-SetTextColor 255 0 0 255
-SetBorderColor 255 0 0 255
-SetBackgroundColor 255 255 255 255
-PlayAlertSound 6 300
-PlayEffect Purple
-MinimapIcon 0 Purple Star
-SetFontSize 45
-
-Show
 Class "Spear"
 BaseType "War Spear" "Forked Spear" "Barbed Spear" "Akoyan Spear"
 Rarity Normal
@@ -641,7 +633,7 @@ SetFontSize 45
 
 Show
 Class "Helmet"
-BaseType "Viper Cap" "Armoured Cap" "Gold Circlet" "Magus Tiara" "Tribal Mask" "Imperial Greathelm" "Kamasan Tiara" "Ancestral Tiara"
+BaseType "Viper Cap" "Armoured Cap" "Gold Circlet" "Magus Tiara" "Imperial Greathelm" "Kamasan Tiara" "Ancestral Tiara"
 Rarity Normal
 Corrupted False
 Sockets >= 2
@@ -1025,17 +1017,6 @@ PlayEffect Orange Temp
 PlayAlertSound 12 300
 MinimapIcon 1 Orange Square
 
-# filter-mage
-Show
-BaseType "Tribal Mask" # The Vertex / use vaal cultivation orb for +[2–4] to Level of all Skills
-Rarity Normal
-ItemLevel >= 33
-SetBorderColor 255 128 200
-SetBackgroundColor 63 63 63 222
-PlayEffect Orange Temp
-PlayAlertSound 12 300
-MinimapIcon 1 Orange Square
-
 # filter-norarity
 Show
 BaseType "Silver Charm" # The Fall of the Axe / Grants Onslaught during effect
@@ -1364,7 +1345,7 @@ PlayAlertSound 16 300
 Show
 BaseType "Vile Robe"
 ItemLevel >= 82
-DropLevel = 65 # that base "vile robe" and "havoc raiment" have a max ES; robe 65lvl: 184 ES; raiment 70lvl: 153 ES + mana regen; robe 75lvl: 153 ES + faster ES recharge
+DropLevel = 65 # that base "vile robe" and "havoc raiment" have a max ES; robe 65lvl: 184 ES (after v0.5.0: 171 ES); raiment 70lvl: 153 ES + mana regen; robe 75lvl: 153 ES + faster ES recharge
 Rarity <= Rare
 SetBorderColor 95 0 160
 SetBackgroundColor 0 0 0 210
@@ -1890,7 +1871,7 @@ AreaLevel >= 75
 
 Hide
 Rarity <= Rare
-BaseType "Circlet" "Tiara" " Crown" " Mask" "Visage" "Greathelm" " Cap" " Hood" "Helm" "Raiment" " Robe" " Mantle" " Vestments" " Jacket" " Garb" "Cuirass" " Plate" " Coat" " Vest" " Mail" "Garment" "Sandals" "Slippers" "Leggings" "Shoes" "Cuisses" "Greaves" "Boots" "Sabatons" "Crest Shield" "Tower Shield" "Buckler" " Targe" "Gloves" " Cuffs" " Wraps" "Manchettes" " Mitts" "Bracers" "Gauntlets"
+BaseType "Circlet" "Tiara" " Crown" " Visor" " Mask" "Visage" "Greathelm" " Cap" " Hood" "Helm" "Raiment" " Robe" " Mantle" " Vestments" " Jacket" " Garb" "Cuirass" " Plate" " Coat" " Vest" " Mail" " Ringmail" " Markings" "Garment" "Sandals" "Slippers" "Leggings" "Shoes" "Cuisses" "Greaves" "Boots" "Sabatons" "Crest Shield" "Tower Shield" "Buckler" " Targe" "Defender" "Fortress" "Gloves" " Cuffs" " Wraps" "Manchettes" " Mitts" "Bracers" "Gauntlets"
 DropLevel <= 64
 AreaLevel >= 75
 
@@ -1968,7 +1949,7 @@ AreaLevel >= 75
 # 
 # Hide
 # Class "Body"
-# BaseType " Mail" " Armour"
+# BaseType " Mail" " Armour" " Ringmail" " Markings"
 # Rarity <= Rare
 # AreaLevel >= 75
 # 
@@ -2004,14 +1985,14 @@ AreaLevel >= 75
 # 
 # Hide
 # Class "Shields"
-# BaseType " Targe"
+# BaseType " Targe" "Defender" "Fortress"
 # Rarity <= Rare
 # AreaLevel >= 75
 
 #   [0904] mix-bases:-----------
 Hide
 Class "Helmet"
-BaseType " Crown" " Mask" " Visage"
+BaseType " Crown" " Visor" " Mask" " Visage"
 Rarity <= Rare
 AreaLevel >= 75
 
@@ -2130,14 +2111,14 @@ DropLevel <= 60
 AreaLevel >= 71
 
 #Hide # todo bug report: "rules with "DropLevel < 17" and lower mistakenly affect Wands / Staves with reqLevel 70+" https://www.pathofexile.com/forum/view-thread/3880752
-#Rarity <= Magic 
-#BaseType "Wand" "Staff"
+#Rarity <= Magic
+#Class "Staff" "Wand"
 #DropLevel <= 60
 #AreaLevel >= 71
 
 Hide
 Rarity <= Magic
-BaseType "Circlet" "Tiara" " Crown" " Mask" "Visage" "Greathelm" " Cap" " Hood" "Helm" "Raiment" " Robe" " Mantle" " Vestments" " Jacket" " Garb" "Cuirass" " Plate" " Coat" " Vest" " Mail" "Garment" "Sandals" "Slippers" "Leggings" "Shoes" "Cuisses" "Greaves" "Boots" "Sabatons" "Crest Shield" "Tower Shield" "Buckler" " Targe" "Gloves" " Cuffs" " Wraps" "Manchettes" " Mitts" "Bracers" "Gauntlets"
+BaseType " Circlet" "Tiara" " Crown" " Visor" " Mask" " Visage" " Greathelm" " Cap" " Hood" "Helm" "Raiment" " Robe" " Mantle" " Vestments" " Jacket" " Garb" "Cuirass" " Plate" " Coat" " Vest" " Mail" " Ringmail" " Markings" "Garment" "Sandals" "Slippers" "Leggings" "Shoes" "Cuisses" "Greaves" "Boots" "Sabatons" "Crest Shield" "Tower Shield" "Buckler" " Targe" "Defender" "Fortress" "Gloves" " Cuffs" " Wraps" "Manchettes" " Mitts" "Bracers" "Gauntlets"
 DropLevel <= 60
 AreaLevel >= 71
 
@@ -2170,7 +2151,7 @@ AreaLevel >= 71
 
 Hide
 Class "Body"
-BaseType " Mail" " Armour"
+BaseType " Mail" " Armour" " Ringmail" " Markings"
 Rarity <= Rare
 AreaLevel >= 71
 
@@ -2206,14 +2187,14 @@ AreaLevel >= 71
 
 Hide
 Class "Shields"
-BaseType " Targe"
+BaseType " Targe" "Defender" "Fortress"
 Rarity <= Rare
 AreaLevel >= 71
 
 #   [1003] mix-bases:-----------
 Hide
 Class "Helmet"
-BaseType " Crown" " Mask" " Visage"
+BaseType " Crown" " Visor" " Mask" " Visage"
 Rarity <= Magic
 AreaLevel >= 71
 
@@ -2435,7 +2416,7 @@ AreaLevel >= 65
 
 Hide
 Class "Body"
-BaseType " Mail" " Armour"
+BaseType " Mail" " Armour" " Ringmail" " Markings"
 Rarity <= Magic
 AreaLevel >= 65
 
@@ -2471,7 +2452,7 @@ AreaLevel >= 65
 
 Hide
 Class "Shields"
-BaseType " Targe"
+BaseType " Targe" "Defender" "Fortress"
 Rarity <= Magic
 AreaLevel >= 65
 
@@ -2576,7 +2557,7 @@ AreaLevel <= 20
 
 Hide
 Class "Shields"
-BaseType " Targe" "Tower Shield"
+BaseType " Targe" "Tower Shield" "Defender" "Fortress"
 Rarity Normal
 
 Hide
@@ -2592,7 +2573,7 @@ SetBackgroundColor 0 0 0 210
 # filter-norarity
 Show
 Class "Shields" "Buckler"
-BaseType "Buckler" " Targe" "Tower Shield"
+BaseType "Buckler" " Targe" "Tower Shield" "Defender" "Fortress"
 Rarity Magic Rare
 SetBackgroundColor 0 0 0 210
 
@@ -2702,38 +2683,38 @@ SetBackgroundColor 0 0 0 210
 #   [1202] mix-bases:-----------
 Hide
 Class "Helmet"
-BaseType " Crown" " Mask" " Helm" " Visage"
+BaseType " Crown" " Visor" " Mask" " Helm" " Visage"
 Rarity Normal
 
 # filter-norarity
 Show
 Class "Helmet"
-BaseType " Crown" " Mask" " Helm" " Visage"
+BaseType " Crown" " Visor" " Mask" " Helm" " Visage"
 Rarity Magic
 SetBackgroundColor 0 0 0 210
 
 # filter-norarity
 Show
 Class "Helmet"
-BaseType " Crown" " Mask" " Helm" " Visage"
+BaseType " Crown" " Visor" " Mask" " Helm" " Visage"
 Rarity Rare
 SetBackgroundColor 0 0 0 210
 
 Hide
 Class "Body"
-BaseType " Jacket" " Mail" " Armour" " Mantle" " Garb" " Vestments"
+BaseType " Jacket" " Mail" " Armour" " Mantle" " Garb" " Vestments" " Ringmail" " Markings"
 Rarity Normal
 
 Hide
 Class "Body"
-BaseType " Jacket" " Mail" " Armour" " Mantle" " Garb" " Vestments"
+BaseType " Jacket" " Mail" " Armour" " Mantle" " Garb" " Vestments" " Ringmail" " Markings"
 Rarity Magic
 AreaLevel >= 65
 
 # filter-norarity
 Show
 Class "Body"
-BaseType " Jacket" " Mail" " Armour" " Mantle" " Garb" " Vestments"
+BaseType " Jacket" " Mail" " Armour" " Mantle" " Garb" " Vestments" " Ringmail" " Markings"
 Rarity Magic
 SetBackgroundColor 0 0 0 210
 AreaLevel < 65
@@ -2741,7 +2722,7 @@ AreaLevel < 65
 # filter-norarity
 Show
 Class "Body"
-BaseType " Jacket" " Mail" " Armour" " Mantle" " Garb" " Vestments"
+BaseType " Jacket" " Mail" " Armour" " Mantle" " Garb" " Vestments" " Ringmail" " Markings"
 Rarity Rare
 SetBackgroundColor 0 0 0 210
 
@@ -2852,12 +2833,11 @@ SetBackgroundColor 0 0 0 210
 # The Gnashing Sash, Wide Belt
 # Headhunter, Heavy Belt
 # Hyrri's Ire, Armoured Vest
-# Abyss Precursor Tablet
+# Abyss Tablet
 # Fury of the King, Ashbark Talisman
 # Atziri's Splendour, Sacrificial Regalia
 # Atziri's Contempt, Pronged Spear
 # Flesh Crucible, Diamond
-# The Vertex, Tribal Mask
 # Choir of the Storm, Jade Amulet (Droplevel 90)
 # ----------------------------------
 
@@ -2900,19 +2880,7 @@ SetFontSize 45
 Show
 Rarity == Unique
 Class "Tablet"
-BaseType == "Abyss Precursor Tablet"
-SetTextColor 255 0 0 255
-SetBorderColor 255 0 0 255
-SetBackgroundColor 255 255 255 255
-PlayAlertSound 6 300
-PlayEffect Purple
-MinimapIcon 0 Purple Star
-SetFontSize 45
-
-Show
-Rarity Unique
-BaseType == "Tribal Mask"
-DropLevel == 33
+BaseType == "Abyss Tablet"
 SetTextColor 255 0 0 255
 SetBorderColor 255 0 0 255
 SetBackgroundColor 255 255 255 255
@@ -3172,16 +3140,16 @@ PlayEffect Pink
 MinimapIcon 1 Pink Star
 SetFontSize 40
 
-# Show
-# Rarity Unique
-# BaseType == "Sapphire Ring"
-# DropLevel == 12 # Dream Fragments
-# SetBorderColor 255 128 200
-# SetBackgroundColor 0 0 0 210
-# PlayAlertSound 7 300
-# PlayEffect Pink
-# MinimapIcon 1 Pink Star
-# SetFontSize 40
+Show
+Rarity Unique
+BaseType == "Sapphire Ring"
+DropLevel == 12 # Dream Fragments
+SetBorderColor 255 128 200
+SetBackgroundColor 0 0 0 210
+PlayAlertSound 7 300
+PlayEffect Pink
+MinimapIcon 1 Pink Star
+SetFontSize 40
 
 # Show
 # Rarity Unique
@@ -3317,7 +3285,1043 @@ PlayAlertSound 3 300
 MinimapIcon 2 Cyan Diamond
 PlayEffect Brown
 
-#   [1305] mid-tier uniques
+#   [1305] Vaal league: upgradable uniques
+
+Show
+Rarity Unique
+BaseType == "Voodoo Focus"
+DropLevel == 33
+SetBorderColor 224 25 25 200
+SetBackgroundColor 0 0 0 210
+PlayEffect Brown
+MinimapIcon 2 Brown Star
+PlayAlertSound 3 300
+
+Show
+Rarity Unique
+BaseType == "Sacrificial Regalia"
+DropLevel == 65
+SetBorderColor 224 25 25 200
+SetBackgroundColor 0 0 0 210
+PlayEffect Brown
+MinimapIcon 2 Brown Star
+PlayAlertSound 3 300
+
+Show
+Rarity Unique
+BaseType == "Moulded Mitts"
+DropLevel == 33
+SetBorderColor 224 25 25 200
+SetBackgroundColor 0 0 0 210
+PlayEffect Brown
+MinimapIcon 2 Brown Star
+PlayAlertSound 3 300
+
+Show
+Rarity Unique
+BaseType == "Moulded Mitts"
+DropLevel == 60
+SetBorderColor 224 25 25 200
+SetBackgroundColor 0 0 0 210
+PlayEffect Brown
+MinimapIcon 2 Brown Star
+PlayAlertSound 3 300
+
+Show
+Rarity Unique
+BaseType == "Pronged Spear"
+DropLevel == 72
+SetBorderColor 224 25 25 200
+SetBackgroundColor 0 0 0 210
+PlayEffect Brown
+MinimapIcon 2 Brown Star
+PlayAlertSound 3 300
+
+Show
+Rarity Unique
+BaseType == "Gold Circlet"
+DropLevel == 40
+SetBorderColor 224 25 25 200
+SetBackgroundColor 0 0 0 210
+PlayEffect Brown
+MinimapIcon 2 Brown Star
+PlayAlertSound 3 300
+
+Show
+Rarity Unique
+BaseType == "Reflecting Staff"
+DropLevel == 70
+SetBorderColor 224 25 25 200
+SetBackgroundColor 0 0 0 210
+PlayEffect Brown
+MinimapIcon 2 Brown Star
+PlayAlertSound 3 300
+
+Show
+Rarity Unique
+BaseType == "Atziri's Splendour"
+DropLevel == 65
+SetBorderColor 224 25 25 200
+SetBackgroundColor 0 0 0 210
+PlayEffect Brown
+MinimapIcon 2 Brown Star
+PlayAlertSound 3 300
+
+Show
+Rarity Unique
+BaseType == "Cinched Boots"
+DropLevel == 65
+SetBorderColor 224 25 25 200
+SetBackgroundColor 0 0 0 210
+PlayEffect Brown
+MinimapIcon 2 Brown Star
+PlayAlertSound 3 300
+
+Show
+Rarity Unique
+BaseType == "Explorer Armour"
+DropLevel == 33
+SetBorderColor 224 25 25 200
+SetBackgroundColor 0 0 0 210
+PlayEffect Brown
+MinimapIcon 2 Brown Star
+PlayAlertSound 3 300
+
+Show
+Rarity Unique
+BaseType == "Iron Buckler"
+DropLevel == 16
+SetBorderColor 224 25 25 200
+SetBackgroundColor 0 0 0 210
+PlayEffect Brown
+MinimapIcon 2 Brown Star
+PlayAlertSound 3 300
+
+Show
+Rarity Unique
+BaseType == "Viper Cap"
+DropLevel == 38
+SetBorderColor 224 25 25 200
+SetBackgroundColor 0 0 0 210
+PlayEffect Brown
+MinimapIcon 2 Brown Star
+PlayAlertSound 3 300
+
+Show
+Rarity Unique
+BaseType == "Heavy Crown"
+DropLevel == 33
+SetBorderColor 224 25 25 200
+SetBackgroundColor 0 0 0 210
+PlayEffect Brown
+MinimapIcon 2 Brown Star
+PlayAlertSound 3 300
+
+Show
+Rarity Unique
+BaseType == "Warrior Greathelm"
+DropLevel == 65
+SetBorderColor 224 25 25 200
+SetBackgroundColor 0 0 0 210
+PlayEffect Brown
+MinimapIcon 2 Brown Star
+PlayAlertSound 3 300
+
+Show
+Rarity Unique
+BaseType == "Mail Belt"
+DropLevel == 40
+SetBorderColor 224 25 25 200
+SetBackgroundColor 0 0 0 210
+PlayEffect Brown
+MinimapIcon 2 Brown Star
+PlayAlertSound 3 300
+
+Show
+Rarity Unique
+BaseType == "Intricate Gloves"
+DropLevel == 33
+SetBorderColor 224 25 25 200
+SetBackgroundColor 0 0 0 210
+PlayEffect Brown
+MinimapIcon 2 Brown Star
+PlayAlertSound 3 300
+
+Show
+Rarity Unique
+BaseType == "Scale Mail"
+DropLevel == 37
+SetBorderColor 224 25 25 200
+SetBackgroundColor 0 0 0 210
+PlayEffect Brown
+MinimapIcon 2 Brown Star
+PlayAlertSound 3 300
+
+Show
+Rarity Unique
+BaseType == "Sapphire Ring"
+DropLevel == 12
+SetBorderColor 224 25 25 200
+SetBackgroundColor 0 0 0 210
+PlayEffect Brown
+MinimapIcon 2 Brown Star
+PlayAlertSound 3 300
+
+Show
+Rarity Unique
+BaseType == "Penetrating Quiver"
+DropLevel == 55
+SetBorderColor 224 25 25 200
+SetBackgroundColor 0 0 0 210
+PlayEffect Brown
+MinimapIcon 2 Brown Star
+PlayAlertSound 3 300
+
+Show
+Rarity Unique
+BaseType == "Tribal Mask"
+DropLevel == 33
+SetBorderColor 224 25 25 200
+SetBackgroundColor 0 0 0 210
+PlayEffect Brown
+MinimapIcon 2 Brown Star
+PlayAlertSound 3 300
+
+Show
+Rarity Unique
+BaseType == "Tribal Mask"
+DropLevel == 52
+SetBorderColor 224 25 25 200
+SetBackgroundColor 0 0 0 210
+PlayEffect Brown
+MinimapIcon 2 Brown Star
+PlayAlertSound 3 300
+
+Show
+Rarity Unique
+BaseType == "Vaal Cuirass"
+DropLevel == 37
+SetBorderColor 224 25 25 200
+SetBackgroundColor 0 0 0 210
+PlayEffect Brown
+MinimapIcon 2 Brown Star
+PlayAlertSound 3 300
+
+Show
+Rarity Unique
+BaseType == "Sectioned Bracers"
+DropLevel == 28
+SetBorderColor 224 25 25 200
+SetBackgroundColor 0 0 0 210
+PlayEffect Brown
+MinimapIcon 2 Brown Star
+PlayAlertSound 3 300
+
+Show
+Rarity Unique
+BaseType == "Omen Crest Shield"
+DropLevel == 36
+SetBorderColor 224 25 25 200
+SetBackgroundColor 0 0 0 210
+PlayEffect Brown
+MinimapIcon 2 Brown Star
+PlayAlertSound 3 300
+
+Show
+Rarity Unique
+BaseType == "Omen Crest Shield"
+DropLevel == 48
+SetBorderColor 224 25 25 200
+SetBackgroundColor 0 0 0 210
+PlayEffect Brown
+MinimapIcon 2 Brown Star
+PlayAlertSound 3 300
+
+Show
+Rarity Unique
+BaseType == "Feathered Tiara"
+DropLevel == 33
+SetBorderColor 224 25 25 200
+SetBackgroundColor 0 0 0 210
+PlayEffect Brown
+MinimapIcon 2 Brown Star
+PlayAlertSound 3 300
+
+Show
+Rarity Unique
+BaseType == "Gauze Wraps"
+DropLevel == 4
+SetBorderColor 224 25 25 200
+SetBackgroundColor 0 0 0 210
+PlayEffect Brown
+MinimapIcon 2 Brown Star
+PlayAlertSound 3 300
+
+Show
+Rarity Unique
+BaseType == "Hunting Shoes"
+DropLevel == 33
+SetBorderColor 224 25 25 200
+SetBackgroundColor 0 0 0 210
+PlayEffect Brown
+MinimapIcon 2 Brown Star
+PlayAlertSound 3 300
+
+Show
+Rarity Unique
+BaseType == "Serpentscale Coat"
+DropLevel == 36
+SetBorderColor 224 25 25 200
+SetBackgroundColor 0 0 0 210
+PlayEffect Brown
+MinimapIcon 2 Brown Star
+PlayAlertSound 3 300
+
+Show
+Rarity Unique
+BaseType == "Crumbling Maul"
+DropLevel == 38
+SetBorderColor 224 25 25 200
+SetBackgroundColor 0 0 0 210
+PlayEffect Brown
+MinimapIcon 2 Brown Star
+PlayAlertSound 3 300
+
+Show
+Rarity Unique
+BaseType == "Sacred Focus"
+DropLevel == 75
+SetBorderColor 224 25 25 200
+SetBackgroundColor 0 0 0 210
+PlayEffect Brown
+MinimapIcon 2 Brown Star
+PlayAlertSound 3 300
+
+Show
+Rarity Unique
+BaseType == "Blunt Quiver"
+DropLevel == 33
+SetBorderColor 224 25 25 200
+SetBackgroundColor 0 0 0 210
+PlayEffect Brown
+MinimapIcon 2 Brown Star
+PlayAlertSound 3 300
+
+Show
+Rarity Unique
+BaseType == "Anchorite Garb"
+DropLevel == 33
+SetBorderColor 224 25 25 200
+SetBackgroundColor 0 0 0 210
+PlayEffect Brown
+MinimapIcon 2 Brown Star
+PlayAlertSound 3 300
+
+Show
+Rarity Unique
+BaseType == "Barbed Spear"
+DropLevel == 33
+SetBorderColor 224 25 25 200
+SetBackgroundColor 0 0 0 210
+PlayEffect Brown
+MinimapIcon 2 Brown Star
+PlayAlertSound 3 300
+
+Show
+Rarity Unique
+BaseType == "Lazuli Ring"
+DropLevel == 1
+SetBorderColor 224 25 25 200
+SetBackgroundColor 0 0 0 210
+PlayEffect Brown
+MinimapIcon 2 Brown Star
+PlayAlertSound 3 300
+
+Show
+Rarity Unique
+BaseType == "Gold Amulet"
+DropLevel == 35
+SetBorderColor 224 25 25 200
+SetBackgroundColor 0 0 0 210
+PlayEffect Brown
+MinimapIcon 2 Brown Star
+PlayAlertSound 3 300
+
+Show
+Rarity Unique
+BaseType == "Tonal Focus"
+DropLevel == 22
+SetBorderColor 224 25 25 200
+SetBackgroundColor 0 0 0 210
+PlayEffect Brown
+MinimapIcon 2 Brown Star
+PlayAlertSound 3 300
+
+Show
+Rarity Unique
+BaseType == "Aged Cuffs"
+DropLevel == 16
+SetBorderColor 224 25 25 200
+SetBackgroundColor 0 0 0 210
+PlayEffect Brown
+MinimapIcon 2 Brown Star
+PlayAlertSound 3 300
+
+Show
+Rarity Unique
+BaseType == "Spined Bracers"
+DropLevel == 33
+SetBorderColor 224 25 25 200
+SetBackgroundColor 0 0 0 210
+PlayEffect Brown
+MinimapIcon 2 Brown Star
+PlayAlertSound 3 300
+
+Show
+Rarity Unique
+BaseType == "Pearl Ring"
+DropLevel == 32
+SetBorderColor 224 25 25 200
+SetBackgroundColor 0 0 0 210
+PlayEffect Brown
+MinimapIcon 2 Brown Star
+PlayAlertSound 3 300
+
+Show
+Rarity Unique
+BaseType == "Sacrificial Mantle"
+DropLevel == 36
+SetBorderColor 224 25 25 200
+SetBackgroundColor 0 0 0 210
+PlayEffect Brown
+MinimapIcon 2 Brown Star
+PlayAlertSound 3 300
+
+Show
+Rarity Unique
+BaseType == "Long Belt"
+DropLevel == 20
+SetBorderColor 224 25 25 200
+SetBackgroundColor 0 0 0 210
+PlayEffect Brown
+MinimapIcon 2 Brown Star
+PlayAlertSound 3 300
+
+Show
+Rarity Unique
+BaseType == "Votive Raiment"
+DropLevel == 33
+SetBorderColor 224 25 25 200
+SetBackgroundColor 0 0 0 210
+PlayEffect Brown
+MinimapIcon 2 Brown Star
+PlayAlertSound 3 300
+
+Show
+Rarity Unique
+BaseType == "Altar Robe"
+DropLevel == 40
+SetBorderColor 224 25 25 200
+SetBackgroundColor 0 0 0 210
+PlayEffect Brown
+MinimapIcon 2 Brown Star
+PlayAlertSound 3 300
+
+Show
+Rarity Unique
+BaseType == "Vicious Talisman"
+DropLevel == 40
+SetBorderColor 224 25 25 200
+SetBackgroundColor 0 0 0 210
+PlayEffect Brown
+MinimapIcon 2 Brown Star
+PlayAlertSound 3 300
+
+Show
+Rarity Unique
+BaseType == "Heavy Belt"
+DropLevel == 56
+SetBorderColor 224 25 25 200
+SetBackgroundColor 0 0 0 210
+PlayEffect Brown
+MinimapIcon 2 Brown Star
+PlayAlertSound 3 300
+
+#   [1306] Expedition league: upgradable uniques
+
+# todo: add uniques: "Duality", "Spiteful Floret", "A Worthy Foe", "Runeseeker's Call"
+
+Show
+Rarity Unique
+BaseType == "Rusted Cuirass"
+DropLevel == 1
+SetBorderColor 25 25 224 255
+SetBackgroundColor 0 0 0 210
+PlayEffect Brown
+MinimapIcon 2 Brown Star
+PlayAlertSound 3 300
+
+Show
+Rarity Unique
+BaseType == "Fur Plate"
+DropLevel == 4
+SetBorderColor 25 25 224 255
+SetBackgroundColor 0 0 0 210
+PlayEffect Brown
+MinimapIcon 2 Brown Star
+PlayAlertSound 3 300
+
+Show
+Rarity Unique
+BaseType == "Iron Cuirass"
+DropLevel == 11
+SetBorderColor 25 25 224 255
+SetBackgroundColor 0 0 0 210
+PlayEffect Brown
+MinimapIcon 2 Brown Star
+PlayAlertSound 3 300
+
+Show
+Rarity Unique
+BaseType == "Full Plate"
+DropLevel == 33
+SetBorderColor 25 25 224 255
+SetBackgroundColor 0 0 0 210
+PlayEffect Brown
+MinimapIcon 2 Brown Star
+PlayAlertSound 3 300
+
+Show
+Rarity Unique
+BaseType == "Leather Vest"
+DropLevel == 1
+SetBorderColor 25 25 224 255
+SetBackgroundColor 0 0 0 210
+PlayEffect Brown
+MinimapIcon 2 Brown Star
+PlayAlertSound 3 300
+
+Show
+Rarity Unique
+BaseType == "Quilted Vest"
+DropLevel == 4
+SetBorderColor 25 25 224 255
+SetBackgroundColor 0 0 0 210
+PlayEffect Brown
+MinimapIcon 2 Brown Star
+PlayAlertSound 3 300
+
+Show
+Rarity Unique
+BaseType == "Pathfinder Coat"
+DropLevel == 11
+SetBorderColor 25 25 224 255
+SetBackgroundColor 0 0 0 210
+PlayEffect Brown
+MinimapIcon 2 Brown Star
+PlayAlertSound 3 300
+
+Show
+Rarity Unique
+BaseType == "Rhoahide Coat"
+DropLevel == 22
+SetBorderColor 25 25 224 255
+SetBackgroundColor 0 0 0 210
+PlayEffect Brown
+MinimapIcon 2 Brown Star
+PlayAlertSound 3 300
+
+Show
+Rarity Unique
+BaseType == "Revered Vestments"
+DropLevel == 65
+SetBorderColor 25 25 224 255
+SetBackgroundColor 0 0 0 210
+PlayEffect Brown
+MinimapIcon 2 Brown Star
+PlayAlertSound 3 300
+
+Show
+Rarity Unique
+BaseType == "Rusted Greathelm"
+DropLevel == 1
+SetBorderColor 25 25 224 255
+SetBackgroundColor 0 0 0 210
+PlayEffect Brown
+MinimapIcon 2 Brown Star
+PlayAlertSound 3 300
+
+Show
+Rarity Unique
+BaseType == "Soldier Greathelm"
+DropLevel == 12
+SetBorderColor 25 25 224 255
+SetBackgroundColor 0 0 0 210
+PlayEffect Brown
+MinimapIcon 2 Brown Star
+PlayAlertSound 3 300
+
+Show
+Rarity Unique
+BaseType == "Elite Greathelm"
+DropLevel == 33
+SetBorderColor 25 25 224 255
+SetBackgroundColor 0 0 0 210
+PlayEffect Brown
+MinimapIcon 2 Brown Star
+PlayAlertSound 3 300
+
+Show
+Rarity Unique
+BaseType == "Hunter Hood"
+DropLevel == 33
+SetBorderColor 25 25 224 255
+SetBackgroundColor 0 0 0 210
+PlayEffect Brown
+MinimapIcon 2 Brown Star
+PlayAlertSound 3 300
+
+Show
+Rarity Unique
+BaseType == "Leatherbound Hood"
+DropLevel == 50
+SetBorderColor 25 25 224 255
+SetBackgroundColor 0 0 0 210
+PlayEffect Brown
+MinimapIcon 2 Brown Star
+PlayAlertSound 3 300
+
+Show
+Rarity Unique
+BaseType == "Twig Circlet"
+DropLevel == 1
+SetBorderColor 25 25 224 255
+SetBackgroundColor 0 0 0 210
+PlayEffect Brown
+MinimapIcon 2 Brown Star
+PlayAlertSound 3 300
+
+Show
+Rarity Unique
+BaseType == "Brimmed Helm"
+DropLevel == 5
+SetBorderColor 25 25 224 255
+SetBackgroundColor 0 0 0 210
+PlayEffect Brown
+MinimapIcon 2 Brown Star
+PlayAlertSound 3 300
+
+Show
+Rarity Unique
+BaseType == "Guarded Helm"
+DropLevel == 11
+SetBorderColor 25 25 224 255
+SetBackgroundColor 0 0 0 210
+PlayEffect Brown
+MinimapIcon 2 Brown Star
+PlayAlertSound 3 300
+
+Show
+Rarity Unique
+BaseType == "Cowled Helm"
+DropLevel == 26
+SetBorderColor 25 25 224 255
+SetBackgroundColor 0 0 0 210
+PlayEffect Brown
+MinimapIcon 2 Brown Star
+PlayAlertSound 3 300
+
+Show
+Rarity Unique
+BaseType == "Shielded Helm"
+DropLevel == 33
+SetBorderColor 25 25 224 255
+SetBackgroundColor 0 0 0 210
+PlayEffect Brown
+MinimapIcon 2 Brown Star
+PlayAlertSound 3 300
+
+Show
+Rarity Unique
+BaseType == "Suede Bracers"
+DropLevel == 1
+SetBorderColor 25 25 224 255
+SetBackgroundColor 0 0 0 210
+PlayEffect Brown
+MinimapIcon 2 Brown Star
+PlayAlertSound 3 300
+
+Show
+Rarity Unique
+BaseType == "Sombre Gloves"
+DropLevel == 12
+SetBorderColor 25 25 224 255
+SetBackgroundColor 0 0 0 210
+PlayEffect Brown
+MinimapIcon 2 Brown Star
+PlayAlertSound 3 300
+
+Show
+Rarity Unique
+BaseType == "Doubled Gauntlets"
+DropLevel == 33
+SetBorderColor 25 25 224 255
+SetBackgroundColor 0 0 0 210
+PlayEffect Brown
+MinimapIcon 2 Brown Star
+PlayAlertSound 3 300
+
+Show
+Rarity Unique
+BaseType == "Rough Greaves"
+DropLevel == 1
+SetBorderColor 25 25 224 255
+SetBackgroundColor 0 0 0 210
+PlayEffect Brown
+MinimapIcon 2 Brown Star
+PlayAlertSound 3 300
+
+Show
+Rarity Unique
+BaseType == "Trimmed Greaves"
+DropLevel == 27
+SetBorderColor 25 25 224 255
+SetBackgroundColor 0 0 0 210
+PlayEffect Brown
+MinimapIcon 2 Brown Star
+PlayAlertSound 3 300
+
+Show
+Rarity Unique
+BaseType == "Laced Boots"
+DropLevel == 11
+SetBorderColor 25 25 224 255
+SetBackgroundColor 0 0 0 210
+PlayEffect Brown
+MinimapIcon 2 Brown Star
+PlayAlertSound 3 300
+
+Show
+Rarity Unique
+BaseType == "Lizardscale Boots"
+DropLevel == 33
+SetBorderColor 25 25 224 255
+SetBackgroundColor 0 0 0 210
+PlayEffect Brown
+MinimapIcon 2 Brown Star
+PlayAlertSound 3 300
+
+Show
+Rarity Unique
+BaseType == "Wrapped Sandals"
+DropLevel == 11
+SetBorderColor 25 25 224 255
+SetBackgroundColor 0 0 0 210
+PlayEffect Brown
+MinimapIcon 2 Brown Star
+PlayAlertSound 3 300
+
+Show
+Rarity Unique
+BaseType == "Mail Sabatons"
+DropLevel == 6
+SetBorderColor 25 25 224 255
+SetBackgroundColor 0 0 0 210
+PlayEffect Brown
+MinimapIcon 2 Brown Star
+PlayAlertSound 3 300
+
+Show
+Rarity Unique
+BaseType == "Stacked Sabatons"
+DropLevel == 33
+SetBorderColor 25 25 224 255
+SetBackgroundColor 0 0 0 210
+PlayEffect Brown
+MinimapIcon 2 Brown Star
+PlayAlertSound 3 300
+
+Show
+Rarity Unique
+BaseType == "Splintered Tower Shield"
+DropLevel == 1
+SetBorderColor 25 25 224 255
+SetBackgroundColor 0 0 0 210
+PlayEffect Brown
+MinimapIcon 2 Brown Star
+PlayAlertSound 3 300
+
+Show
+Rarity Unique
+BaseType == "Painted Tower Shield"
+DropLevel == 6
+SetBorderColor 25 25 224 255
+SetBackgroundColor 0 0 0 210
+PlayEffect Brown
+MinimapIcon 2 Brown Star
+PlayAlertSound 3 300
+
+Show
+Rarity Unique
+BaseType == "Blacksteel Tower Shield"
+DropLevel == 65
+SetBorderColor 25 25 224 255
+SetBackgroundColor 0 0 0 210
+PlayEffect Brown
+MinimapIcon 2 Brown Star
+PlayAlertSound 3 300
+
+Show
+Rarity Unique
+BaseType == "Blazon Crest Shield"
+DropLevel == 1
+SetBorderColor 25 25 224 255
+SetBackgroundColor 0 0 0 210
+PlayEffect Brown
+MinimapIcon 2 Brown Star
+PlayAlertSound 3 300
+
+Show
+Rarity Unique
+BaseType == "Sigil Crest Shield"
+DropLevel == 7
+SetBorderColor 25 25 224 255
+SetBackgroundColor 0 0 0 210
+PlayEffect Brown
+MinimapIcon 2 Brown Star
+PlayAlertSound 3 300
+
+Show
+Rarity Unique
+BaseType == "Leather Buckler"
+DropLevel == 1
+SetBorderColor 25 25 224 255
+SetBackgroundColor 0 0 0 210
+PlayEffect Brown
+MinimapIcon 2 Brown Star
+PlayAlertSound 3 300
+
+Show
+Rarity Unique
+BaseType == "Plated Buckler"
+DropLevel == 11
+SetBorderColor 25 25 224 255
+SetBackgroundColor 0 0 0 210
+PlayEffect Brown
+MinimapIcon 2 Brown Star
+PlayAlertSound 3 300
+
+Show
+Rarity Unique
+BaseType == "Wooden Club"
+DropLevel == 1
+SetBorderColor 25 25 224 255
+SetBackgroundColor 0 0 0 210
+PlayEffect Brown
+MinimapIcon 2 Brown Star
+PlayAlertSound 3 300
+
+Show
+Rarity Unique
+BaseType == "Spiked Club"
+DropLevel == 16
+SetBorderColor 25 25 224 255
+SetBackgroundColor 0 0 0 210
+PlayEffect Brown
+MinimapIcon 2 Brown Star
+PlayAlertSound 3 300
+
+Show
+Rarity Unique
+BaseType == "Torment Club"
+DropLevel == 65
+SetBorderColor 25 25 224 255
+SetBackgroundColor 0 0 0 210
+PlayEffect Brown
+MinimapIcon 2 Brown Star
+PlayAlertSound 3 300
+
+Show
+Rarity Unique
+BaseType == "Aberrant Sledge"
+DropLevel == 78
+SetBorderColor 25 25 224 255
+SetBackgroundColor 0 0 0 210
+PlayEffect Brown
+MinimapIcon 2 Brown Star
+PlayAlertSound 3 300
+
+Show
+Rarity Unique
+BaseType == "Felled Greatclub"
+DropLevel == 1
+SetBorderColor 25 25 224 255
+SetBackgroundColor 0 0 0 210
+PlayEffect Brown
+MinimapIcon 2 Brown Star
+PlayAlertSound 3 300
+
+Show
+Rarity Unique
+BaseType == "Oak Greathammer"
+DropLevel == 4
+SetBorderColor 25 25 224 255
+SetBackgroundColor 0 0 0 210
+PlayEffect Brown
+MinimapIcon 2 Brown Star
+PlayAlertSound 3 300
+
+Show
+Rarity Unique
+BaseType == "Studded Greatclub"
+DropLevel == 16
+SetBorderColor 25 25 224 255
+SetBackgroundColor 0 0 0 210
+PlayEffect Brown
+MinimapIcon 2 Brown Star
+PlayAlertSound 3 300
+
+Show
+Rarity Unique
+BaseType == "Attuned Wand"
+DropLevel == 2
+SetBorderColor 25 25 224 255
+SetBackgroundColor 0 0 0 210
+PlayEffect Brown
+MinimapIcon 2 Brown Star
+PlayAlertSound 3 300
+
+Show
+Rarity Unique
+BaseType == "Ironhead Spear"
+DropLevel == 5
+SetBorderColor 25 25 224 255
+SetBackgroundColor 0 0 0 210
+PlayEffect Brown
+MinimapIcon 2 Brown Star
+PlayAlertSound 3 300
+
+Show
+Rarity Unique
+BaseType == "Gothic Quarterstaff"
+DropLevel == 11
+SetBorderColor 25 25 224 255
+SetBackgroundColor 0 0 0 210
+PlayEffect Brown
+MinimapIcon 2 Brown Star
+PlayAlertSound 3 300
+
+Show
+Rarity Unique
+BaseType == "Siphoning Wand"
+DropLevel == 65
+SetBorderColor 25 25 224 255
+SetBackgroundColor 0 0 0 210
+PlayEffect Brown
+MinimapIcon 2 Brown Star
+PlayAlertSound 3 300
+
+Show
+Rarity Unique
+BaseType == "Acrid Wand"
+DropLevel == 33
+SetBorderColor 25 25 224 255
+SetBackgroundColor 0 0 0 210
+PlayEffect Brown
+MinimapIcon 2 Brown Star
+PlayAlertSound 3 300
+
+Show
+Rarity Unique
+BaseType == "Ashen Staff"
+DropLevel == 1
+SetBorderColor 25 25 224 255
+SetBackgroundColor 0 0 0 210
+PlayEffect Brown
+MinimapIcon 2 Brown Star
+PlayAlertSound 3 300
+
+Show
+Rarity Unique
+BaseType == "Wrapped Quarterstaff"
+DropLevel == 1
+SetBorderColor 25 25 224 255
+SetBackgroundColor 0 0 0 210
+PlayEffect Brown
+MinimapIcon 2 Brown Star
+PlayAlertSound 3 300
+
+Show
+Rarity Unique
+BaseType == "Shortbow"
+DropLevel == 5
+SetBorderColor 25 25 224 255
+SetBackgroundColor 0 0 0 210
+PlayEffect Brown
+MinimapIcon 2 Brown Star
+PlayAlertSound 3 300
+
+Show
+Rarity Unique
+BaseType == "Warden Bow"
+DropLevel == 11
+SetBorderColor 25 25 224 255
+SetBackgroundColor 0 0 0 210
+PlayEffect Brown
+MinimapIcon 2 Brown Star
+PlayAlertSound 3 300
+
+Show
+Rarity Unique
+BaseType == "Changeling Talisman"
+DropLevel == 1
+SetBorderColor 25 25 224 255
+SetBackgroundColor 0 0 0 210
+PlayEffect Brown
+MinimapIcon 2 Brown Star
+PlayAlertSound 3 300
+
+Show
+Rarity Unique
+BaseType == "Crucible Tower Shield"
+DropLevel == 60
+SetBorderColor 25 25 224 255
+SetBackgroundColor 0 0 0 210
+PlayEffect Brown
+MinimapIcon 2 Brown Star
+PlayAlertSound 3 300
+
+Show
+Rarity Unique
+BaseType == "Spiritbone Crown"
+DropLevel == 62
+SetBorderColor 25 25 224 255
+SetBackgroundColor 0 0 0 210
+PlayEffect Brown
+MinimapIcon 2 Brown Star
+PlayAlertSound 3 300
+
+Show
+Rarity Unique
+BaseType == "Kalguuran Forgehammer"
+DropLevel == 47
+SetBorderColor 25 25 224 255
+SetBackgroundColor 0 0 0 210
+PlayEffect Brown
+MinimapIcon 2 Brown Star
+PlayAlertSound 3 300
+
+Show
+Rarity Unique
+BaseType == "Stocky Mitts"
+DropLevel == 1
+SetBorderColor 25 25 224 255
+SetBackgroundColor 0 0 0 210
+PlayEffect Brown
+MinimapIcon 2 Brown Star
+PlayAlertSound 3 300
+
+#   [1307] mid-tier uniques
 
 # uniques with extra socket
 Show
@@ -3539,6 +4543,15 @@ SetFontSize 40
 PlayEffect Green
 
 Show
+Class "Map Fragments"
+SetTextColor 255 205 113
+SetBorderColor 255 207 255
+SetBackgroundColor 65 20 80 200
+PlayAlertSound 2 300
+MinimapIcon 1 White Square
+SetFontSize 40
+
+Show
 Class == "Pinnacle Keys" # from citadels
 BaseType == "Primary Calamity Fragment" "Secondary Calamity Fragment" "Tertiary Calamity Fragment"
 SetTextColor 255 205 113
@@ -3630,7 +4643,7 @@ SetFontSize 45
 
 #   [1402] Expedition / logbooks, artifacts & exotic coinage
 Show
-BaseType "Expedition Logbook"
+Class "Expedition Logbook"
 ItemLevel >= 79
 MinimapIcon 1 Orange Square
 SetTextColor 255 255 255 255
@@ -3641,7 +4654,7 @@ PlayEffect Orange
 SetFontSize 40
 
 Show
-BaseType "Expedition Logbook"
+Class "Expedition Logbook"
 ItemLevel < 79
 MinimapIcon 1 White Square
 SetTextColor 255 255 255 255
@@ -3747,6 +4760,8 @@ PlayAlertSound 2 300
 PlayEffect White
 MinimapIcon 1 White Circle
 SetFontSize 40
+
+#todo: apply custom styles to new omens: "Aldur's Saga" "Medved's Saga" "Vorana's Saga" "Uhtred's Saga" "Olroth's Saga" "Omen of Chaotic Effectiveness" 
 
 # splinters
 Show
@@ -3874,11 +4889,22 @@ PlayAlertSound 6 300
 PlayEffect Red
 MinimapIcon 1 Red Circle
 
-#   [1405] Breach / catalysts and breach rings: -----------------------
+#   [1405] Breach / catalysts, wombgifts and breach rings: -----------------------
 # splinters
 Show
 Class "Currency"
 BaseType "Breach Splinter"
+SetTextColor 255 207 132
+SetBorderColor 239 34 255
+SetBackgroundColor 0 0 0 210
+MinimapIcon 2 Pink Circle
+PlayEffect White
+PlayAlertSound 2 100
+SetFontSize 40
+
+# wombgifts
+Show
+Class "Wombgifts"
 SetTextColor 255 207 132
 SetBorderColor 239 34 255
 SetBackgroundColor 0 0 0 210
@@ -5126,7 +6152,7 @@ SetFontSize 40
 # any other idols
 Show
 Class "Augment"
-BaseType "Idol"
+BaseType " Idol" "Idol of "
 SetTextColor 104 238 170
 SetBackgroundColor 0 0 0 210
 PlayAlertSound 12 200
@@ -5197,6 +6223,20 @@ SetFontSize 45
 # PlayEffect Red Temp
 # MinimapIcon 1 Red Circle
 # SetFontSize 40
+
+#   [1809] "Return of the Ancients" league: runes and Legacy of Expedition 
+
+# extracted affixes of unique items
+Show
+Class "Augment"
+BaseType "Legacy of "
+SetTextColor 255 207 132
+SetBorderColor 104 238 170
+SetBackgroundColor 0 0 0 210
+PlayAlertSound 2 100
+PlayEffect White
+MinimapIcon 2 Cyan Circle
+SetFontSize 40
 
 #--------------------------
 # [[1900]] Craft and Currency
@@ -5587,13 +6627,17 @@ PlayAlertSound 6 300
 PlayEffect Purple
 MinimapIcon 0 Purple Star
 SetFontSize 45
-#SetTextColor 255 207 132
-#SetBorderColor 255 207 132
-#SetBackgroundColor 95 75 75 200 # violet
-#PlayAlertSound 6 300
-#PlayEffect Purple
-#MinimapIcon 1 Red Circle
-#SetFontSize 40
+
+Show
+Class "Currency"
+BaseType "Essence of the Breach"
+SetTextColor 255 207 132
+SetBorderColor 255 207 132
+SetBackgroundColor 95 75 75 200 # violet
+PlayAlertSound 6 300
+PlayEffect Purple
+MinimapIcon 1 Red Circle
+SetFontSize 40
 
 Show
 Class "Currency"
@@ -5697,7 +6741,7 @@ SetFontSize 45
 
 Show
 Class "Currency"
-BaseType "Crystallised Corruption" "Vaal Cultivation Orb" "Architect's Orb" "Vaal Infuser"
+BaseType "Crystallised Corruption" "Vaal Cultivation Orb" "Architect's Orb" "Vaal Blacksmith's Infuser" "Vaal Arcanist's Infuser" "Vaal Catalysing Infuser" "Vaal Armourer's Infuser"
 SetTextColor 255 255 255 255
 SetBorderColor 255 255 255 255
 SetBackgroundColor 240 90 35 200
@@ -5739,7 +6783,42 @@ PlayAlertSound 2 200
 PlayEffect Red Temp
 MinimapIcon 1 Red Circle
 
-# Unknown currency
+#   [1909] "Return of the Ancients" league
+
+Show
+Class "Currency"
+BaseType " Alloy" " Flux" " Starlit Ore" " Crest of the " "Verisium"
+SetTextColor 255 207 132
+SetBorderColor 104 238 170
+SetBackgroundColor 0 0 0 210
+PlayAlertSound 2 100
+PlayEffect White
+MinimapIcon 2 Cyan Circle
+SetFontSize 40
+
+Show
+Class "Currency"
+BaseType "Altered Collarbone"
+SetTextColor 169 208 56
+SetBorderColor 255 207 132
+SetBackgroundColor 16 82 16 200
+MinimapIcon 1 Green Circle
+PlayAlertSound 2 300
+
+Show
+Class "Currency"
+BaseType "Ancient Potent Liquid "
+SetTextColor 255 207 132
+SetBorderColor 132 255 207
+SetBackgroundColor 0 0 0 210
+PlayAlertSound 2 100
+PlayEffect White
+MinimapIcon 2 Cyan Circle
+SetFontSize 40
+
+# todo: apply styles for "Cryptic Key", "Shattered Triskelion", "Emergent ", "Carved " "Raven-Touched Shard", "Serle's Triumph", "Cadigan's Epiphany", "Astrid's Creativity", "Uhtred's Sidereus", "Kolr's Hunt", "Vorana's Carnage", "Thrud's Might", "Medved's Tending", "Katla's Gloom", "Aldur's Legacy", new Distilled Emotions and Catalysts
+
+#   [1910] Unknown currency
 Show
 Class "Currency"
 SetTextColor 255 207 132
@@ -6273,7 +7352,7 @@ Rarity <= Rare
 
 #armors: visibility are overridden in higher priority rules
 Hide
-BaseType "Circlet" "Tiara" " Crown" " Mask" "Visage" "Greathelm" " Cap" " Hood" "Helm" "Raiment" " Robe" " Mantle" " Vestments" " Jacket" " Garb" "Regalia" "Cuirass" " Plate" " Coat" " Vest" "Armour" " Mail" "Garment" "Sandals" "Slippers" "Leggings" "Shoes" "Cuisses" "Greaves" "Boots" "Sabatons" "Crest Shield" "Tower Shield" "Buckler" " Targe" "Gloves" " Cuffs" " Wraps" "Manchettes" " Mitts" "Bracers" "Gauntlets"
+BaseType "Circlet" "Tiara" " Crown" " Visor" " Mask" "Visage" "Greathelm" " Cap" " Hood" "Helm" "Raiment" " Robe" " Mantle" " Vestments" " Jacket" " Garb" "Regalia" "Cuirass" " Plate" " Coat" " Vest" "Armour" " Mail" " Ringmail" " Markings" "Garment" "Sandals" "Slippers" "Leggings" "Shoes" "Cuisses" "Greaves" "Boots" "Sabatons" "Crest Shield" "Tower Shield" "Buckler" " Targe" "Defender" "Fortress" "Gloves" " Cuffs" " Wraps" "Manchettes" " Mitts" "Bracers" "Gauntlets"
 Rarity <= Rare
 
 # items without any other rules:
