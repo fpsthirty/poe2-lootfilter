@@ -1468,13 +1468,6 @@ AreaLevel > 78
 style-rune
 
 Hide
-Class "Augment"
-BaseType "Rune"
-DropLevel <= 62
-AreaLevel > 78
-style-rune
-
-Hide
 Class "Currency"
 BaseType "Orb of Augmentation" "Orb of Transmutation"
 DropLevel < 45
@@ -5003,6 +4996,11 @@ style-orb-div-purple
 Show
 Class "Augment"
 BaseType "Legacy of "
+style-league-expedition-currency
+
+Show
+Class "Augment"
+BaseType "Ancient Rune" "Warding Rune"
 style-league-expedition-currency
 
 #--------------------------

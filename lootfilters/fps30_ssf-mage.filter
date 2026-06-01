@@ -1539,17 +1539,6 @@ PlayEffect Cyan Temp
 MinimapIcon 2 Cyan Circle
 
 Hide
-Class "Augment"
-BaseType "Rune"
-DropLevel <= 62
-AreaLevel > 78
-SetTextColor 0 240 190
-SetBackgroundColor 0 0 0 210
-PlayAlertSound 2 100
-PlayEffect Cyan Temp
-MinimapIcon 2 Cyan Circle
-
-Hide
 Class "Currency"
 BaseType "Orb of Augmentation" "Orb of Transmutation"
 DropLevel < 45
@@ -6017,6 +6006,17 @@ SetFontSize 45
 Show
 Class "Augment"
 BaseType "Legacy of "
+SetTextColor 255 207 132
+SetBorderColor 104 238 170
+SetBackgroundColor 0 0 0 210
+PlayAlertSound 2 100
+PlayEffect White
+MinimapIcon 2 Cyan Circle
+SetFontSize 40
+
+Show
+Class "Augment"
+BaseType "Ancient Rune" "Warding Rune"
 SetTextColor 255 207 132
 SetBorderColor 104 238 170
 SetBackgroundColor 0 0 0 210
