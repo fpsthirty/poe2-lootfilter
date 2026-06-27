@@ -51,7 +51,7 @@
 # summoner-ssf: filter-rarity, filter-nossf, filter-ssf-mage, filter-mage
 # mage-nossf: filter-rarity, filter-ssf, filter-ssf-summoner
 # mage-ssf: filter-rarity, filter-nossf, filter-ssf-summoner, filter-summoner
-# rarity: filter-ssf, filter-summoner, filter-mage, filter-norarity
+# rarity: filter-ssf, filter-ssf-summoner, filter-ssf-mage, filter-summoner, filter-mage, filter-norarity
 #
 #
 #===============================================================================================================
@@ -915,29 +915,7 @@ PlayEffect Orange Temp
 PlayAlertSound 12 300
 MinimapIcon 1 Orange Square
 
-# filter-ssf-summoner
-Show
-BaseType "Intricate Crest Shield" # Prism Guardian / +1 to Maximum Spirit per 25 Maximum Life
-Rarity Normal
-ItemLevel >= 33
-SetBorderColor 255 128 200
-SetBackgroundColor 63 63 63 222
-PlayEffect Orange Temp
-PlayAlertSound 12 300
-MinimapIcon 1 Orange Square
-
 # A-tier:
-
-# filter-ssf-summoner
-# Show
-# BaseType "Spiked Club" # Trenchtimbre / +(1–2) to Level of all Minion Skills
-# Rarity Normal
-# DropLevel = 16
-# SetBorderColor 255 128 200
-# SetBackgroundColor 63 63 63 222
-# PlayEffect Orange Temp
-# PlayAlertSound 12 300
-# MinimapIcon 1 Orange Square
 
 # Show
 # BaseType "Gold Ring" # Ventor's Gamble / life + spirit + rarity + elemental res
@@ -1205,30 +1183,6 @@ Rarity <= Rare
 DropLevel < 65
 AreaLevel >= 75
 
-# filter-ssf-mage
-Hide
-Class "Sceptre" "Shield"
-Rarity Normal
-AreaLevel > 40
-
-# filter-ssf-mage
-Hide
-Class "Sceptre"
-Rarity Magic
-AreaLevel >= 65
-
-# filter-ssf-mage
-Hide
-Class "Shield"
-Rarity Magic
-AreaLevel >= 71
-
-# filter-ssf-mage
-Hide
-Class "Sceptre" "Shield"
-Rarity Rare
-AreaLevel >= 75
-
 #--------------------------
 # [[0800]] Endgame custom rules:
 #--------------------------
@@ -1474,12 +1428,6 @@ DropLevel <= 64
 AreaLevel >= 75
 
 #caster weapons/offhands:
-
-# filter-ssf-summoner
-Hide
-Class "Staff" "Wand"
-Rarity <= Rare
-AreaLevel >= 75
 
 #   [0902] waystones: additional rules for low waystones
 Hide
@@ -1802,12 +1750,6 @@ Rarity <= Magic
 AreaLevel >= 65
 
 #   [1101] caster weapons/offhands:
-
-# filter-ssf-summoner
-Hide
-Class "Staff" "Wand"
-Rarity <= Magic
-AreaLevel >= 65
 
 #   [1102] hide cheap currency, normal charms and flasks
 Hide

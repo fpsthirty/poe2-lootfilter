@@ -127,7 +127,7 @@ var TagMap = map[string][]string{
 	"ssf-summoner":   {"filter-rarity", "filter-nossf", "filter-ssf-mage", "filter-mage"},
 	"trade-mage":     {"filter-rarity", "filter-ssf", "filter-ssf-summoner"},
 	"ssf-mage":       {"filter-rarity", "filter-nossf", "filter-ssf-summoner", "filter-summoner"},
-	"rarity":         {"filter-ssf", "filter-summoner", "filter-mage", "filter-norarity"},
+	"rarity":         {"filter-ssf", "filter-ssf-summoner", "filter-ssf-mage", "filter-summoner", "filter-mage", "filter-norarity"},
 }
 
 // Global variables

@@ -51,7 +51,7 @@
 # summoner-ssf: filter-rarity, filter-nossf, filter-ssf-mage, filter-mage
 # mage-nossf: filter-rarity, filter-ssf, filter-ssf-summoner
 # mage-ssf: filter-rarity, filter-nossf, filter-ssf-summoner, filter-summoner
-# rarity: filter-ssf, filter-summoner, filter-mage, filter-norarity
+# rarity: filter-ssf, filter-ssf-summoner, filter-ssf-mage, filter-summoner, filter-mage, filter-norarity
 #
 #
 #===============================================================================================================
