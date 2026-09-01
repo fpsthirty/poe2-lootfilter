@@ -20,10 +20,10 @@
 #  - orange text without beam: preliminary price less than 1 chaos orbs
 #  - orange text with white border and white beam: for cheap Schrodinger bases with price ~2–20 chaos;
 #  - orange text with orange border and brown beam: preliminary price ~2–20 chaos orbs;
-#  - orange large text with pink border and pink beam: for base that theoretically can be either very expensive (Astramentis, etc.) or very cheap (~1 chaos);
+#  - orange large text with pink border and pink beam: for base that theoretically can be either very expensive (Mageblood, etc.) or very cheap (~1 chaos);
 #  - orange large text with brown beam: unique with extra socket;
 #  - divine styles with red beam: price ~1div *(these styles are also used for other expensive non-unique items)*;
-#  - divine styles with purple beam: price 2+ div.
+#  - divine styles with purple text and purple beam: price 2+ div.
 #
 # I also recommend check out the short documentation for before using it: in just a couple minutes you can familiarize yourself with the styles of ~95% of the items in the game and ~95% of the rules for showing/hiding items: https://github.com/fpsthirty/poe2-lootfilter/blob/main/README.md
 #
@@ -2534,11 +2534,13 @@ style-bg-translucent
 # Two-Stone Rings
 # Brutus' Lead Sprinkler, Morning Star
 # The Taming, Prismatic Ring
+# Runeseeker's Call, Runic Fork
+# The Ordained, Grand Spear
 # ----------------------------------
 
 Show
 Rarity Unique
-BaseType == "Incense Relic" "Ultimate Life Flask" "Armoured Cap" "Sacred Focus" "Ornate Gauntlets" "Fine Bracers" "Golden Charm" "Silver Charm" "Lattice Sandals" "Conqueror Plate" "Intricate Crest Shield" "Timeless Jewel" "Ruby" "Emerald" "Armoured Vest" "Ashbark Talisman" "Pronged Spear" "Two-Stone Ring" "Morning Star"
+BaseType == "Incense Relic" "Ultimate Life Flask" "Armoured Cap" "Sacred Focus" "Ornate Gauntlets" "Fine Bracers" "Golden Charm" "Silver Charm" "Lattice Sandals" "Conqueror Plate" "Intricate Crest Shield" "Timeless Jewel" "Ruby" "Emerald" "Armoured Vest" "Ashbark Talisman" "Pronged Spear" "Two-Stone Ring" "Morning Star" "Runic Fork" "Runemastered Runic Fork" "Grand Spear"
 style-orb-div-purple
 
 Show
@@ -2813,627 +2815,649 @@ PlayEffect Brown
 
 #   [1305] Vaal league: upgradable uniques
 
-Show
-Rarity Unique
-BaseType == "Voodoo Focus"
-DropLevel == 33
-style-uniq-up-vaal
-
-Show
-Rarity Unique
-BaseType == "Sacrificial Regalia"
-DropLevel == 65
-style-uniq-up-vaal
-
-Show
-Rarity Unique
-BaseType == "Moulded Mitts"
-DropLevel == 33
-style-uniq-up-vaal
-
-Show
-Rarity Unique
-BaseType == "Moulded Mitts"
-DropLevel == 60
-style-uniq-up-vaal
-
-Show
-Rarity Unique
-BaseType == "Pronged Spear"
-DropLevel == 72
-style-uniq-up-vaal
-
-Show
-Rarity Unique
-BaseType == "Gold Circlet"
-DropLevel == 40
-style-uniq-up-vaal
-
-Show
-Rarity Unique
-BaseType == "Reflecting Staff"
-DropLevel == 70
-style-uniq-up-vaal
-
-Show
-Rarity Unique
-BaseType == "Sacrificial Regalia"
-DropLevel == 65
-style-uniq-up-vaal
-
-Show
-Rarity Unique
-BaseType == "Cinched Boots"
-DropLevel == 65
-style-uniq-up-vaal
-
-Show
-Rarity Unique
-BaseType == "Explorer Armour"
-DropLevel == 33
-style-uniq-up-vaal
-
-Show
-Rarity Unique
-BaseType == "Iron Buckler"
-DropLevel == 16
-style-uniq-up-vaal
-
-Show
-Rarity Unique
-BaseType == "Viper Cap"
-DropLevel == 38
-style-uniq-up-vaal
-
-Show
-Rarity Unique
-BaseType == "Heavy Crown"
-DropLevel == 33
-style-uniq-up-vaal
-
-Show
-Rarity Unique
-BaseType == "Warrior Greathelm"
-DropLevel == 65
-style-uniq-up-vaal
-
-Show
-Rarity Unique
-BaseType == "Mail Belt"
-DropLevel == 40
-style-uniq-up-vaal
-
-Show
-Rarity Unique
-BaseType == "Intricate Gloves"
-DropLevel == 33
-style-uniq-up-vaal
-
-Show
-Rarity Unique
-BaseType == "Scale Mail"
-DropLevel == 37
-style-uniq-up-vaal
-
-Show
-Rarity Unique
-BaseType == "Sapphire Ring"
-DropLevel == 12
-style-uniq-up-vaal
-
-Show
-Rarity Unique
-BaseType == "Penetrating Quiver"
-DropLevel == 55
-style-uniq-up-vaal
-
-Show
-Rarity Unique
-BaseType == "Tribal Mask"
-DropLevel == 33
-style-uniq-up-vaal
-
-Show
-Rarity Unique
-BaseType == "Tribal Mask"
-DropLevel == 52
-style-uniq-up-vaal
-
-Show
-Rarity Unique
-BaseType == "Vaal Cuirass"
-DropLevel == 37
-style-uniq-up-vaal
-
-Show
-Rarity Unique
-BaseType == "Sectioned Bracers"
-DropLevel == 28
-style-uniq-up-vaal
-
-Show
-Rarity Unique
-BaseType == "Omen Crest Shield"
-DropLevel == 36
-style-uniq-up-vaal
-
-Show
-Rarity Unique
-BaseType == "Omen Crest Shield"
-DropLevel == 48
-style-uniq-up-vaal
-
-Show
-Rarity Unique
-BaseType == "Feathered Tiara"
-DropLevel == 33
-style-uniq-up-vaal
-
-Show
-Rarity Unique
-BaseType == "Gauze Wraps"
-DropLevel == 4
-style-uniq-up-vaal
-
-Show
-Rarity Unique
-BaseType == "Hunting Shoes"
-DropLevel == 33
-style-uniq-up-vaal
-
-Show
-Rarity Unique
-BaseType == "Serpentscale Coat"
-DropLevel == 36
-style-uniq-up-vaal
-
-Show
-Rarity Unique
-BaseType == "Crumbling Maul"
-DropLevel == 38
-style-uniq-up-vaal
-
-Show
-Rarity Unique
-BaseType == "Sacred Focus"
-DropLevel == 75
-style-uniq-up-vaal
-
-Show
-Rarity Unique
-BaseType == "Blunt Quiver"
-DropLevel == 33
-style-uniq-up-vaal
-
-Show
-Rarity Unique
-BaseType == "Anchorite Garb"
-DropLevel == 33
-style-uniq-up-vaal
-
-Show
-Rarity Unique
-BaseType == "Barbed Spear"
-DropLevel == 33
-style-uniq-up-vaal
-
-Show
-Rarity Unique
-BaseType == "Lazuli Ring"
-DropLevel == 1
-style-uniq-up-vaal
-
-Show
-Rarity Unique
-BaseType == "Gold Amulet"
-DropLevel == 35
-style-uniq-up-vaal
-
-Show
-Rarity Unique
-BaseType == "Tonal Focus"
-DropLevel == 22
-style-uniq-up-vaal
-
-Show
-Rarity Unique
-BaseType == "Aged Cuffs"
-DropLevel == 16
-style-uniq-up-vaal
-
-Show
-Rarity Unique
-BaseType == "Spined Bracers"
-DropLevel == 33
-style-uniq-up-vaal
-
-Show
-Rarity Unique
-BaseType == "Pearl Ring"
-DropLevel == 32
-style-uniq-up-vaal
-
-Show
-Rarity Unique
-BaseType == "Sacrificial Mantle"
-DropLevel == 36
-style-uniq-up-vaal
-
-Show
-Rarity Unique
-BaseType == "Long Belt"
-DropLevel == 20
-style-uniq-up-vaal
-
-Show
-Rarity Unique
-BaseType == "Votive Raiment"
-DropLevel == 33
-style-uniq-up-vaal
-
-Show
-Rarity Unique
-BaseType == "Altar Robe"
-DropLevel == 40
-style-uniq-up-vaal
-
-Show
-Rarity Unique
-BaseType == "Vicious Talisman"
-DropLevel == 40
-style-uniq-up-vaal
-
-Show
-Rarity Unique
-BaseType == "Heavy Belt"
-DropLevel == 56
-style-uniq-up-vaal
+#Show
+#Rarity Unique
+#BaseType == "Voodoo Focus"
+#DropLevel == 33
+#style-uniq-up-vaal
+#
+#Show
+#Rarity Unique
+#BaseType == "Sacrificial Regalia"
+#DropLevel == 65
+#style-uniq-up-vaal
+#
+#Show
+#Rarity Unique
+#BaseType == "Moulded Mitts"
+#DropLevel == 33
+#style-uniq-up-vaal
+#
+#Show
+#Rarity Unique
+#BaseType == "Moulded Mitts"
+#DropLevel == 60
+#style-uniq-up-vaal
+#
+#Show
+#Rarity Unique
+#BaseType == "Pronged Spear"
+#DropLevel == 72
+#style-uniq-up-vaal
+#
+#Show
+#Rarity Unique
+#BaseType == "Gold Circlet"
+#DropLevel == 40
+#style-uniq-up-vaal
+#
+#Show
+#Rarity Unique
+#BaseType == "Reflecting Staff"
+#DropLevel == 70
+#style-uniq-up-vaal
+#
+#Show
+#Rarity Unique
+#BaseType == "Sacrificial Regalia"
+#DropLevel == 65
+#style-uniq-up-vaal
+#
+#Show
+#Rarity Unique
+#BaseType == "Cinched Boots"
+#DropLevel == 65
+#style-uniq-up-vaal
+#
+#Show
+#Rarity Unique
+#BaseType == "Explorer Armour"
+#DropLevel == 33
+#style-uniq-up-vaal
+#
+#Show
+#Rarity Unique
+#BaseType == "Iron Buckler"
+#DropLevel == 16
+#style-uniq-up-vaal
+#
+#Show
+#Rarity Unique
+#BaseType == "Viper Cap"
+#DropLevel == 38
+#style-uniq-up-vaal
+#
+#Show
+#Rarity Unique
+#BaseType == "Heavy Crown"
+#DropLevel == 33
+#style-uniq-up-vaal
+#
+#Show
+#Rarity Unique
+#BaseType == "Warrior Greathelm"
+#DropLevel == 65
+#style-uniq-up-vaal
+#
+#Show
+#Rarity Unique
+#BaseType == "Mail Belt"
+#DropLevel == 40
+#style-uniq-up-vaal
+#
+#Show
+#Rarity Unique
+#BaseType == "Intricate Gloves"
+#DropLevel == 33
+#style-uniq-up-vaal
+#
+#Show
+#Rarity Unique
+#BaseType == "Scale Mail"
+#DropLevel == 37
+#style-uniq-up-vaal
+#
+#Show
+#Rarity Unique
+#BaseType == "Sapphire Ring"
+#DropLevel == 12
+#style-uniq-up-vaal
+#
+#Show
+#Rarity Unique
+#BaseType == "Penetrating Quiver"
+#DropLevel == 55
+#style-uniq-up-vaal
+#
+#Show
+#Rarity Unique
+#BaseType == "Tribal Mask"
+#DropLevel == 33
+#style-uniq-up-vaal
+#
+#Show
+#Rarity Unique
+#BaseType == "Tribal Mask"
+#DropLevel == 52
+#style-uniq-up-vaal
+#
+#Show
+#Rarity Unique
+#BaseType == "Vaal Cuirass"
+#DropLevel == 37
+#style-uniq-up-vaal
+#
+#Show
+#Rarity Unique
+#BaseType == "Sectioned Bracers"
+#DropLevel == 28
+#style-uniq-up-vaal
+#
+#Show
+#Rarity Unique
+#BaseType == "Omen Crest Shield"
+#DropLevel == 36
+#style-uniq-up-vaal
+#
+#Show
+#Rarity Unique
+#BaseType == "Omen Crest Shield"
+#DropLevel == 48
+#style-uniq-up-vaal
+#
+#Show
+#Rarity Unique
+#BaseType == "Feathered Tiara"
+#DropLevel == 33
+#style-uniq-up-vaal
+#
+#Show
+#Rarity Unique
+#BaseType == "Gauze Wraps"
+#DropLevel == 4
+#style-uniq-up-vaal
+#
+#Show
+#Rarity Unique
+#BaseType == "Hunting Shoes"
+#DropLevel == 33
+#style-uniq-up-vaal
+#
+#Show
+#Rarity Unique
+#BaseType == "Serpentscale Coat"
+#DropLevel == 36
+#style-uniq-up-vaal
+#
+#Show
+#Rarity Unique
+#BaseType == "Crumbling Maul"
+#DropLevel == 38
+#style-uniq-up-vaal
+#
+#Show
+#Rarity Unique
+#BaseType == "Sacred Focus"
+#DropLevel == 75
+#style-uniq-up-vaal
+#
+#Show
+#Rarity Unique
+#BaseType == "Blunt Quiver"
+#DropLevel == 33
+#style-uniq-up-vaal
+#
+#Show
+#Rarity Unique
+#BaseType == "Anchorite Garb"
+#DropLevel == 33
+#style-uniq-up-vaal
+#
+#Show
+#Rarity Unique
+#BaseType == "Barbed Spear"
+#DropLevel == 33
+#style-uniq-up-vaal
+#
+#Show
+#Rarity Unique
+#BaseType == "Lazuli Ring"
+#DropLevel == 1
+#style-uniq-up-vaal
+#
+#Show
+#Rarity Unique
+#BaseType == "Gold Amulet"
+#DropLevel == 35
+#style-uniq-up-vaal
+#
+#Show
+#Rarity Unique
+#BaseType == "Tonal Focus"
+#DropLevel == 22
+#style-uniq-up-vaal
+#
+#Show
+#Rarity Unique
+#BaseType == "Aged Cuffs"
+#DropLevel == 16
+#style-uniq-up-vaal
+#
+#Show
+#Rarity Unique
+#BaseType == "Spined Bracers"
+#DropLevel == 33
+#style-uniq-up-vaal
+#
+#Show
+#Rarity Unique
+#BaseType == "Pearl Ring"
+#DropLevel == 32
+#style-uniq-up-vaal
+#
+#Show
+#Rarity Unique
+#BaseType == "Sacrificial Mantle"
+#DropLevel == 36
+#style-uniq-up-vaal
+#
+#Show
+#Rarity Unique
+#BaseType == "Long Belt"
+#DropLevel == 20
+#style-uniq-up-vaal
+#
+#Show
+#Rarity Unique
+#BaseType == "Votive Raiment"
+#DropLevel == 33
+#style-uniq-up-vaal
+#
+#Show
+#Rarity Unique
+#BaseType == "Altar Robe"
+#DropLevel == 40
+#style-uniq-up-vaal
+#
+#Show
+#Rarity Unique
+#BaseType == "Vicious Talisman"
+#DropLevel == 40
+#style-uniq-up-vaal
+#
+#Show
+#Rarity Unique
+#BaseType == "Heavy Belt"
+#DropLevel == 56
+#style-uniq-up-vaal
 
 #   [1306] Expedition league: upgradable uniques
 
-# todo: add uniques: "Duality", "Spiteful Floret", "A Worthy Foe", "Runeseeker's Call"
-
-Show
-Rarity Unique
-BaseType == "Rusted Cuirass"
-DropLevel == 1
-style-uniq-up-expedition
-
-Show
-Rarity Unique
-BaseType == "Fur Plate"
-DropLevel == 4
-style-uniq-up-expedition
-
-Show
-Rarity Unique
-BaseType == "Iron Cuirass"
-DropLevel == 11
-style-uniq-up-expedition
-
-Show
-Rarity Unique
-BaseType == "Full Plate"
-DropLevel == 33
-style-uniq-up-expedition
-
-Show
-Rarity Unique
-BaseType == "Leather Vest"
-DropLevel == 1
-style-uniq-up-expedition
-
-Show
-Rarity Unique
-BaseType == "Quilted Vest"
-DropLevel == 4
-style-uniq-up-expedition
-
-Show
-Rarity Unique
-BaseType == "Pathfinder Coat"
-DropLevel == 11
-style-uniq-up-expedition
-
-Show
-Rarity Unique
-BaseType == "Rhoahide Coat"
-DropLevel == 22
-style-uniq-up-expedition
-
-Show
-Rarity Unique
-BaseType == "Revered Vestments"
-DropLevel == 65
-style-uniq-up-expedition
-
-Show
-Rarity Unique
-BaseType == "Rusted Greathelm"
-DropLevel == 1
-style-uniq-up-expedition
-
-Show
-Rarity Unique
-BaseType == "Soldier Greathelm"
-DropLevel == 12
-style-uniq-up-expedition
-
-Show
-Rarity Unique
-BaseType == "Elite Greathelm"
-DropLevel == 33
-style-uniq-up-expedition
-
-Show
-Rarity Unique
-BaseType == "Hunter Hood"
-DropLevel == 33
-style-uniq-up-expedition
-
-Show
-Rarity Unique
-BaseType == "Leatherbound Hood"
-DropLevel == 50
-style-uniq-up-expedition
-
-Show
-Rarity Unique
-BaseType == "Twig Circlet"
-DropLevel == 1
-style-uniq-up-expedition
-
-Show
-Rarity Unique
-BaseType == "Brimmed Helm"
-DropLevel == 5
-style-uniq-up-expedition
-
-Show
-Rarity Unique
-BaseType == "Guarded Helm"
-DropLevel == 11
-style-uniq-up-expedition
-
-Show
-Rarity Unique
-BaseType == "Cowled Helm"
-DropLevel == 26
-style-uniq-up-expedition
-
-Show
-Rarity Unique
-BaseType == "Shielded Helm"
-DropLevel == 33
-style-uniq-up-expedition
-
-Show
-Rarity Unique
-BaseType == "Suede Bracers"
-DropLevel == 1
-style-uniq-up-expedition
-
-Show
-Rarity Unique
-BaseType == "Sombre Gloves"
-DropLevel == 12
-style-uniq-up-expedition
-
-Show
-Rarity Unique
-BaseType == "Doubled Gauntlets"
-DropLevel == 33
-style-uniq-up-expedition
-
-Show
-Rarity Unique
-BaseType == "Rough Greaves"
-DropLevel == 1
-style-uniq-up-expedition
-
-Show
-Rarity Unique
-BaseType == "Trimmed Greaves"
-DropLevel == 27
-style-uniq-up-expedition
-
-Show
-Rarity Unique
-BaseType == "Laced Boots"
-DropLevel == 11
-style-uniq-up-expedition
-
-Show
-Rarity Unique
-BaseType == "Lizardscale Boots"
-DropLevel == 33
-style-uniq-up-expedition
-
-Show
-Rarity Unique
-BaseType == "Wrapped Sandals"
-DropLevel == 11
-style-uniq-up-expedition
-
-Show
-Rarity Unique
-BaseType == "Mail Sabatons"
-DropLevel == 6
-style-uniq-up-expedition
-
-Show
-Rarity Unique
-BaseType == "Stacked Sabatons"
-DropLevel == 33
-style-uniq-up-expedition
-
-Show
-Rarity Unique
-BaseType == "Splintered Tower Shield"
-DropLevel == 1
-style-uniq-up-expedition
-
-Show
-Rarity Unique
-BaseType == "Painted Tower Shield"
-DropLevel == 6
-style-uniq-up-expedition
-
-Show
-Rarity Unique
-BaseType == "Blacksteel Tower Shield"
-DropLevel == 65
-style-uniq-up-expedition
-
-Show
-Rarity Unique
-BaseType == "Blazon Crest Shield"
-DropLevel == 1
-style-uniq-up-expedition
-
-Show
-Rarity Unique
-BaseType == "Sigil Crest Shield"
-DropLevel == 7
-style-uniq-up-expedition
-
-Show
-Rarity Unique
-BaseType == "Leather Buckler"
-DropLevel == 1
-style-uniq-up-expedition
-
-Show
-Rarity Unique
-BaseType == "Plated Buckler"
-DropLevel == 11
-style-uniq-up-expedition
-
-Show
-Rarity Unique
-BaseType == "Wooden Club"
-DropLevel == 1
-style-uniq-up-expedition
-
-Show
-Rarity Unique
-BaseType == "Spiked Club"
-DropLevel == 16
-style-uniq-up-expedition
-
-Show
-Rarity Unique
-BaseType == "Torment Club"
-DropLevel == 65
-style-uniq-up-expedition
-
-Show
-Rarity Unique
-BaseType == "Aberrant Sledge"
-DropLevel == 78
-style-uniq-up-expedition
-
-Show
-Rarity Unique
-BaseType == "Felled Greatclub"
-DropLevel == 1
-style-uniq-up-expedition
-
-Show
-Rarity Unique
-BaseType == "Oak Greathammer"
-DropLevel == 4
-style-uniq-up-expedition
-
-Show
-Rarity Unique
-BaseType == "Studded Greatclub"
-DropLevel == 16
-style-uniq-up-expedition
-
-Show
-Rarity Unique
-BaseType == "Attuned Wand"
-DropLevel == 2
-style-uniq-up-expedition
-
-Show
-Rarity Unique
-BaseType == "Ironhead Spear"
-DropLevel == 5
-style-uniq-up-expedition
-
-Show
-Rarity Unique
-BaseType == "Gothic Quarterstaff"
-DropLevel == 11
-style-uniq-up-expedition
-
-Show
-Rarity Unique
-BaseType == "Siphoning Wand"
-DropLevel == 65
-style-uniq-up-expedition
-
-Show
-Rarity Unique
-BaseType == "Acrid Wand"
-DropLevel == 33
-style-uniq-up-expedition
-
-Show
-Rarity Unique
-BaseType == "Ashen Staff"
-DropLevel == 1
-style-uniq-up-expedition
-
-Show
-Rarity Unique
-BaseType == "Wrapped Quarterstaff"
-DropLevel == 1
-style-uniq-up-expedition
-
-Show
-Rarity Unique
-BaseType == "Shortbow"
-DropLevel == 5
-style-uniq-up-expedition
-
-Show
-Rarity Unique
-BaseType == "Warden Bow"
-DropLevel == 11
-style-uniq-up-expedition
-
-Show
-Rarity Unique
-BaseType == "Changeling Talisman"
-DropLevel == 1
-style-uniq-up-expedition
-
-Show
-Rarity Unique
-BaseType == "Crucible Tower Shield"
-DropLevel == 60
-style-uniq-up-expedition
-
-Show
-Rarity Unique
-BaseType == "Spiritbone Crown"
-DropLevel == 62
-style-uniq-up-expedition
-
-Show
-Rarity Unique
-BaseType == "Kalguuran Forgehammer"
-DropLevel == 47
-style-uniq-up-expedition
-
-Show
-Rarity Unique
-BaseType == "Stocky Mitts"
-DropLevel == 1
-style-uniq-up-expedition
+#Show
+#Rarity Unique
+#BaseType == "Runic Fork"
+#DropLevel == 65
+#style-uniq-up-expedition
+#
+#Show
+#Rarity Unique
+#BaseType == "Venerable Defender"
+#DropLevel == 62
+#style-uniq-up-expedition
+#
+#Show
+#Rarity Unique
+#BaseType == "Nettle Talisman"
+#DropLevel == 5
+#style-uniq-up-expedition
+#
+#Show
+#Rarity Unique
+#BaseType == "Warding Quarterstaff"
+#DropLevel == 65
+#style-uniq-up-expedition
+#
+#Show
+#Rarity Unique
+#BaseType == "Rusted Cuirass"
+#DropLevel == 1
+#style-uniq-up-expedition
+#
+#Show
+#Rarity Unique
+#BaseType == "Fur Plate"
+#DropLevel == 4
+#style-uniq-up-expedition
+#
+#Show
+#Rarity Unique
+#BaseType == "Iron Cuirass"
+#DropLevel == 11
+#style-uniq-up-expedition
+#
+#Show
+#Rarity Unique
+#BaseType == "Full Plate"
+#DropLevel == 33
+#style-uniq-up-expedition
+#
+#Show
+#Rarity Unique
+#BaseType == "Leather Vest"
+#DropLevel == 1
+#style-uniq-up-expedition
+#
+#Show
+#Rarity Unique
+#BaseType == "Quilted Vest"
+#DropLevel == 4
+#style-uniq-up-expedition
+#
+#Show
+#Rarity Unique
+#BaseType == "Pathfinder Coat"
+#DropLevel == 11
+#style-uniq-up-expedition
+#
+#Show
+#Rarity Unique
+#BaseType == "Rhoahide Coat"
+#DropLevel == 22
+#style-uniq-up-expedition
+#
+#Show
+#Rarity Unique
+#BaseType == "Revered Vestments"
+#DropLevel == 65
+#style-uniq-up-expedition
+#
+#Show
+#Rarity Unique
+#BaseType == "Rusted Greathelm"
+#DropLevel == 1
+#style-uniq-up-expedition
+#
+#Show
+#Rarity Unique
+#BaseType == "Soldier Greathelm"
+#DropLevel == 12
+#style-uniq-up-expedition
+#
+#Show
+#Rarity Unique
+#BaseType == "Elite Greathelm"
+#DropLevel == 33
+#style-uniq-up-expedition
+#
+#Show
+#Rarity Unique
+#BaseType == "Hunter Hood"
+#DropLevel == 33
+#style-uniq-up-expedition
+#
+#Show
+#Rarity Unique
+#BaseType == "Leatherbound Hood"
+#DropLevel == 50
+#style-uniq-up-expedition
+#
+#Show
+#Rarity Unique
+#BaseType == "Twig Circlet"
+#DropLevel == 1
+#style-uniq-up-expedition
+#
+#Show
+#Rarity Unique
+#BaseType == "Brimmed Helm"
+#DropLevel == 5
+#style-uniq-up-expedition
+#
+#Show
+#Rarity Unique
+#BaseType == "Guarded Helm"
+#DropLevel == 11
+#style-uniq-up-expedition
+#
+#Show
+#Rarity Unique
+#BaseType == "Cowled Helm"
+#DropLevel == 26
+#style-uniq-up-expedition
+#
+#Show
+#Rarity Unique
+#BaseType == "Shielded Helm"
+#DropLevel == 33
+#style-uniq-up-expedition
+#
+#Show
+#Rarity Unique
+#BaseType == "Suede Bracers"
+#DropLevel == 1
+#style-uniq-up-expedition
+#
+#Show
+#Rarity Unique
+#BaseType == "Sombre Gloves"
+#DropLevel == 12
+#style-uniq-up-expedition
+#
+#Show
+#Rarity Unique
+#BaseType == "Doubled Gauntlets"
+#DropLevel == 33
+#style-uniq-up-expedition
+#
+#Show
+#Rarity Unique
+#BaseType == "Rough Greaves"
+#DropLevel == 1
+#style-uniq-up-expedition
+#
+#Show
+#Rarity Unique
+#BaseType == "Trimmed Greaves"
+#DropLevel == 27
+#style-uniq-up-expedition
+#
+#Show
+#Rarity Unique
+#BaseType == "Laced Boots"
+#DropLevel == 11
+#style-uniq-up-expedition
+#
+#Show
+#Rarity Unique
+#BaseType == "Lizardscale Boots"
+#DropLevel == 33
+#style-uniq-up-expedition
+#
+#Show
+#Rarity Unique
+#BaseType == "Wrapped Sandals"
+#DropLevel == 11
+#style-uniq-up-expedition
+#
+#Show
+#Rarity Unique
+#BaseType == "Mail Sabatons"
+#DropLevel == 6
+#style-uniq-up-expedition
+#
+#Show
+#Rarity Unique
+#BaseType == "Stacked Sabatons"
+#DropLevel == 33
+#style-uniq-up-expedition
+#
+#Show
+#Rarity Unique
+#BaseType == "Splintered Tower Shield"
+#DropLevel == 1
+#style-uniq-up-expedition
+#
+#Show
+#Rarity Unique
+#BaseType == "Painted Tower Shield"
+#DropLevel == 6
+#style-uniq-up-expedition
+#
+#Show
+#Rarity Unique
+#BaseType == "Blacksteel Tower Shield"
+#DropLevel == 65
+#style-uniq-up-expedition
+#
+#Show
+#Rarity Unique
+#BaseType == "Blazon Crest Shield"
+#DropLevel == 1
+#style-uniq-up-expedition
+#
+#Show
+#Rarity Unique
+#BaseType == "Sigil Crest Shield"
+#DropLevel == 7
+#style-uniq-up-expedition
+#
+#Show
+#Rarity Unique
+#BaseType == "Leather Buckler"
+#DropLevel == 1
+#style-uniq-up-expedition
+#
+#Show
+#Rarity Unique
+#BaseType == "Plated Buckler"
+#DropLevel == 11
+#style-uniq-up-expedition
+#
+#Show
+#Rarity Unique
+#BaseType == "Wooden Club"
+#DropLevel == 1
+#style-uniq-up-expedition
+#
+#Show
+#Rarity Unique
+#BaseType == "Spiked Club"
+#DropLevel == 16
+#style-uniq-up-expedition
+#
+#Show
+#Rarity Unique
+#BaseType == "Torment Club"
+#DropLevel == 65
+#style-uniq-up-expedition
+#
+#Show
+#Rarity Unique
+#BaseType == "Aberrant Sledge"
+#DropLevel == 78
+#style-uniq-up-expedition
+#
+#Show
+#Rarity Unique
+#BaseType == "Felled Greatclub"
+#DropLevel == 1
+#style-uniq-up-expedition
+#
+#Show
+#Rarity Unique
+#BaseType == "Oak Greathammer"
+#DropLevel == 4
+#style-uniq-up-expedition
+#
+#Show
+#Rarity Unique
+#BaseType == "Studded Greatclub"
+#DropLevel == 16
+#style-uniq-up-expedition
+#
+#Show
+#Rarity Unique
+#BaseType == "Attuned Wand"
+#DropLevel == 2
+#style-uniq-up-expedition
+#
+#Show
+#Rarity Unique
+#BaseType == "Ironhead Spear"
+#DropLevel == 5
+#style-uniq-up-expedition
+#
+#Show
+#Rarity Unique
+#BaseType == "Gothic Quarterstaff"
+#DropLevel == 11
+#style-uniq-up-expedition
+#
+#Show
+#Rarity Unique
+#BaseType == "Siphoning Wand"
+#DropLevel == 65
+#style-uniq-up-expedition
+#
+#Show
+#Rarity Unique
+#BaseType == "Acrid Wand"
+#DropLevel == 33
+#style-uniq-up-expedition
+#
+#Show
+#Rarity Unique
+#BaseType == "Ashen Staff"
+#DropLevel == 1
+#style-uniq-up-expedition
+#
+#Show
+#Rarity Unique
+#BaseType == "Wrapped Quarterstaff"
+#DropLevel == 1
+#style-uniq-up-expedition
+#
+#Show
+#Rarity Unique
+#BaseType == "Shortbow"
+#DropLevel == 5
+#style-uniq-up-expedition
+#
+#Show
+#Rarity Unique
+#BaseType == "Warden Bow"
+#DropLevel == 11
+#style-uniq-up-expedition
+#
+#Show
+#Rarity Unique
+#BaseType == "Changeling Talisman"
+#DropLevel == 1
+#style-uniq-up-expedition
+#
+#Show
+#Rarity Unique
+#BaseType == "Crucible Tower Shield"
+#DropLevel == 60
+#style-uniq-up-expedition
+#
+#Show
+#Rarity Unique
+#BaseType == "Spiritbone Crown"
+#DropLevel == 62
+#style-uniq-up-expedition
+#
+#Show
+#Rarity Unique
+#BaseType == "Kalguuran Forgehammer"
+#DropLevel == 47
+#style-uniq-up-expedition
+#
+#Show
+#Rarity Unique
+#BaseType == "Stocky Mitts"
+#DropLevel == 1
+#style-uniq-up-expedition
 
 #   [1307] mid-tier uniques
 
@@ -3467,13 +3491,13 @@ MinimapIcon 2 Brown Star
 ## weapons:
 Show
 Rarity Unique
-BaseType == "Spiked Club" "Torment Club" "Pointed Maul" "Totemic Greatclub" "Winged Spear" "Barbed Spear" "Helix Spear" "Crescent Quarterstaff" "Wyrm Quarterstaff" "Siphoning Wand" "Permafrost Staff" "Crude Bow" "Recurve Bow" "Composite Bow" "Dualstring Bow" "Heavy Bow" "Tense Crossbow" "Fanatic Bow" "Reflecting Staff" "Penetrating Quiver" "Familial Talisman" "Vicious Talisman" "Desolate Crossbow" "Heavy Bow"
+BaseType == "Spiked Club" "Torment Club" "Pointed Maul" "Totemic Greatclub" "Winged Spear" "Barbed Spear" "Helix Spear" "Crescent Quarterstaff" "Wyrm Quarterstaff" "Siphoning Wand" "Permafrost Staff" "Crude Bow" "Recurve Bow" "Composite Bow" "Dualstring Bow" "Heavy Bow" "Tense Crossbow" "Fanatic Bow" "Reflecting Staff" "Penetrating Quiver" "Familial Talisman" "Vicious Talisman" "Desolate Crossbow" "Heavy Bow" "Aberrant Sledge" "Perching Staff" "Trarthan Cannon" "Warding Quarterstaff"
 style-uniq-tier-a
 
 ## armors:
 Show
 Rarity Unique
-BaseType == "Fur Plate" "Champion Cuirass" "Pathfinder Coat" "Serpentscale Coat" "Strider Vest" "Tattered Robe" "Votive Raiment" "Havoc Raiment" "Enlightened Robe" "Explorer Armour" "Scale Mail" "Knight Armour" "Ancestral Mail" "Heroic Armour" "Pilgrim Vestments" "Cleric Vestments" "Tideseer Mantle" "Corvus Mantle" "Wayfarer Jacket" "Scalper's Jacket" "Wrapped Greathelm" "Spired Greathelm" "Fierce Greathelm" "Felt Cap" "Viper Cap" "Velvet Cap" "Covert Hood" "Twig Circlet" "Chain Tiara" "Feathered Tiara" "Vermeil Circlet" "Jade Tiara" "Magus Tiara" "Brimmed Helm" "Decorated Helm" "Iron Crown" "Cultist Crown" "Martyr Crown" "Heavy Crown" "Spiritbone Crown" "Face Mask" "Death Mask" "Gold Circlet" "Riveted Mitts" "Spined Bracers" "Torn Gloves" "Pauascale Gloves" "Layered Gauntlets" "Doubled Gauntlets" "Burnished Gauntlets" "Rope Cuffs" "Gauze Wraps" "Spiral Wraps" "Utility Wraps" "Trimmed Greaves" "Laced Boots" "Wrapped Sandals" "Feathered Sandals" "Secured Leggings" "Hunting Shoes" "Heraldric Tower Shield" "Crucible Tower Shield" "Emblem Crest Shield" "Iron Buckler" "Woven Focus" "Antler Focus" "Voodoo Focus" "Grand Regalia" "Grand Manchettes" "Grand Cuisses" "Array Buckler" "Long Belt" "Blacksteel Tower Shield" "Gilded Vestments" "Cinched Boots" "Embroidered Gloves" "Plate Belt" "Threaded Shoes" "Intricate Gloves" "Stitched Gloves" "Vaal Cuirass" "Stocky Mitts"
+BaseType == "Fur Plate" "Champion Cuirass" "Pathfinder Coat" "Serpentscale Coat" "Strider Vest" "Tattered Robe" "Votive Raiment" "Havoc Raiment" "Enlightened Robe" "Explorer Armour" "Scale Mail" "Knight Armour" "Ancestral Mail" "Heroic Armour" "Pilgrim Vestments" "Cleric Vestments" "Tideseer Mantle" "Corvus Mantle" "Wayfarer Jacket" "Scalper's Jacket" "Wrapped Greathelm" "Spired Greathelm" "Fierce Greathelm" "Felt Cap" "Viper Cap" "Velvet Cap" "Covert Hood" "Twig Circlet" "Chain Tiara" "Feathered Tiara" "Vermeil Circlet" "Jade Tiara" "Magus Tiara" "Brimmed Helm" "Decorated Helm" "Iron Crown" "Cultist Crown" "Martyr Crown" "Heavy Crown" "Spiritbone Crown" "Face Mask" "Death Mask" "Gold Circlet" "Riveted Mitts" "Spined Bracers" "Torn Gloves" "Pauascale Gloves" "Layered Gauntlets" "Doubled Gauntlets" "Burnished Gauntlets" "Rope Cuffs" "Gauze Wraps" "Spiral Wraps" "Utility Wraps" "Trimmed Greaves" "Laced Boots" "Wrapped Sandals" "Feathered Sandals" "Secured Leggings" "Hunting Shoes" "Heraldric Tower Shield" "Crucible Tower Shield" "Emblem Crest Shield" "Iron Buckler" "Woven Focus" "Antler Focus" "Voodoo Focus" "Grand Regalia" "Grand Manchettes" "Grand Cuisses" "Array Buckler" "Long Belt" "Blacksteel Tower Shield" "Gilded Vestments" "Cinched Boots" "Embroidered Gloves" "Plate Belt" "Threaded Shoes" "Intricate Gloves" "Stitched Gloves" "Vaal Cuirass" "Stocky Mitts" "Abyssal Signet" "Rawhide Belt" "Engraved Bracers" "Ancient Leggings" "Primal Markings" "Ornate Ringmail" "Glacial Fortress"
 style-uniq-tier-a
 
 Show
@@ -3496,6 +3520,12 @@ style-uniq-tier-a
 
 Show
 Rarity Unique
+BaseType == "Tribal Mask"
+DropLevel == 33
+style-uniq-tier-a
+
+Show
+Rarity Unique
 BaseType == "Garment"
 Sockets < 4
 style-uniq-tier-a
@@ -3510,8 +3540,8 @@ style-uniq-tier-a
 
 Show
 Rarity Unique
-BaseType == "Broadhead Quiver" "Azure Amulet" "Solar Amulet" "Gold Amulet" "Gold Ring" "Ornate Belt" "Fine Belt"
-# "Staunching Charm" "Antidote Charm" "Grounding Charm" "Stone Charm" "Ruby Charm" "Sapphire Charm" "Topaz Charm" "Amethyst Charm"
+BaseType == "Broadhead Quiver" "Azure Amulet" "Solar Amulet" "Gold Amulet" "Gold Ring" "Ornate Belt" "Fine Belt" "Stone Charm"
+# "Staunching Charm" "Antidote Charm" "Grounding Charm"  "Ruby Charm" "Sapphire Charm" "Topaz Charm" "Amethyst Charm"
 style-uniq-tier-a
 
 Show
@@ -3551,13 +3581,13 @@ style-uniq-tier-a
 #   [1401] pinnacle keys
 Show
 Class "Map Fragments"
-BaseType == "An Audience with the King"
+BaseType == "An Audience with the King" "Call of the Shadows"
 style-mapfragment
-PlayEffect Purple
+PlayEffect Pink
 
 Show
 Class "Map Fragments"
-BaseType == "Simulacrum"
+BaseType == "Simulacrum" "Raven's Reflection"
 style-mapfragment
 PlayEffect White
 
@@ -3584,6 +3614,12 @@ Class "Map Fragments"
 BaseType "Kulemak's Invitation"
 style-mapfragment
 PlayEffect Green
+
+Show
+Class "Map Fragments"
+BaseType == "The Triskelion Reforged"
+style-mapfragment
+PlayEffect Blue
 
 Show
 Class "Map Fragments"
@@ -3899,6 +3935,16 @@ MinimapIcon 1 Pink Raindrop
 
 Show
 Class "Currency"
+BaseType "Necrotic Catalyst"
+SetTextColor 255 207 132
+SetBorderColor 239 34 255
+SetBackgroundColor 46 87 69 222
+PlayAlertSound 2 300
+PlayEffect White
+MinimapIcon 1 Pink Raindrop
+
+Show
+Class "Currency"
 BaseType "Chayula's Catalyst"
 SetTextColor 255 207 132
 SetBorderColor 239 34 255
@@ -4101,20 +4147,24 @@ MinimapIcon 2 Cyan Diamond
 PlayEffect Cyan Temp
 
 #   [1408] quest items in unique maps
+
+Show
+Class "Quest Item"
+BaseType == "Depleted Mana Rune" # Drop from Uhtred, the Stardrinker: Expedition boss 3/5
+style-orb-div-purple
+
 Show
 Class "Quest Item" "Instance Local Item"
-BaseType == "Rotten Satchel Charge" "Shattered Triskelion"
+BaseType == "Rotten Satchel Charge"
 SetTextColor 0 209 0
 style-bg-translucent
 PlayAlertSound 2 100
 SetFontSize 40
 
 Show
+Class "Currency"
 BaseType == "Shattered Triskelion" # from Olroth, Expedition boss 4/5
-SetTextColor 0 209 0
-style-bg-translucent
-PlayAlertSound 2 100
-SetFontSize 40
+style-orb-annul
 
 #--------------------------
 # [[1500]] Trials of Ascendancy
@@ -4280,7 +4330,7 @@ PlayEffect Cyan
 
 #Hide
 #Rarity <= Rare
-#BaseType == "Vase Relic" "Incense Relic" "Coffer Relic" # todo: lootfilter does not hide any relics https://www.pathofexile.com/forum/view-thread/3869369
+#BaseType == "Vase Relic" "Incense Relic" "Coffer Relic" # todo bug report: lootfilter does not hide any relics https://www.pathofexile.com/forum/view-thread/3869369
 
 Show
 Class "Relic"
@@ -4437,7 +4487,7 @@ PlayEffect Cyan Temp
 MinimapIcon 1 Cyan Triangle
 
 Show
-BaseType "Cast on" # todo "Meta Skill Gem" Class is not supported by lootfilter core: https://www.pathofexile.com/forum/view-thread/3876617
+BaseType "Cast on" # todo bug report: "Meta Skill Gem" Class is not supported by lootfilter core: https://www.pathofexile.com/forum/view-thread/3876617
 SetTextColor 20 240 240
 SetBorderColor 20 240 240
 style-bg-translucent
@@ -4554,7 +4604,7 @@ style-spiritgem
 # filter-rarity
 Hide
 Class "Uncut Support Gem"
-style-skillgem
+style-supportgem
 
 Show
 Class "Spirit Gem" "Uncut Spirit Gem"
@@ -4577,7 +4627,7 @@ style-orb-div-purple
 Show
 Class "Support Gem"
 DropLevel >= 65
-BaseType == "Breachlord's Rift" "Atalui's Bloodletting" "Khatal's Rejuvenation" "Uhtred's Constellation" "Medved's Felling"
+BaseType == "Breachlord's Rift" "Atalui's Bloodletting" "Khatal's Rejuvenation" "Uhtred's Constellation" "Medved's Felling" "Esh's Prowess"
 style-orb-div
 
 # B-tier:
@@ -4598,6 +4648,12 @@ Show
 Class "Support Gem"
 DropLevel >= 65
 style-supportgem-high
+
+Show
+Class "Support Gem"
+AreaLevel < 65
+style-supportgem
+SetFontSize 40
 
 Show
 Class "Support Gem"
@@ -4766,12 +4822,12 @@ style-orb-div-purple
 # A-tier:
 Show
 Class "Augment"
-BaseType  "Saqawal's Rune of Memory" "Farrul's Rune of the Chase"
+BaseType  "Saqawal's Rune of Memory" "Farrul's Rune of the Chase" "Greater Rune of Alacrity"
 style-orb-div
 
 Show
 Class "Augment"
-BaseType "Fenumus' Rune of Draining" "Thane Grannell's Rune of Mastery" "Farrul's Rune of Grace" "Saqawal's Rune of the Sky" "Thane Leld's Rune of Spring" "Courtesan Mannan's Rune of Cruelty" "Thane Girt's Rune of Wildness" "Greater Rune of Tithing" "The Greatwolf's Rune of Willpower"
+BaseType "Fenumus' Rune of Draining" "Fenumus' Rune of Agony" "Craiceann's Rune of Recovery" "Craiceann's Rune of Warding" "Thane Grannell's Rune of Mastery" "Farrul's Rune of Grace" "Saqawal's Rune of the Sky" "Thane Leld's Rune of Spring" "Courtesan Mannan's Rune of Cruelty" "Thane Girt's Rune of Wildness" "Greater Rune of Tithing" "The Greatwolf's Rune of Willpower" "Greater Rune of Nobility" "Farrul's Rune of the Hunt"
 style-orb-annul
 
 # any other runes:
@@ -4833,14 +4889,10 @@ style-bg-translucent
 Show
 Class "Charm"
 Rarity Unique
-SetTextColor 0 240 190
-#SetTextColor 220 112 45
-#SetBorderColor 0 240 190
-SetBorderColor 255 140 0 255
 style-bg-translucent
 PlayAlertSound 3 300
 MinimapIcon 2 Brown Star
-PlayEffect Orange
+PlayEffect Cyan
 
 # filter-rarity
 Hide
@@ -4997,7 +5049,7 @@ style-orb-div-purple
 
 Show
 Class "Currency"
-BaseType "Divine" "Albino Rhoa Feather"
+BaseType "Divine Orb" "Albino Rhoa Feather"
 style-orb-div
 
 #   [1902] currency Tier A: Gemcutter, Annullment, Fracturing and advanced orbs
@@ -5392,27 +5444,22 @@ style-league-abyss-craft
 
 Show
 Class "Currency"
-BaseType "Vaal Cultivation Orb"
+BaseType "Vaal Cultivation Orb" "Architect's Orb" "Vaal Catalysing Infuser" "Yaomac's Orb of Sacrifice"
 style-orb-div
 
 Show
 Class "Currency"
-BaseType "Orb of Extraction"
+BaseType "Orb of Extraction" "Crystallised Corruption" "Orb of Sacrifice"
 style-orb-annul-max
 
 Show
 Class "Currency"
-BaseType "Crystallised Corruption" "Vaal Cultivation Orb" "Architect's Orb" "Vaal Catalysing Infuser" "Vaal Armourer's Infuser"
+BaseType "Vaal Armourer's Infuser" "Vaal Blacksmith's Infuser" "Core Destabiliser"
 style-orb-annul
 
 Show
 Class "Currency"
-BaseType "Core Destabiliser" "Ancient Infuser" "Vaal Arcanist's Infuser" "Vaal Blacksmith's Infuser"
-style-league-vaal
-
-Show
-Class "Incubators"
-BaseType "Vaal Siphoner"
+BaseType "Ancient Infuser" "Vaal Arcanist's Infuser" "Vaal Siphoner"
 style-league-vaal
 
 #   [1909] "Return of the Ancients" league
@@ -5454,7 +5501,7 @@ style-orb-annul-min
 
 Show
 Class "Currency"
-BaseType "Exceptional Verisium"
+BaseType "Exceptional Verisium" "Liquid Verisium"
 style-league-expedition-currency
 SetTextColor 255 225 200
 
