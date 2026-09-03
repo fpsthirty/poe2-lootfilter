@@ -92,9 +92,13 @@
 #   [1102] hide cheap currency, normal charms and flasks
 #   [1103] hide dex- or/and str-bases
 # [[1200]] To start for any class of casters
-#   [1201] dex- / str-bases
-#   [1202] mix-bases
-#   [1203] int-bases
+#   [1201] area level 1–64
+#   [1202] area level 1–40
+#   [1203] area level 1–20
+#   [1204] area level: at beginning
+#   [1205] dex- / str-bases
+#   [1206] mix-bases
+#   [1207] int-bases
 # [[1300]] Uniques
 #   [1301] purple beam: price 2–500+ divine orbs
 #   [1302] red beam: price ~1 divine orb
@@ -1110,18 +1114,26 @@ PlayAlertSound 16 300
 Hide
 Class "Quarterstaff"
 Rarity <= Rare
+SetBackgroundColor 0 0 0 210
 DropLevel <= 60
 AreaLevel >= 75
 
 Hide
 Class "Quarterstaff"
-Rarity <= Rare
-AreaLevel >= 71
+Rarity Rare
+SetBackgroundColor 0 0 0 210
+AreaLevel > 40
+
+Hide
+Class "Quarter"
+SetBackgroundColor 0 0 0 210
+Rarity Magic
 
 Hide
 Class "Quarterstaff"
 Rarity <= Magic
-AreaLevel >= 41
+SetBackgroundColor 0 0 0 210
+AreaLevel > 20
 
 # typical caster stuffs:
 
@@ -1879,10 +1891,44 @@ AreaLevel >= 65
 # [[1200]] To start for any class of casters:
 #--------------------------
 
+#   [1201] area level 1–64
+
 Hide
-Class "Quiver" "Quarter" "Bow" "Crossbow" "Two Hand Sword" "Two Hand Axe" "Two Hand Mace"
+Class "Quiver" "Spears" "Traps" "One Hand Axes" "One Hand Maces" "One Hand Swords" "Flails"
 Rarity <= Magic
-AreaLevel >= 41
+AreaLevel > 40
+
+Hide
+Class "Bows" "Crossbows" "Quarterstaves" "Two Hand Axes" "Two Hand Maces" "Two Hand Swords"
+Rarity <= Rare
+AreaLevel > 40
+
+Hide
+Class "Quiver" "Spears" "Traps" "One Hand Axes" "One Hand Maces" "One Hand Swords" "Flails"
+Rarity <= Rare
+AreaLevel > 64
+
+# filter-rarity
+Hide
+Class "Currency"
+BaseType "Scroll of Wisdom"
+
+# "Scroll of Wisdom" is only shown in acts 1–4
+Hide
+Class "Currency"
+BaseType "Scroll of Wisdom"
+AreaLevel > 48
+
+#   [1202] area level 1–40
+
+#   [1203] area level 1–20
+
+Hide
+Class "Bows" "Crossbows" "Quarterstaves" "Two Hand Axes" "Two Hand Maces" "Two Hand Swords"
+Rarity <= Magic
+AreaLevel > 20
+
+#   [1204] area level: at beginning
 
 Hide
 Class "Quiver" "One Hand Axe" "One Hand Mace" "One Hand Sword" "Dagger"  "Flail" "Claw"
@@ -1901,18 +1947,7 @@ Hide
 Class "Buckler"
 Rarity Normal
 
-# filter-rarity
-Hide
-Class "Currency"
-BaseType "Scroll of Wisdom"
-
-# "Scroll of Wisdom" is only shown in acts 1–4
-Hide
-Class "Currency"
-BaseType "Scroll of Wisdom"
-AreaLevel > 48
-
-#   [1201] dex- / str-bases:-----------
+#   [1205] dex- / str-bases:-----------
 Hide
 Class "Helmet"
 BaseType "Greathelm" " Cap" " Hood"
@@ -1939,7 +1974,7 @@ Class "Boots"
 BaseType "Greaves" "Boots" "Sabatons"
 Rarity Normal
 
-#   [1202] mix-bases:-----------
+#   [1206] mix-bases:-----------
 Hide
 Class "Helmet"
 BaseType " Crown" " Visor" " Mask" " Helm" " Visage"
@@ -1966,7 +2001,7 @@ Class "Boots"
 BaseType "Sabatons" "Leggings" " Shoes" "Cuisses"
 Rarity Normal
 
-#   [1203] int-bases:-----------
+#   [1207] int-bases:-----------
 
 #--------------------------
 # [[1300]] Uniques
@@ -2186,6 +2221,7 @@ SetFontSize 45
 # The Desperate Alliance, Vase Relic
 # Essentia Sanguis, Furtive Wraps
 # The Covenant, Altar Robe
+# Periphery, Heartwood Shortbow
 # ----------------------------------
 
 Show
@@ -2200,7 +2236,8 @@ MinimapIcon 0 Red Star
 SetFontSize 45
 
 Show
-BaseType "Giant Maul" # The Hammer of Faith / Gain a random shrine buff every 10 seconds
+Rarity Unique
+BaseType "Giant Maul" "Heartwood Shortbow" # The Hammer of Faith / Gain a random shrine buff every 10 seconds
 SetTextColor 255 0 0 255
 SetBorderColor 255 0 0 255
 SetBackgroundColor 255 255 255 255
@@ -3670,7 +3707,7 @@ PlayAlertSound 3 300
 
 Show
 Rarity Unique
-BaseType == "Broadhead Quiver" "Azure Amulet" "Solar Amulet" "Gold Amulet" "Gold Ring" "Ornate Belt" "Fine Belt" "Stone Charm"
+BaseType == "Broadhead Quiver" "Azure Amulet" "Solar Amulet" "Gold Amulet" "Gold Ring" "Ornate Belt" "Fine Belt" "Stone Charm" "Transcendent Mana Flask"
 # "Staunching Charm" "Antidote Charm" "Grounding Charm"  "Ruby Charm" "Sapphire Charm" "Topaz Charm" "Amethyst Charm"
 SetBackgroundColor 0 0 0 210
 SetBorderColor 255 140 0 255
@@ -5199,7 +5236,7 @@ SetFontSize 45
 # A-Tier
 Show
 Class "Augment"
-BaseType "Primate Idol" "Snake Idol" "Idol of Grold" "Idol of Thruldana" "Fox Idol" "Rabbit Idol" "Idol of Egrin" "Idol of Eeshta"
+BaseType "Primate Idol" "Snake Idol" "Idol of Grold" "Idol of Thruldana" "Fox Idol" "Rabbit Idol" "Idol of Egrin" "Idol of Eeshta" "Stoat Idol"
 SetTextColor 255 255 255 255
 SetBorderColor 255 255 255 255
 SetBackgroundColor 240 90 35 200
