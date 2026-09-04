@@ -2,7 +2,7 @@
 # fps30_ssf-mage.filter — Path of Exile 2
 #===============================================================================================================
 #
-# VERSION: 	0.5.0-1 (actual for PoE2 v0.5.0 and higher, does not support v0.4.0 and lower)
+# VERSION: 	0.5.5-1 (actual for PoE2 v0.5.5 and higher, does not support v0.5.4 and lower)
 # AUTHOR: 	fpsthirty
 # SOURCE: 	https://github.com/fpsthirty/poe2-lootfilter
 #
@@ -5857,6 +5857,17 @@ MinimapIcon 1 Orange Circle
 SetFontSize 40
 
 Show
+Class == "Augment" #todo+: раскидать по тирам после релиза этих соулкоров
+"Jiquani's Soul Core of Automation" "Jiquani's Soul Core of Malediction" "Jiquani's Soul Core of Targeting" "Jiquani's Soul Core of Rallying" "Jiquani's Soul Core of Radiance" "Jiquani's Soul Core of Severing" "Jiquani's Soul Core of Rippling" "Jiquani's Soul Core of Quaking" "Jiquani's Soul Core of Munitions" "Jiquani's Soul Core of Snares" "Jiquani's Soul Core of Abundance" "Jiquani's Soul Core of Squalls" "Jiquani's Soul Core of Thundering" "Atziri's Soul Core of Devotion" "Atziri's Soul Core of Vitality" "Atziri's Soul Core of Alacrity" "Atziri's Soul Core of Inoculation"
+SetTextColor 255 207 132
+SetBorderColor 255 207 132
+SetBackgroundColor 222 102 204
+PlayAlertSound 2 300
+PlayEffect Pink
+MinimapIcon 1 Pink Circle
+SetFontSize 40
+
+Show
 Class == "Augment"
 BaseType "Soul Core"
 SetTextColor 0 240 190
@@ -5924,6 +5935,7 @@ PlayAlertSound 2 300
 PlayEffect Cyan
 
 #   [1803] any jewels
+
 Show
 Class "Jewel"
 BaseType == "Ruby"
@@ -6585,7 +6597,7 @@ SetFontSize 40
 
 Show
 Class "Currency"
-BaseType "Greater Orb of Transmutation"
+BaseType "Greater Orb of Augmentation" "Greater Orb of Transmutation"
 SetTextColor 255 207 132
 SetBorderColor 255 207 132
 SetBackgroundColor 0 0 0 210
@@ -6947,6 +6959,17 @@ PlayEffect Red Temp
 MinimapIcon 1 Red Circle
 
 #   [1909] "Return of the Ancients" league
+
+Show
+Class "Currency"
+BaseType "Sacred Bloom"
+SetTextColor 255 0 0 255
+SetBorderColor 255 0 0 255
+SetBackgroundColor 255 255 255 255
+PlayAlertSound 6 300
+PlayEffect Red
+MinimapIcon 0 Red Star
+SetFontSize 45
 
 Show
 Class "Currency"
@@ -7435,7 +7458,7 @@ MinimapIcon 2 Brown Star
 Show
 Class "Quest Item" "Instance Local Item"
 SetBackgroundColor 0 0 0 210
-PlayAlertSound 2 100
+PlayAlertSound 2 200
 SetFontSize 40
 
 Show

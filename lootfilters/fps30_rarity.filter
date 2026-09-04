@@ -2,7 +2,7 @@
 # fps30_rarity.filter — Path of Exile 2
 #===============================================================================================================
 #
-# VERSION: 	0.5.0-1 (actual for PoE2 v0.5.0 and higher, does not support v0.4.0 and lower)
+# VERSION: 	0.5.5-1 (actual for PoE2 v0.5.5 and higher, does not support v0.5.4 and lower)
 # AUTHOR: 	fpsthirty
 # SOURCE: 	https://github.com/fpsthirty/poe2-lootfilter
 #
@@ -4458,16 +4458,16 @@ MinimapIcon 1 Purple Square
 SetFontSize 40
 
 # filter-rarity
-Hide
-Class "Tablet"
-Rarity <= Magic
-SetTextColor 255 207 255
-SetBorderColor 255 207 255
-SetBackgroundColor 65 20 80 200
-PlayAlertSound 2 300
-PlayEffect White
-MinimapIcon 1 Purple Square
-SetFontSize 40
+#Hide
+#Class "Tablet"
+#Rarity <= Magic
+#SetTextColor 255 207 255
+#SetBorderColor 255 207 255
+#SetBackgroundColor 65 20 80 200
+#PlayAlertSound 2 300
+#PlayEffect White
+#MinimapIcon 1 Purple Square
+#SetFontSize 40
 
 Show
 Rarity == Unique
@@ -4595,45 +4595,45 @@ PlayEffect Orange
 SetFontSize 40
 MinimapIcon 1 Purple Square
 
-# filter-rarity
-Hide
-Class "Trial Coin" "Inscribed Ultimatum"
-BaseType "Ultimatum" "Barya"
-Rarity < Magic
-ItemLevel <= 82
-SetTextColor 255 207 255
-SetBorderColor 255 207 255
-SetBackgroundColor 65 20 80 200
-PlayAlertSound 2 200
-PlayEffect White
-MinimapIcon 1 Purple Square
+## filter-rarity
+#Hide
+#Class "Trial Coin" "Inscribed Ultimatum"
+#BaseType "Ultimatum" "Barya"
+#Rarity < Magic
+#ItemLevel <= 82
+#SetTextColor 255 207 255
+#SetBorderColor 255 207 255
+#SetBackgroundColor 65 20 80 200
+#PlayAlertSound 2 200
+#PlayEffect White
+#MinimapIcon 1 Purple Square
 
-# filter-nossf
-Hide
-Class "Trial Coin"
-BaseType "Barya"
-Rarity < Magic
-ItemLevel <= 82
-AreaLevel >= 78
-SetTextColor 255 207 255
-SetBorderColor 255 207 255
-SetBackgroundColor 65 20 80 200
-PlayAlertSound 2 200
-PlayEffect White
-MinimapIcon 1 Purple Square
+## filter-nossf
+#Hide
+#Class "Trial Coin"
+#BaseType "Barya"
+#Rarity < Magic
+#ItemLevel <= 82
+#AreaLevel >= 78
+#SetTextColor 255 207 255
+#SetBorderColor 255 207 255
+#SetBackgroundColor 65 20 80 200
+#PlayAlertSound 2 200
+#PlayEffect White
+#MinimapIcon 1 Purple Square
 
-# filter-nossf
-Hide
-Class "Inscribed Ultimatum"
-BaseType "Ultimatum"
-Rarity < Magic
-AreaLevel >= 78
-SetTextColor 255 207 255
-SetBorderColor 255 207 255
-SetBackgroundColor 65 20 80 200
-PlayAlertSound 2 200
-PlayEffect White
-MinimapIcon 1 Purple Square
+## filter-nossf
+#Hide
+#Class "Inscribed Ultimatum"
+#BaseType "Ultimatum"
+#Rarity < Magic
+#AreaLevel >= 78
+#SetTextColor 255 207 255
+#SetBorderColor 255 207 255
+#SetBackgroundColor 65 20 80 200
+#PlayAlertSound 2 200
+#PlayEffect White
+#MinimapIcon 1 Purple Square
 
 #   [1502] Sekhemas: keys
 Show
@@ -4938,6 +4938,17 @@ MinimapIcon 1 Orange Circle
 SetFontSize 40
 
 Show
+Class == "Augment" #todo+: раскидать по тирам после релиза этих соулкоров
+"Jiquani's Soul Core of Automation" "Jiquani's Soul Core of Malediction" "Jiquani's Soul Core of Targeting" "Jiquani's Soul Core of Rallying" "Jiquani's Soul Core of Radiance" "Jiquani's Soul Core of Severing" "Jiquani's Soul Core of Rippling" "Jiquani's Soul Core of Quaking" "Jiquani's Soul Core of Munitions" "Jiquani's Soul Core of Snares" "Jiquani's Soul Core of Abundance" "Jiquani's Soul Core of Squalls" "Jiquani's Soul Core of Thundering" "Atziri's Soul Core of Devotion" "Atziri's Soul Core of Vitality" "Atziri's Soul Core of Alacrity" "Atziri's Soul Core of Inoculation"
+SetTextColor 255 207 132
+SetBorderColor 255 207 132
+SetBackgroundColor 222 102 204
+PlayAlertSound 2 300
+PlayEffect Pink
+MinimapIcon 1 Pink Circle
+SetFontSize 40
+
+Show
 Class == "Augment"
 BaseType "Soul Core"
 SetTextColor 0 240 190
@@ -5005,6 +5016,19 @@ PlayAlertSound 2 300
 PlayEffect Cyan
 
 #   [1803] any jewels
+
+# filter-rarity
+Hide
+Class "Jewel"
+BaseType == "Ruby"
+Rarity == Rare
+SetTextColor 255 207 132
+SetBackgroundColor 124 25 22 200
+SetFontSize 40
+SetBorderColor 244 222 94
+MinimapIcon 2 Cyan Triangle
+PlayEffect Cyan Temp
+
 Show
 Class "Jewel"
 BaseType == "Ruby"
@@ -5013,6 +5037,18 @@ SetTextColor 255 207 132
 SetBackgroundColor 124 25 22 200
 SetFontSize 40
 SetBorderColor 244 222 94
+MinimapIcon 2 Cyan Triangle
+PlayEffect Cyan Temp
+
+# filter-rarity
+Hide
+Class "Jewel"
+BaseType == "Ruby"
+Rarity == Magic
+SetTextColor 255 207 132
+SetBackgroundColor 124 25 22 200
+SetFontSize 40
+SetBorderColor 127 153 230
 MinimapIcon 2 Cyan Triangle
 PlayEffect Cyan Temp
 
@@ -5579,17 +5615,17 @@ MinimapIcon 1 White Circle
 AreaLevel >= 75
 
 # filter-rarity
-Hide
-Class "Currency"
-BaseType "Vaal Orb"
-SetTextColor 255 158 132
-SetBorderColor 255 207 132
-SetBackgroundColor 76 51 12 200
-PlayAlertSound 2 300
-PlayEffect White
-MinimapIcon 1 White Circle
-SetFontSize 40
-AreaLevel >= 79
+#Hide
+#Class "Currency"
+#BaseType "Vaal Orb"
+#SetTextColor 255 158 132
+#SetBorderColor 255 207 132
+#SetBackgroundColor 76 51 12 200
+#PlayAlertSound 2 300
+#PlayEffect White
+#MinimapIcon 1 White Circle
+#SetFontSize 40
+#AreaLevel >= 79
 
 Show
 Class "Currency"
@@ -5625,17 +5661,17 @@ MinimapIcon 1 White Circle
 SetFontSize 40
 
 # filter-rarity
-Hide
-Class "Currency"
-BaseType "Orb of Alchemy"
-SetTextColor 130 255 157
-SetBorderColor 255 207 132
-SetBackgroundColor 76 51 12 200
-PlayAlertSound 2 300
-PlayEffect White
-MinimapIcon 1 White Circle
-SetFontSize 40
-AreaLevel >= 79
+#Hide
+#Class "Currency"
+#BaseType "Orb of Alchemy"
+#SetTextColor 130 255 157
+#SetBorderColor 255 207 132
+#SetBackgroundColor 76 51 12 200
+#PlayAlertSound 2 300
+#PlayEffect White
+#MinimapIcon 1 White Circle
+#SetFontSize 40
+#AreaLevel >= 79
 
 Show
 Class "Currency"
@@ -5706,15 +5742,15 @@ MinimapIcon 2 Grey Circle
 AreaLevel >= 75
 
 # filter-rarity
-Hide
-Class "Currency"
-BaseType "Greater Orb of Transmutation"
-SetTextColor 255 207 132
-SetBorderColor 255 207 132
-SetBackgroundColor 0 0 0 210
-MinimapIcon 2 Grey Circle
-PlayAlertSound 2 150
-AreaLevel >= 75
+#Hide
+#Class "Currency"
+#BaseType "Greater Orb of Transmutation"
+#SetTextColor 255 207 132
+#SetBorderColor 255 207 132
+#SetBackgroundColor 0 0 0 210
+#MinimapIcon 2 Grey Circle
+#PlayAlertSound 2 150
+#AreaLevel >= 75
 
 # filter-rarity
 Hide
@@ -5746,7 +5782,7 @@ SetFontSize 40
 
 Show
 Class "Currency"
-BaseType "Greater Orb of Transmutation"
+BaseType "Greater Orb of Augmentation" "Greater Orb of Transmutation"
 SetTextColor 255 207 132
 SetBorderColor 255 207 132
 SetBackgroundColor 0 0 0 210
@@ -6108,6 +6144,17 @@ PlayEffect Red Temp
 MinimapIcon 1 Red Circle
 
 #   [1909] "Return of the Ancients" league
+
+Show
+Class "Currency"
+BaseType "Sacred Bloom"
+SetTextColor 255 0 0 255
+SetBorderColor 255 0 0 255
+SetBackgroundColor 255 255 255 255
+PlayAlertSound 6 300
+PlayEffect Red
+MinimapIcon 0 Red Star
+SetFontSize 45
 
 Show
 Class "Currency"
@@ -6588,7 +6635,7 @@ SetFontSize 40
 Show
 Class "Quest Item" "Instance Local Item"
 SetBackgroundColor 0 0 0 210
-PlayAlertSound 2 100
+PlayAlertSound 2 200
 SetFontSize 40
 
 Show
