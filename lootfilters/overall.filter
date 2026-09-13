@@ -280,14 +280,6 @@ style-orb-annul-min
 
 
 #   [0303] expensive extra socket / quality:
-# tier A uniques with inner extra socket:
-
-Show
-Rarity Unique
-Class "Body"
-BaseType "Grand Regalia" # Morior Invictus
-Sockets >= 4
-style-uniq-tier-a
 
 Show
 Rarity Unique
@@ -298,16 +290,30 @@ style-orb-div-purple
 
 Show
 Rarity Unique
+Class "Body"
+BaseType "Grand Regalia" # Morior Invictus
+Sockets >= 4
+style-uniq-tier-a
+
+Show
+Rarity Unique
+Class "One Hand Maces"
+BaseType "Kalguuran Forgehammer" # Serle's Grit
+Sockets == 3
+style-uniq-tier-a
+
+Show
+Rarity Unique
 Class "Helmets"
 BaseType "Decorated Helm" # The Bringer of Rain
-Sockets >= 4
+Sockets == 4
 style-uniq-tier-a
 
 Show
 Rarity Unique
 Class "Helmets"
 BaseType "Brimmed Helm" # Greymake
-Sockets >= 4
+Sockets == 4
 style-uniq-tier-a
 
 Show
@@ -2546,7 +2552,6 @@ style-bg-translucent
 # Yoke of Suffering, Bloodstone Amulet
 # Astramentis, Stellar Amulet
 # Bursting Decay, Unset Ring
-# Olroth's Resolve, Ultimate Life Flask
 # The Fall of the Axe, Silver Charm
 # Rite of Passage, Golden Charm
 # Kalandra's Touch, Ring
@@ -2571,7 +2576,7 @@ style-bg-translucent
 
 Show
 Rarity Unique
-BaseType == "Incense Relic" "Ultimate Life Flask" "Armoured Cap" "Sacred Focus" "Ornate Gauntlets" "Fine Bracers" "Golden Charm" "Silver Charm" "Lattice Sandals" "Conqueror Plate" "Intricate Crest Shield" "Timeless Jewel" "Ruby" "Emerald" "Armoured Vest" "Ashbark Talisman" "Pronged Spear" "Two-Stone Ring" "Morning Star" "Runic Fork" "Runemastered Runic Fork" "Grand Spear"
+BaseType == "Incense Relic" "Armoured Cap" "Sacred Focus" "Ornate Gauntlets" "Fine Bracers" "Golden Charm" "Silver Charm" "Lattice Sandals" "Conqueror Plate" "Intricate Crest Shield" "Timeless Jewel" "Ruby" "Emerald" "Armoured Vest" "Ashbark Talisman" "Pronged Spear" "Two-Stone Ring" "Morning Star" "Runic Fork" "Runemastered Runic Fork" "Grand Spear"
 style-orb-div-purple
 
 Show
@@ -2645,7 +2650,7 @@ style-orb-div-purple
 
 # ======================================
 #   [1302] red beam: price ~1 divine orb
-### ~1 div (October, 2025):
+### ~1 div (September, 2026):
 # Tabula Rasa, Garment
 # Solus Ipse, Grand Visage
 # Megalomaniac, unid Diamond
@@ -2662,11 +2667,12 @@ style-orb-div-purple
 # Essentia Sanguis, Furtive Wraps
 # The Covenant, Altar Robe
 # Periphery, Heartwood Shortbow
+# Olroth's Resolve, Ultimate Life Flask
 # ----------------------------------
 
 Show
 Rarity Unique
-BaseType == "Stone Tower Shield" "Thawing Charm" "Grand Visage" "Primed Quiver" "Vase Relic" "Furtive Wraps" "Altar Robe"
+BaseType == "Stone Tower Shield" "Thawing Charm" "Grand Visage" "Primed Quiver" "Vase Relic" "Furtive Wraps" "Altar Robe" "Ultimate Life Flask"
 style-orb-div
 
 Show
@@ -3530,7 +3536,7 @@ style-uniq-tier-a
 ## armors:
 Show
 Rarity Unique
-BaseType == "Fur Plate" "Champion Cuirass" "Pathfinder Coat" "Serpentscale Coat" "Strider Vest" "Tattered Robe" "Votive Raiment" "Havoc Raiment" "Enlightened Robe" "Explorer Armour" "Scale Mail" "Knight Armour" "Ancestral Mail" "Heroic Armour" "Pilgrim Vestments" "Cleric Vestments" "Tideseer Mantle" "Corvus Mantle" "Wayfarer Jacket" "Scalper's Jacket" "Wrapped Greathelm" "Spired Greathelm" "Fierce Greathelm" "Felt Cap" "Viper Cap" "Velvet Cap" "Covert Hood" "Twig Circlet" "Chain Tiara" "Feathered Tiara" "Vermeil Circlet" "Jade Tiara" "Magus Tiara" "Brimmed Helm" "Decorated Helm" "Iron Crown" "Cultist Crown" "Martyr Crown" "Heavy Crown" "Spiritbone Crown" "Face Mask" "Death Mask" "Gold Circlet" "Riveted Mitts" "Spined Bracers" "Torn Gloves" "Pauascale Gloves" "Layered Gauntlets" "Doubled Gauntlets" "Burnished Gauntlets" "Rope Cuffs" "Gauze Wraps" "Spiral Wraps" "Utility Wraps" "Trimmed Greaves" "Laced Boots" "Wrapped Sandals" "Feathered Sandals" "Secured Leggings" "Hunting Shoes" "Heraldric Tower Shield" "Crucible Tower Shield" "Emblem Crest Shield" "Iron Buckler" "Woven Focus" "Antler Focus" "Voodoo Focus" "Grand Regalia" "Grand Manchettes" "Grand Cuisses" "Array Buckler" "Long Belt" "Blacksteel Tower Shield" "Gilded Vestments" "Cinched Boots" "Embroidered Gloves" "Plate Belt" "Threaded Shoes" "Intricate Gloves" "Stitched Gloves" "Vaal Cuirass" "Stocky Mitts" "Abyssal Signet" "Rawhide Belt" "Engraved Bracers" "Ancient Leggings" "Primal Markings" "Ornate Ringmail" "Glacial Fortress"
+BaseType == "Fur Plate" "Champion Cuirass" "Pathfinder Coat" "Serpentscale Coat" "Strider Vest" "Tattered Robe" "Votive Raiment" "Havoc Raiment" "Enlightened Robe" "Explorer Armour" "Scale Mail" "Knight Armour" "Ancestral Mail" "Heroic Armour" "Pilgrim Vestments" "Cleric Vestments" "Tideseer Mantle" "Corvus Mantle" "Wayfarer Jacket" "Scalper's Jacket" "Spired Greathelm" "Fierce Greathelm" "Felt Cap" "Viper Cap" "Velvet Cap" "Covert Hood" "Twig Circlet" "Chain Tiara" "Feathered Tiara" "Vermeil Circlet" "Jade Tiara" "Magus Tiara" "Brimmed Helm" "Decorated Helm" "Iron Crown" "Cultist Crown" "Martyr Crown" "Heavy Crown" "Spiritbone Crown" "Face Mask" "Death Mask" "Gold Circlet" "Riveted Mitts" "Spined Bracers" "Torn Gloves" "Pauascale Gloves" "Layered Gauntlets" "Doubled Gauntlets" "Burnished Gauntlets" "Rope Cuffs" "Gauze Wraps" "Spiral Wraps" "Utility Wraps" "Trimmed Greaves" "Laced Boots" "Wrapped Sandals" "Feathered Sandals" "Secured Leggings" "Hunting Shoes" "Heraldric Tower Shield" "Crucible Tower Shield" "Emblem Crest Shield" "Iron Buckler" "Woven Focus" "Antler Focus" "Voodoo Focus" "Grand Regalia" "Grand Manchettes" "Grand Cuisses" "Array Buckler" "Long Belt" "Blacksteel Tower Shield" "Gilded Vestments" "Cinched Boots" "Embroidered Gloves" "Plate Belt" "Threaded Shoes" "Intricate Gloves" "Stitched Gloves" "Vaal Cuirass" "Stocky Mitts" "Abyssal Signet" "Rawhide Belt" "Engraved Bracers" "Ancient Leggings" "Primal Markings" "Ornate Ringmail" "Glacial Fortress"
 style-uniq-tier-a
 
 Show
@@ -3752,7 +3758,7 @@ style-orb-div
 
 Show
 Class == "Omen"
-BaseType == "Omen of Abyssal Echoes" "Omen of Sinistral Crystallisation" "Omen of Homogenising Coronation" "Omen of Recombination" "Medved's Saga" "Vorana's Saga" "Uhtred's Saga" "Olroth's Saga" "Omen of the Blackblooded" "Omen of the Blessed" "Omen of Chaotic Quantity" "Omen of Chaotic Rarity" "Omen of Chaotic Effectiveness" "Omen of Chaotic Monsters"
+BaseType == "Omen of Abyssal Echoes" "Omen of Sinistral Crystallisation" "Omen of Homogenising Coronation" "Omen of Recombination" "Medved's Saga" "Vorana's Saga" "Uhtred's Saga" "Olroth's Saga" "Omen of the Blessed" "Omen of Chaotic Quantity" "Omen of Chaotic Rarity" "Omen of Chaotic Effectiveness" "Omen of Chaotic Monsters"
 style-orb-annul
 
 Show
@@ -4281,7 +4287,6 @@ MinimapIcon 1 Purple Square
 #PlayEffect White
 #MinimapIcon 1 Purple Square
 
-# filter-norarity
 Show
 Class "Trial Coin" "Inscribed Ultimatum"
 BaseType "Barya" "Ultimatum"
@@ -4875,21 +4880,33 @@ PlayEffect Cyan
 # S-Tier:
 Show
 Class "Augment"
-BaseType "Countess Seske's Rune of Archery" "Hedgewitch Assandra's Rune of Wisdom" "Greater Rune of Leadership" "Greater Rune of Tithing"
+BaseType  "Greater Rune of Leadership" "Greater Rune of Tithing" "Greater Rune of Alacrity"
 style-orb-div-purple
 
 # A-tier:
 Show
 Class "Augment"
-BaseType  "Saqawal's Rune of Memory" "Farrul's Rune of the Chase" "Greater Rune of Alacrity"
+BaseType  "Hedgewitch Assandra's Rune of Wisdom"
 style-orb-div
 
 Show
 Class "Augment"
-BaseType "Fenumus' Rune of Draining" "Fenumus' Rune of Agony" "Craiceann's Rune of Recovery" "Craiceann's Rune of Warding" "Thane Grannell's Rune of Mastery" "Farrul's Rune of Grace" "Saqawal's Rune of the Sky" "Thane Leld's Rune of Spring" "Courtesan Mannan's Rune of Cruelty" "Thane Girt's Rune of Wildness" "Greater Rune of Tithing" "The Greatwolf's Rune of Willpower" "Greater Rune of Nobility" "Farrul's Rune of the Hunt"
+BaseType "Fenumus' Rune of Draining" "Fenumus' Rune of Agony" "Craiceann's Rune of Recovery" "Craiceann's Rune of Warding" "Thane Grannell's Rune of Mastery" "Farrul's Rune of Grace" "Saqawal's Rune of the Sky" "Thane Leld's Rune of Spring" "Courtesan Mannan's Rune of Cruelty" "Thane Girt's Rune of Wildness" "Greater Rune of Tithing" "The Greatwolf's Rune of Willpower" "Greater Rune of Nobility" "Farrul's Rune of the Hunt" "Farrul's Rune of the Chase" "Saqawal's Rune of Memory" "Countess Seske's Rune of Archery"
 style-orb-annul
 
 # any other runes:
+
+# filter-rarity
+Hide
+Class "Augment"
+BaseType "Greater Desert Rune" "Greater Rebirth Rune" "Greater Robust Rune" "Greater Vision Rune" "Greater Glacial Rune" "Greater Body Rune" "Greater Inspiration Rune" "Greater Adept Rune" "Greater Storm Rune" "Greater Mind Rune" "Greater Stone Rune" "Greater Resolve Rune"
+AreaLevel >= 65
+PlayEffect Red Temp
+PlayAlertSound 2 100
+SetTextColor 0 240 190
+style-bg-translucent
+MinimapIcon 2 Cyan Circle
+
 Show
 Class "Augment"
 BaseType "Desert Rune" # Fire Resistance
@@ -5045,7 +5062,12 @@ style-orb-div-purple
 
 Show
 Class "Augment"
-BaseType "Serle's Triumph" "Uhtred's Sidereus"
+BaseType "Serle's Triumph"
+style-orb-div
+
+Show
+Class "Augment"
+BaseType "Uhtred's Sidereus"
 style-orb-annul-max
 
 Show
@@ -5219,6 +5241,12 @@ AreaLevel >= 75
 #PlayAlertSound 2 150
 #AreaLevel >= 75
 
+Show
+Class "Currency"
+BaseType "Greater Orb of Augmentation" "Greater Orb of Transmutation"
+style-orb-cheap
+PlayAlertSound 2 150
+
 # filter-rarity
 Hide
 Class "Currency"
@@ -5236,12 +5264,6 @@ Show
 Class "Currency"
 BaseType "Armourer's Scrap"
 style-orb-cheap-large
-
-Show
-Class "Currency"
-BaseType "Greater Orb of Augmentation" "Greater Orb of Transmutation"
-style-orb-cheap
-PlayAlertSound 2 150
 
 Show
 Class "Currency"
@@ -5521,6 +5543,11 @@ Class "Currency"
 BaseType "Ancient Infuser" "Vaal Arcanist's Infuser" "Vaal Siphoner"
 style-league-vaal
 
+Show
+Class "Incubator"
+BaseType "Vaal Siphoner"
+style-league-vaal
+
 #   [1909] "Return of the Ancients" league
 
 Show
@@ -5540,7 +5567,12 @@ style-orb-div
 
 Show
 Class "Currency"
-BaseType "The Runebinder's Alloy" "Transcendent Alloy" "Celestial Alloy" "Sovereign Alloy"
+BaseType  "The Runebinder's Alloy"
+style-orb-div
+
+Show
+Class "Currency"
+BaseType  "Transcendent Alloy" "Celestial Alloy" "Sovereign Alloy"
 style-orb-annul
 
 Show
