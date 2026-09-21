@@ -274,7 +274,7 @@ style-orb-annul-min
 Show
 Class "Body"
 Rarity Normal
-BaseType "Death Mantle"
+BaseType "Death Mantle" "Corsair Coat"
 Sockets == 3
 style-orb-annul-min
 
@@ -487,7 +487,7 @@ style-orb-div-purple
 
 Show
 Class "Gloves"
-BaseType "Moulded Mitts" "Sectioned Bracers" "Fine Bracers" "Torn Gloves" "Sombre Gloves" "Stitched Gloves" "Intricate Gloves" "Pauascale Gloves" "Rope Cuffs" "Aged Cuffs" "Gauze Wraps" "Gold Gloves" "Massive Mitts" "Grim Gloves" "Opulent Gloves" "Vaal Gloves" "Sirenscale Gloves" "Secured Wraps"
+BaseType "Moulded Mitts" "Sectioned Bracers" "Fine Bracers" "Torn Gloves" "Sombre Gloves" "Intricate Gloves" "Pauascale Gloves" "Rope Cuffs" "Aged Cuffs" "Gauze Wraps" "Gold Gloves" "Massive Mitts" "Grim Gloves" "Opulent Gloves" "Vaal Gloves" "Sirenscale Gloves" "Secured Wraps"
 Rarity Normal
 Corrupted False
 Sockets >= 2
@@ -503,7 +503,7 @@ style-orb-div-purple
 
 Show
 Class "Body"
-BaseType "Champion Cuirass" "Conqueror Plate" "Shrouded Vest" "Smuggler Coat" "Armoured Vest" "Tattered Robe" "Silk Robe" "Altar Robe" "Knight Armour" "Corvus Mantle" "Wayfarer Jacket" "Ornate Plate" "Vile Robe" "Conjurer Mantle" "Sleek Jacket"
+BaseType "Champion Cuirass" "Conqueror Plate" "Shrouded Vest" "Smuggler Coat" "Armoured Vest" "Tattered Robe" "Silk Robe" "Altar Robe" "Corvus Mantle" "Wayfarer Jacket" "Ornate Plate" "Vile Robe" "Conjurer Mantle" "Sleek Jacket"
 Rarity Normal
 Corrupted False
 Sockets >= 3
@@ -988,7 +988,7 @@ DropLevel > 65
 Rarity <= Rare
 style-eq-endgame
 
-# filter-nossf
+# filter-nossf filter-norarity
 Show
 Class "Boots"
 ItemLevel >= 82
@@ -2560,8 +2560,6 @@ style-bg-translucent
 # Headhunter, Heavy Belt
 # Mageblood, Utility Belt
 # Hyrri's Ire, Armoured Vest
-# Abyss Tablet
-# Fury of the King, Ashbark Talisman
 # Atziri's Splendour, Sacrificial Regalia
 # Atziri's Contempt, Pronged Spear
 # Flesh Crucible, Diamond
@@ -2576,7 +2574,7 @@ style-bg-translucent
 
 Show
 Rarity Unique
-BaseType == "Incense Relic" "Armoured Cap" "Sacred Focus" "Ornate Gauntlets" "Fine Bracers" "Golden Charm" "Silver Charm" "Lattice Sandals" "Conqueror Plate" "Intricate Crest Shield" "Timeless Jewel" "Ruby" "Emerald" "Armoured Vest" "Ashbark Talisman" "Pronged Spear" "Two-Stone Ring" "Morning Star" "Runic Fork" "Runemastered Runic Fork" "Grand Spear"
+BaseType == "Incense Relic" "Armoured Cap" "Sacred Focus" "Ornate Gauntlets" "Fine Bracers" "Golden Charm" "Silver Charm" "Lattice Sandals" "Conqueror Plate" "Intricate Crest Shield" "Timeless Jewel" "Ruby" "Emerald" "Armoured Vest" "Pronged Spear" "Two-Stone Ring" "Morning Star" "Runic Fork" "Runemastered Runic Fork" "Grand Spear"
 style-orb-div-purple
 
 Show
@@ -2600,12 +2598,6 @@ style-orb-div-purple
 # style-orb-div-purple
 
 Show
-Rarity == Unique
-Class "Tablet"
-BaseType == "Abyss Tablet"
-style-orb-div-purple
-
-Show
 Rarity Unique
 BaseType == "Moulded Mitts" # Hateforge / Gain (1-3) random Charge on reaching Maximum Rage
 DropLevel == 60
@@ -2621,12 +2613,6 @@ Show
 Rarity Unique
 BaseType == "Wide Belt" # The Gnashing Sash / Life Recovery from Flasks can Overflow Maximum Life
 DropLevel == 60
-style-orb-div-purple
-
-Show
-Rarity Unique
-BaseType == "Primed Quiver" # Cadiro's Gambit / Each Arrow fired is a Crescendo, Splinter, Reversing, Diamond, Covetous, or Blunt Arrow
-DropLevel == 51
 style-orb-div-purple
 
 Show
@@ -2668,11 +2654,19 @@ style-orb-div-purple
 # The Covenant, Altar Robe
 # Periphery, Heartwood Shortbow
 # Olroth's Resolve, Ultimate Life Flask
+# Abyss Tablet
+# Fury of the King, Ashbark Talisman
 # ----------------------------------
 
 Show
 Rarity Unique
-BaseType == "Stone Tower Shield" "Thawing Charm" "Grand Visage" "Primed Quiver" "Vase Relic" "Furtive Wraps" "Altar Robe" "Ultimate Life Flask"
+BaseType == "Stone Tower Shield" "Thawing Charm" "Grand Visage" "Primed Quiver" "Vase Relic" "Furtive Wraps" "Altar Robe" "Ultimate Life Flask" "Ashbark Talisman"
+style-orb-div
+
+Show
+Rarity == Unique
+Class "Tablet"
+BaseType == "Abyss Tablet"
 style-orb-div
 
 Show
@@ -3536,7 +3530,7 @@ style-uniq-tier-a
 ## armors:
 Show
 Rarity Unique
-BaseType == "Fur Plate" "Champion Cuirass" "Pathfinder Coat" "Serpentscale Coat" "Strider Vest" "Tattered Robe" "Votive Raiment" "Havoc Raiment" "Enlightened Robe" "Explorer Armour" "Scale Mail" "Knight Armour" "Ancestral Mail" "Heroic Armour" "Pilgrim Vestments" "Cleric Vestments" "Tideseer Mantle" "Corvus Mantle" "Wayfarer Jacket" "Scalper's Jacket" "Spired Greathelm" "Fierce Greathelm" "Felt Cap" "Viper Cap" "Velvet Cap" "Covert Hood" "Twig Circlet" "Chain Tiara" "Feathered Tiara" "Vermeil Circlet" "Jade Tiara" "Magus Tiara" "Brimmed Helm" "Decorated Helm" "Iron Crown" "Cultist Crown" "Martyr Crown" "Heavy Crown" "Spiritbone Crown" "Face Mask" "Death Mask" "Gold Circlet" "Riveted Mitts" "Spined Bracers" "Torn Gloves" "Pauascale Gloves" "Layered Gauntlets" "Doubled Gauntlets" "Burnished Gauntlets" "Rope Cuffs" "Gauze Wraps" "Spiral Wraps" "Utility Wraps" "Trimmed Greaves" "Laced Boots" "Wrapped Sandals" "Feathered Sandals" "Secured Leggings" "Hunting Shoes" "Heraldric Tower Shield" "Crucible Tower Shield" "Emblem Crest Shield" "Iron Buckler" "Woven Focus" "Antler Focus" "Voodoo Focus" "Grand Regalia" "Grand Manchettes" "Grand Cuisses" "Array Buckler" "Long Belt" "Blacksteel Tower Shield" "Gilded Vestments" "Cinched Boots" "Embroidered Gloves" "Plate Belt" "Threaded Shoes" "Intricate Gloves" "Stitched Gloves" "Vaal Cuirass" "Stocky Mitts" "Abyssal Signet" "Rawhide Belt" "Engraved Bracers" "Ancient Leggings" "Primal Markings" "Ornate Ringmail" "Glacial Fortress"
+BaseType == "Fur Plate" "Champion Cuirass" "Pathfinder Coat" "Serpentscale Coat" "Strider Vest" "Tattered Robe" "Votive Raiment" "Havoc Raiment" "Enlightened Robe" "Explorer Armour" "Scale Mail" "Knight Armour" "Ancestral Mail" "Heroic Armour" "Pilgrim Vestments" "Cleric Vestments" "Tideseer Mantle" "Corvus Mantle" "Wayfarer Jacket" "Scalper's Jacket" "Spired Greathelm" "Felt Cap" "Viper Cap" "Velvet Cap" "Covert Hood" "Twig Circlet" "Chain Tiara" "Feathered Tiara" "Vermeil Circlet" "Jade Tiara" "Magus Tiara" "Brimmed Helm" "Decorated Helm" "Iron Crown" "Cultist Crown" "Martyr Crown" "Heavy Crown" "Spiritbone Crown" "Face Mask" "Death Mask" "Gold Circlet" "Riveted Mitts" "Spined Bracers" "Torn Gloves" "Pauascale Gloves" "Layered Gauntlets" "Doubled Gauntlets" "Burnished Gauntlets" "Rope Cuffs" "Gauze Wraps" "Spiral Wraps" "Utility Wraps" "Trimmed Greaves" "Laced Boots" "Wrapped Sandals" "Feathered Sandals" "Secured Leggings" "Hunting Shoes" "Heraldric Tower Shield" "Crucible Tower Shield" "Emblem Crest Shield" "Iron Buckler" "Woven Focus" "Antler Focus" "Voodoo Focus" "Grand Regalia" "Grand Manchettes" "Grand Cuisses" "Array Buckler" "Long Belt" "Blacksteel Tower Shield" "Gilded Vestments" "Cinched Boots" "Embroidered Gloves" "Plate Belt" "Threaded Shoes" "Vaal Cuirass" "Stocky Mitts" "Abyssal Signet" "Rawhide Belt" "Engraved Bracers" "Ancient Leggings" "Primal Markings" "Ornate Ringmail" "Glacial Fortress"
 style-uniq-tier-a
 
 Show
@@ -4412,7 +4406,7 @@ style-gold
 Show
 BaseType = 20
 Class "Uncut Skill Gem"
-style-orb-div
+style-orb-div-purple
 
 Show
 Class "Uncut Skill Gem"
@@ -4665,7 +4659,7 @@ style-orb-div-purple
 Show
 Class "Support Gem"
 DropLevel >= 65
-BaseType == "Breachlord's Rift" "Atalui's Bloodletting" "Khatal's Rejuvenation" "Uhtred's Constellation" "Medved's Felling" "Esh's Prowess"
+BaseType == "Breachlord's Rift" "Atalui's Bloodletting" "Khatal's Rejuvenation" "Uhtred's Constellation" "Medved's Felling" "Esh's Prowess" "Ahn's Citadel"
 style-orb-div
 
 # B-tier:
@@ -4880,13 +4874,13 @@ PlayEffect Cyan
 # S-Tier:
 Show
 Class "Augment"
-BaseType  "Greater Rune of Leadership" "Greater Rune of Tithing" "Greater Rune of Alacrity"
+BaseType  "Greater Rune of Leadership" "Greater Rune of Tithing"
 style-orb-div-purple
 
 # A-tier:
 Show
 Class "Augment"
-BaseType  "Hedgewitch Assandra's Rune of Wisdom"
+BaseType  "Hedgewitch Assandra's Rune of Wisdom" "Greater Rune of Alacrity"
 style-orb-div
 
 Show
@@ -5125,12 +5119,12 @@ style-orb-div-purple
 
 Show
 Class "Currency"
-BaseType "Perfect Jeweller's Orb" "Perfect Exalted Orb" "Perfect Chaos Orb"
+BaseType "Perfect Exalted Orb" "Perfect Chaos Orb"
 style-orb-div-purple
 
 Show
 Class "Currency"
-BaseType "Divine Orb" "Albino Rhoa Feather"
+BaseType "Divine Orb" "Albino Rhoa Feather" "Perfect Jeweller's Orb"
 style-orb-div
 
 #   [1902] currency Tier A: Gemcutter, Annullment, Fracturing and advanced orbs
@@ -5190,11 +5184,11 @@ BaseType "Exalted Orb" "Perfect Orb of Augmentation" "Perfect Orb of Transmutati
 style-orb-exalt
 
 # filter-rarity
-#Hide
-#Class "Currency"
-#BaseType "Orb of Alchemy"
-#style-orb-alch
-#AreaLevel >= 79
+Hide
+Class "Currency"
+BaseType "Orb of Alchemy"
+style-orb-alch
+AreaLevel >= 79
 
 Show
 Class "Currency"
