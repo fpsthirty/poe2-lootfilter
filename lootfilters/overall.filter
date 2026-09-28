@@ -2,7 +2,7 @@
 # fpsthirty overall caster LootFilter — Path of Exile 2
 #===============================================================================================================
 #
-# VERSION: 	0.5.5-1 (actual for PoE2 v0.5.5 and higher, does not support v0.5.4 and lower)
+# VERSION: 	0.5.5-1d (actual for PoE2 v0.5.5 and higher, does not support v0.5.4 and lower)
 # AUTHOR: 	fpsthirty
 # SOURCE: 	https://github.com/fpsthirty/poe2-lootfilter
 #
@@ -267,17 +267,23 @@ Sockets == 2
 Show
 Class "Helmet"
 Rarity Normal
-BaseType "Champion Helm"
+BaseType "Champion Helm" "Paragon Greathelm"
 Sockets == 2
 style-orb-annul-min
 
 Show
 Class "Body"
 Rarity Normal
-BaseType "Death Mantle" "Corsair Coat"
+BaseType "Death Mantle" "Corsair Coat" "Rambler Jacket"
 Sockets == 3
 style-orb-annul-min
 
+Show
+Class "Bows"
+Rarity Normal
+BaseType "Ironwood Shortbow"
+Sockets == 3
+style-orb-annul-min
 
 #   [0303] expensive extra socket / quality:
 
@@ -2656,11 +2662,12 @@ style-orb-div-purple
 # Olroth's Resolve, Ultimate Life Flask
 # Abyss Tablet
 # Fury of the King, Ashbark Talisman
+# Cleric Vestments, The Mutable Star
 # ----------------------------------
 
 Show
 Rarity Unique
-BaseType == "Stone Tower Shield" "Thawing Charm" "Grand Visage" "Primed Quiver" "Vase Relic" "Furtive Wraps" "Altar Robe" "Ultimate Life Flask" "Ashbark Talisman"
+BaseType == "Stone Tower Shield" "Thawing Charm" "Grand Visage" "Primed Quiver" "Vase Relic" "Furtive Wraps" "Altar Robe" "Ultimate Life Flask" "Ashbark Talisman" "Cleric Vestments"
 style-orb-div
 
 Show
@@ -2826,14 +2833,14 @@ Show
 Class "Jewel"
 BaseType == "Diamond"
 Rarity == Unique
-Corrupted False
+Corrupted True
 style-orb-div-purple
 
 Show
 Class "Jewel"
 BaseType == "Diamond"
 Rarity == Unique
-Corrupted True
+Corrupted False
 style-orb-div
 
 Show
@@ -3524,13 +3531,13 @@ MinimapIcon 2 Brown Star
 ## weapons:
 Show
 Rarity Unique
-BaseType == "Spiked Club" "Torment Club" "Pointed Maul" "Totemic Greatclub" "Winged Spear" "Barbed Spear" "Helix Spear" "Crescent Quarterstaff" "Wyrm Quarterstaff" "Siphoning Wand" "Permafrost Staff" "Crude Bow" "Recurve Bow" "Composite Bow" "Dualstring Bow" "Heavy Bow" "Tense Crossbow" "Fanatic Bow" "Reflecting Staff" "Penetrating Quiver" "Familial Talisman" "Vicious Talisman" "Desolate Crossbow" "Heavy Bow" "Aberrant Sledge" "Perching Staff" "Trarthan Cannon" "Warding Quarterstaff"
+BaseType == "Spiked Club" "Pointed Maul" "Totemic Greatclub" "Winged Spear" "Barbed Spear" "Helix Spear" "Crescent Quarterstaff" "Wyrm Quarterstaff" "Siphoning Wand" "Permafrost Staff" "Crude Bow" "Recurve Bow" "Composite Bow" "Dualstring Bow" "Heavy Bow" "Tense Crossbow" "Fanatic Bow" "Reflecting Staff" "Penetrating Quiver" "Familial Talisman" "Vicious Talisman" "Desolate Crossbow" "Heavy Bow" "Aberrant Sledge" "Perching Staff" "Trarthan Cannon" "Warding Quarterstaff" "Twisted Wand"
 style-uniq-tier-a
 
 ## armors:
 Show
 Rarity Unique
-BaseType == "Fur Plate" "Champion Cuirass" "Pathfinder Coat" "Serpentscale Coat" "Strider Vest" "Tattered Robe" "Votive Raiment" "Havoc Raiment" "Enlightened Robe" "Explorer Armour" "Scale Mail" "Knight Armour" "Ancestral Mail" "Heroic Armour" "Pilgrim Vestments" "Cleric Vestments" "Tideseer Mantle" "Corvus Mantle" "Wayfarer Jacket" "Scalper's Jacket" "Spired Greathelm" "Felt Cap" "Viper Cap" "Velvet Cap" "Covert Hood" "Twig Circlet" "Chain Tiara" "Feathered Tiara" "Vermeil Circlet" "Jade Tiara" "Magus Tiara" "Brimmed Helm" "Decorated Helm" "Iron Crown" "Cultist Crown" "Martyr Crown" "Heavy Crown" "Spiritbone Crown" "Face Mask" "Death Mask" "Gold Circlet" "Riveted Mitts" "Spined Bracers" "Torn Gloves" "Pauascale Gloves" "Layered Gauntlets" "Doubled Gauntlets" "Burnished Gauntlets" "Rope Cuffs" "Gauze Wraps" "Spiral Wraps" "Utility Wraps" "Trimmed Greaves" "Laced Boots" "Wrapped Sandals" "Feathered Sandals" "Secured Leggings" "Hunting Shoes" "Heraldric Tower Shield" "Crucible Tower Shield" "Emblem Crest Shield" "Iron Buckler" "Woven Focus" "Antler Focus" "Voodoo Focus" "Grand Regalia" "Grand Manchettes" "Grand Cuisses" "Array Buckler" "Long Belt" "Blacksteel Tower Shield" "Gilded Vestments" "Cinched Boots" "Embroidered Gloves" "Plate Belt" "Threaded Shoes" "Vaal Cuirass" "Stocky Mitts" "Abyssal Signet" "Rawhide Belt" "Engraved Bracers" "Ancient Leggings" "Primal Markings" "Ornate Ringmail" "Glacial Fortress"
+BaseType == "Fur Plate" "Champion Cuirass" "Pathfinder Coat" "Serpentscale Coat" "Strider Vest" "Tattered Robe" "Votive Raiment" "Havoc Raiment" "Enlightened Robe" "Explorer Armour" "Scale Mail" "Knight Armour" "Ancestral Mail" "Heroic Armour" "Pilgrim Vestments" "Cleric Vestments" "Tideseer Mantle" "Corvus Mantle" "Wayfarer Jacket" "Scalper's Jacket" "Spired Greathelm" "Felt Cap" "Viper Cap" "Velvet Cap" "Covert Hood" "Twig Circlet" "Chain Tiara" "Feathered Tiara" "Vermeil Circlet" "Jade Tiara" "Magus Tiara" "Brimmed Helm" "Decorated Helm" "Iron Crown" "Cultist Crown" "Martyr Crown" "Heavy Crown" "Face Mask" "Death Mask" "Gold Circlet" "Riveted Mitts" "Spined Bracers" "Torn Gloves" "Pauascale Gloves" "Layered Gauntlets" "Doubled Gauntlets" "Burnished Gauntlets" "Rope Cuffs" "Gauze Wraps" "Spiral Wraps" "Utility Wraps" "Trimmed Greaves" "Laced Boots" "Wrapped Sandals" "Feathered Sandals" "Secured Leggings" "Hunting Shoes" "Heraldric Tower Shield" "Crucible Tower Shield" "Emblem Crest Shield" "Iron Buckler" "Woven Focus" "Antler Focus" "Grand Regalia" "Grand Manchettes" "Grand Cuisses" "Array Buckler" "Long Belt" "Blacksteel Tower Shield" "Gilded Vestments" "Cinched Boots" "Embroidered Gloves" "Plate Belt" "Threaded Shoes" "Vaal Cuirass" "Stocky Mitts" "Abyssal Signet" "Rawhide Belt" "Engraved Bracers" "Ancient Leggings" "Primal Markings" "Ornate Ringmail" "Glacial Fortress"
 style-uniq-tier-a
 
 Show
@@ -3543,12 +3550,6 @@ Show
 Rarity Unique
 Class "Flask"
 BaseType "Gargantuan Mana Flask" "Ultimate Mana Flask"
-style-uniq-tier-a
-
-Show
-Rarity Unique
-BaseType == "Moulded Mitts"
-DropLevel == 33
 style-uniq-tier-a
 
 Show
@@ -3742,7 +3743,7 @@ style-league-expedition-currency
 #   [1403] Altar / omens
 Show
 Class == "Omen"
-BaseType == "Aldur's Saga" "Omen of Dextral Annulment" "Omen of Dextral Erasure" "Omen of Sinistral Annulment" "Omen of Sinistral Erasure" "Omen of Whittling" "Omen of Chance" "Omen of Light" "Head of the King"
+BaseType == "Aldur's Saga" "Omen of Dextral Annulment" "Omen of Dextral Erasure" "Omen of Sinistral Annulment" "Omen of Sinistral Erasure" "Omen of Whittling" "Omen of Chance" "Omen of Light" "Head of the King" "Omen of the Hunt"
 style-orb-div-purple
 
 Show
@@ -3796,6 +3797,17 @@ Show
 Class "Currency"
 BaseType "Potent Liquid Contempt" "Potent Liquid Ferocity" "Ancient Potent Liquid Contempt"
 style-orb-div-purple
+
+Show
+Class "Currency"
+BaseType "Potent Liquid Melancholy"
+SetTextColor 255 207 132
+SetBorderColor 255 207 132
+SetBackgroundColor 80 132 59 200
+PlayAlertSound 2 300
+PlayEffect White
+MinimapIcon 1 White Circle
+SetFontSize 40
 
 Show
 Class "Currency"
@@ -5524,17 +5536,17 @@ style-orb-div
 
 Show
 Class "Currency"
-BaseType "Orb of Extraction" "Crystallised Corruption" "Orb of Sacrifice"
+BaseType "Orb of Extraction" "Crystallised Corruption"
 style-orb-annul-max
 
 Show
 Class "Currency"
-BaseType "Vaal Armourer's Infuser" "Vaal Blacksmith's Infuser" "Core Destabiliser"
+BaseType "Vaal Armourer's Infuser" "Vaal Blacksmith's Infuser" "Core Destabiliser" "Kamasa's Orb of Sacrifice"
 style-orb-annul
 
 Show
 Class "Currency"
-BaseType "Ancient Infuser" "Vaal Arcanist's Infuser" "Vaal Siphoner"
+BaseType "Ancient Infuser" "Vaal Arcanist's Infuser" "Vaal Siphoner" "Yugul's Orb of Sacrifice"
 style-league-vaal
 
 Show
@@ -5631,7 +5643,7 @@ Rarity Rare
 SetTextColor 20 20 20 255
 SetBorderColor 244 222 94 255
 SetBackgroundColor 95 95 95 200
-PlayAlertSound 4 300
+PlayAlertSound 4 200
 MinimapIcon 1 White Square
 PlayEffect White Temp
 SetFontSize 40
@@ -5644,7 +5656,7 @@ Rarity Magic
 SetTextColor 20 20 20 255
 SetBorderColor 77 77 230 255
 SetBackgroundColor 95 95 95 200
-PlayAlertSound 4 300
+PlayAlertSound 4 200
 MinimapIcon 1 White Square
 PlayEffect White Temp
 SetFontSize 40
@@ -5657,7 +5669,7 @@ Rarity Normal
 SetTextColor 20 20 20 255
 SetBorderColor 255 255 255
 SetBackgroundColor 95 95 95 200
-PlayAlertSound 4 300
+PlayAlertSound 4 200
 MinimapIcon 1 White Square
 PlayEffect White Temp
 SetFontSize 40
@@ -5747,7 +5759,7 @@ Rarity <= Rare
 SetTextColor 20 20 20 255
 SetBorderColor 244 222 94 255
 SetBackgroundColor 95 95 95 200
-PlayAlertSound 4 300
+PlayAlertSound 4 200
 PlayEffect White Temp
 MinimapIcon 1 White Square
 SetFontSize 40
@@ -5759,7 +5771,7 @@ Rarity Magic
 SetTextColor 20 20 20 255
 SetBorderColor 77 77 230 255
 SetBackgroundColor 95 95 95 200
-PlayAlertSound 4 300
+PlayAlertSound 4 200
 PlayEffect White Temp
 MinimapIcon 1 White Square
 SetFontSize 40
@@ -5771,7 +5783,7 @@ Rarity Normal
 SetTextColor 20 20 20 255
 SetBorderColor 255 255 255 255
 SetBackgroundColor 95 95 95 200
-PlayAlertSound 4 300
+PlayAlertSound 4 200
 PlayEffect White Temp
 MinimapIcon 1 White Square
 SetFontSize 40
@@ -5785,7 +5797,7 @@ Rarity Unique
 SetTextColor 255 255 255 255
 SetBorderColor 255 140 0 255
 style-bg-translucent
-PlayAlertSound 4 300
+PlayAlertSound 4 200
 MinimapIcon 1 Orange Square
 PlayEffect Orange
 SetFontSize 40
@@ -5798,7 +5810,7 @@ Rarity Rare
 SetTextColor 255 255 255 255
 SetBorderColor 244 222 94 255
 style-bg-translucent
-PlayAlertSound 4 300
+PlayAlertSound 4 200
 MinimapIcon 1 White Square
 SetFontSize 40
 
@@ -5810,7 +5822,7 @@ Rarity Magic
 SetTextColor 255 255 255 255
 SetBorderColor 77 77 230 255
 style-bg-translucent
-PlayAlertSound 4 300
+PlayAlertSound 4 200
 MinimapIcon 1 White Square
 SetFontSize 40
 
@@ -5822,7 +5834,7 @@ Rarity Normal
 SetTextColor 255 255 255 255
 SetBorderColor 255 255 255 255
 style-bg-translucent
-PlayAlertSound 4 300
+PlayAlertSound 4 200
 MinimapIcon 1 White Square
 SetFontSize 40
 
@@ -5902,7 +5914,7 @@ Rarity Rare
 SetTextColor 255 255 255
 SetBorderColor 244 222 94 255
 style-bg-translucent
-PlayAlertSound 4 300
+PlayAlertSound 4 200
 PlayEffect White Temp
 MinimapIcon 1 White Square
 SetFontSize 40
@@ -5914,7 +5926,7 @@ Rarity Magic
 SetTextColor 255 255 255
 SetBorderColor 77 77 230 255
 style-bg-translucent
-PlayAlertSound 4 300
+PlayAlertSound 4 200
 PlayEffect White Temp
 MinimapIcon 1 White Square
 SetFontSize 40
@@ -5926,7 +5938,7 @@ Rarity Normal
 SetTextColor 255 255 255
 SetBorderColor 255 255 255 255
 style-bg-translucent
-PlayAlertSound 4 300
+PlayAlertSound 4 200
 PlayEffect White Temp
 MinimapIcon 1 White Square
 SetFontSize 40
@@ -5936,7 +5948,7 @@ BaseType "Waystone"
 SetTextColor 255 255 255
 SetBorderColor 255 255 255
 SetBackgroundColor 222 102 204 # pink background for unexpected waystones
-PlayAlertSound 4 300
+PlayAlertSound 4 200
 PlayEffect White Temp
 MinimapIcon 1 White Square
 SetFontSize 40
