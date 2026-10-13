@@ -251,7 +251,7 @@ BaseType "Champion Helm" "Paragon Greathelm"
 Sockets == 2
 SetTextColor 255 255 255 255
 SetBorderColor 255 255 255 255
-SetBackgroundColor 240 90 35 200
+SetBackgroundColor 228 138 43 200
 PlayAlertSound 1 100
 MinimapIcon 1 Orange Circle
 PlayEffect White
@@ -263,7 +263,7 @@ BaseType "Death Mantle" "Corsair Coat" "Rambler Jacket"
 Sockets == 3
 SetTextColor 255 255 255 255
 SetBorderColor 255 255 255 255
-SetBackgroundColor 240 90 35 200
+SetBackgroundColor 228 138 43 200
 PlayAlertSound 1 100
 MinimapIcon 1 Orange Circle
 PlayEffect White
@@ -275,7 +275,7 @@ BaseType "Ironwood Shortbow"
 Sockets == 3
 SetTextColor 255 255 255 255
 SetBorderColor 255 255 255 255
-SetBackgroundColor 240 90 35 200
+SetBackgroundColor 228 138 43 200
 PlayAlertSound 1 100
 MinimapIcon 1 Orange Circle
 PlayEffect White
@@ -1577,7 +1577,7 @@ AreaLevel > 78
 BaseType "Greater Jeweller's Orb" "Orb of Chance"
 SetTextColor 255 255 255 255
 SetBorderColor 255 255 255 255
-SetBackgroundColor 240 90 35 200
+SetBackgroundColor 228 138 43 200
 PlayAlertSound 1 100
 MinimapIcon 1 Orange Circle
 PlayEffect White
@@ -4550,7 +4550,7 @@ Class "Vault Key"
 BaseType == "Ritualistic Reliquary Key" "Zarokh's Reliquary Key: Sandstorm Visage"
 SetTextColor 255 255 255 255
 SetBorderColor 255 255 255 255
-SetBackgroundColor 240 90 35 200
+SetBackgroundColor 228 138 43 200
 PlayAlertSound 1 150
 PlayEffect White
 MinimapIcon 1 Orange Circle
@@ -4562,7 +4562,7 @@ Class "Vault Key"
 BaseType == "Twilight Reliquary Key" "Zarokh's Reliquary Key: Blessed Bonds" "Zarokh's Reliquary Key: Sekhema's Resolve"
 SetTextColor 255 255 255 255
 SetBorderColor 255 255 255 255
-SetBackgroundColor 240 90 35 200
+SetBackgroundColor 228 138 43 200
 PlayAlertSound 1 100
 MinimapIcon 1 Orange Circle
 PlayEffect White
@@ -4659,7 +4659,7 @@ Class == "Omen"
 BaseType == "Omen of Abyssal Echoes" "Omen of Sinistral Crystallisation" "Omen of Homogenising Coronation" "Omen of Recombination" "Medved's Saga" "Vorana's Saga" "Uhtred's Saga" "Olroth's Saga" "Omen of the Blessed" "Omen of Chaotic Quantity" "Omen of Chaotic Rarity" "Omen of Chaotic Effectiveness" "Omen of Chaotic Monsters"
 SetTextColor 255 255 255 255
 SetBorderColor 255 255 255 255
-SetBackgroundColor 240 90 35 200
+SetBackgroundColor 228 138 43 200
 PlayAlertSound 1 150
 PlayEffect White
 MinimapIcon 1 Orange Circle
@@ -4670,7 +4670,7 @@ Class == "Omen"
 BaseType == "Omen of Sinistral Necromancy" "Omen of Corruption"  "Omen of Secret Compartments" "Omen of Catalysing Exaltation"
 SetTextColor 255 255 255 255
 SetBorderColor 255 255 255 255
-SetBackgroundColor 240 90 35 200
+SetBackgroundColor 228 138 43 200
 PlayAlertSound 1 100
 MinimapIcon 1 Orange Circle
 PlayEffect White
@@ -5141,7 +5141,7 @@ Class "Currency"
 BaseType == "Shattered Triskelion" # from Olroth, Expedition boss 4/5
 SetTextColor 255 255 255 255
 SetBorderColor 255 255 255 255
-SetBackgroundColor 240 90 35 200
+SetBackgroundColor 228 138 43 200
 PlayAlertSound 1 150
 PlayEffect White
 MinimapIcon 1 Orange Circle
@@ -5717,7 +5717,7 @@ SetFontSize 45
 Show
 Class "Support Gem"
 DropLevel >= 65
-BaseType == "Breachlord's Rift" "Atalui's Bloodletting" "Khatal's Rejuvenation" "Uhtred's Constellation" "Medved's Felling" "Esh's Prowess" "Ahn's Citadel"
+BaseType == "Breachlord's Rift" "Atalui's Bloodletting" "Khatal's Rejuvenation" "Uhtred's Constellation" "Medved's Felling" "Esh's Prowess" "Ahn's Citadel" "Hayoxi's Fulmination" "Olroth's Hubris"
 SetTextColor 255 0 0 255
 SetBorderColor 255 0 0 255
 SetBackgroundColor 255 255 255 255
@@ -5794,7 +5794,7 @@ Class == "Augment"
 BaseType == "Opiloti's Soul Core of Assault" "Tzamoto's Soul Core of Ferocity" "Xopec's Soul Core of Power" "Soul Core of Ticaba" "Guatelitzi's Soul Core of Endurance" "Estazunti's Soul Core of Convalescence" "Tacati's Soul Core of Affliction" "Xipocado's Soul Core of Dominion" "Soul Core of Tacati" "Soul Core of Quipolatl" "Soul Core of Azcapa" "Soul Core of Jiquani"
 SetTextColor 255 255 255 255
 SetBorderColor 255 255 255 255
-SetBackgroundColor 240 90 35 200
+SetBackgroundColor 228 138 43 200
 PlayAlertSound 1 150
 PlayEffect White
 MinimapIcon 1 Orange Circle
@@ -6008,7 +6008,7 @@ Class "Augment"
 BaseType "Fenumus' Rune of Draining" "Fenumus' Rune of Agony" "Craiceann's Rune of Recovery" "Craiceann's Rune of Warding" "Thane Grannell's Rune of Mastery" "Farrul's Rune of Grace" "Saqawal's Rune of the Sky" "Thane Leld's Rune of Spring" "Courtesan Mannan's Rune of Cruelty" "Thane Girt's Rune of Wildness" "Greater Rune of Tithing" "The Greatwolf's Rune of Willpower" "Greater Rune of Nobility" "Farrul's Rune of the Hunt" "Farrul's Rune of the Chase" "Saqawal's Rune of Memory" "Countess Seske's Rune of Archery"
 SetTextColor 255 255 255 255
 SetBorderColor 255 255 255 255
-SetBackgroundColor 240 90 35 200
+SetBackgroundColor 228 138 43 200
 PlayAlertSound 1 150
 PlayEffect White
 MinimapIcon 1 Orange Circle
@@ -6130,7 +6130,7 @@ Class "Augment"
 BaseType "Primate Idol" "Snake Idol" "Idol of Grold" "Idol of Thruldana" "Fox Idol" "Rabbit Idol" "Idol of Egrin" "Idol of Eeshta" "Stoat Idol"
 SetTextColor 255 255 255 255
 SetBorderColor 255 255 255 255
-SetBackgroundColor 240 90 35 200
+SetBackgroundColor 228 138 43 200
 PlayAlertSound 1 150
 PlayEffect White
 MinimapIcon 1 Orange Circle
@@ -6175,7 +6175,7 @@ Class "Augment"
 BaseType "Kurgal's Gaze" "Ulaman's Gaze"
 SetTextColor 255 255 255 255
 SetBorderColor 255 255 255 255
-SetBackgroundColor 240 90 35 200
+SetBackgroundColor 228 138 43 200
 PlayAlertSound 1 150
 PlayEffect White
 MinimapIcon 1 Orange Circle
@@ -6277,7 +6277,7 @@ Class "Augment"
 BaseType "Uhtred's Sidereus"
 SetTextColor 255 255 255 255
 SetBorderColor 255 255 255 255
-SetBackgroundColor 240 90 35 200
+SetBackgroundColor 228 138 43 200
 PlayAlertSound 1 100
 PlayEffect Orange
 MinimapIcon 1 Orange Square
@@ -6288,7 +6288,7 @@ Class "Augment"
 BaseType "Katla's Gloom" "Kolr's Hunt"  "Vorana's Carnage" "Thrud's Might"
 SetTextColor 255 255 255 255
 SetBorderColor 255 255 255 255
-SetBackgroundColor 240 90 35 200
+SetBackgroundColor 228 138 43 200
 PlayAlertSound 1 150
 PlayEffect White
 MinimapIcon 1 Orange Circle
@@ -6311,7 +6311,7 @@ Class "Augment"
 BaseType "Passion of Aldur" "Ire of Aldur" "Betrayal of Aldur" "Breath of Aldur"
 SetTextColor 255 255 255 255
 SetBorderColor 255 255 255 255
-SetBackgroundColor 240 90 35 200
+SetBackgroundColor 228 138 43 200
 PlayAlertSound 1 100
 MinimapIcon 1 Orange Circle
 PlayEffect White
@@ -6321,7 +6321,7 @@ Class "Augment"
 BaseType "Medved's Tending" "Uhtred's Sidereus"
 SetTextColor 255 255 255 255
 SetBorderColor 255 255 255 255
-SetBackgroundColor 240 90 35 200
+SetBackgroundColor 228 138 43 200
 PlayAlertSound 1 100
 MinimapIcon 1 Orange Circle
 PlayEffect White
@@ -6420,7 +6420,7 @@ MinimapIcon 0 Purple Star
 SetFontSize 45
 #SetTextColor 255 255 255 255
 #SetBorderColor 255 255 255 255
-#SetBackgroundColor 240 90 35 200
+#SetBackgroundColor 228 138 43 200
 #PlayAlertSound 1 150
 #PlayEffect White
 #MinimapIcon 1 Orange Circle
@@ -6438,7 +6438,7 @@ Class "Currency"
 BaseType "Orb of Chance" "Greater Jeweller's Orb" "Orb of Annulment" "Perfect Regal Orb" "Greater Exalted Orb" "Greater Chaos Orb" 
 SetTextColor 255 255 255 255
 SetBorderColor 255 255 255 255
-SetBackgroundColor 240 90 35 200
+SetBackgroundColor 228 138 43 200
 PlayAlertSound 1 150
 PlayEffect White
 MinimapIcon 1 Orange Circle
@@ -6449,7 +6449,7 @@ Class "Currency"
 BaseType "Gemcutter's Prism"
 SetTextColor 255 255 255 255
 SetBorderColor 255 255 255 255
-SetBackgroundColor 240 90 35 200
+SetBackgroundColor 228 138 43 200
 PlayAlertSound 1 100
 MinimapIcon 1 Orange Circle
 PlayEffect White
@@ -6830,12 +6830,12 @@ SetFontSize 45
 Show
 Class "Currency"
 BaseType "Preserved Cranium"
-SetTextColor 255 0 0 255
-SetBorderColor 255 0 0 255
+SetTextColor 146 53 152 255
+SetBorderColor 146 53 152 255
 SetBackgroundColor 255 255 255 255
 PlayAlertSound 6 300
-PlayEffect Red
-MinimapIcon 0 Red Star
+PlayEffect Purple
+MinimapIcon 0 Purple Star
 SetFontSize 45
 
 Show
@@ -6843,7 +6843,7 @@ Class "Currency"
 BaseType "Preserved Collarbone" 
 SetTextColor 255 255 255 255
 SetBorderColor 255 255 255 255
-SetBackgroundColor 240 90 35 200
+SetBackgroundColor 228 138 43 200
 PlayAlertSound 1 100
 PlayEffect Orange
 MinimapIcon 1 Orange Square
@@ -6854,7 +6854,7 @@ Class "Currency"
 BaseType "Preserved Rib"
 SetTextColor 255 255 255 255
 SetBorderColor 255 255 255 255
-SetBackgroundColor 240 90 35 200
+SetBackgroundColor 228 138 43 200
 PlayAlertSound 1 100
 MinimapIcon 1 Orange Circle
 PlayEffect White
@@ -6886,7 +6886,7 @@ Class "Currency"
 BaseType "Orb of Extraction" "Crystallised Corruption"
 SetTextColor 255 255 255 255
 SetBorderColor 255 255 255 255
-SetBackgroundColor 240 90 35 200
+SetBackgroundColor 228 138 43 200
 PlayAlertSound 1 100
 PlayEffect Orange
 MinimapIcon 1 Orange Square
@@ -6897,7 +6897,7 @@ Class "Currency"
 BaseType "Vaal Armourer's Infuser" "Vaal Blacksmith's Infuser" "Core Destabiliser" "Kamasa's Orb of Sacrifice"
 SetTextColor 255 255 255 255
 SetBorderColor 255 255 255 255
-SetBackgroundColor 240 90 35 200
+SetBackgroundColor 228 138 43 200
 PlayAlertSound 1 150
 PlayEffect White
 MinimapIcon 1 Orange Circle
@@ -6976,7 +6976,7 @@ Class "Currency"
 BaseType  "Transcendent Alloy" "Celestial Alloy" "Sovereign Alloy"
 SetTextColor 255 255 255 255
 SetBorderColor 255 255 255 255
-SetBackgroundColor 240 90 35 200
+SetBackgroundColor 228 138 43 200
 PlayAlertSound 1 150
 PlayEffect White
 MinimapIcon 1 Orange Circle
@@ -6987,7 +6987,7 @@ Class "Currency"
 BaseType "Revered Starlit Ore" "Warding Starlit Ore" "Veridical Starlit Ore" "Venerable Starlit Ore"
 SetTextColor 255 255 255 255
 SetBorderColor 255 255 255 255
-SetBackgroundColor 240 90 35 200
+SetBackgroundColor 228 138 43 200
 PlayAlertSound 1 150
 PlayEffect White
 MinimapIcon 1 Orange Circle
@@ -6998,7 +6998,7 @@ Class "Currency"
 BaseType "Uhtred's Crest of the Chalice"
 SetTextColor 255 255 255 255
 SetBorderColor 255 255 255 255
-SetBackgroundColor 240 90 35 200
+SetBackgroundColor 228 138 43 200
 PlayAlertSound 1 150
 PlayEffect White
 MinimapIcon 1 Orange Circle
@@ -7009,7 +7009,7 @@ Class "Currency"
 BaseType "Cryptic Key"
 SetTextColor 255 255 255 255
 SetBorderColor 255 255 255 255
-SetBackgroundColor 240 90 35 200
+SetBackgroundColor 228 138 43 200
 PlayAlertSound 1 150
 PlayEffect White
 MinimapIcon 1 Orange Circle
@@ -7020,7 +7020,7 @@ Class "Currency"
 BaseType " Flux"
 SetTextColor 255 255 255 255
 SetBorderColor 255 255 255 255
-SetBackgroundColor 240 90 35 200
+SetBackgroundColor 228 138 43 200
 PlayAlertSound 1 100
 MinimapIcon 1 Orange Circle
 PlayEffect White

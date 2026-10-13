@@ -4671,7 +4671,7 @@ style-orb-div-purple
 Show
 Class "Support Gem"
 DropLevel >= 65
-BaseType == "Breachlord's Rift" "Atalui's Bloodletting" "Khatal's Rejuvenation" "Uhtred's Constellation" "Medved's Felling" "Esh's Prowess" "Ahn's Citadel"
+BaseType == "Breachlord's Rift" "Atalui's Bloodletting" "Khatal's Rejuvenation" "Uhtred's Constellation" "Medved's Felling" "Esh's Prowess" "Ahn's Citadel" "Hayoxi's Fulmination" "Olroth's Hubris"
 style-orb-div
 
 # B-tier:
@@ -5510,7 +5510,7 @@ style-orb-div-purple
 Show
 Class "Currency"
 BaseType "Preserved Cranium"
-style-orb-div
+style-orb-div-purple
 
 Show
 Class "Currency"

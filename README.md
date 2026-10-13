@@ -129,10 +129,10 @@ If you want to customize one of my lootfilters, create a separate import file so
 > ![table-weapons](https://github.com/fpsthirty/poe2-lootfilter/raw/main/img/loot/table-weapons.png)
 
 >### abyss currency:
->  ![altar](https://github.com/fpsthirty/poe2-lootfilter/raw/main/img/loot/abyss-currency.jpg)
+>  ![altar](https://github.com/fpsthirty/poe2-lootfilter/raw/main/img/loot/abyss-currency.png)
 
 >### abyss omens:
->  ![altar](https://github.com/fpsthirty/poe2-lootfilter/raw/main/img/loot/abyss-omens.jpg)
+>  ![altar](https://github.com/fpsthirty/poe2-lootfilter/raw/main/img/loot/abyss-omens.png)
 
 > ### action gems:
 >  ![uncut_gems](https://github.com/fpsthirty/poe2-lootfilter/raw/main/img/loot/action-gems.jpg)
