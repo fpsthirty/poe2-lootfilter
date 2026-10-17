@@ -3615,7 +3615,7 @@ style-uniq-tier-a
 #   [1401] pinnacle keys
 Show
 Class "Map Fragments"
-BaseType == "An Audience with the King" "Call of the Shadows"
+BaseType == "An Audience with the King" "Call of the Shadows" "Head of the King"
 style-mapfragment
 PlayEffect Pink
 
@@ -3628,8 +3628,9 @@ PlayEffect White
 Show
 Class "Map Fragments"
 BaseType == "Breachlord Sac"
-style-mapfragment
-PlayEffect Pink
+style-orb-div-purple
+#style-mapfragment
+#PlayEffect Pink
 
 Show
 Class "Breachstone"
@@ -3743,17 +3744,22 @@ style-league-expedition-currency
 #   [1403] Altar / omens
 Show
 Class == "Omen"
-BaseType == "Aldur's Saga" "Omen of Dextral Annulment" "Omen of Dextral Erasure" "Omen of Sinistral Annulment" "Omen of Sinistral Erasure" "Omen of Whittling" "Omen of Chance" "Omen of Light" "Head of the King" "Omen of the Hunt"
+BaseType == "Aldur's Saga" "Omen of Dextral Annulment" "Omen of Dextral Erasure" "Omen of Sinistral Annulment" "Omen of Sinistral Erasure" "Omen of Whittling" "Omen of Chance" "Omen of Light" "Omen of the Hunt"
 style-orb-div-purple
 
 Show
 Class == "Omen"
-BaseType == "Omen of Homogenising Exaltation" "Omen of Dextral Crystallisation" "Omen of Sanctification"
+BaseType == "Omen of Homogenising Exaltation" "Omen of Dextral Crystallisation" "Omen of Sanctification" "Uhtred's Saga"
 style-orb-div
 
 Show
 Class == "Omen"
-BaseType == "Omen of Abyssal Echoes" "Omen of Sinistral Crystallisation" "Omen of Homogenising Coronation" "Omen of Recombination" "Medved's Saga" "Vorana's Saga" "Uhtred's Saga" "Olroth's Saga" "Omen of the Blessed" "Omen of Chaotic Quantity" "Omen of Chaotic Rarity" "Omen of Chaotic Effectiveness" "Omen of Chaotic Monsters"
+BaseType == "Omen of Abyssal Echoes" "Olroth's Saga" "Omen of the Blessed"
+style-orb-annul-max
+
+Show
+Class == "Omen"
+BaseType == "Omen of Abyssal Echoes" "Omen of Sinistral Crystallisation" "Omen of Homogenising Coronation" "Omen of Recombination" "Medved's Saga" "Uhtred's Saga" "Olroth's Saga" "Omen of the Blessed" "Omen of Chaotic Quantity" "Omen of Chaotic Rarity" "Omen of Chaotic Effectiveness" "Omen of Chaotic Monsters"
 style-orb-annul
 
 Show
@@ -3772,6 +3778,11 @@ Show
 Class == "Omen"
 BaseType == "Omen of the Liege"
 style-orb-regal
+
+Show
+Class == "Omen"
+BaseType == "Vorana's Saga"
+style-orb-exalt
 
 Show
 Class == "Omen"
@@ -4209,7 +4220,8 @@ SetFontSize 40
 Show
 Class "Currency"
 BaseType == "Shattered Triskelion" # from Olroth, Expedition boss 4/5
-style-orb-annul
+style-mapfragment
+PlayEffect Blue
 
 #--------------------------
 # [[1500]] Trials of Ascendancy
@@ -5136,25 +5148,28 @@ style-orb-div-purple
 
 Show
 Class "Currency"
+BaseType "Fracturing Orb"
+style-orb-div-purple
+
+Show
+Class "Currency"
 BaseType "Divine Orb" "Albino Rhoa Feather" "Perfect Jeweller's Orb"
 style-orb-div
 
 #   [1902] currency Tier A: Gemcutter, Annullment, Fracturing and advanced orbs
 Show
 Class "Currency"
-BaseType "Fracturing Orb"
-style-orb-div-purple
-#style-orb-annul
-#style-orb-fracturing
+BaseType "Orb of Annulment"
+style-orb-annul-max
 
 Show
 Class "Currency"
-BaseType "Orb of Chance" "Greater Jeweller's Orb" "Orb of Annulment" "Perfect Regal Orb" "Greater Exalted Orb" "Greater Chaos Orb" 
+BaseType "Greater Jeweller's Orb" "Perfect Regal Orb" "Greater Exalted Orb" "Greater Chaos Orb" 
 style-orb-annul
 
 Show
 Class "Currency"
-BaseType "Gemcutter's Prism"
+BaseType "Gemcutter's Prism" "Orb of Chance"
 style-orb-annul-min
 
 #   [1903] currency Tier B: Vaal, Chaos, Exalt and advanced orbs
@@ -5192,7 +5207,12 @@ style-orb-chaos
 
 Show
 Class "Currency"
-BaseType "Exalted Orb" "Perfect Orb of Augmentation" "Perfect Orb of Transmutation" "Greater Regal Orb" "Chance Shard"
+BaseType "Perfect Orb of Augmentation" "Perfect Orb of Transmutation"
+style-orb-annul
+
+Show
+Class "Currency"
+BaseType "Exalted Orb" "Greater Regal Orb" "Chance Shard"
 style-orb-exalt
 
 # filter-rarity
@@ -5441,7 +5461,7 @@ SetFontSize 40
 Show
 Class "Currency"
 BaseType "Essence of Horror"
-style-orb-div-purple
+style-orb-div
 #SetTextColor 255 207 132
 #SetBorderColor 255 207 132
 #SetBackgroundColor 107 62 62 200 # red
@@ -5531,12 +5551,12 @@ style-league-abyss-craft
 
 Show
 Class "Currency"
-BaseType "Vaal Cultivation Orb" "Architect's Orb" "Vaal Catalysing Infuser" "Yaomac's Orb of Sacrifice"
-style-orb-div
+BaseType "Vaal Cultivation Orb" "Architect's Orb" "Vaal Catalysing Infuser" "Yaomac's Orb of Sacrifice" "Crystallised Corruption"
+style-orb-div-purple
 
 Show
 Class "Currency"
-BaseType "Orb of Extraction" "Crystallised Corruption"
+BaseType "Orb of Extraction" 
 style-orb-annul-max
 
 Show
@@ -5559,7 +5579,7 @@ style-league-vaal
 Show
 Class "Currency"
 BaseType "Sacred Bloom"
-style-orb-div
+style-orb-annul-min
 
 Show
 Class "Currency"
@@ -5568,17 +5588,12 @@ style-orb-div-purple
 
 Show
 Class "Currency"
-BaseType "Olroth's Crest of the Sun" 
+BaseType  "The Runebinder's Alloy" "Sovereign Alloy" "Celestial Alloy"
 style-orb-div
 
 Show
 Class "Currency"
-BaseType  "The Runebinder's Alloy"
-style-orb-div
-
-Show
-Class "Currency"
-BaseType  "Transcendent Alloy" "Celestial Alloy" "Sovereign Alloy"
+BaseType  "Transcendent Alloy"
 style-orb-annul
 
 Show
@@ -5588,12 +5603,17 @@ style-orb-annul
 
 Show
 Class "Currency"
-BaseType "Uhtred's Crest of the Chalice"
+BaseType "Uhtred's Crest of the Chalice" "Olroth's Crest of the Sun" 
 style-orb-annul
 
 Show
 Class "Currency"
 BaseType "Cryptic Key"
+style-orb-annul
+
+Show
+Class "Currency"
+BaseType "Void Flux"
 style-orb-annul
 
 Show

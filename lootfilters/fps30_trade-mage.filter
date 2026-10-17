@@ -4652,7 +4652,7 @@ PlayAlertSound 3 300
 #   [1401] pinnacle keys
 Show
 Class "Map Fragments"
-BaseType == "An Audience with the King" "Call of the Shadows"
+BaseType == "An Audience with the King" "Call of the Shadows" "Head of the King"
 SetTextColor 255 205 113
 SetBorderColor 255 207 255
 SetBackgroundColor 65 20 80 200
@@ -4675,13 +4675,20 @@ PlayEffect White
 Show
 Class "Map Fragments"
 BaseType == "Breachlord Sac"
-SetTextColor 255 205 113
-SetBorderColor 255 207 255
-SetBackgroundColor 65 20 80 200
-PlayAlertSound 2 300
-MinimapIcon 1 White Square
-SetFontSize 40
-PlayEffect Pink
+SetTextColor 146 53 152 255
+SetBorderColor 146 53 152 255
+SetBackgroundColor 255 255 255 255
+PlayAlertSound 6 300
+PlayEffect Purple
+MinimapIcon 0 Purple Star
+SetFontSize 45
+#SetTextColor 255 205 113
+#SetBorderColor 255 207 255
+#SetBackgroundColor 65 20 80 200
+#PlayAlertSound 2 300
+#MinimapIcon 1 White Square
+#SetFontSize 40
+#PlayEffect Pink
 
 Show
 Class "Breachstone"
@@ -4894,7 +4901,7 @@ SetFontSize 40
 #   [1403] Altar / omens
 Show
 Class == "Omen"
-BaseType == "Aldur's Saga" "Omen of Dextral Annulment" "Omen of Dextral Erasure" "Omen of Sinistral Annulment" "Omen of Sinistral Erasure" "Omen of Whittling" "Omen of Chance" "Omen of Light" "Head of the King" "Omen of the Hunt"
+BaseType == "Aldur's Saga" "Omen of Dextral Annulment" "Omen of Dextral Erasure" "Omen of Sinistral Annulment" "Omen of Sinistral Erasure" "Omen of Whittling" "Omen of Chance" "Omen of Light" "Omen of the Hunt"
 SetTextColor 146 53 152 255
 SetBorderColor 146 53 152 255
 SetBackgroundColor 255 255 255 255
@@ -4905,7 +4912,7 @@ SetFontSize 45
 
 Show
 Class == "Omen"
-BaseType == "Omen of Homogenising Exaltation" "Omen of Dextral Crystallisation" "Omen of Sanctification"
+BaseType == "Omen of Homogenising Exaltation" "Omen of Dextral Crystallisation" "Omen of Sanctification" "Uhtred's Saga"
 SetTextColor 255 0 0 255
 SetBorderColor 255 0 0 255
 SetBackgroundColor 255 255 255 255
@@ -4916,7 +4923,18 @@ SetFontSize 45
 
 Show
 Class == "Omen"
-BaseType == "Omen of Abyssal Echoes" "Omen of Sinistral Crystallisation" "Omen of Homogenising Coronation" "Omen of Recombination" "Medved's Saga" "Vorana's Saga" "Uhtred's Saga" "Olroth's Saga" "Omen of the Blessed" "Omen of Chaotic Quantity" "Omen of Chaotic Rarity" "Omen of Chaotic Effectiveness" "Omen of Chaotic Monsters"
+BaseType == "Omen of Abyssal Echoes" "Olroth's Saga" "Omen of the Blessed"
+SetTextColor 255 255 255 255
+SetBorderColor 255 255 255 255
+SetBackgroundColor 228 138 43 200
+PlayAlertSound 1 100
+PlayEffect Orange
+MinimapIcon 1 Orange Square
+SetFontSize 40
+
+Show
+Class == "Omen"
+BaseType == "Omen of Abyssal Echoes" "Omen of Sinistral Crystallisation" "Omen of Homogenising Coronation" "Omen of Recombination" "Medved's Saga" "Uhtred's Saga" "Olroth's Saga" "Omen of the Blessed" "Omen of Chaotic Quantity" "Omen of Chaotic Rarity" "Omen of Chaotic Effectiveness" "Omen of Chaotic Monsters"
 SetTextColor 255 255 255 255
 SetBorderColor 255 255 255 255
 SetBackgroundColor 228 138 43 200
@@ -4940,6 +4958,17 @@ Show
 Class == "Omen"
 BaseType == "Omen of the Liege"
 SetTextColor 255 207 132
+SetBorderColor 255 207 132
+SetBackgroundColor 76 51 12 200
+PlayAlertSound 2 300
+PlayEffect White
+MinimapIcon 1 White Circle
+SetFontSize 40
+
+Show
+Class == "Omen"
+BaseType == "Vorana's Saga"
+SetTextColor 255 225 200
 SetBorderColor 255 207 132
 SetBackgroundColor 76 51 12 200
 PlayAlertSound 2 300
@@ -5399,13 +5428,13 @@ SetFontSize 40
 Show
 Class "Currency"
 BaseType == "Shattered Triskelion" # from Olroth, Expedition boss 4/5
-SetTextColor 255 255 255 255
-SetBorderColor 255 255 255 255
-SetBackgroundColor 228 138 43 200
-PlayAlertSound 1 150
-PlayEffect White
-MinimapIcon 1 Orange Circle
+SetTextColor 255 205 113
+SetBorderColor 255 207 255
+SetBackgroundColor 65 20 80 200
+PlayAlertSound 2 300
+MinimapIcon 1 White Square
 SetFontSize 40
+PlayEffect Blue
 
 #--------------------------
 # [[1500]] Trials of Ascendancy
@@ -6685,6 +6714,17 @@ SetFontSize 45
 
 Show
 Class "Currency"
+BaseType "Fracturing Orb"
+SetTextColor 146 53 152 255
+SetBorderColor 146 53 152 255
+SetBackgroundColor 255 255 255 255
+PlayAlertSound 6 300
+PlayEffect Purple
+MinimapIcon 0 Purple Star
+SetFontSize 45
+
+Show
+Class "Currency"
 BaseType "Divine Orb" "Albino Rhoa Feather" "Perfect Jeweller's Orb"
 SetTextColor 255 0 0 255
 SetBorderColor 255 0 0 255
@@ -6697,32 +6737,18 @@ SetFontSize 45
 #   [1902] currency Tier A: Gemcutter, Annullment, Fracturing and advanced orbs
 Show
 Class "Currency"
-BaseType "Fracturing Orb"
-SetTextColor 146 53 152 255
-SetBorderColor 146 53 152 255
-SetBackgroundColor 255 255 255 255
-PlayAlertSound 6 300
-PlayEffect Purple
-MinimapIcon 0 Purple Star
-SetFontSize 45
-#SetTextColor 255 255 255 255
-#SetBorderColor 255 255 255 255
-#SetBackgroundColor 228 138 43 200
-#PlayAlertSound 1 150
-#PlayEffect White
-#MinimapIcon 1 Orange Circle
-#SetFontSize 40
-#SetTextColor 132 229 255
-#SetBorderColor 255 207 132
-#SetBackgroundColor 76 51 12 200
-#PlayAlertSound 2 300
-#PlayEffect White
-#MinimapIcon 1 Cyan Diamond
-#SetFontSize 40
+BaseType "Orb of Annulment"
+SetTextColor 255 255 255 255
+SetBorderColor 255 255 255 255
+SetBackgroundColor 228 138 43 200
+PlayAlertSound 1 100
+PlayEffect Orange
+MinimapIcon 1 Orange Square
+SetFontSize 40
 
 Show
 Class "Currency"
-BaseType "Orb of Chance" "Greater Jeweller's Orb" "Orb of Annulment" "Perfect Regal Orb" "Greater Exalted Orb" "Greater Chaos Orb" 
+BaseType "Greater Jeweller's Orb" "Perfect Regal Orb" "Greater Exalted Orb" "Greater Chaos Orb" 
 SetTextColor 255 255 255 255
 SetBorderColor 255 255 255 255
 SetBackgroundColor 228 138 43 200
@@ -6733,7 +6759,7 @@ SetFontSize 40
 
 Show
 Class "Currency"
-BaseType "Gemcutter's Prism"
+BaseType "Gemcutter's Prism" "Orb of Chance"
 SetTextColor 255 255 255 255
 SetBorderColor 255 255 255 255
 SetBackgroundColor 228 138 43 200
@@ -6767,7 +6793,18 @@ SetFontSize 40
 
 Show
 Class "Currency"
-BaseType "Exalted Orb" "Perfect Orb of Augmentation" "Perfect Orb of Transmutation" "Greater Regal Orb" "Chance Shard"
+BaseType "Perfect Orb of Augmentation" "Perfect Orb of Transmutation"
+SetTextColor 255 255 255 255
+SetBorderColor 255 255 255 255
+SetBackgroundColor 228 138 43 200
+PlayAlertSound 1 150
+PlayEffect White
+MinimapIcon 1 Orange Circle
+SetFontSize 40
+
+Show
+Class "Currency"
+BaseType "Exalted Orb" "Greater Regal Orb" "Chance Shard"
 SetTextColor 255 225 200
 SetBorderColor 255 207 132
 SetBackgroundColor 76 51 12 200
@@ -7020,12 +7057,12 @@ SetFontSize 40
 Show
 Class "Currency"
 BaseType "Essence of Horror"
-SetTextColor 146 53 152 255
-SetBorderColor 146 53 152 255
+SetTextColor 255 0 0 255
+SetBorderColor 255 0 0 255
 SetBackgroundColor 255 255 255 255
 PlayAlertSound 6 300
-PlayEffect Purple
-MinimapIcon 0 Purple Star
+PlayEffect Red
+MinimapIcon 0 Red Star
 SetFontSize 45
 #SetTextColor 255 207 132
 #SetBorderColor 255 207 132
@@ -7159,18 +7196,18 @@ PlayAlertSound 2 300
 
 Show
 Class "Currency"
-BaseType "Vaal Cultivation Orb" "Architect's Orb" "Vaal Catalysing Infuser" "Yaomac's Orb of Sacrifice"
-SetTextColor 255 0 0 255
-SetBorderColor 255 0 0 255
+BaseType "Vaal Cultivation Orb" "Architect's Orb" "Vaal Catalysing Infuser" "Yaomac's Orb of Sacrifice" "Crystallised Corruption"
+SetTextColor 146 53 152 255
+SetBorderColor 146 53 152 255
 SetBackgroundColor 255 255 255 255
 PlayAlertSound 6 300
-PlayEffect Red
-MinimapIcon 0 Red Star
+PlayEffect Purple
+MinimapIcon 0 Purple Star
 SetFontSize 45
 
 Show
 Class "Currency"
-BaseType "Orb of Extraction" "Crystallised Corruption"
+BaseType "Orb of Extraction" 
 SetTextColor 255 255 255 255
 SetBorderColor 255 255 255 255
 SetBackgroundColor 228 138 43 200
@@ -7217,13 +7254,12 @@ MinimapIcon 1 Red Circle
 Show
 Class "Currency"
 BaseType "Sacred Bloom"
-SetTextColor 255 0 0 255
-SetBorderColor 255 0 0 255
-SetBackgroundColor 255 255 255 255
-PlayAlertSound 6 300
-PlayEffect Red
-MinimapIcon 0 Red Star
-SetFontSize 45
+SetTextColor 255 255 255 255
+SetBorderColor 255 255 255 255
+SetBackgroundColor 228 138 43 200
+PlayAlertSound 1 100
+MinimapIcon 1 Orange Circle
+PlayEffect White
 
 Show
 Class "Currency"
@@ -7238,7 +7274,7 @@ SetFontSize 45
 
 Show
 Class "Currency"
-BaseType "Olroth's Crest of the Sun" 
+BaseType  "The Runebinder's Alloy" "Sovereign Alloy" "Celestial Alloy"
 SetTextColor 255 0 0 255
 SetBorderColor 255 0 0 255
 SetBackgroundColor 255 255 255 255
@@ -7249,18 +7285,7 @@ SetFontSize 45
 
 Show
 Class "Currency"
-BaseType  "The Runebinder's Alloy"
-SetTextColor 255 0 0 255
-SetBorderColor 255 0 0 255
-SetBackgroundColor 255 255 255 255
-PlayAlertSound 6 300
-PlayEffect Red
-MinimapIcon 0 Red Star
-SetFontSize 45
-
-Show
-Class "Currency"
-BaseType  "Transcendent Alloy" "Celestial Alloy" "Sovereign Alloy"
+BaseType  "Transcendent Alloy"
 SetTextColor 255 255 255 255
 SetBorderColor 255 255 255 255
 SetBackgroundColor 228 138 43 200
@@ -7282,7 +7307,7 @@ SetFontSize 40
 
 Show
 Class "Currency"
-BaseType "Uhtred's Crest of the Chalice"
+BaseType "Uhtred's Crest of the Chalice" "Olroth's Crest of the Sun" 
 SetTextColor 255 255 255 255
 SetBorderColor 255 255 255 255
 SetBackgroundColor 228 138 43 200
@@ -7294,6 +7319,17 @@ SetFontSize 40
 Show
 Class "Currency"
 BaseType "Cryptic Key"
+SetTextColor 255 255 255 255
+SetBorderColor 255 255 255 255
+SetBackgroundColor 228 138 43 200
+PlayAlertSound 1 150
+PlayEffect White
+MinimapIcon 1 Orange Circle
+SetFontSize 40
+
+Show
+Class "Currency"
+BaseType "Void Flux"
 SetTextColor 255 255 255 255
 SetBorderColor 255 255 255 255
 SetBackgroundColor 228 138 43 200

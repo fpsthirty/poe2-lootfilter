@@ -42,3 +42,6 @@ _site/
 
 # Execution files
 lootfilters/filter-generator.exe
+
+# Local development
+templates/

@@ -129,13 +129,13 @@ If you want to customize one of my lootfilters, create a separate import file so
 > ![table-weapons](https://github.com/fpsthirty/poe2-lootfilter/raw/main/img/loot/table-weapons.png)
 
 >### abyss currency:
->  ![altar](https://github.com/fpsthirty/poe2-lootfilter/raw/main/img/loot/abyss-currency.png)
+>  ![abyss](https://github.com/fpsthirty/poe2-lootfilter/raw/main/img/loot/abyss-currency.png)
 
 >### abyss omens:
->  ![altar](https://github.com/fpsthirty/poe2-lootfilter/raw/main/img/loot/abyss-omens.png)
+>  ![abyss](https://github.com/fpsthirty/poe2-lootfilter/raw/main/img/loot/abyss-omens.png)
 
 > ### action gems:
->  ![uncut_gems](https://github.com/fpsthirty/poe2-lootfilter/raw/main/img/loot/action-gems.jpg)
+>  ![action_gems](https://github.com/fpsthirty/poe2-lootfilter/raw/main/img/loot/action-gems.jpg)
 
 >### breach:
 >  ![breach](https://github.com/fpsthirty/poe2-lootfilter/raw/main/img/loot/breach.jpg)
@@ -173,10 +173,9 @@ If you want to customize one of my lootfilters, create a separate import file so
 
 > ### pinnacle fragments and splinters:
 >  ![pinnacle_keys](https://github.com/fpsthirty/poe2-lootfilter/raw/main/img/loot/pinnacle-fragments.jpg)
->  ![pinnacle_keys](https://github.com/fpsthirty/poe2-lootfilter/raw/main/img/loot/pinnacle-splinters.jpg)
 
 >### ritual omens:
->  ![altar](https://github.com/fpsthirty/poe2-lootfilter/raw/main/img/loot/ritual-omens.jpg)
+>  ![ritual](https://github.com/fpsthirty/poe2-lootfilter/raw/main/img/loot/ritual-omens.jpg)
 
 > ### socketables:
 > Sometimes item prices in screenshots may not be up-to-date: for example, prices for Soul Cores change every season; the lootfilter itself uses the current pricing styles starting around the second week of each fresh league.
