@@ -135,7 +135,7 @@ If you want to customize one of my lootfilters, create a separate import file so
 >  ![abyss](https://github.com/fpsthirty/poe2-lootfilter/raw/main/img/loot/abyss-omens.png)
 
 > ### action gems:
->  ![action_gems](https://github.com/fpsthirty/poe2-lootfilter/raw/main/img/loot/action-gems.jpg)
+>  ![action_gems](https://github.com/fpsthirty/poe2-lootfilter/raw/main/img/loot/action-gems.png)
 
 >### breach:
 >  ![breach](https://github.com/fpsthirty/poe2-lootfilter/raw/main/img/loot/breach.jpg)
@@ -157,7 +157,7 @@ If you want to customize one of my lootfilters, create a separate import file so
 >  ![equipment](https://github.com/fpsthirty/poe2-lootfilter/raw/main/img/loot/equip-main.jpg)
 
 > ### uniques:
->  ![uniques](https://github.com/fpsthirty/poe2-lootfilter/raw/main/img/loot/uniques.jpg)
+>  ![uniques](https://github.com/fpsthirty/poe2-lootfilter/raw/main/img/loot/uniques.png)
 
 > ### equipment (high-end):
 >  ![equip_high-end](https://github.com/fpsthirty/poe2-lootfilter/raw/main/img/loot/equip-highend.jpg)
@@ -175,7 +175,7 @@ If you want to customize one of my lootfilters, create a separate import file so
 >  ![pinnacle_keys](https://github.com/fpsthirty/poe2-lootfilter/raw/main/img/loot/pinnacle-fragments.jpg)
 
 >### ritual omens:
->  ![ritual](https://github.com/fpsthirty/poe2-lootfilter/raw/main/img/loot/ritual-omens.jpg)
+>  ![ritual](https://github.com/fpsthirty/poe2-lootfilter/raw/main/img/loot/ritual-omens.png)
 
 > ### socketables:
 > Sometimes item prices in screenshots may not be up-to-date: for example, prices for Soul Cores change every season; the lootfilter itself uses the current pricing styles starting around the second week of each fresh league.
