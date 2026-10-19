@@ -151,7 +151,7 @@ If you want to customize one of my lootfilters, create a separate import file so
 >  ![currency](https://github.com/fpsthirty/poe2-lootfilter/raw/main/img/loot/currency-most-valuable.jpg)
 
 > ### delirium:
->  ![delirium](https://github.com/fpsthirty/poe2-lootfilter/raw/main/img/loot/delirium.jpg)
+>  ![delirium](https://github.com/fpsthirty/poe2-lootfilter/raw/main/img/loot/delirium.png)
 
 > ### equipment:
 >  ![equipment](https://github.com/fpsthirty/poe2-lootfilter/raw/main/img/loot/equip-main.jpg)
